@@ -2,6 +2,19 @@
 @gmf
 package abstracta;
 
+class ModelFactory {
+	attr String nombre;
+	attr String ruta;
+	val TcdDiagramaClases[*] listaDiagramas;
+}
+
+class TcdDiagramaClases {
+    val TcdClase[*] listaClases;
+    val TcdRelacion[*] listaRelaciones;
+    
+    attr String nombre;
+}
+
 class TcdPaquete {
     val TcdClase[*] listaClases;
     val TcdPaquete[*] listapaquetes;
