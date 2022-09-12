@@ -1,0 +1,139 @@
+@namespace(uri="diagrama_concreta", prefix="diagrama_concreta")
+@gmf
+package diagrama_concreta;
+
+@gmf.diagram
+class TcdDiagramaClases {
+    val TcdClase[*] listaClases;
+    val TcdRelacion[*] listaRelaciones;
+    
+    attr String nombre;
+}
+
+class ModelFactory {
+	attr String nombre;
+	attr String ruta;
+	val TcdDiagramaClases[*] listaDiagramas;
+}
+
+@gmf.node(label = "nombre")
+class TcdPaquete {
+	val TcdPaquete[*] listaPaquetes;
+	val TcdClase[*] listaClases;
+	
+	attr String nombre;
+	attr String ruta;
+}
+
+@gmf.node(label = "nombre")
+class TcdClase {
+    @gmf.compartment
+    val TcdAtributo[*] listaAtributos;
+    @gmf.compartment
+    val TcdMetodo[*] listaMetodos;
+    
+   
+    attr String nombre;
+    attr String estereotipo;
+    attr Visibilidad modificadorAcceso;
+    attr boolean isAbstract;
+    attr String documentacion;
+}
+
+@gmf.link(source="source", target="target", style="solid", width="2")
+abstract class TcdRelacion {
+    ref TcdClase source;
+    ref TcdClase target;
+    
+    attr String navegavilidad;
+}
+
+@gmf.link(source="source", target="target", style="dot", width="2")
+class TcdAsociacion extends TcdRelacion{
+	
+	attr String nombreOrigen;
+    attr String nombreDestino;
+    attr Multiplicidad multiplicidadOrigen;
+    attr Multiplicidad multiplicidadDestino;
+}
+
+class TcdComposicion extends TcdRelacion{
+	
+	attr String nombreOrigen;
+    attr String nombreDestino;
+    attr Multiplicidad multiplicidadOrigen;
+    attr Multiplicidad multiplicidadDestino;
+}
+
+class TcdDependencia extends TcdRelacion{
+	
+	attr String nombreOrigen;
+    attr String nombreDestino;
+    attr Multiplicidad multiplicidadOrigen;
+    attr Multiplicidad multiplicidadDestino;
+}
+
+class TcdHerencia extends TcdRelacion{
+	
+}
+
+class TcdAgregacion extends TcdRelacion{
+	
+	attr String nombreOrigen;
+    attr String nombreDestino;
+    attr Multiplicidad multiplicidadOrigen;
+    attr Multiplicidad multiplicidadDestino;
+}
+
+enum Multiplicidad {
+	uno;
+	uno_cero;
+	cero_varios;
+	uno_varios;
+}
+
+@gmf.node(label = "nombre")
+class TcdAtributo {
+	attr String nombre;
+	attr TipoDato tipoDato;
+	attr Visibilidad visibilidad;
+	attr boolean isConstante;
+	attr boolean isStatic;
+}
+
+enum TipoDato {
+	string;
+	number;
+	boolean;
+	undefined;
+	null;
+}
+
+enum Visibilidad {
+	public;
+	private;
+	protected;
+}
+
+@gmf.node(label = "nombre")
+class TcdMetodo {
+    val TcdParametro[*] listaParametros;
+	
+	attr String nombre;
+	attr Visibilidad modificadorAcceso;
+	attr TipoRetorno tipoRetorno;
+	attr String semantica;
+}
+
+enum TipoRetorno {
+	string;
+	number;
+	boolean;
+	undefined;
+}
+
+@gmf.node(label = "nombre")
+class TcdParametro {
+	attr String nombre;
+	attr TipoDato tipoDato;
+}

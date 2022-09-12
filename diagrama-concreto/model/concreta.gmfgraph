@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="diagrama_concreta">
+  <figures name="Default">
+    <descriptors name="TcdPaqueteFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="TcdPaqueteFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="TcdPaqueteLabelFigure" text="TcdPaquete"/>
+      </actualFigure>
+      <accessors accessor="getFigureTcdPaqueteLabelFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="TcdClaseFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="TcdClaseFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="TcdClaseLabelFigure" text="TcdClase">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="TcdClaseListaAtributosCompartmentFigure" outline="false"/>
+        <children xsi:type="gmfgraph:Rectangle" name="TcdClaseListaMetodosCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureTcdClaseLabelFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+      <accessors accessor="getTcdClaseListaAtributosCompartmentFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.1"/>
+      <accessors accessor="getTcdClaseListaMetodosCompartmentFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="TcdAtributoFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="TcdAtributoFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="TcdAtributoLabelFigure" text="TcdAtributo"/>
+      </actualFigure>
+      <accessors accessor="getFigureTcdAtributoLabelFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="TcdMetodoFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="TcdMetodoFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="TcdMetodoLabelFigure" text="TcdMetodo"/>
+      </actualFigure>
+      <accessors accessor="getFigureTcdMetodoLabelFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="TcdParametroFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="TcdParametroFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="TcdParametroLabelFigure" text="TcdParametro"/>
+      </actualFigure>
+      <accessors accessor="getFigureTcdParametroLabelFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="TcdAsociacionFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="TcdAsociacionFigure" lineWidth="2" lineKind="LINE_DOT"/>
+    </descriptors>
+    <descriptors name="TcdComposicionFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="TcdComposicionFigure" lineWidth="2"/>
+    </descriptors>
+    <descriptors name="TcdDependenciaFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="TcdDependenciaFigure" lineWidth="2"/>
+    </descriptors>
+    <descriptors name="TcdHerenciaFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="TcdHerenciaFigure" lineWidth="2"/>
+    </descriptors>
+    <descriptors name="TcdAgregacionFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="TcdAgregacionFigure" lineWidth="2"/>
+    </descriptors>
+  </figures>
+  <nodes name="TcdPaquete" figure="TcdPaqueteFigure"/>
+  <nodes name="TcdClase" figure="TcdClaseFigure"/>
+  <nodes name="TcdAtributo" figure="TcdAtributoFigure"/>
+  <nodes name="TcdMetodo" figure="TcdMetodoFigure"/>
+  <nodes name="TcdParametro" figure="TcdParametroFigure"/>
+  <connections name="TcdAsociacion" figure="TcdAsociacionFigure"/>
+  <connections name="TcdComposicion" figure="TcdComposicionFigure"/>
+  <connections name="TcdDependencia" figure="TcdDependenciaFigure"/>
+  <connections name="TcdHerencia" figure="TcdHerenciaFigure"/>
+  <connections name="TcdAgregacion" figure="TcdAgregacionFigure"/>
+  <compartments name="TcdClaseListaAtributosCompartment" figure="TcdClaseFigure" collapsible="true" accessor="//@figures.0/@descriptors.1/@accessors.1"/>
+  <compartments name="TcdClaseListaMetodosCompartment" figure="TcdClaseFigure" collapsible="true" accessor="//@figures.0/@descriptors.1/@accessors.2"/>
+  <labels name="TcdPaqueteLabel" figure="TcdPaqueteFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="TcdClaseLabel" figure="TcdClaseFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="TcdAtributoLabel" figure="TcdAtributoFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <labels name="TcdMetodoLabel" figure="TcdMetodoFigure" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
+  <labels name="TcdParametroLabel" figure="TcdParametroFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+</gmfgraph:Canvas>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/diagrama-concreto/src" modelPluginID="diagrama-concreto"
+    modelName="Diagrama_concreta" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>concreta.emf</foreignModel>
+  <genPackages prefix="Diagrama_concreta" disposableProviderFactory="true" ecorePackage="concreta.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="concreta.ecore#//Multiplicidad">
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Multiplicidad/uno"/>
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Multiplicidad/uno_cero"/>
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Multiplicidad/cero_varios"/>
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Multiplicidad/uno_varios"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="concreta.ecore#//TipoDato">
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoDato/string"/>
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoDato/number"/>
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoDato/boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoDato/undefined"/>
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoDato/null"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="concreta.ecore#//Visibilidad">
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Visibilidad/public"/>
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Visibilidad/private"/>
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Visibilidad/protected"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="concreta.ecore#//TipoRetorno">
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoRetorno/string"/>
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoRetorno/number"/>
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoRetorno/boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoRetorno/undefined"/>
+    </genEnums>
+    <genClasses ecoreClass="concreta.ecore#//TcdDiagramaClases">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//TcdDiagramaClases/listaClases"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//TcdDiagramaClases/listaRelaciones"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdDiagramaClases/nombre"/>
+    </genClasses>
+    <genClasses ecoreClass="concreta.ecore#//ModelFactory">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//ModelFactory/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//ModelFactory/ruta"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//ModelFactory/listaDiagramas"/>
+    </genClasses>
+    <genClasses ecoreClass="concreta.ecore#//TcdPaquete">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//TcdPaquete/listaPaquetes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//TcdPaquete/listaClases"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdPaquete/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdPaquete/ruta"/>
+    </genClasses>
+    <genClasses ecoreClass="concreta.ecore#//TcdClase">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//TcdClase/listaAtributos"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//TcdClase/listaMetodos"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdClase/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdClase/estereotipo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdClase/modificadorAcceso"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdClase/isAbstract"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdClase/documentacion"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="concreta.ecore#//TcdRelacion">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference concreta.ecore#//TcdRelacion/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference concreta.ecore#//TcdRelacion/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdRelacion/navegavilidad"/>
+    </genClasses>
+    <genClasses ecoreClass="concreta.ecore#//TcdAsociacion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdAsociacion/nombreOrigen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdAsociacion/nombreDestino"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdAsociacion/multiplicidadOrigen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdAsociacion/multiplicidadDestino"/>
+    </genClasses>
+    <genClasses ecoreClass="concreta.ecore#//TcdComposicion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdComposicion/nombreOrigen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdComposicion/nombreDestino"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdComposicion/multiplicidadOrigen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdComposicion/multiplicidadDestino"/>
+    </genClasses>
+    <genClasses ecoreClass="concreta.ecore#//TcdDependencia">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdDependencia/nombreOrigen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdDependencia/nombreDestino"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdDependencia/multiplicidadOrigen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdDependencia/multiplicidadDestino"/>
+    </genClasses>
+    <genClasses ecoreClass="concreta.ecore#//TcdHerencia"/>
+    <genClasses ecoreClass="concreta.ecore#//TcdAgregacion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdAgregacion/nombreOrigen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdAgregacion/nombreDestino"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdAgregacion/multiplicidadOrigen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdAgregacion/multiplicidadDestino"/>
+    </genClasses>
+    <genClasses ecoreClass="concreta.ecore#//TcdAtributo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdAtributo/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdAtributo/tipoDato"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdAtributo/visibilidad"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdAtributo/isConstante"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdAtributo/isStatic"/>
+    </genClasses>
+    <genClasses ecoreClass="concreta.ecore#//TcdMetodo">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//TcdMetodo/listaParametros"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdMetodo/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdMetodo/modificadorAcceso"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdMetodo/tipoRetorno"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdMetodo/semantica"/>
+    </genClasses>
+    <genClasses ecoreClass="concreta.ecore#//TcdParametro">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdParametro/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TcdParametro/tipoDato"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

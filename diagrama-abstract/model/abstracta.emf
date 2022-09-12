@@ -1,0 +1,117 @@
+@namespace(uri="abstracta", prefix="abstracta")
+@gmf
+package abstracta;
+
+class TcdPaquete {
+    val TcdClase[*] listaClases;
+    val TcdPaquete[*] listapaquetes;
+    
+    attr String nombre;
+    attr String ruta;
+}
+
+class TcdClase {
+    val TcdAtributo[*] listaAtributos;
+    val TcdMetodo[*] listaMetodos;
+    val TcdRelacion[*] listaRelaciones;
+    
+    attr String nombre;
+    attr String estereotipo;
+    attr Visibilidad modificadorAcceso;
+    attr boolean isAbstract;
+    attr String documentacion;
+}
+
+class TcdAtributo {
+    attr String nombre;
+	attr TipoDato tipoDato;
+	attr Visibilidad visibilidad;
+	attr boolean isConstante;
+	attr boolean isStatic;
+	attr String valorDefecto;
+}
+
+class TcdMetodo {
+    val TcdParametro[*] listaParametros;
+	
+	attr String nombre;
+	attr Visibilidad modificadorAcceso;
+	attr TipoRetorno tipoRetorno;
+	attr String semantica;
+}
+
+abstract class TcdRelacion {
+    ref TcdClase source;
+    ref TcdClase target;
+    
+    attr String navegavilidad;
+}
+
+class TcdAsociacion extends TcdRelacion{
+	
+	attr String nombreOrigen;
+    attr String nombreDestino;
+    attr Multiplicidad multiplicidadOrigen;
+    attr Multiplicidad multiplicidadDestino;
+}
+
+class TcdComposicion extends TcdRelacion{
+	
+	attr String nombreOrigen;
+    attr String nombreDestino;
+    attr Multiplicidad multiplicidadOrigen;
+    attr Multiplicidad multiplicidadDestino;
+}
+
+class TcdDependencia extends TcdRelacion{
+	
+	attr String nombreOrigen;
+    attr String nombreDestino;
+    attr Multiplicidad multiplicidadOrigen;
+    attr Multiplicidad multiplicidadDestino;
+}
+
+class TcdHerencia extends TcdRelacion{
+	
+}
+
+class TcdAgregacion extends TcdRelacion{
+	
+	attr String nombreOrigen;
+    attr String nombreDestino;
+    attr Multiplicidad multiplicidadOrigen;
+    attr Multiplicidad multiplicidadDestino;
+}
+
+class TcdParametro {
+    attr String nombre;
+	attr TipoDato tipoDato;
+}
+
+enum Visibilidad {
+	public;
+	private;
+	protected;
+}
+
+enum TipoDato {
+	string;
+	number;
+	boolean;
+	undefined;
+	null;
+}
+
+enum Multiplicidad {
+	uno;
+	uno_cero;
+	cero_varios;
+	uno_varios;
+}
+
+enum TipoRetorno {
+	string;
+	number;
+	boolean;
+	undefined;
+}

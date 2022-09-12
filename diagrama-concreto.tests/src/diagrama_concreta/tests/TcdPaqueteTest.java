@@ -1,0 +1,89 @@
+/**
+ */
+package diagrama_concreta.tests;
+
+import diagrama_concreta.Diagrama_concretaFactory;
+import diagrama_concreta.TcdPaquete;
+
+import junit.framework.TestCase;
+
+import junit.textui.TestRunner;
+
+/**
+ * <!-- begin-user-doc -->
+ * A test case for the model object '<em><b>Tcd Paquete</b></em>'.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class TcdPaqueteTest extends TestCase {
+
+	/**
+	 * The fixture for this Tcd Paquete test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TcdPaquete fixture = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static void main(String[] args) {
+		TestRunner.run(TcdPaqueteTest.class);
+	}
+
+	/**
+	 * Constructs a new Tcd Paquete test case with the given name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TcdPaqueteTest(String name) {
+		super(name);
+	}
+
+	/**
+	 * Sets the fixture for this Tcd Paquete test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void setFixture(TcdPaquete fixture) {
+		this.fixture = fixture;
+	}
+
+	/**
+	 * Returns the fixture for this Tcd Paquete test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TcdPaquete getFixture() {
+		return fixture;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see junit.framework.TestCase#setUp()
+	 * @generated
+	 */
+	@Override
+	protected void setUp() throws Exception {
+		setFixture(Diagrama_concretaFactory.eINSTANCE.createTcdPaquete());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see junit.framework.TestCase#tearDown()
+	 * @generated
+	 */
+	@Override
+	protected void tearDown() throws Exception {
+		setFixture(null);
+	}
+
+} //TcdPaqueteTest
