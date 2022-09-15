@@ -8,28 +8,28 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Tcd Metodo</b></em>'.
+ * A representation of the model object '<em><b>TCD Metodo</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link diagrama_concreta.TcdMetodo#getListaParametros <em>Lista Parametros</em>}</li>
- *   <li>{@link diagrama_concreta.TcdMetodo#getNombre <em>Nombre</em>}</li>
- *   <li>{@link diagrama_concreta.TcdMetodo#getModificadorAcceso <em>Modificador Acceso</em>}</li>
- *   <li>{@link diagrama_concreta.TcdMetodo#getTipoRetorno <em>Tipo Retorno</em>}</li>
- *   <li>{@link diagrama_concreta.TcdMetodo#getSemantica <em>Semantica</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDMetodo#getListaParametros <em>Lista Parametros</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDMetodo#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDMetodo#getModificadorAcceso <em>Modificador Acceso</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDMetodo#getTipoRetorno <em>Tipo Retorno</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDMetodo#getSemantica <em>Semantica</em>}</li>
  * </ul>
  *
- * @see diagrama_concreta.Diagrama_concretaPackage#getTcdMetodo()
- * @model annotation="gmf.node label='nombre'"
+ * @see diagrama_concreta.Diagrama_concretaPackage#getTCDMetodo()
+ * @model annotation="gmf.node label='nombre' border.style='dot' color='166,255,234'"
  * @generated
  */
-public interface TcdMetodo extends EObject {
+public interface TCDMetodo extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Lista Parametros</b></em>' containment reference list.
-	 * The list contents are of type {@link diagrama_concreta.TcdParametro}.
+	 * The list contents are of type {@link diagrama_concreta.TCDParametro}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Lista Parametros</em>' containment reference list isn't clear,
@@ -37,11 +37,11 @@ public interface TcdMetodo extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Lista Parametros</em>' containment reference list.
-	 * @see diagrama_concreta.Diagrama_concretaPackage#getTcdMetodo_ListaParametros()
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDMetodo_ListaParametros()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<TcdParametro> getListaParametros();
+	EList<TCDParametro> getListaParametros();
 
 	/**
 	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
@@ -53,14 +53,14 @@ public interface TcdMetodo extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nombre</em>' attribute.
 	 * @see #setNombre(String)
-	 * @see diagrama_concreta.Diagrama_concretaPackage#getTcdMetodo_Nombre()
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDMetodo_Nombre()
 	 * @model
 	 * @generated
 	 */
 	String getNombre();
 
 	/**
-	 * Sets the value of the '{@link diagrama_concreta.TcdMetodo#getNombre <em>Nombre</em>}' attribute.
+	 * Sets the value of the '{@link diagrama_concreta.TCDMetodo#getNombre <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Nombre</em>' attribute.
@@ -81,14 +81,14 @@ public interface TcdMetodo extends EObject {
 	 * @return the value of the '<em>Modificador Acceso</em>' attribute.
 	 * @see diagrama_concreta.Visibilidad
 	 * @see #setModificadorAcceso(Visibilidad)
-	 * @see diagrama_concreta.Diagrama_concretaPackage#getTcdMetodo_ModificadorAcceso()
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDMetodo_ModificadorAcceso()
 	 * @model
 	 * @generated
 	 */
 	Visibilidad getModificadorAcceso();
 
 	/**
-	 * Sets the value of the '{@link diagrama_concreta.TcdMetodo#getModificadorAcceso <em>Modificador Acceso</em>}' attribute.
+	 * Sets the value of the '{@link diagrama_concreta.TCDMetodo#getModificadorAcceso <em>Modificador Acceso</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Modificador Acceso</em>' attribute.
@@ -110,14 +110,14 @@ public interface TcdMetodo extends EObject {
 	 * @return the value of the '<em>Tipo Retorno</em>' attribute.
 	 * @see diagrama_concreta.TipoRetorno
 	 * @see #setTipoRetorno(TipoRetorno)
-	 * @see diagrama_concreta.Diagrama_concretaPackage#getTcdMetodo_TipoRetorno()
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDMetodo_TipoRetorno()
 	 * @model
 	 * @generated
 	 */
 	TipoRetorno getTipoRetorno();
 
 	/**
-	 * Sets the value of the '{@link diagrama_concreta.TcdMetodo#getTipoRetorno <em>Tipo Retorno</em>}' attribute.
+	 * Sets the value of the '{@link diagrama_concreta.TCDMetodo#getTipoRetorno <em>Tipo Retorno</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Tipo Retorno</em>' attribute.
@@ -137,14 +137,14 @@ public interface TcdMetodo extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Semantica</em>' attribute.
 	 * @see #setSemantica(String)
-	 * @see diagrama_concreta.Diagrama_concretaPackage#getTcdMetodo_Semantica()
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDMetodo_Semantica()
 	 * @model
 	 * @generated
 	 */
 	String getSemantica();
 
 	/**
-	 * Sets the value of the '{@link diagrama_concreta.TcdMetodo#getSemantica <em>Semantica</em>}' attribute.
+	 * Sets the value of the '{@link diagrama_concreta.TCDMetodo#getSemantica <em>Semantica</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Semantica</em>' attribute.
@@ -153,4 +153,4 @@ public interface TcdMetodo extends EObject {
 	 */
 	void setSemantica(String value);
 
-} // TcdMetodo
+} // TCDMetodo

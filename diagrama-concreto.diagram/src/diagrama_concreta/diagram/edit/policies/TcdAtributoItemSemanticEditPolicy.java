@@ -14,14 +14,14 @@ import org.eclipse.gmf.runtime.notation.View;
 /**
  * @generated
  */
-public class TcdAtributoItemSemanticEditPolicy
+public class TCDAtributoItemSemanticEditPolicy
 		extends diagrama_concreta.diagram.edit.policies.Diagrama_concretaBaseItemSemanticEditPolicy {
 
 	/**
 	* @generated
 	*/
-	public TcdAtributoItemSemanticEditPolicy() {
-		super(diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdAtributo_3001);
+	public TCDAtributoItemSemanticEditPolicy() {
+		super(diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDAtributo_3001);
 	}
 
 	/**

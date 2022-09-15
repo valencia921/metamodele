@@ -18,12 +18,12 @@ import org.eclipse.gmf.runtime.notation.View;
 /**
  * @generated
  */
-public class TcdAtributoCreateCommand extends EditElementCommand {
+public class TCDAtributoCreateCommand extends EditElementCommand {
 
 	/**
 	* @generated
 	*/
-	public TcdAtributoCreateCommand(CreateElementRequest req) {
+	public TCDAtributoCreateCommand(CreateElementRequest req) {
 		super(req.getLabel(), null, req);
 	}
 
@@ -51,10 +51,10 @@ public class TcdAtributoCreateCommand extends EditElementCommand {
 	* @generated
 	*/
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
-		diagrama_concreta.TcdAtributo newElement = diagrama_concreta.Diagrama_concretaFactory.eINSTANCE
-				.createTcdAtributo();
+		diagrama_concreta.TCDAtributo newElement = diagrama_concreta.Diagrama_concretaFactory.eINSTANCE
+				.createTCDAtributo();
 
-		diagrama_concreta.TcdClase owner = (diagrama_concreta.TcdClase) getElementToEdit();
+		diagrama_concreta.TCDClase owner = (diagrama_concreta.TCDClase) getElementToEdit();
 		owner.getListaAtributos().add(newElement);
 
 		doConfigure(newElement, monitor, info);
@@ -66,7 +66,7 @@ public class TcdAtributoCreateCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	protected void doConfigure(diagrama_concreta.TcdAtributo newElement, IProgressMonitor monitor, IAdaptable info)
+	protected void doConfigure(diagrama_concreta.TCDAtributo newElement, IProgressMonitor monitor, IAdaptable info)
 			throws ExecutionException {
 		IElementType elementType = ((CreateElementRequest) getRequest()).getElementType();
 		ConfigureRequest configureRequest = new ConfigureRequest(getEditingDomain(), newElement, elementType);

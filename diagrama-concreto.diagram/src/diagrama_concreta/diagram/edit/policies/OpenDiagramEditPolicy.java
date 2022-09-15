@@ -171,7 +171,7 @@ public class OpenDiagramEditPolicy extends OpenEditPolicy {
 		* @generated
 		*/
 		protected String getDiagramKind() {
-			return diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.MODEL_ID;
+			return diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.MODEL_ID;
 		}
 
 		/**

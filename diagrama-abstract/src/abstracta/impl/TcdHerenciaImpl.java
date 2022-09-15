@@ -3,24 +3,24 @@
 package abstracta.impl;
 
 import abstracta.AbstractaPackage;
-import abstracta.TcdHerencia;
+import abstracta.TCDHerencia;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Tcd Herencia</b></em>'.
+ * An implementation of the model object '<em><b>TCD Herencia</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class TcdHerenciaImpl extends TcdRelacionImpl implements TcdHerencia {
+public class TCDHerenciaImpl extends TCDRelacionImpl implements TCDHerencia {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TcdHerenciaImpl() {
+	protected TCDHerenciaImpl() {
 		super();
 	}
 
@@ -34,4 +34,4 @@ public class TcdHerenciaImpl extends TcdRelacionImpl implements TcdHerencia {
 		return AbstractaPackage.Literals.TCD_HERENCIA;
 	}
 
-} //TcdHerenciaImpl
+} //TCDHerenciaImpl

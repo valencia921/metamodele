@@ -68,48 +68,52 @@ public class AbstractaAdapterFactory extends AdapterFactoryImpl {
 	protected AbstractaSwitch<Adapter> modelSwitch =
 		new AbstractaSwitch<Adapter>() {
 			@Override
-			public Adapter caseTcdPaquete(TcdPaquete object) {
-				return createTcdPaqueteAdapter();
+			public Adapter caseTCDPaquete(TCDPaquete object) {
+				return createTCDPaqueteAdapter();
 			}
 			@Override
-			public Adapter caseTcdClase(TcdClase object) {
-				return createTcdClaseAdapter();
+			public Adapter caseModelFactory(ModelFactory object) {
+				return createModelFactoryAdapter();
 			}
 			@Override
-			public Adapter caseTcdAtributo(TcdAtributo object) {
-				return createTcdAtributoAdapter();
+			public Adapter caseTCDClase(TCDClase object) {
+				return createTCDClaseAdapter();
 			}
 			@Override
-			public Adapter caseTcdMetodo(TcdMetodo object) {
-				return createTcdMetodoAdapter();
+			public Adapter caseTCDAtributo(TCDAtributo object) {
+				return createTCDAtributoAdapter();
 			}
 			@Override
-			public Adapter caseTcdRelacion(TcdRelacion object) {
-				return createTcdRelacionAdapter();
+			public Adapter caseTCDMetodo(TCDMetodo object) {
+				return createTCDMetodoAdapter();
 			}
 			@Override
-			public Adapter caseTcdAsociacion(TcdAsociacion object) {
-				return createTcdAsociacionAdapter();
+			public Adapter caseTCDRelacion(TCDRelacion object) {
+				return createTCDRelacionAdapter();
 			}
 			@Override
-			public Adapter caseTcdComposicion(TcdComposicion object) {
-				return createTcdComposicionAdapter();
+			public Adapter caseTCDAsociacion(TCDAsociacion object) {
+				return createTCDAsociacionAdapter();
 			}
 			@Override
-			public Adapter caseTcdDependencia(TcdDependencia object) {
-				return createTcdDependenciaAdapter();
+			public Adapter caseTCDComposicion(TCDComposicion object) {
+				return createTCDComposicionAdapter();
 			}
 			@Override
-			public Adapter caseTcdHerencia(TcdHerencia object) {
-				return createTcdHerenciaAdapter();
+			public Adapter caseTCDDependencia(TCDDependencia object) {
+				return createTCDDependenciaAdapter();
 			}
 			@Override
-			public Adapter caseTcdAgregacion(TcdAgregacion object) {
-				return createTcdAgregacionAdapter();
+			public Adapter caseTCDHerencia(TCDHerencia object) {
+				return createTCDHerenciaAdapter();
 			}
 			@Override
-			public Adapter caseTcdParametro(TcdParametro object) {
-				return createTcdParametroAdapter();
+			public Adapter caseTCDAgregacion(TCDAgregacion object) {
+				return createTCDAgregacionAdapter();
+			}
+			@Override
+			public Adapter caseTCDParametro(TCDParametro object) {
+				return createTCDParametroAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -132,156 +136,170 @@ public class AbstractaAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link abstracta.TcdPaquete <em>Tcd Paquete</em>}'.
+	 * Creates a new adapter for an object of class '{@link abstracta.TCDPaquete <em>TCD Paquete</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see abstracta.TcdPaquete
+	 * @see abstracta.TCDPaquete
 	 * @generated
 	 */
-	public Adapter createTcdPaqueteAdapter() {
+	public Adapter createTCDPaqueteAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link abstracta.TcdClase <em>Tcd Clase</em>}'.
+	 * Creates a new adapter for an object of class '{@link abstracta.ModelFactory <em>Model Factory</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see abstracta.TcdClase
+	 * @see abstracta.ModelFactory
 	 * @generated
 	 */
-	public Adapter createTcdClaseAdapter() {
+	public Adapter createModelFactoryAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link abstracta.TcdAtributo <em>Tcd Atributo</em>}'.
+	 * Creates a new adapter for an object of class '{@link abstracta.TCDClase <em>TCD Clase</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see abstracta.TcdAtributo
+	 * @see abstracta.TCDClase
 	 * @generated
 	 */
-	public Adapter createTcdAtributoAdapter() {
+	public Adapter createTCDClaseAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link abstracta.TcdMetodo <em>Tcd Metodo</em>}'.
+	 * Creates a new adapter for an object of class '{@link abstracta.TCDAtributo <em>TCD Atributo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see abstracta.TcdMetodo
+	 * @see abstracta.TCDAtributo
 	 * @generated
 	 */
-	public Adapter createTcdMetodoAdapter() {
+	public Adapter createTCDAtributoAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link abstracta.TcdRelacion <em>Tcd Relacion</em>}'.
+	 * Creates a new adapter for an object of class '{@link abstracta.TCDMetodo <em>TCD Metodo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see abstracta.TcdRelacion
+	 * @see abstracta.TCDMetodo
 	 * @generated
 	 */
-	public Adapter createTcdRelacionAdapter() {
+	public Adapter createTCDMetodoAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link abstracta.TcdAsociacion <em>Tcd Asociacion</em>}'.
+	 * Creates a new adapter for an object of class '{@link abstracta.TCDRelacion <em>TCD Relacion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see abstracta.TcdAsociacion
+	 * @see abstracta.TCDRelacion
 	 * @generated
 	 */
-	public Adapter createTcdAsociacionAdapter() {
+	public Adapter createTCDRelacionAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link abstracta.TcdComposicion <em>Tcd Composicion</em>}'.
+	 * Creates a new adapter for an object of class '{@link abstracta.TCDAsociacion <em>TCD Asociacion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see abstracta.TcdComposicion
+	 * @see abstracta.TCDAsociacion
 	 * @generated
 	 */
-	public Adapter createTcdComposicionAdapter() {
+	public Adapter createTCDAsociacionAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link abstracta.TcdDependencia <em>Tcd Dependencia</em>}'.
+	 * Creates a new adapter for an object of class '{@link abstracta.TCDComposicion <em>TCD Composicion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see abstracta.TcdDependencia
+	 * @see abstracta.TCDComposicion
 	 * @generated
 	 */
-	public Adapter createTcdDependenciaAdapter() {
+	public Adapter createTCDComposicionAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link abstracta.TcdHerencia <em>Tcd Herencia</em>}'.
+	 * Creates a new adapter for an object of class '{@link abstracta.TCDDependencia <em>TCD Dependencia</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see abstracta.TcdHerencia
+	 * @see abstracta.TCDDependencia
 	 * @generated
 	 */
-	public Adapter createTcdHerenciaAdapter() {
+	public Adapter createTCDDependenciaAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link abstracta.TcdAgregacion <em>Tcd Agregacion</em>}'.
+	 * Creates a new adapter for an object of class '{@link abstracta.TCDHerencia <em>TCD Herencia</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see abstracta.TcdAgregacion
+	 * @see abstracta.TCDHerencia
 	 * @generated
 	 */
-	public Adapter createTcdAgregacionAdapter() {
+	public Adapter createTCDHerenciaAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link abstracta.TcdParametro <em>Tcd Parametro</em>}'.
+	 * Creates a new adapter for an object of class '{@link abstracta.TCDAgregacion <em>TCD Agregacion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see abstracta.TcdParametro
+	 * @see abstracta.TCDAgregacion
 	 * @generated
 	 */
-	public Adapter createTcdParametroAdapter() {
+	public Adapter createTCDAgregacionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link abstracta.TCDParametro <em>TCD Parametro</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see abstracta.TCDParametro
+	 * @generated
+	 */
+	public Adapter createTCDParametroAdapter() {
 		return null;
 	}
 

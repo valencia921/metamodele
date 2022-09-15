@@ -3,6 +3,7 @@
  */
 package diagrama_concreta.diagram.edit.parts;
 
+import org.eclipse.draw2d.Ellipse;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
 import org.eclipse.draw2d.RoundedRectangle;
@@ -29,7 +30,7 @@ import org.eclipse.swt.graphics.Color;
 /**
  * @generated
  */
-public class TcdAtributoEditPart extends ShapeNodeEditPart {
+public class TCDAtributoEditPart extends ShapeNodeEditPart {
 
 	/**
 	* @generated
@@ -49,7 +50,7 @@ public class TcdAtributoEditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public TcdAtributoEditPart(View view) {
+	public TCDAtributoEditPart(View view) {
 		super(view);
 	}
 
@@ -59,7 +60,7 @@ public class TcdAtributoEditPart extends ShapeNodeEditPart {
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new diagrama_concreta.diagram.edit.policies.TcdAtributoItemSemanticEditPolicy());
+				new diagrama_concreta.diagram.edit.policies.TCDAtributoItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
 		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
@@ -94,23 +95,23 @@ public class TcdAtributoEditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected IFigure createNodeShape() {
-		return primaryShape = new TcdAtributoFigure();
+		return primaryShape = new TCDAtributoFigure();
 	}
 
 	/**
 	* @generated
 	*/
-	public TcdAtributoFigure getPrimaryShape() {
-		return (TcdAtributoFigure) primaryShape;
+	public TCDAtributoFigure getPrimaryShape() {
+		return (TCDAtributoFigure) primaryShape;
 	}
 
 	/**
 	* @generated
 	*/
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof diagrama_concreta.diagram.edit.parts.TcdAtributoNombreEditPart) {
-			((diagrama_concreta.diagram.edit.parts.TcdAtributoNombreEditPart) childEditPart)
-					.setLabel(getPrimaryShape().getFigureTcdAtributoLabelFigure());
+		if (childEditPart instanceof diagrama_concreta.diagram.edit.parts.TCDAtributoNombreEditPart) {
+			((diagrama_concreta.diagram.edit.parts.TCDAtributoNombreEditPart) childEditPart)
+					.setLabel(getPrimaryShape().getFigureTCDAtributoLabelFigure());
 			return true;
 		}
 		return false;
@@ -120,7 +121,7 @@ public class TcdAtributoEditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof diagrama_concreta.diagram.edit.parts.TcdAtributoNombreEditPart) {
+		if (childEditPart instanceof diagrama_concreta.diagram.edit.parts.TCDAtributoNombreEditPart) {
 			return true;
 		}
 		return false;
@@ -244,24 +245,25 @@ public class TcdAtributoEditPart extends ShapeNodeEditPart {
 	*/
 	public EditPart getPrimaryChildEditPart() {
 		return getChildBySemanticHint(diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-				.getType(diagrama_concreta.diagram.edit.parts.TcdAtributoNombreEditPart.VISUAL_ID));
+				.getType(diagrama_concreta.diagram.edit.parts.TCDAtributoNombreEditPart.VISUAL_ID));
 	}
 
 	/**
 	 * @generated
 	 */
-	public class TcdAtributoFigure extends RoundedRectangle {
+	public class TCDAtributoFigure extends RoundedRectangle {
 
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigureTcdAtributoLabelFigure;
+		private WrappingLabel fFigureTCDAtributoLabelFigure;
 
 		/**
 		 * @generated
 		 */
-		public TcdAtributoFigure() {
+		public TCDAtributoFigure() {
 			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8), getMapMode().DPtoLP(8)));
+			this.setBackgroundColor(THIS_BACK);
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
 			createContents();
@@ -272,21 +274,26 @@ public class TcdAtributoEditPart extends ShapeNodeEditPart {
 		 */
 		private void createContents() {
 
-			fFigureTcdAtributoLabelFigure = new WrappingLabel();
+			fFigureTCDAtributoLabelFigure = new WrappingLabel();
 
-			fFigureTcdAtributoLabelFigure.setText("TcdAtributo");
+			fFigureTCDAtributoLabelFigure.setText("TCDAtributo");
 
-			this.add(fFigureTcdAtributoLabelFigure);
+			this.add(fFigureTCDAtributoLabelFigure);
 
 		}
 
 		/**
 		 * @generated
 		 */
-		public WrappingLabel getFigureTcdAtributoLabelFigure() {
-			return fFigureTcdAtributoLabelFigure;
+		public WrappingLabel getFigureTCDAtributoLabelFigure() {
+			return fFigureTCDAtributoLabelFigure;
 		}
 
 	}
+
+	/**
+	* @generated
+	*/
+	static final Color THIS_BACK = new Color(null, 166, 255, 234);
 
 }

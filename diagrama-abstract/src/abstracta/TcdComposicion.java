@@ -5,24 +5,24 @@ package abstracta;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Tcd Composicion</b></em>'.
+ * A representation of the model object '<em><b>TCD Composicion</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link abstracta.TcdComposicion#getNombreOrigen <em>Nombre Origen</em>}</li>
- *   <li>{@link abstracta.TcdComposicion#getNombreDestino <em>Nombre Destino</em>}</li>
- *   <li>{@link abstracta.TcdComposicion#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}</li>
- *   <li>{@link abstracta.TcdComposicion#getMultiplicidadDestino <em>Multiplicidad Destino</em>}</li>
+ *   <li>{@link abstracta.TCDComposicion#getNombreOrigen <em>Nombre Origen</em>}</li>
+ *   <li>{@link abstracta.TCDComposicion#getNombreDestino <em>Nombre Destino</em>}</li>
+ *   <li>{@link abstracta.TCDComposicion#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}</li>
+ *   <li>{@link abstracta.TCDComposicion#getMultiplicidadDestino <em>Multiplicidad Destino</em>}</li>
  * </ul>
  *
- * @see abstracta.AbstractaPackage#getTcdComposicion()
+ * @see abstracta.AbstractaPackage#getTCDComposicion()
  * @model
  * @generated
  */
-public interface TcdComposicion extends TcdRelacion {
+public interface TCDComposicion extends TCDRelacion {
 	/**
 	 * Returns the value of the '<em><b>Nombre Origen</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -33,14 +33,14 @@ public interface TcdComposicion extends TcdRelacion {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nombre Origen</em>' attribute.
 	 * @see #setNombreOrigen(String)
-	 * @see abstracta.AbstractaPackage#getTcdComposicion_NombreOrigen()
+	 * @see abstracta.AbstractaPackage#getTCDComposicion_NombreOrigen()
 	 * @model
 	 * @generated
 	 */
 	String getNombreOrigen();
 
 	/**
-	 * Sets the value of the '{@link abstracta.TcdComposicion#getNombreOrigen <em>Nombre Origen</em>}' attribute.
+	 * Sets the value of the '{@link abstracta.TCDComposicion#getNombreOrigen <em>Nombre Origen</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Nombre Origen</em>' attribute.
@@ -59,14 +59,14 @@ public interface TcdComposicion extends TcdRelacion {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nombre Destino</em>' attribute.
 	 * @see #setNombreDestino(String)
-	 * @see abstracta.AbstractaPackage#getTcdComposicion_NombreDestino()
+	 * @see abstracta.AbstractaPackage#getTCDComposicion_NombreDestino()
 	 * @model
 	 * @generated
 	 */
 	String getNombreDestino();
 
 	/**
-	 * Sets the value of the '{@link abstracta.TcdComposicion#getNombreDestino <em>Nombre Destino</em>}' attribute.
+	 * Sets the value of the '{@link abstracta.TCDComposicion#getNombreDestino <em>Nombre Destino</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Nombre Destino</em>' attribute.
@@ -87,14 +87,14 @@ public interface TcdComposicion extends TcdRelacion {
 	 * @return the value of the '<em>Multiplicidad Origen</em>' attribute.
 	 * @see abstracta.Multiplicidad
 	 * @see #setMultiplicidadOrigen(Multiplicidad)
-	 * @see abstracta.AbstractaPackage#getTcdComposicion_MultiplicidadOrigen()
+	 * @see abstracta.AbstractaPackage#getTCDComposicion_MultiplicidadOrigen()
 	 * @model
 	 * @generated
 	 */
 	Multiplicidad getMultiplicidadOrigen();
 
 	/**
-	 * Sets the value of the '{@link abstracta.TcdComposicion#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}' attribute.
+	 * Sets the value of the '{@link abstracta.TCDComposicion#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Multiplicidad Origen</em>' attribute.
@@ -116,14 +116,14 @@ public interface TcdComposicion extends TcdRelacion {
 	 * @return the value of the '<em>Multiplicidad Destino</em>' attribute.
 	 * @see abstracta.Multiplicidad
 	 * @see #setMultiplicidadDestino(Multiplicidad)
-	 * @see abstracta.AbstractaPackage#getTcdComposicion_MultiplicidadDestino()
+	 * @see abstracta.AbstractaPackage#getTCDComposicion_MultiplicidadDestino()
 	 * @model
 	 * @generated
 	 */
 	Multiplicidad getMultiplicidadDestino();
 
 	/**
-	 * Sets the value of the '{@link abstracta.TcdComposicion#getMultiplicidadDestino <em>Multiplicidad Destino</em>}' attribute.
+	 * Sets the value of the '{@link abstracta.TCDComposicion#getMultiplicidadDestino <em>Multiplicidad Destino</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Multiplicidad Destino</em>' attribute.
@@ -133,4 +133,4 @@ public interface TcdComposicion extends TcdRelacion {
 	 */
 	void setMultiplicidadDestino(Multiplicidad value);
 
-} // TcdComposicion
+} // TCDComposicion

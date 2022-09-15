@@ -7,9 +7,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.emf.ecore.EObject;
@@ -35,7 +37,12 @@ import org.eclipse.gmf.tooling.runtime.update.UpdaterLinkDescriptor;
 /**
  * @generated
  */
-public class TcdDiagramaClasesCanonicalEditPolicy extends CanonicalEditPolicy {
+public class TCDDiagramaClasesCanonicalEditPolicy extends CanonicalEditPolicy {
+
+	/**
+	* @generated
+	*/
+	private Set<EStructuralFeature> myFeaturesToSynchronize;
 
 	/**
 	* @generated
@@ -52,8 +59,15 @@ public class TcdDiagramaClasesCanonicalEditPolicy extends CanonicalEditPolicy {
 	/**
 	* @generated
 	*/
-	protected EStructuralFeature getFeatureToSynchronize() {
-		return diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTcdDiagramaClases_ListaClases();
+	protected Set getFeaturesToSynchronize() {
+		if (myFeaturesToSynchronize == null) {
+			myFeaturesToSynchronize = new HashSet<EStructuralFeature>();
+			myFeaturesToSynchronize
+					.add(diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDDiagramaClases_ListaClases());
+			myFeaturesToSynchronize
+					.add(diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDDiagramaClases_ListaPaquetes());
+		}
+		return myFeaturesToSynchronize;
 	}
 
 	/**
@@ -65,7 +79,7 @@ public class TcdDiagramaClasesCanonicalEditPolicy extends CanonicalEditPolicy {
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<diagrama_concreta.diagram.part.Diagrama_concretaNodeDescriptor> childDescriptors = diagrama_concreta.diagram.part.Diagrama_concretaDiagramUpdater
-				.getTcdDiagramaClases_1000SemanticChildren(viewObject);
+				.getTCDDiagramaClases_1000SemanticChildren(viewObject);
 		for (diagrama_concreta.diagram.part.Diagrama_concretaNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -86,8 +100,9 @@ public class TcdDiagramaClasesCanonicalEditPolicy extends CanonicalEditPolicy {
 	* @generated
 	*/
 	private boolean isMyDiagramElement(View view) {
-		return diagrama_concreta.diagram.edit.parts.TcdClaseEditPart.VISUAL_ID == diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-				.getVisualID(view);
+		int visualID = diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getVisualID(view);
+		return visualID == diagrama_concreta.diagram.edit.parts.TCDClaseEditPart.VISUAL_ID
+				|| visualID == diagrama_concreta.diagram.edit.parts.TCDPaqueteEditPart.VISUAL_ID;
 	}
 
 	/**
@@ -106,7 +121,7 @@ public class TcdDiagramaClasesCanonicalEditPolicy extends CanonicalEditPolicy {
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<diagrama_concreta.diagram.part.Diagrama_concretaNodeDescriptor> childDescriptors = diagrama_concreta.diagram.part.Diagrama_concretaDiagramUpdater
-				.getTcdDiagramaClases_1000SemanticChildren((View) getHost().getModel());
+				.getTCDDiagramaClases_1000SemanticChildren((View) getHost().getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours and not shortcuts
 		LinkedList<View> knownViewChildren = new LinkedList<View>();
@@ -236,80 +251,88 @@ public class TcdDiagramaClasesCanonicalEditPolicy extends CanonicalEditPolicy {
 	*/
 	private Collection<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor> collectAllLinks(View view,
 			Domain2Notation domain2NotationMap) {
-		if (!diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.MODEL_ID
+		if (!diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.MODEL_ID
 				.equals(diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getModelID(view))) {
 			return Collections.emptyList();
 		}
 		LinkedList<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor> result = new LinkedList<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor>();
 		switch (diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getVisualID(view)) {
-		case diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.VISUAL_ID: {
+		case diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(diagrama_concreta.diagram.part.Diagrama_concretaDiagramUpdater
-						.getTcdDiagramaClases_1000ContainedLinks(view));
+						.getTCDDiagramaClases_1000ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case diagrama_concreta.diagram.edit.parts.TcdClaseEditPart.VISUAL_ID: {
+		case diagrama_concreta.diagram.edit.parts.TCDClaseEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(diagrama_concreta.diagram.part.Diagrama_concretaDiagramUpdater
-						.getTcdClase_2001ContainedLinks(view));
+						.getTCDClase_2001ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case diagrama_concreta.diagram.edit.parts.TcdAtributoEditPart.VISUAL_ID: {
+		case diagrama_concreta.diagram.edit.parts.TCDPaqueteEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(diagrama_concreta.diagram.part.Diagrama_concretaDiagramUpdater
-						.getTcdAtributo_3001ContainedLinks(view));
+						.getTCDPaquete_2002ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case diagrama_concreta.diagram.edit.parts.TcdMetodoEditPart.VISUAL_ID: {
+		case diagrama_concreta.diagram.edit.parts.TCDAtributoEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(diagrama_concreta.diagram.part.Diagrama_concretaDiagramUpdater
-						.getTcdMetodo_3002ContainedLinks(view));
+						.getTCDAtributo_3001ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case diagrama_concreta.diagram.edit.parts.TcdAsociacionEditPart.VISUAL_ID: {
+		case diagrama_concreta.diagram.edit.parts.TCDMetodoEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(diagrama_concreta.diagram.part.Diagrama_concretaDiagramUpdater
-						.getTcdAsociacion_4001ContainedLinks(view));
+						.getTCDMetodo_3002ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case diagrama_concreta.diagram.edit.parts.TcdComposicionEditPart.VISUAL_ID: {
+		case diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(diagrama_concreta.diagram.part.Diagrama_concretaDiagramUpdater
-						.getTcdComposicion_4002ContainedLinks(view));
+						.getTCDAgregacion_4005ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case diagrama_concreta.diagram.edit.parts.TcdDependenciaEditPart.VISUAL_ID: {
+		case diagrama_concreta.diagram.edit.parts.TCDAsociacionEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(diagrama_concreta.diagram.part.Diagrama_concretaDiagramUpdater
-						.getTcdDependencia_4003ContainedLinks(view));
+						.getTCDAsociacion_4001ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case diagrama_concreta.diagram.edit.parts.TcdHerenciaEditPart.VISUAL_ID: {
+		case diagrama_concreta.diagram.edit.parts.TCDComposicionEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(diagrama_concreta.diagram.part.Diagrama_concretaDiagramUpdater
-						.getTcdHerencia_4004ContainedLinks(view));
+						.getTCDComposicion_4002ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case diagrama_concreta.diagram.edit.parts.TcdAgregacionEditPart.VISUAL_ID: {
+		case diagrama_concreta.diagram.edit.parts.TCDDependenciaEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(diagrama_concreta.diagram.part.Diagrama_concretaDiagramUpdater
-						.getTcdAgregacion_4005ContainedLinks(view));
+						.getTCDDependencia_4003ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case diagrama_concreta.diagram.edit.parts.TCDHerenciaEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(diagrama_concreta.diagram.part.Diagrama_concretaDiagramUpdater
+						.getTCDHerencia_4004ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;

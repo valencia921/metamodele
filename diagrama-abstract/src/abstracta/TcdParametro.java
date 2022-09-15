@@ -6,22 +6,22 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Tcd Parametro</b></em>'.
+ * A representation of the model object '<em><b>TCD Parametro</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link abstracta.TcdParametro#getNombre <em>Nombre</em>}</li>
- *   <li>{@link abstracta.TcdParametro#getTipoDato <em>Tipo Dato</em>}</li>
+ *   <li>{@link abstracta.TCDParametro#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link abstracta.TCDParametro#getTipoDato <em>Tipo Dato</em>}</li>
  * </ul>
  *
- * @see abstracta.AbstractaPackage#getTcdParametro()
+ * @see abstracta.AbstractaPackage#getTCDParametro()
  * @model
  * @generated
  */
-public interface TcdParametro extends EObject {
+public interface TCDParametro extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -32,14 +32,14 @@ public interface TcdParametro extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nombre</em>' attribute.
 	 * @see #setNombre(String)
-	 * @see abstracta.AbstractaPackage#getTcdParametro_Nombre()
+	 * @see abstracta.AbstractaPackage#getTCDParametro_Nombre()
 	 * @model
 	 * @generated
 	 */
 	String getNombre();
 
 	/**
-	 * Sets the value of the '{@link abstracta.TcdParametro#getNombre <em>Nombre</em>}' attribute.
+	 * Sets the value of the '{@link abstracta.TCDParametro#getNombre <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Nombre</em>' attribute.
@@ -60,14 +60,14 @@ public interface TcdParametro extends EObject {
 	 * @return the value of the '<em>Tipo Dato</em>' attribute.
 	 * @see abstracta.TipoDato
 	 * @see #setTipoDato(TipoDato)
-	 * @see abstracta.AbstractaPackage#getTcdParametro_TipoDato()
+	 * @see abstracta.AbstractaPackage#getTCDParametro_TipoDato()
 	 * @model
 	 * @generated
 	 */
 	TipoDato getTipoDato();
 
 	/**
-	 * Sets the value of the '{@link abstracta.TcdParametro#getTipoDato <em>Tipo Dato</em>}' attribute.
+	 * Sets the value of the '{@link abstracta.TCDParametro#getTipoDato <em>Tipo Dato</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Tipo Dato</em>' attribute.
@@ -77,4 +77,4 @@ public interface TcdParametro extends EObject {
 	 */
 	void setTipoDato(TipoDato value);
 
-} // TcdParametro
+} // TCDParametro

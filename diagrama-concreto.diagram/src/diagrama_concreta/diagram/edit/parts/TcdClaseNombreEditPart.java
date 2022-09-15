@@ -50,7 +50,7 @@ import org.eclipse.swt.graphics.Image;
 /**
  * @generated
  */
-public class TcdClaseNombreEditPart extends CompartmentEditPart implements ITextAwareEditPart {
+public class TCDClaseNombreEditPart extends CompartmentEditPart implements ITextAwareEditPart {
 
 	/**
 	* @generated
@@ -85,7 +85,7 @@ public class TcdClaseNombreEditPart extends CompartmentEditPart implements IText
 	/**
 	* @generated
 	*/
-	public TcdClaseNombreEditPart(View view) {
+	public TCDClaseNombreEditPart(View view) {
 		super(view);
 	}
 
@@ -292,9 +292,9 @@ public class TcdClaseNombreEditPart extends CompartmentEditPart implements IText
 	public IParser getParser() {
 		if (parser == null) {
 			parser = diagrama_concreta.diagram.providers.Diagrama_concretaParserProvider.getParser(
-					diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdClase_2001, getParserElement(),
+					diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDClase_2001, getParserElement(),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdClaseNombreEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDClaseNombreEditPart.VISUAL_ID));
 		}
 		return parser;
 	}

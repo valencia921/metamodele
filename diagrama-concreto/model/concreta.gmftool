@@ -12,8 +12,8 @@
         collapsible="true">
       <tools
           xsi:type="gmftool:CreationTool"
-          title="TcdAtributo"
-          description="Create new TcdAtributo">
+          title="TCDAtributo"
+          description="Create new TCDAtributo">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -21,8 +21,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="TcdClase"
-          description="Create new TcdClase">
+          title="TCDClase"
+          description="Create new TCDClase">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -30,8 +30,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="TcdMetodo"
-          description="Create new TcdMetodo">
+          title="TCDMetodo"
+          description="Create new TCDMetodo">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -39,8 +39,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="TcdPaquete"
-          description="Create new TcdPaquete">
+          title="TCDPaquete"
+          description="Create new TCDPaquete">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -48,8 +48,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="TcdParametro"
-          description="Create new TcdParametro">
+          title="TCDParametro"
+          description="Create new TCDParametro">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -62,8 +62,8 @@
         collapsible="true">
       <tools
           xsi:type="gmftool:CreationTool"
-          title="TcdAgregacion"
-          description="Create new TcdAgregacion">
+          title="TCDAgregacion"
+          description="Create new TCDAgregacion">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -71,8 +71,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="TcdAsociacion"
-          description="Create new TcdAsociacion">
+          title="TCDAsociacion"
+          description="Create new TCDAsociacion">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -80,8 +80,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="TcdComposicion"
-          description="Create new TcdComposicion">
+          title="TCDComposicion"
+          description="Create new TCDComposicion">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -89,8 +89,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="TcdDependencia"
-          description="Create new TcdDependencia">
+          title="TCDDependencia"
+          description="Create new TCDDependencia">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -98,8 +98,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="TcdHerencia"
-          description="Create new TcdHerencia">
+          title="TCDHerencia"
+          description="Create new TCDHerencia">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon

@@ -141,11 +141,11 @@ public class Diagrama_concretaDiagramEditorUtil {
 				Collections.EMPTY_LIST) {
 			protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info)
 					throws ExecutionException {
-				diagrama_concreta.TcdDiagramaClases model = createInitialModel();
+				diagrama_concreta.TCDDiagramaClases model = createInitialModel();
 				attachModelToResource(model, modelResource);
 
 				Diagram diagram = ViewService.createDiagram(model,
-						diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.MODEL_ID,
+						diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.MODEL_ID,
 						diagrama_concreta.diagram.part.Diagrama_concretaDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT);
 				if (diagram != null) {
 					diagramResource.getContents().add(diagram);
@@ -184,8 +184,8 @@ public class Diagrama_concretaDiagramEditorUtil {
 	* <!-- end-user-doc -->
 	* @generated
 	*/
-	private static diagrama_concreta.TcdDiagramaClases createInitialModel() {
-		return diagrama_concreta.Diagrama_concretaFactory.eINSTANCE.createTcdDiagramaClases();
+	private static diagrama_concreta.TCDDiagramaClases createInitialModel() {
+		return diagrama_concreta.Diagrama_concretaFactory.eINSTANCE.createTCDDiagramaClases();
 	}
 
 	/**
@@ -194,7 +194,7 @@ public class Diagrama_concretaDiagramEditorUtil {
 	* <!-- end-user-doc -->
 	* @generated
 	*/
-	private static void attachModelToResource(diagrama_concreta.TcdDiagramaClases model, Resource resource) {
+	private static void attachModelToResource(diagrama_concreta.TCDDiagramaClases model, Resource resource) {
 		resource.getContents().add(model);
 	}
 

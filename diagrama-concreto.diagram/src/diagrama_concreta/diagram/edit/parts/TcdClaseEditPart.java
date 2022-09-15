@@ -32,7 +32,7 @@ import org.eclipse.swt.graphics.Color;
 /**
  * @generated
  */
-public class TcdClaseEditPart extends ShapeNodeEditPart {
+public class TCDClaseEditPart extends ShapeNodeEditPart {
 
 	/**
 	* @generated
@@ -52,7 +52,7 @@ public class TcdClaseEditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public TcdClaseEditPart(View view) {
+	public TCDClaseEditPart(View view) {
 		super(view);
 	}
 
@@ -62,7 +62,7 @@ public class TcdClaseEditPart extends ShapeNodeEditPart {
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new diagrama_concreta.diagram.edit.policies.TcdClaseItemSemanticEditPolicy());
+				new diagrama_concreta.diagram.edit.policies.TCDClaseItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
 		installEditPolicy(EditPolicyRoles.OPEN_ROLE,
 				new diagrama_concreta.diagram.edit.policies.OpenDiagramEditPolicy()); // XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
@@ -98,38 +98,38 @@ public class TcdClaseEditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected IFigure createNodeShape() {
-		return primaryShape = new TcdClaseFigure();
+		return primaryShape = new TCDClaseFigure();
 	}
 
 	/**
 	* @generated
 	*/
-	public TcdClaseFigure getPrimaryShape() {
-		return (TcdClaseFigure) primaryShape;
+	public TCDClaseFigure getPrimaryShape() {
+		return (TCDClaseFigure) primaryShape;
 	}
 
 	/**
 	* @generated
 	*/
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof diagrama_concreta.diagram.edit.parts.TcdClaseNombreEditPart) {
-			((diagrama_concreta.diagram.edit.parts.TcdClaseNombreEditPart) childEditPart)
-					.setLabel(getPrimaryShape().getFigureTcdClaseLabelFigure());
+		if (childEditPart instanceof diagrama_concreta.diagram.edit.parts.TCDClaseNombreEditPart) {
+			((diagrama_concreta.diagram.edit.parts.TCDClaseNombreEditPart) childEditPart)
+					.setLabel(getPrimaryShape().getFigureTCDClaseLabelFigure());
 			return true;
 		}
-		if (childEditPart instanceof diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaAtributosCompartmentEditPart) {
-			IFigure pane = getPrimaryShape().getTcdClaseListaAtributosCompartmentFigure();
+		if (childEditPart instanceof diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaAtributosCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getTCDClaseListaAtributosCompartmentFigure();
 			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
 			pane.add(
-					((diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaAtributosCompartmentEditPart) childEditPart)
+					((diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaAtributosCompartmentEditPart) childEditPart)
 							.getFigure());
 			return true;
 		}
-		if (childEditPart instanceof diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaMetodosCompartmentEditPart) {
-			IFigure pane = getPrimaryShape().getTcdClaseListaMetodosCompartmentFigure();
+		if (childEditPart instanceof diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaMetodosCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getTCDClaseListaMetodosCompartmentFigure();
 			setupContentPane(pane); // FIXME each comparment should handle his content pane in his own way 
 			pane.add(
-					((diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaMetodosCompartmentEditPart) childEditPart)
+					((diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaMetodosCompartmentEditPart) childEditPart)
 							.getFigure());
 			return true;
 		}
@@ -140,20 +140,20 @@ public class TcdClaseEditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof diagrama_concreta.diagram.edit.parts.TcdClaseNombreEditPart) {
+		if (childEditPart instanceof diagrama_concreta.diagram.edit.parts.TCDClaseNombreEditPart) {
 			return true;
 		}
-		if (childEditPart instanceof diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaAtributosCompartmentEditPart) {
-			IFigure pane = getPrimaryShape().getTcdClaseListaAtributosCompartmentFigure();
+		if (childEditPart instanceof diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaAtributosCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getTCDClaseListaAtributosCompartmentFigure();
 			pane.remove(
-					((diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaAtributosCompartmentEditPart) childEditPart)
+					((diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaAtributosCompartmentEditPart) childEditPart)
 							.getFigure());
 			return true;
 		}
-		if (childEditPart instanceof diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaMetodosCompartmentEditPart) {
-			IFigure pane = getPrimaryShape().getTcdClaseListaMetodosCompartmentFigure();
+		if (childEditPart instanceof diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaMetodosCompartmentEditPart) {
+			IFigure pane = getPrimaryShape().getTCDClaseListaMetodosCompartmentFigure();
 			pane.remove(
-					((diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaMetodosCompartmentEditPart) childEditPart)
+					((diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaMetodosCompartmentEditPart) childEditPart)
 							.getFigure());
 			return true;
 		}
@@ -184,11 +184,11 @@ public class TcdClaseEditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected IFigure getContentPaneFor(IGraphicalEditPart editPart) {
-		if (editPart instanceof diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaAtributosCompartmentEditPart) {
-			return getPrimaryShape().getTcdClaseListaAtributosCompartmentFigure();
+		if (editPart instanceof diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaAtributosCompartmentEditPart) {
+			return getPrimaryShape().getTCDClaseListaAtributosCompartmentFigure();
 		}
-		if (editPart instanceof diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaMetodosCompartmentEditPart) {
-			return getPrimaryShape().getTcdClaseListaMetodosCompartmentFigure();
+		if (editPart instanceof diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaMetodosCompartmentEditPart) {
+			return getPrimaryShape().getTCDClaseListaMetodosCompartmentFigure();
 		}
 		return getContentPane();
 	}
@@ -284,7 +284,7 @@ public class TcdClaseEditPart extends ShapeNodeEditPart {
 	*/
 	public EditPart getPrimaryChildEditPart() {
 		return getChildBySemanticHint(diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-				.getType(diagrama_concreta.diagram.edit.parts.TcdClaseNombreEditPart.VISUAL_ID));
+				.getType(diagrama_concreta.diagram.edit.parts.TCDClaseNombreEditPart.VISUAL_ID));
 	}
 
 	/**
@@ -302,26 +302,27 @@ public class TcdClaseEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public class TcdClaseFigure extends RoundedRectangle {
+	public class TCDClaseFigure extends RoundedRectangle {
 
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigureTcdClaseLabelFigure;
+		private WrappingLabel fFigureTCDClaseLabelFigure;
 		/**
 		 * @generated
 		 */
-		private RectangleFigure fTcdClaseListaAtributosCompartmentFigure;
+		private RectangleFigure fTCDClaseListaAtributosCompartmentFigure;
 		/**
 		 * @generated
 		 */
-		private RectangleFigure fTcdClaseListaMetodosCompartmentFigure;
+		private RectangleFigure fTCDClaseListaMetodosCompartmentFigure;
 
 		/**
 		 * @generated
 		 */
-		public TcdClaseFigure() {
+		public TCDClaseFigure() {
 			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8), getMapMode().DPtoLP(8)));
+			this.setBackgroundColor(THIS_BACK);
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
 			createContents();
@@ -332,49 +333,54 @@ public class TcdClaseEditPart extends ShapeNodeEditPart {
 		 */
 		private void createContents() {
 
-			fFigureTcdClaseLabelFigure = new WrappingLabel();
+			fFigureTCDClaseLabelFigure = new WrappingLabel();
 
-			fFigureTcdClaseLabelFigure.setText("TcdClase");
-			fFigureTcdClaseLabelFigure
+			fFigureTCDClaseLabelFigure.setText("TCDClase");
+			fFigureTCDClaseLabelFigure
 					.setMaximumSize(new Dimension(getMapMode().DPtoLP(10000), getMapMode().DPtoLP(50)));
 
-			this.add(fFigureTcdClaseLabelFigure);
+			this.add(fFigureTCDClaseLabelFigure);
 
-			fTcdClaseListaAtributosCompartmentFigure = new RectangleFigure();
+			fTCDClaseListaAtributosCompartmentFigure = new RectangleFigure();
 
-			fTcdClaseListaAtributosCompartmentFigure.setOutline(false);
+			fTCDClaseListaAtributosCompartmentFigure.setOutline(false);
 
-			this.add(fTcdClaseListaAtributosCompartmentFigure);
+			this.add(fTCDClaseListaAtributosCompartmentFigure);
 
-			fTcdClaseListaMetodosCompartmentFigure = new RectangleFigure();
+			fTCDClaseListaMetodosCompartmentFigure = new RectangleFigure();
 
-			fTcdClaseListaMetodosCompartmentFigure.setOutline(false);
+			fTCDClaseListaMetodosCompartmentFigure.setOutline(false);
 
-			this.add(fTcdClaseListaMetodosCompartmentFigure);
+			this.add(fTCDClaseListaMetodosCompartmentFigure);
 
 		}
 
 		/**
 		 * @generated
 		 */
-		public WrappingLabel getFigureTcdClaseLabelFigure() {
-			return fFigureTcdClaseLabelFigure;
+		public WrappingLabel getFigureTCDClaseLabelFigure() {
+			return fFigureTCDClaseLabelFigure;
 		}
 
 		/**
 		 * @generated
 		 */
-		public RectangleFigure getTcdClaseListaAtributosCompartmentFigure() {
-			return fTcdClaseListaAtributosCompartmentFigure;
+		public RectangleFigure getTCDClaseListaAtributosCompartmentFigure() {
+			return fTCDClaseListaAtributosCompartmentFigure;
 		}
 
 		/**
 		 * @generated
 		 */
-		public RectangleFigure getTcdClaseListaMetodosCompartmentFigure() {
-			return fTcdClaseListaMetodosCompartmentFigure;
+		public RectangleFigure getTCDClaseListaMetodosCompartmentFigure() {
+			return fTCDClaseListaMetodosCompartmentFigure;
 		}
 
 	}
+
+	/**
+	 * @generated
+	 */
+	static final Color THIS_BACK = new Color(null, 227, 255, 248);
 
 }

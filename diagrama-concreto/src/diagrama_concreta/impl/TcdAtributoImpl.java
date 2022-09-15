@@ -3,7 +3,7 @@
 package diagrama_concreta.impl;
 
 import diagrama_concreta.Diagrama_concretaPackage;
-import diagrama_concreta.TcdAtributo;
+import diagrama_concreta.TCDAtributo;
 import diagrama_concreta.TipoDato;
 import diagrama_concreta.Visibilidad;
 
@@ -16,22 +16,22 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Tcd Atributo</b></em>'.
+ * An implementation of the model object '<em><b>TCD Atributo</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link diagrama_concreta.impl.TcdAtributoImpl#getNombre <em>Nombre</em>}</li>
- *   <li>{@link diagrama_concreta.impl.TcdAtributoImpl#getTipoDato <em>Tipo Dato</em>}</li>
- *   <li>{@link diagrama_concreta.impl.TcdAtributoImpl#getVisibilidad <em>Visibilidad</em>}</li>
- *   <li>{@link diagrama_concreta.impl.TcdAtributoImpl#isIsConstante <em>Is Constante</em>}</li>
- *   <li>{@link diagrama_concreta.impl.TcdAtributoImpl#isIsStatic <em>Is Static</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDAtributoImpl#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDAtributoImpl#getTipoDato <em>Tipo Dato</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDAtributoImpl#getVisibilidad <em>Visibilidad</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDAtributoImpl#isIsConstante <em>Is Constante</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDAtributoImpl#isIsStatic <em>Is Static</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TcdAtributoImpl extends EObjectImpl implements TcdAtributo {
+public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 	/**
 	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -137,7 +137,7 @@ public class TcdAtributoImpl extends EObjectImpl implements TcdAtributo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TcdAtributoImpl() {
+	protected TCDAtributoImpl() {
 		super();
 	}
 
@@ -378,4 +378,4 @@ public class TcdAtributoImpl extends EObjectImpl implements TcdAtributo {
 		return result.toString();
 	}
 
-} //TcdAtributoImpl
+} //TCDAtributoImpl

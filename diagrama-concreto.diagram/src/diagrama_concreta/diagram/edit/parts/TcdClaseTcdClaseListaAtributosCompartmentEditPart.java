@@ -23,7 +23,7 @@ import org.eclipse.gmf.tooling.runtime.edit.policies.reparent.CreationEditPolicy
 /**
  * @generated
  */
-public class TcdClaseTcdClaseListaAtributosCompartmentEditPart extends ShapeCompartmentEditPart {
+public class TCDClaseTCDClaseListaAtributosCompartmentEditPart extends ShapeCompartmentEditPart {
 
 	/**
 	* @generated
@@ -33,7 +33,7 @@ public class TcdClaseTcdClaseListaAtributosCompartmentEditPart extends ShapeComp
 	/**
 	* @generated
 	*/
-	public TcdClaseTcdClaseListaAtributosCompartmentEditPart(View view) {
+	public TCDClaseTCDClaseListaAtributosCompartmentEditPart(View view) {
 		super(view);
 	}
 
@@ -41,7 +41,7 @@ public class TcdClaseTcdClaseListaAtributosCompartmentEditPart extends ShapeComp
 	* @generated
 	*/
 	public String getCompartmentName() {
-		return diagrama_concreta.diagram.part.Messages.TcdClaseTcdClaseListaAtributosCompartmentEditPart_title;
+		return diagrama_concreta.diagram.part.Messages.TCDClaseTCDClaseListaAtributosCompartmentEditPart_title;
 	}
 
 	/**
@@ -60,12 +60,12 @@ public class TcdClaseTcdClaseListaAtributosCompartmentEditPart extends ShapeComp
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE, new ResizableCompartmentEditPolicy());
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new diagrama_concreta.diagram.edit.policies.TcdClaseTcdClaseListaAtributosCompartmentItemSemanticEditPolicy());
+				new diagrama_concreta.diagram.edit.policies.TCDClaseTCDClaseListaAtributosCompartmentItemSemanticEditPolicy());
 		installEditPolicy(EditPolicyRoles.CREATION_ROLE, new CreationEditPolicyWithCustomReparent(
 				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.TYPED_INSTANCE));
 		installEditPolicy(EditPolicyRoles.DRAG_DROP_ROLE, new DragDropEditPolicy());
 		installEditPolicy(EditPolicyRoles.CANONICAL_ROLE,
-				new diagrama_concreta.diagram.edit.policies.TcdClaseTcdClaseListaAtributosCompartmentCanonicalEditPolicy());
+				new diagrama_concreta.diagram.edit.policies.TCDClaseTCDClaseListaAtributosCompartmentCanonicalEditPolicy());
 	}
 
 	/**
@@ -85,7 +85,7 @@ public class TcdClaseTcdClaseListaAtributosCompartmentEditPart extends ShapeComp
 			CreateElementRequestAdapter adapter = ((CreateViewAndElementRequest) request).getViewAndElementDescriptor()
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter.getAdapter(IElementType.class);
-			if (type == diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdAtributo_3001) {
+			if (type == diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDAtributo_3001) {
 				return this;
 			}
 			return getParent().getTargetEditPart(request);

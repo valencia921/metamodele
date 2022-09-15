@@ -309,85 +309,85 @@ public class Diagrama_concretaBaseItemSemanticEditPolicy extends SemanticEditPol
 		/**
 		 * @generated
 		 */
-		public boolean canCreateTcdAsociacion_4001(diagrama_concreta.TcdDiagramaClases container,
-				diagrama_concreta.TcdClase source, diagrama_concreta.TcdClase target) {
-			return canExistTcdAsociacion_4001(container, null, source, target);
+		public boolean canCreateTCDAsociacion_4001(diagrama_concreta.TCDDiagramaClases container,
+				diagrama_concreta.TCDClase source, diagrama_concreta.TCDClase target) {
+			return canExistTCDAsociacion_4001(container, null, source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateTcdComposicion_4002(diagrama_concreta.TcdDiagramaClases container,
-				diagrama_concreta.TcdClase source, diagrama_concreta.TcdClase target) {
-			return canExistTcdComposicion_4002(container, null, source, target);
+		public boolean canCreateTCDComposicion_4002(diagrama_concreta.TCDDiagramaClases container,
+				diagrama_concreta.TCDClase source, diagrama_concreta.TCDClase target) {
+			return canExistTCDComposicion_4002(container, null, source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateTcdDependencia_4003(diagrama_concreta.TcdDiagramaClases container,
-				diagrama_concreta.TcdClase source, diagrama_concreta.TcdClase target) {
-			return canExistTcdDependencia_4003(container, null, source, target);
+		public boolean canCreateTCDDependencia_4003(diagrama_concreta.TCDDiagramaClases container,
+				diagrama_concreta.TCDClase source, diagrama_concreta.TCDClase target) {
+			return canExistTCDDependencia_4003(container, null, source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateTcdHerencia_4004(diagrama_concreta.TcdDiagramaClases container,
-				diagrama_concreta.TcdClase source, diagrama_concreta.TcdClase target) {
-			return canExistTcdHerencia_4004(container, null, source, target);
+		public boolean canCreateTCDHerencia_4004(diagrama_concreta.TCDDiagramaClases container,
+				diagrama_concreta.TCDClase source, diagrama_concreta.TCDClase target) {
+			return canExistTCDHerencia_4004(container, null, source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public boolean canCreateTcdAgregacion_4005(diagrama_concreta.TcdDiagramaClases container,
-				diagrama_concreta.TcdClase source, diagrama_concreta.TcdClase target) {
-			return canExistTcdAgregacion_4005(container, null, source, target);
+		public boolean canCreateTCDAgregacion_4005(diagrama_concreta.TCDDiagramaClases container,
+				diagrama_concreta.TCDClase source, diagrama_concreta.TCDClase target) {
+			return canExistTCDAgregacion_4005(container, null, source, target);
 		}
 
 		/**
 		* @generated
 		*/
-		public boolean canExistTcdAsociacion_4001(diagrama_concreta.TcdDiagramaClases container,
-				diagrama_concreta.TcdAsociacion linkInstance, diagrama_concreta.TcdClase source,
-				diagrama_concreta.TcdClase target) {
+		public boolean canExistTCDAsociacion_4001(diagrama_concreta.TCDDiagramaClases container,
+				diagrama_concreta.TCDAsociacion linkInstance, diagrama_concreta.TCDClase source,
+				diagrama_concreta.TCDClase target) {
 			return true;
 		}
 
 		/**
 		* @generated
 		*/
-		public boolean canExistTcdComposicion_4002(diagrama_concreta.TcdDiagramaClases container,
-				diagrama_concreta.TcdComposicion linkInstance, diagrama_concreta.TcdClase source,
-				diagrama_concreta.TcdClase target) {
+		public boolean canExistTCDComposicion_4002(diagrama_concreta.TCDDiagramaClases container,
+				diagrama_concreta.TCDComposicion linkInstance, diagrama_concreta.TCDClase source,
+				diagrama_concreta.TCDClase target) {
 			return true;
 		}
 
 		/**
 		* @generated
 		*/
-		public boolean canExistTcdDependencia_4003(diagrama_concreta.TcdDiagramaClases container,
-				diagrama_concreta.TcdDependencia linkInstance, diagrama_concreta.TcdClase source,
-				diagrama_concreta.TcdClase target) {
+		public boolean canExistTCDDependencia_4003(diagrama_concreta.TCDDiagramaClases container,
+				diagrama_concreta.TCDDependencia linkInstance, diagrama_concreta.TCDClase source,
+				diagrama_concreta.TCDClase target) {
 			return true;
 		}
 
 		/**
 		* @generated
 		*/
-		public boolean canExistTcdHerencia_4004(diagrama_concreta.TcdDiagramaClases container,
-				diagrama_concreta.TcdHerencia linkInstance, diagrama_concreta.TcdClase source,
-				diagrama_concreta.TcdClase target) {
+		public boolean canExistTCDHerencia_4004(diagrama_concreta.TCDDiagramaClases container,
+				diagrama_concreta.TCDHerencia linkInstance, diagrama_concreta.TCDClase source,
+				diagrama_concreta.TCDClase target) {
 			return true;
 		}
 
 		/**
 		* @generated
 		*/
-		public boolean canExistTcdAgregacion_4005(diagrama_concreta.TcdDiagramaClases container,
-				diagrama_concreta.TcdAgregacion linkInstance, diagrama_concreta.TcdClase source,
-				diagrama_concreta.TcdClase target) {
+		public boolean canExistTCDAgregacion_4005(diagrama_concreta.TCDDiagramaClases container,
+				diagrama_concreta.TCDAgregacion linkInstance, diagrama_concreta.TCDClase source,
+				diagrama_concreta.TCDClase target) {
 			return true;
 		}
 	}

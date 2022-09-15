@@ -79,7 +79,7 @@ public interface ModelFactory extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Lista Diagramas</b></em>' containment reference list.
-	 * The list contents are of type {@link diagrama_concreta.TcdDiagramaClases}.
+	 * The list contents are of type {@link diagrama_concreta.TCDDiagramaClases}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Lista Diagramas</em>' containment reference list isn't clear,
@@ -91,6 +91,6 @@ public interface ModelFactory extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<TcdDiagramaClases> getListaDiagramas();
+	EList<TCDDiagramaClases> getListaDiagramas();
 
 } // ModelFactory

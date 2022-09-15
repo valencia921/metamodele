@@ -8,27 +8,27 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Tcd Paquete</b></em>'.
+ * A representation of the model object '<em><b>TCD Paquete</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link diagrama_concreta.TcdPaquete#getListaPaquetes <em>Lista Paquetes</em>}</li>
- *   <li>{@link diagrama_concreta.TcdPaquete#getListaClases <em>Lista Clases</em>}</li>
- *   <li>{@link diagrama_concreta.TcdPaquete#getNombre <em>Nombre</em>}</li>
- *   <li>{@link diagrama_concreta.TcdPaquete#getRuta <em>Ruta</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDPaquete#getListaPaquetes <em>Lista Paquetes</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDPaquete#getListaClases <em>Lista Clases</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDPaquete#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDPaquete#getRuta <em>Ruta</em>}</li>
  * </ul>
  *
- * @see diagrama_concreta.Diagrama_concretaPackage#getTcdPaquete()
- * @model annotation="gmf.node label='nombre'"
+ * @see diagrama_concreta.Diagrama_concretaPackage#getTCDPaquete()
+ * @model annotation="gmf.node label='nombre' color='255,252,142'"
  * @generated
  */
-public interface TcdPaquete extends EObject {
+public interface TCDPaquete extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Lista Paquetes</b></em>' containment reference list.
-	 * The list contents are of type {@link diagrama_concreta.TcdPaquete}.
+	 * The list contents are of type {@link diagrama_concreta.TCDPaquete}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Lista Paquetes</em>' containment reference list isn't clear,
@@ -36,15 +36,15 @@ public interface TcdPaquete extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Lista Paquetes</em>' containment reference list.
-	 * @see diagrama_concreta.Diagrama_concretaPackage#getTcdPaquete_ListaPaquetes()
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDPaquete_ListaPaquetes()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<TcdPaquete> getListaPaquetes();
+	EList<TCDPaquete> getListaPaquetes();
 
 	/**
 	 * Returns the value of the '<em><b>Lista Clases</b></em>' containment reference list.
-	 * The list contents are of type {@link diagrama_concreta.TcdClase}.
+	 * The list contents are of type {@link diagrama_concreta.TCDClase}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Lista Clases</em>' containment reference list isn't clear,
@@ -52,11 +52,11 @@ public interface TcdPaquete extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Lista Clases</em>' containment reference list.
-	 * @see diagrama_concreta.Diagrama_concretaPackage#getTcdPaquete_ListaClases()
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDPaquete_ListaClases()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<TcdClase> getListaClases();
+	EList<TCDClase> getListaClases();
 
 	/**
 	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
@@ -68,14 +68,14 @@ public interface TcdPaquete extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nombre</em>' attribute.
 	 * @see #setNombre(String)
-	 * @see diagrama_concreta.Diagrama_concretaPackage#getTcdPaquete_Nombre()
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDPaquete_Nombre()
 	 * @model
 	 * @generated
 	 */
 	String getNombre();
 
 	/**
-	 * Sets the value of the '{@link diagrama_concreta.TcdPaquete#getNombre <em>Nombre</em>}' attribute.
+	 * Sets the value of the '{@link diagrama_concreta.TCDPaquete#getNombre <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Nombre</em>' attribute.
@@ -94,14 +94,14 @@ public interface TcdPaquete extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ruta</em>' attribute.
 	 * @see #setRuta(String)
-	 * @see diagrama_concreta.Diagrama_concretaPackage#getTcdPaquete_Ruta()
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDPaquete_Ruta()
 	 * @model
 	 * @generated
 	 */
 	String getRuta();
 
 	/**
-	 * Sets the value of the '{@link diagrama_concreta.TcdPaquete#getRuta <em>Ruta</em>}' attribute.
+	 * Sets the value of the '{@link diagrama_concreta.TCDPaquete#getRuta <em>Ruta</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Ruta</em>' attribute.
@@ -110,4 +110,4 @@ public interface TcdPaquete extends EObject {
 	 */
 	void setRuta(String value);
 
-} // TcdPaquete
+} // TCDPaquete

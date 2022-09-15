@@ -8,161 +8,181 @@
     xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
   <nodes>
     <containmentFeature
-        href="concreta.ecore#//TcdDiagramaClases/listaClases"/>
+        href="concreta.ecore#//TCDDiagramaClases/listaClases"/>
     <ownedChild
         relatedDiagrams="//@diagram">
       <domainMetaElement
-          href="concreta.ecore#//TcdClase"/>
+          href="concreta.ecore#//TCDClase"/>
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
-            href="concreta.gmfgraph#TcdClaseLabel"/>
+            href="concreta.gmfgraph#TCDClaseLabel"/>
         <features
-            href="concreta.ecore#//TcdClase/nombre"/>
+            href="concreta.ecore#//TCDClase/nombre"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
           href="concreta.gmftool#//@palette/@tools.0/@tools.1"/>
       <diagramNode
-          href="concreta.gmfgraph#TcdClase"/>
+          href="concreta.gmfgraph#TCDClase"/>
       <children
           compartment="//@nodes.0/@ownedChild/@compartments.0">
         <containmentFeature
-            href="concreta.ecore#//TcdClase/listaAtributos"/>
+            href="concreta.ecore#//TCDClase/listaAtributos"/>
         <ownedChild>
           <domainMetaElement
-              href="concreta.ecore#//TcdAtributo"/>
+              href="concreta.ecore#//TCDAtributo"/>
           <labelMappings
               xsi:type="gmfmap:FeatureLabelMapping">
             <diagramLabel
-                href="concreta.gmfgraph#TcdAtributoLabel"/>
+                href="concreta.gmfgraph#TCDAtributoLabel"/>
             <features
-                href="concreta.ecore#//TcdAtributo/nombre"/>
+                href="concreta.ecore#//TCDAtributo/nombre"/>
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
               href="concreta.gmftool#//@palette/@tools.0/@tools.0"/>
           <diagramNode
-              href="concreta.gmfgraph#TcdAtributo"/>
+              href="concreta.gmfgraph#TCDAtributo"/>
         </ownedChild>
       </children>
       <children
           compartment="//@nodes.0/@ownedChild/@compartments.1">
         <containmentFeature
-            href="concreta.ecore#//TcdClase/listaMetodos"/>
+            href="concreta.ecore#//TCDClase/listaMetodos"/>
         <ownedChild>
           <domainMetaElement
-              href="concreta.ecore#//TcdMetodo"/>
+              href="concreta.ecore#//TCDMetodo"/>
           <labelMappings
               xsi:type="gmfmap:FeatureLabelMapping">
             <diagramLabel
-                href="concreta.gmfgraph#TcdMetodoLabel"/>
+                href="concreta.gmfgraph#TCDMetodoLabel"/>
             <features
-                href="concreta.ecore#//TcdMetodo/nombre"/>
+                href="concreta.ecore#//TCDMetodo/nombre"/>
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
               href="concreta.gmftool#//@palette/@tools.0/@tools.2"/>
           <diagramNode
-              href="concreta.gmfgraph#TcdMetodo"/>
+              href="concreta.gmfgraph#TCDMetodo"/>
         </ownedChild>
       </children>
       <compartments
           children="//@nodes.0/@ownedChild/@children.0">
         <compartment
-            href="concreta.gmfgraph#TcdClaseListaAtributosCompartment"/>
+            href="concreta.gmfgraph#TCDClaseListaAtributosCompartment"/>
       </compartments>
       <compartments
           children="//@nodes.0/@ownedChild/@children.1">
         <compartment
-            href="concreta.gmfgraph#TcdClaseListaMetodosCompartment"/>
+            href="concreta.gmfgraph#TCDClaseListaMetodosCompartment"/>
       </compartments>
+    </ownedChild>
+  </nodes>
+  <nodes>
+    <containmentFeature
+        href="concreta.ecore#//TCDDiagramaClases/listaPaquetes"/>
+    <ownedChild>
+      <domainMetaElement
+          href="concreta.ecore#//TCDPaquete"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="concreta.gmfgraph#TCDPaqueteLabel"/>
+        <features
+            href="concreta.ecore#//TCDPaquete/nombre"/>
+      </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="concreta.gmftool#//@palette/@tools.0/@tools.3"/>
+      <diagramNode
+          href="concreta.gmfgraph#TCDPaquete"/>
     </ownedChild>
   </nodes>
   <links>
     <domainMetaElement
-        href="concreta.ecore#//TcdAsociacion"/>
+        href="concreta.ecore#//TCDAgregacion"/>
     <containmentFeature
-        href="concreta.ecore#//TcdDiagramaClases/listaRelaciones"/>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="concreta.gmftool#//@palette/@tools.1/@tools.1"/>
-    <diagramLink
-        href="concreta.gmfgraph#TcdAsociacion"/>
-    <sourceMetaFeature
-        xsi:type="ecore:EReference"
-        href="concreta.ecore#//TcdRelacion/source"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="concreta.ecore#//TcdRelacion/target"/>
-  </links>
-  <links>
-    <domainMetaElement
-        href="concreta.ecore#//TcdComposicion"/>
-    <containmentFeature
-        href="concreta.ecore#//TcdDiagramaClases/listaRelaciones"/>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="concreta.gmftool#//@palette/@tools.1/@tools.2"/>
-    <diagramLink
-        href="concreta.gmfgraph#TcdComposicion"/>
-    <sourceMetaFeature
-        xsi:type="ecore:EReference"
-        href="concreta.ecore#//TcdRelacion/source"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="concreta.ecore#//TcdRelacion/target"/>
-  </links>
-  <links>
-    <domainMetaElement
-        href="concreta.ecore#//TcdDependencia"/>
-    <containmentFeature
-        href="concreta.ecore#//TcdDiagramaClases/listaRelaciones"/>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="concreta.gmftool#//@palette/@tools.1/@tools.3"/>
-    <diagramLink
-        href="concreta.gmfgraph#TcdDependencia"/>
-    <sourceMetaFeature
-        xsi:type="ecore:EReference"
-        href="concreta.ecore#//TcdRelacion/source"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="concreta.ecore#//TcdRelacion/target"/>
-  </links>
-  <links>
-    <domainMetaElement
-        href="concreta.ecore#//TcdHerencia"/>
-    <containmentFeature
-        href="concreta.ecore#//TcdDiagramaClases/listaRelaciones"/>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="concreta.gmftool#//@palette/@tools.1/@tools.4"/>
-    <diagramLink
-        href="concreta.gmfgraph#TcdHerencia"/>
-    <sourceMetaFeature
-        xsi:type="ecore:EReference"
-        href="concreta.ecore#//TcdRelacion/source"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="concreta.ecore#//TcdRelacion/target"/>
-  </links>
-  <links>
-    <domainMetaElement
-        href="concreta.ecore#//TcdAgregacion"/>
-    <containmentFeature
-        href="concreta.ecore#//TcdDiagramaClases/listaRelaciones"/>
+        href="concreta.ecore#//TCDDiagramaClases/listaRelaciones"/>
     <tool
         xsi:type="gmftool:CreationTool"
         href="concreta.gmftool#//@palette/@tools.1/@tools.0"/>
     <diagramLink
-        href="concreta.gmfgraph#TcdAgregacion"/>
+        href="concreta.gmfgraph#TCDAgregacion"/>
     <sourceMetaFeature
         xsi:type="ecore:EReference"
-        href="concreta.ecore#//TcdRelacion/source"/>
+        href="concreta.ecore#//TCDRelacion/source"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
-        href="concreta.ecore#//TcdRelacion/target"/>
+        href="concreta.ecore#//TCDRelacion/target"/>
+  </links>
+  <links>
+    <domainMetaElement
+        href="concreta.ecore#//TCDAsociacion"/>
+    <containmentFeature
+        href="concreta.ecore#//TCDDiagramaClases/listaRelaciones"/>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="concreta.gmftool#//@palette/@tools.1/@tools.1"/>
+    <diagramLink
+        href="concreta.gmfgraph#TCDAsociacion"/>
+    <sourceMetaFeature
+        xsi:type="ecore:EReference"
+        href="concreta.ecore#//TCDRelacion/source"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="concreta.ecore#//TCDRelacion/target"/>
+  </links>
+  <links>
+    <domainMetaElement
+        href="concreta.ecore#//TCDComposicion"/>
+    <containmentFeature
+        href="concreta.ecore#//TCDDiagramaClases/listaRelaciones"/>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="concreta.gmftool#//@palette/@tools.1/@tools.2"/>
+    <diagramLink
+        href="concreta.gmfgraph#TCDComposicion"/>
+    <sourceMetaFeature
+        xsi:type="ecore:EReference"
+        href="concreta.ecore#//TCDRelacion/source"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="concreta.ecore#//TCDRelacion/target"/>
+  </links>
+  <links>
+    <domainMetaElement
+        href="concreta.ecore#//TCDDependencia"/>
+    <containmentFeature
+        href="concreta.ecore#//TCDDiagramaClases/listaRelaciones"/>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="concreta.gmftool#//@palette/@tools.1/@tools.3"/>
+    <diagramLink
+        href="concreta.gmfgraph#TCDDependencia"/>
+    <sourceMetaFeature
+        xsi:type="ecore:EReference"
+        href="concreta.ecore#//TCDRelacion/source"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="concreta.ecore#//TCDRelacion/target"/>
+  </links>
+  <links>
+    <domainMetaElement
+        href="concreta.ecore#//TCDHerencia"/>
+    <containmentFeature
+        href="concreta.ecore#//TCDDiagramaClases/listaRelaciones"/>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="concreta.gmftool#//@palette/@tools.1/@tools.4"/>
+    <diagramLink
+        href="concreta.gmfgraph#TCDHerencia"/>
+    <sourceMetaFeature
+        xsi:type="ecore:EReference"
+        href="concreta.ecore#//TCDRelacion/source"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="concreta.ecore#//TCDRelacion/target"/>
   </links>
   <diagram>
     <diagramCanvas
@@ -170,7 +190,7 @@
     <domainModel
         href="concreta.ecore#/"/>
     <domainMetaElement
-        href="concreta.ecore#//TcdDiagramaClases"/>
+        href="concreta.ecore#//TCDDiagramaClases"/>
     <palette
         href="concreta.gmftool#//@palette"/>
   </diagram>

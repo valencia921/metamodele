@@ -99,7 +99,7 @@ public class Diagrama_concretaValidationDecoratorProvider extends AbstractProvid
 		}
 		IDecoratorTarget decoratorTarget = ((CreateDecoratorsOperation) operation).getDecoratorTarget();
 		View view = (View) decoratorTarget.getAdapter(View.class);
-		return view != null && diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.MODEL_ID
+		return view != null && diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.MODEL_ID
 				.equals(diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getModelID(view));
 	}
 

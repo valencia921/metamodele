@@ -5,24 +5,24 @@ package diagrama_concreta;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Tcd Dependencia</b></em>'.
+ * A representation of the model object '<em><b>TCD Dependencia</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link diagrama_concreta.TcdDependencia#getNombreOrigen <em>Nombre Origen</em>}</li>
- *   <li>{@link diagrama_concreta.TcdDependencia#getNombreDestino <em>Nombre Destino</em>}</li>
- *   <li>{@link diagrama_concreta.TcdDependencia#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}</li>
- *   <li>{@link diagrama_concreta.TcdDependencia#getMultiplicidadDestino <em>Multiplicidad Destino</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDDependencia#getNombreOrigen <em>Nombre Origen</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDDependencia#getNombreDestino <em>Nombre Destino</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDDependencia#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDDependencia#getMultiplicidadDestino <em>Multiplicidad Destino</em>}</li>
  * </ul>
  *
- * @see diagrama_concreta.Diagrama_concretaPackage#getTcdDependencia()
- * @model
+ * @see diagrama_concreta.Diagrama_concretaPackage#getTCDDependencia()
+ * @model annotation="gmf.link source='source' target='target' style='solid' width='3' color='255,15,15' source.decoration='filledrhomb'"
  * @generated
  */
-public interface TcdDependencia extends TcdRelacion {
+public interface TCDDependencia extends TCDRelacion {
 	/**
 	 * Returns the value of the '<em><b>Nombre Origen</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -33,14 +33,14 @@ public interface TcdDependencia extends TcdRelacion {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nombre Origen</em>' attribute.
 	 * @see #setNombreOrigen(String)
-	 * @see diagrama_concreta.Diagrama_concretaPackage#getTcdDependencia_NombreOrigen()
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDDependencia_NombreOrigen()
 	 * @model
 	 * @generated
 	 */
 	String getNombreOrigen();
 
 	/**
-	 * Sets the value of the '{@link diagrama_concreta.TcdDependencia#getNombreOrigen <em>Nombre Origen</em>}' attribute.
+	 * Sets the value of the '{@link diagrama_concreta.TCDDependencia#getNombreOrigen <em>Nombre Origen</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Nombre Origen</em>' attribute.
@@ -59,14 +59,14 @@ public interface TcdDependencia extends TcdRelacion {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nombre Destino</em>' attribute.
 	 * @see #setNombreDestino(String)
-	 * @see diagrama_concreta.Diagrama_concretaPackage#getTcdDependencia_NombreDestino()
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDDependencia_NombreDestino()
 	 * @model
 	 * @generated
 	 */
 	String getNombreDestino();
 
 	/**
-	 * Sets the value of the '{@link diagrama_concreta.TcdDependencia#getNombreDestino <em>Nombre Destino</em>}' attribute.
+	 * Sets the value of the '{@link diagrama_concreta.TCDDependencia#getNombreDestino <em>Nombre Destino</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Nombre Destino</em>' attribute.
@@ -87,14 +87,14 @@ public interface TcdDependencia extends TcdRelacion {
 	 * @return the value of the '<em>Multiplicidad Origen</em>' attribute.
 	 * @see diagrama_concreta.Multiplicidad
 	 * @see #setMultiplicidadOrigen(Multiplicidad)
-	 * @see diagrama_concreta.Diagrama_concretaPackage#getTcdDependencia_MultiplicidadOrigen()
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDDependencia_MultiplicidadOrigen()
 	 * @model
 	 * @generated
 	 */
 	Multiplicidad getMultiplicidadOrigen();
 
 	/**
-	 * Sets the value of the '{@link diagrama_concreta.TcdDependencia#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}' attribute.
+	 * Sets the value of the '{@link diagrama_concreta.TCDDependencia#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Multiplicidad Origen</em>' attribute.
@@ -116,14 +116,14 @@ public interface TcdDependencia extends TcdRelacion {
 	 * @return the value of the '<em>Multiplicidad Destino</em>' attribute.
 	 * @see diagrama_concreta.Multiplicidad
 	 * @see #setMultiplicidadDestino(Multiplicidad)
-	 * @see diagrama_concreta.Diagrama_concretaPackage#getTcdDependencia_MultiplicidadDestino()
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDDependencia_MultiplicidadDestino()
 	 * @model
 	 * @generated
 	 */
 	Multiplicidad getMultiplicidadDestino();
 
 	/**
-	 * Sets the value of the '{@link diagrama_concreta.TcdDependencia#getMultiplicidadDestino <em>Multiplicidad Destino</em>}' attribute.
+	 * Sets the value of the '{@link diagrama_concreta.TCDDependencia#getMultiplicidadDestino <em>Multiplicidad Destino</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Multiplicidad Destino</em>' attribute.
@@ -133,4 +133,4 @@ public interface TcdDependencia extends TcdRelacion {
 	 */
 	void setMultiplicidadDestino(Multiplicidad value);
 
-} // TcdDependencia
+} // TCDDependencia

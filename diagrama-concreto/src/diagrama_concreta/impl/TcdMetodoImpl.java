@@ -3,8 +3,8 @@
 package diagrama_concreta.impl;
 
 import diagrama_concreta.Diagrama_concretaPackage;
-import diagrama_concreta.TcdMetodo;
-import diagrama_concreta.TcdParametro;
+import diagrama_concreta.TCDMetodo;
+import diagrama_concreta.TCDParametro;
 import diagrama_concreta.TipoRetorno;
 import diagrama_concreta.Visibilidad;
 
@@ -26,22 +26,22 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Tcd Metodo</b></em>'.
+ * An implementation of the model object '<em><b>TCD Metodo</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link diagrama_concreta.impl.TcdMetodoImpl#getListaParametros <em>Lista Parametros</em>}</li>
- *   <li>{@link diagrama_concreta.impl.TcdMetodoImpl#getNombre <em>Nombre</em>}</li>
- *   <li>{@link diagrama_concreta.impl.TcdMetodoImpl#getModificadorAcceso <em>Modificador Acceso</em>}</li>
- *   <li>{@link diagrama_concreta.impl.TcdMetodoImpl#getTipoRetorno <em>Tipo Retorno</em>}</li>
- *   <li>{@link diagrama_concreta.impl.TcdMetodoImpl#getSemantica <em>Semantica</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDMetodoImpl#getListaParametros <em>Lista Parametros</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDMetodoImpl#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDMetodoImpl#getModificadorAcceso <em>Modificador Acceso</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDMetodoImpl#getTipoRetorno <em>Tipo Retorno</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDMetodoImpl#getSemantica <em>Semantica</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TcdMetodoImpl extends EObjectImpl implements TcdMetodo {
+public class TCDMetodoImpl extends EObjectImpl implements TCDMetodo {
 	/**
 	 * The cached value of the '{@link #getListaParametros() <em>Lista Parametros</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -50,7 +50,7 @@ public class TcdMetodoImpl extends EObjectImpl implements TcdMetodo {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TcdParametro> listaParametros;
+	protected EList<TCDParametro> listaParametros;
 
 	/**
 	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
@@ -137,7 +137,7 @@ public class TcdMetodoImpl extends EObjectImpl implements TcdMetodo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TcdMetodoImpl() {
+	protected TCDMetodoImpl() {
 		super();
 	}
 
@@ -156,9 +156,9 @@ public class TcdMetodoImpl extends EObjectImpl implements TcdMetodo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TcdParametro> getListaParametros() {
+	public EList<TCDParametro> getListaParametros() {
 		if (listaParametros == null) {
-			listaParametros = new EObjectContainmentEList<TcdParametro>(TcdParametro.class, this, Diagrama_concretaPackage.TCD_METODO__LISTA_PARAMETROS);
+			listaParametros = new EObjectContainmentEList<TCDParametro>(TCDParametro.class, this, Diagrama_concretaPackage.TCD_METODO__LISTA_PARAMETROS);
 		}
 		return listaParametros;
 	}
@@ -294,7 +294,7 @@ public class TcdMetodoImpl extends EObjectImpl implements TcdMetodo {
 		switch (featureID) {
 			case Diagrama_concretaPackage.TCD_METODO__LISTA_PARAMETROS:
 				getListaParametros().clear();
-				getListaParametros().addAll((Collection<? extends TcdParametro>)newValue);
+				getListaParametros().addAll((Collection<? extends TCDParametro>)newValue);
 				return;
 			case Diagrama_concretaPackage.TCD_METODO__NOMBRE:
 				setNombre((String)newValue);
@@ -383,4 +383,4 @@ public class TcdMetodoImpl extends EObjectImpl implements TcdMetodo {
 		return result.toString();
 	}
 
-} //TcdMetodoImpl
+} //TCDMetodoImpl

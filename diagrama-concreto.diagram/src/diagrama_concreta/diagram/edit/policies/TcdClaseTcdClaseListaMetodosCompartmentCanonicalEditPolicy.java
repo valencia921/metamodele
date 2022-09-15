@@ -27,7 +27,7 @@ import org.eclipse.gmf.runtime.notation.View;
 /**
  * @generated
  */
-public class TcdClaseTcdClaseListaMetodosCompartmentCanonicalEditPolicy extends CanonicalEditPolicy {
+public class TCDClaseTCDClaseListaMetodosCompartmentCanonicalEditPolicy extends CanonicalEditPolicy {
 
 	/**
 	* @generated
@@ -45,7 +45,7 @@ public class TcdClaseTcdClaseListaMetodosCompartmentCanonicalEditPolicy extends 
 	* @generated
 	*/
 	protected EStructuralFeature getFeatureToSynchronize() {
-		return diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTcdClase_ListaMetodos();
+		return diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDClase_ListaMetodos();
 	}
 
 	/**
@@ -57,7 +57,7 @@ public class TcdClaseTcdClaseListaMetodosCompartmentCanonicalEditPolicy extends 
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
 		List<diagrama_concreta.diagram.part.Diagrama_concretaNodeDescriptor> childDescriptors = diagrama_concreta.diagram.part.Diagrama_concretaDiagramUpdater
-				.getTcdClaseTcdClaseListaMetodosCompartment_7002SemanticChildren(viewObject);
+				.getTCDClaseTCDClaseListaMetodosCompartment_7002SemanticChildren(viewObject);
 		for (diagrama_concreta.diagram.part.Diagrama_concretaNodeDescriptor d : childDescriptors) {
 			result.add(d.getModelElement());
 		}
@@ -75,7 +75,7 @@ public class TcdClaseTcdClaseListaMetodosCompartmentCanonicalEditPolicy extends 
 	* @generated
 	*/
 	private boolean isMyDiagramElement(View view) {
-		return diagrama_concreta.diagram.edit.parts.TcdMetodoEditPart.VISUAL_ID == diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
+		return diagrama_concreta.diagram.edit.parts.TCDMetodoEditPart.VISUAL_ID == diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
 				.getVisualID(view);
 	}
 
@@ -88,7 +88,7 @@ public class TcdClaseTcdClaseListaMetodosCompartmentCanonicalEditPolicy extends 
 		}
 		LinkedList<IAdaptable> createdViews = new LinkedList<IAdaptable>();
 		List<diagrama_concreta.diagram.part.Diagrama_concretaNodeDescriptor> childDescriptors = diagrama_concreta.diagram.part.Diagrama_concretaDiagramUpdater
-				.getTcdClaseTcdClaseListaMetodosCompartment_7002SemanticChildren((View) getHost().getModel());
+				.getTCDClaseTCDClaseListaMetodosCompartment_7002SemanticChildren((View) getHost().getModel());
 		LinkedList<View> orphaned = new LinkedList<View>();
 		// we care to check only views we recognize as ours
 		LinkedList<View> knownViewChildren = new LinkedList<View>();

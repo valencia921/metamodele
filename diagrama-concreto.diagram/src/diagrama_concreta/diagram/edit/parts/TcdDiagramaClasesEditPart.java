@@ -23,7 +23,7 @@ import org.eclipse.gmf.tooling.runtime.edit.policies.reparent.CreationEditPolicy
 /**
  * @generated
  */
-public class TcdDiagramaClasesEditPart extends DiagramEditPart {
+public class TCDDiagramaClasesEditPart extends DiagramEditPart {
 
 	/**
 	* @generated
@@ -38,7 +38,7 @@ public class TcdDiagramaClasesEditPart extends DiagramEditPart {
 	/**
 	* @generated
 	*/
-	public TcdDiagramaClasesEditPart(View view) {
+	public TCDDiagramaClasesEditPart(View view) {
 		super(view);
 	}
 
@@ -48,9 +48,9 @@ public class TcdDiagramaClasesEditPart extends DiagramEditPart {
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new diagrama_concreta.diagram.edit.policies.TcdDiagramaClasesItemSemanticEditPolicy());
+				new diagrama_concreta.diagram.edit.policies.TCDDiagramaClasesItemSemanticEditPolicy());
 		installEditPolicy(EditPolicyRoles.CANONICAL_ROLE,
-				new diagrama_concreta.diagram.edit.policies.TcdDiagramaClasesCanonicalEditPolicy());
+				new diagrama_concreta.diagram.edit.policies.TCDDiagramaClasesCanonicalEditPolicy());
 		installEditPolicy(EditPolicyRoles.CREATION_ROLE, new CreationEditPolicyWithCustomReparent(
 				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.TYPED_INSTANCE));
 		installEditPolicy(EditPolicyRoles.DRAG_DROP_ROLE, new DiagramDragDropEditPolicy() {

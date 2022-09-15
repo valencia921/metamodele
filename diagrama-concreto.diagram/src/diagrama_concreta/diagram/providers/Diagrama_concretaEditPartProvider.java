@@ -16,7 +16,7 @@ public class Diagrama_concretaEditPartProvider extends DefaultEditPartProvider {
 	public Diagrama_concretaEditPartProvider() {
 		super(new diagrama_concreta.diagram.edit.parts.Diagrama_concretaEditPartFactory(),
 				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.TYPED_INSTANCE,
-				diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.MODEL_ID);
+				diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.MODEL_ID);
 	}
 
 }

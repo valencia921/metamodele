@@ -18,7 +18,7 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
 /**
  * @generated
  */
-public class TcdComposicionCreateCommand extends EditElementCommand {
+public class TCDComposicionCreateCommand extends EditElementCommand {
 
 	/**
 	* @generated
@@ -33,12 +33,12 @@ public class TcdComposicionCreateCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	private final diagrama_concreta.TcdDiagramaClases container;
+	private final diagrama_concreta.TCDDiagramaClases container;
 
 	/**
 	* @generated
 	*/
-	public TcdComposicionCreateCommand(CreateRelationshipRequest request, EObject source, EObject target) {
+	public TCDComposicionCreateCommand(CreateRelationshipRequest request, EObject source, EObject target) {
 		super(request.getLabel(), null, request);
 		this.source = source;
 		this.target = target;
@@ -52,10 +52,10 @@ public class TcdComposicionCreateCommand extends EditElementCommand {
 		if (source == null && target == null) {
 			return false;
 		}
-		if (source != null && false == source instanceof diagrama_concreta.TcdClase) {
+		if (source != null && false == source instanceof diagrama_concreta.TCDClase) {
 			return false;
 		}
-		if (target != null && false == target instanceof diagrama_concreta.TcdClase) {
+		if (target != null && false == target instanceof diagrama_concreta.TCDClase) {
 			return false;
 		}
 		if (getSource() == null) {
@@ -66,7 +66,7 @@ public class TcdComposicionCreateCommand extends EditElementCommand {
 			return false;
 		}
 		return diagrama_concreta.diagram.edit.policies.Diagrama_concretaBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canCreateTcdComposicion_4002(getContainer(), getSource(), getTarget());
+				.canCreateTCDComposicion_4002(getContainer(), getSource(), getTarget());
 	}
 
 	/**
@@ -77,8 +77,8 @@ public class TcdComposicionCreateCommand extends EditElementCommand {
 			throw new ExecutionException("Invalid arguments in create link command"); //$NON-NLS-1$
 		}
 
-		diagrama_concreta.TcdComposicion newElement = diagrama_concreta.Diagrama_concretaFactory.eINSTANCE
-				.createTcdComposicion();
+		diagrama_concreta.TCDComposicion newElement = diagrama_concreta.Diagrama_concretaFactory.eINSTANCE
+				.createTCDComposicion();
 		getContainer().getListaRelaciones().add(newElement);
 		newElement.setSource(getSource());
 		newElement.setTarget(getTarget());
@@ -91,7 +91,7 @@ public class TcdComposicionCreateCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	protected void doConfigure(diagrama_concreta.TcdComposicion newElement, IProgressMonitor monitor, IAdaptable info)
+	protected void doConfigure(diagrama_concreta.TCDComposicion newElement, IProgressMonitor monitor, IAdaptable info)
 			throws ExecutionException {
 		IElementType elementType = ((CreateElementRequest) getRequest()).getElementType();
 		ConfigureRequest configureRequest = new ConfigureRequest(getEditingDomain(), newElement, elementType);
@@ -115,21 +115,21 @@ public class TcdComposicionCreateCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	protected diagrama_concreta.TcdClase getSource() {
-		return (diagrama_concreta.TcdClase) source;
+	protected diagrama_concreta.TCDClase getSource() {
+		return (diagrama_concreta.TCDClase) source;
 	}
 
 	/**
 	* @generated
 	*/
-	protected diagrama_concreta.TcdClase getTarget() {
-		return (diagrama_concreta.TcdClase) target;
+	protected diagrama_concreta.TCDClase getTarget() {
+		return (diagrama_concreta.TCDClase) target;
 	}
 
 	/**
 	* @generated
 	*/
-	public diagrama_concreta.TcdDiagramaClases getContainer() {
+	public diagrama_concreta.TCDDiagramaClases getContainer() {
 		return container;
 	}
 
@@ -138,13 +138,13 @@ public class TcdComposicionCreateCommand extends EditElementCommand {
 	* Modify with appropriate logic.
 	* @generated
 	*/
-	private static diagrama_concreta.TcdDiagramaClases deduceContainer(EObject source, EObject target) {
+	private static diagrama_concreta.TCDDiagramaClases deduceContainer(EObject source, EObject target) {
 		// Find container element for the new link.
 		// Climb up by containment hierarchy starting from the source
 		// and return the first element that is instance of the container class.
 		for (EObject element = source; element != null; element = element.eContainer()) {
-			if (element instanceof diagrama_concreta.TcdDiagramaClases) {
-				return (diagrama_concreta.TcdDiagramaClases) element;
+			if (element instanceof diagrama_concreta.TCDDiagramaClases) {
+				return (diagrama_concreta.TCDDiagramaClases) element;
 			}
 		}
 		return null;

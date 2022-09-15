@@ -4,7 +4,8 @@ package diagrama_concreta.impl;
 
 import diagrama_concreta.Diagrama_concretaPackage;
 import diagrama_concreta.Multiplicidad;
-import diagrama_concreta.TcdAsociacion;
+import diagrama_concreta.Navegavilidad;
+import diagrama_concreta.TCDAsociacion;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -14,21 +15,22 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Tcd Asociacion</b></em>'.
+ * An implementation of the model object '<em><b>TCD Asociacion</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link diagrama_concreta.impl.TcdAsociacionImpl#getNombreOrigen <em>Nombre Origen</em>}</li>
- *   <li>{@link diagrama_concreta.impl.TcdAsociacionImpl#getNombreDestino <em>Nombre Destino</em>}</li>
- *   <li>{@link diagrama_concreta.impl.TcdAsociacionImpl#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}</li>
- *   <li>{@link diagrama_concreta.impl.TcdAsociacionImpl#getMultiplicidadDestino <em>Multiplicidad Destino</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDAsociacionImpl#getNombreOrigen <em>Nombre Origen</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDAsociacionImpl#getNombreDestino <em>Nombre Destino</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDAsociacionImpl#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDAsociacionImpl#getMultiplicidadDestino <em>Multiplicidad Destino</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDAsociacionImpl#getNavegavilidad <em>Navegavilidad</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TcdAsociacionImpl extends TcdRelacionImpl implements TcdAsociacion {
+public class TCDAsociacionImpl extends TCDRelacionImpl implements TCDAsociacion {
 	/**
 	 * The default value of the '{@link #getNombreOrigen() <em>Nombre Origen</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -110,11 +112,31 @@ public class TcdAsociacionImpl extends TcdRelacionImpl implements TcdAsociacion 
 	protected Multiplicidad multiplicidadDestino = MULTIPLICIDAD_DESTINO_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getNavegavilidad() <em>Navegavilidad</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNavegavilidad()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Navegavilidad NAVEGAVILIDAD_EDEFAULT = Navegavilidad.BIDIRECCIONAL;
+
+	/**
+	 * The cached value of the '{@link #getNavegavilidad() <em>Navegavilidad</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNavegavilidad()
+	 * @generated
+	 * @ordered
+	 */
+	protected Navegavilidad navegavilidad = NAVEGAVILIDAD_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TcdAsociacionImpl() {
+	protected TCDAsociacionImpl() {
 		super();
 	}
 
@@ -217,6 +239,27 @@ public class TcdAsociacionImpl extends TcdRelacionImpl implements TcdAsociacion 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Navegavilidad getNavegavilidad() {
+		return navegavilidad;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNavegavilidad(Navegavilidad newNavegavilidad) {
+		Navegavilidad oldNavegavilidad = navegavilidad;
+		navegavilidad = newNavegavilidad == null ? NAVEGAVILIDAD_EDEFAULT : newNavegavilidad;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Diagrama_concretaPackage.TCD_ASOCIACION__NAVEGAVILIDAD, oldNavegavilidad, navegavilidad));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -228,6 +271,8 @@ public class TcdAsociacionImpl extends TcdRelacionImpl implements TcdAsociacion 
 				return getMultiplicidadOrigen();
 			case Diagrama_concretaPackage.TCD_ASOCIACION__MULTIPLICIDAD_DESTINO:
 				return getMultiplicidadDestino();
+			case Diagrama_concretaPackage.TCD_ASOCIACION__NAVEGAVILIDAD:
+				return getNavegavilidad();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -251,6 +296,9 @@ public class TcdAsociacionImpl extends TcdRelacionImpl implements TcdAsociacion 
 				return;
 			case Diagrama_concretaPackage.TCD_ASOCIACION__MULTIPLICIDAD_DESTINO:
 				setMultiplicidadDestino((Multiplicidad)newValue);
+				return;
+			case Diagrama_concretaPackage.TCD_ASOCIACION__NAVEGAVILIDAD:
+				setNavegavilidad((Navegavilidad)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -276,6 +324,9 @@ public class TcdAsociacionImpl extends TcdRelacionImpl implements TcdAsociacion 
 			case Diagrama_concretaPackage.TCD_ASOCIACION__MULTIPLICIDAD_DESTINO:
 				setMultiplicidadDestino(MULTIPLICIDAD_DESTINO_EDEFAULT);
 				return;
+			case Diagrama_concretaPackage.TCD_ASOCIACION__NAVEGAVILIDAD:
+				setNavegavilidad(NAVEGAVILIDAD_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -296,6 +347,8 @@ public class TcdAsociacionImpl extends TcdRelacionImpl implements TcdAsociacion 
 				return multiplicidadOrigen != MULTIPLICIDAD_ORIGEN_EDEFAULT;
 			case Diagrama_concretaPackage.TCD_ASOCIACION__MULTIPLICIDAD_DESTINO:
 				return multiplicidadDestino != MULTIPLICIDAD_DESTINO_EDEFAULT;
+			case Diagrama_concretaPackage.TCD_ASOCIACION__NAVEGAVILIDAD:
+				return navegavilidad != NAVEGAVILIDAD_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -318,8 +371,10 @@ public class TcdAsociacionImpl extends TcdRelacionImpl implements TcdAsociacion 
 		result.append(multiplicidadOrigen);
 		result.append(", multiplicidadDestino: ");
 		result.append(multiplicidadDestino);
+		result.append(", navegavilidad: ");
+		result.append(navegavilidad);
 		result.append(')');
 		return result.toString();
 	}
 
-} //TcdAsociacionImpl
+} //TCDAsociacionImpl

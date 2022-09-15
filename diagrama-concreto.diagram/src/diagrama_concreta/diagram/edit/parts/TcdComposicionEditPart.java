@@ -3,17 +3,23 @@
  */
 package diagrama_concreta.diagram.edit.parts;
 
+import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.Connection;
+import org.eclipse.draw2d.Graphics;
+import org.eclipse.draw2d.PolygonDecoration;
+import org.eclipse.draw2d.RotatableDecoration;
+import org.eclipse.draw2d.geometry.PointList;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ITreeBranchEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.swt.graphics.Color;
 
 /**
  * @generated
  */
-public class TcdComposicionEditPart extends ConnectionNodeEditPart implements ITreeBranchEditPart {
+public class TCDComposicionEditPart extends ConnectionNodeEditPart implements ITreeBranchEditPart {
 
 	/**
 	* @generated
@@ -23,7 +29,7 @@ public class TcdComposicionEditPart extends ConnectionNodeEditPart implements IT
 	/**
 	* @generated
 	*/
-	public TcdComposicionEditPart(View view) {
+	public TCDComposicionEditPart(View view) {
 		super(view);
 	}
 
@@ -33,7 +39,7 @@ public class TcdComposicionEditPart extends ConnectionNodeEditPart implements IT
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new diagrama_concreta.diagram.edit.policies.TcdComposicionItemSemanticEditPolicy());
+				new diagrama_concreta.diagram.edit.policies.TCDComposicionItemSemanticEditPolicy());
 	}
 
 	/**
@@ -46,29 +52,55 @@ public class TcdComposicionEditPart extends ConnectionNodeEditPart implements IT
 	*/
 
 	protected Connection createConnectionFigure() {
-		return new TcdComposicionFigure();
+		return new TCDComposicionFigure();
 	}
 
 	/**
 	* @generated
 	*/
-	public TcdComposicionFigure getPrimaryShape() {
-		return (TcdComposicionFigure) getFigure();
+	public TCDComposicionFigure getPrimaryShape() {
+		return (TCDComposicionFigure) getFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public class TcdComposicionFigure extends PolylineConnectionEx {
+	public class TCDComposicionFigure extends PolylineConnectionEx {
 
 		/**
 		 * @generated
 		 */
-		public TcdComposicionFigure() {
-			this.setLineWidth(2);
+		public TCDComposicionFigure() {
+			this.setLineWidth(3);
+			this.setLineStyle(Graphics.LINE_DASH);
+			this.setForegroundColor(THIS_FORE);
 
+			setSourceDecoration(createSourceDecoration());
+		}
+
+		/**
+		* @generated
+		*/
+		private RotatableDecoration createSourceDecoration() {
+			PolygonDecoration df = new PolygonDecoration();
+			df.setFill(true);
+			df.setBackgroundColor(ColorConstants.white);
+			PointList pl = new PointList();
+			pl.addPoint(getMapMode().DPtoLP(-1), getMapMode().DPtoLP(1));
+			pl.addPoint(getMapMode().DPtoLP(0), getMapMode().DPtoLP(0));
+			pl.addPoint(getMapMode().DPtoLP(-1), getMapMode().DPtoLP(-1));
+			pl.addPoint(getMapMode().DPtoLP(-2), getMapMode().DPtoLP(0));
+			pl.addPoint(getMapMode().DPtoLP(-1), getMapMode().DPtoLP(1));
+			df.setTemplate(pl);
+			df.setScale(getMapMode().DPtoLP(7), getMapMode().DPtoLP(3));
+			return df;
 		}
 
 	}
+
+	/**
+	* @generated
+	*/
+	static final Color THIS_FORE = new Color(null, 0, 255, 193);
 
 }

@@ -118,7 +118,7 @@ public class Diagrama_concretaNavigatorActionProvider extends CommonActionProvid
 				}
 				if (selectedElement instanceof Diagram) {
 					Diagram diagram = (Diagram) selectedElement;
-					if (diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.MODEL_ID.equals(
+					if (diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.MODEL_ID.equals(
 							diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getModelID(diagram))) {
 						myDiagram = diagram;
 					}

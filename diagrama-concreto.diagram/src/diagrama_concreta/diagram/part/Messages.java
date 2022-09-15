@@ -256,112 +256,112 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
-	public static String TcdAtributo1CreationTool_title;
+	public static String TCDAtributo1CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String TcdAtributo1CreationTool_desc;
+	public static String TCDAtributo1CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String TcdClase2CreationTool_title;
+	public static String TCDClase2CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String TcdClase2CreationTool_desc;
+	public static String TCDClase2CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String TcdMetodo3CreationTool_title;
+	public static String TCDMetodo3CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String TcdMetodo3CreationTool_desc;
+	public static String TCDMetodo3CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String TcdPaquete4CreationTool_title;
+	public static String TCDPaquete4CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String TcdPaquete4CreationTool_desc;
+	public static String TCDPaquete4CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String TcdParametro5CreationTool_title;
+	public static String TCDParametro5CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String TcdParametro5CreationTool_desc;
+	public static String TCDParametro5CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String TcdAgregacion1CreationTool_title;
+	public static String TCDAgregacion1CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String TcdAgregacion1CreationTool_desc;
+	public static String TCDAgregacion1CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String TcdAsociacion2CreationTool_title;
+	public static String TCDAsociacion2CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String TcdAsociacion2CreationTool_desc;
+	public static String TCDAsociacion2CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String TcdComposicion3CreationTool_title;
+	public static String TCDComposicion3CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String TcdComposicion3CreationTool_desc;
+	public static String TCDComposicion3CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String TcdDependencia4CreationTool_title;
+	public static String TCDDependencia4CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String TcdDependencia4CreationTool_desc;
+	public static String TCDDependencia4CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String TcdHerencia5CreationTool_title;
+	public static String TCDHerencia5CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String TcdHerencia5CreationTool_desc;
+	public static String TCDHerencia5CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String TcdClaseTcdClaseListaAtributosCompartmentEditPart_title;
+	public static String TCDClaseTCDClaseListaAtributosCompartmentEditPart_title;
 
 	/**
 	* @generated
 	*/
-	public static String TcdClaseTcdClaseListaMetodosCompartmentEditPart_title;
+	public static String TCDClaseTCDClaseListaMetodosCompartmentEditPart_title;
 
 	/**
 	* @generated
@@ -371,67 +371,67 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_TcdDiagramaClases_1000_links;
+	public static String NavigatorGroupName_TCDDiagramaClases_1000_links;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_TcdClase_2001_incominglinks;
+	public static String NavigatorGroupName_TCDClase_2001_incominglinks;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_TcdClase_2001_outgoinglinks;
+	public static String NavigatorGroupName_TCDClase_2001_outgoinglinks;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_TcdAsociacion_4001_target;
+	public static String NavigatorGroupName_TCDAsociacion_4001_target;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_TcdAsociacion_4001_source;
+	public static String NavigatorGroupName_TCDAsociacion_4001_source;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_TcdComposicion_4002_target;
+	public static String NavigatorGroupName_TCDComposicion_4002_target;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_TcdComposicion_4002_source;
+	public static String NavigatorGroupName_TCDComposicion_4002_source;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_TcdDependencia_4003_target;
+	public static String NavigatorGroupName_TCDDependencia_4003_target;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_TcdDependencia_4003_source;
+	public static String NavigatorGroupName_TCDDependencia_4003_source;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_TcdHerencia_4004_target;
+	public static String NavigatorGroupName_TCDHerencia_4004_target;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_TcdHerencia_4004_source;
+	public static String NavigatorGroupName_TCDHerencia_4004_source;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_TcdAgregacion_4005_target;
+	public static String NavigatorGroupName_TCDAgregacion_4005_target;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_TcdAgregacion_4005_source;
+	public static String NavigatorGroupName_TCDAgregacion_4005_source;
 
 	/**
 	* @generated

@@ -3,7 +3,7 @@
 package abstracta.impl;
 
 import abstracta.AbstractaPackage;
-import abstracta.TcdParametro;
+import abstracta.TCDParametro;
 import abstracta.TipoDato;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -15,19 +15,19 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Tcd Parametro</b></em>'.
+ * An implementation of the model object '<em><b>TCD Parametro</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link abstracta.impl.TcdParametroImpl#getNombre <em>Nombre</em>}</li>
- *   <li>{@link abstracta.impl.TcdParametroImpl#getTipoDato <em>Tipo Dato</em>}</li>
+ *   <li>{@link abstracta.impl.TCDParametroImpl#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link abstracta.impl.TCDParametroImpl#getTipoDato <em>Tipo Dato</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TcdParametroImpl extends EObjectImpl implements TcdParametro {
+public class TCDParametroImpl extends EObjectImpl implements TCDParametro {
 	/**
 	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -73,7 +73,7 @@ public class TcdParametroImpl extends EObjectImpl implements TcdParametro {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TcdParametroImpl() {
+	protected TCDParametroImpl() {
 		super();
 	}
 
@@ -215,4 +215,4 @@ public class TcdParametroImpl extends EObjectImpl implements TcdParametro {
 		return result.toString();
 	}
 
-} //TcdParametroImpl
+} //TCDParametroImpl

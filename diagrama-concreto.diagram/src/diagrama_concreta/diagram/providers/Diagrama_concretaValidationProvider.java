@@ -58,7 +58,7 @@ public class Diagrama_concretaValidationProvider {
 			return false;
 		}
 		if (object instanceof View) {
-			return constraintsActive && diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.MODEL_ID
+			return constraintsActive && diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.MODEL_ID
 					.equals(diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getModelID((View) object));
 		}
 		return true;

@@ -48,44 +48,48 @@ public class Diagrama_concretaElementTypes {
 	/**
 	* @generated
 	*/
-	public static final IElementType TcdDiagramaClases_1000 = getElementType(
-			"diagrama-concreto.diagram.TcdDiagramaClases_1000"); //$NON-NLS-1$
+	public static final IElementType TCDDiagramaClases_1000 = getElementType(
+			"diagrama-concreto.diagram.TCDDiagramaClases_1000"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
-	public static final IElementType TcdClase_2001 = getElementType("diagrama-concreto.diagram.TcdClase_2001"); //$NON-NLS-1$
+	public static final IElementType TCDClase_2001 = getElementType("diagrama-concreto.diagram.TCDClase_2001"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
-	public static final IElementType TcdAtributo_3001 = getElementType("diagrama-concreto.diagram.TcdAtributo_3001"); //$NON-NLS-1$
+	public static final IElementType TCDPaquete_2002 = getElementType("diagrama-concreto.diagram.TCDPaquete_2002"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
-	public static final IElementType TcdMetodo_3002 = getElementType("diagrama-concreto.diagram.TcdMetodo_3002"); //$NON-NLS-1$
+	public static final IElementType TCDAtributo_3001 = getElementType("diagrama-concreto.diagram.TCDAtributo_3001"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
-	public static final IElementType TcdAsociacion_4001 = getElementType(
-			"diagrama-concreto.diagram.TcdAsociacion_4001"); //$NON-NLS-1$
+	public static final IElementType TCDMetodo_3002 = getElementType("diagrama-concreto.diagram.TCDMetodo_3002"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
-	public static final IElementType TcdComposicion_4002 = getElementType(
-			"diagrama-concreto.diagram.TcdComposicion_4002"); //$NON-NLS-1$
+	public static final IElementType TCDAsociacion_4001 = getElementType(
+			"diagrama-concreto.diagram.TCDAsociacion_4001"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
-	public static final IElementType TcdDependencia_4003 = getElementType(
-			"diagrama-concreto.diagram.TcdDependencia_4003"); //$NON-NLS-1$
+	public static final IElementType TCDComposicion_4002 = getElementType(
+			"diagrama-concreto.diagram.TCDComposicion_4002"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
-	public static final IElementType TcdHerencia_4004 = getElementType("diagrama-concreto.diagram.TcdHerencia_4004"); //$NON-NLS-1$
+	public static final IElementType TCDDependencia_4003 = getElementType(
+			"diagrama-concreto.diagram.TCDDependencia_4003"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
-	public static final IElementType TcdAgregacion_4005 = getElementType(
-			"diagrama-concreto.diagram.TcdAgregacion_4005"); //$NON-NLS-1$
+	public static final IElementType TCDHerencia_4004 = getElementType("diagrama-concreto.diagram.TCDHerencia_4004"); //$NON-NLS-1$
+	/**
+	* @generated
+	*/
+	public static final IElementType TCDAgregacion_4005 = getElementType(
+			"diagrama-concreto.diagram.TCDAgregacion_4005"); //$NON-NLS-1$
 
 	/**
 	* @generated
@@ -125,24 +129,26 @@ public class Diagrama_concretaElementTypes {
 		if (elements == null) {
 			elements = new IdentityHashMap<IElementType, ENamedElement>();
 
-			elements.put(TcdDiagramaClases_1000,
-					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTcdDiagramaClases());
+			elements.put(TCDDiagramaClases_1000,
+					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDDiagramaClases());
 
-			elements.put(TcdClase_2001, diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTcdClase());
+			elements.put(TCDClase_2001, diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDClase());
 
-			elements.put(TcdAtributo_3001, diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTcdAtributo());
+			elements.put(TCDPaquete_2002, diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDPaquete());
 
-			elements.put(TcdMetodo_3002, diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTcdMetodo());
+			elements.put(TCDAtributo_3001, diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDAtributo());
 
-			elements.put(TcdAsociacion_4001, diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTcdAsociacion());
+			elements.put(TCDMetodo_3002, diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDMetodo());
 
-			elements.put(TcdComposicion_4002, diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTcdComposicion());
+			elements.put(TCDAgregacion_4005, diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDAgregacion());
 
-			elements.put(TcdDependencia_4003, diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTcdDependencia());
+			elements.put(TCDAsociacion_4001, diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDAsociacion());
 
-			elements.put(TcdHerencia_4004, diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTcdHerencia());
+			elements.put(TCDComposicion_4002, diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDComposicion());
 
-			elements.put(TcdAgregacion_4005, diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTcdAgregacion());
+			elements.put(TCDDependencia_4003, diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDDependencia());
+
+			elements.put(TCDHerencia_4004, diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDHerencia());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -160,15 +166,16 @@ public class Diagrama_concretaElementTypes {
 	public static boolean isKnownElementType(IElementType elementType) {
 		if (KNOWN_ELEMENT_TYPES == null) {
 			KNOWN_ELEMENT_TYPES = new HashSet<IElementType>();
-			KNOWN_ELEMENT_TYPES.add(TcdDiagramaClases_1000);
-			KNOWN_ELEMENT_TYPES.add(TcdClase_2001);
-			KNOWN_ELEMENT_TYPES.add(TcdAtributo_3001);
-			KNOWN_ELEMENT_TYPES.add(TcdMetodo_3002);
-			KNOWN_ELEMENT_TYPES.add(TcdAsociacion_4001);
-			KNOWN_ELEMENT_TYPES.add(TcdComposicion_4002);
-			KNOWN_ELEMENT_TYPES.add(TcdDependencia_4003);
-			KNOWN_ELEMENT_TYPES.add(TcdHerencia_4004);
-			KNOWN_ELEMENT_TYPES.add(TcdAgregacion_4005);
+			KNOWN_ELEMENT_TYPES.add(TCDDiagramaClases_1000);
+			KNOWN_ELEMENT_TYPES.add(TCDClase_2001);
+			KNOWN_ELEMENT_TYPES.add(TCDPaquete_2002);
+			KNOWN_ELEMENT_TYPES.add(TCDAtributo_3001);
+			KNOWN_ELEMENT_TYPES.add(TCDMetodo_3002);
+			KNOWN_ELEMENT_TYPES.add(TCDAgregacion_4005);
+			KNOWN_ELEMENT_TYPES.add(TCDAsociacion_4001);
+			KNOWN_ELEMENT_TYPES.add(TCDComposicion_4002);
+			KNOWN_ELEMENT_TYPES.add(TCDDependencia_4003);
+			KNOWN_ELEMENT_TYPES.add(TCDHerencia_4004);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -178,24 +185,26 @@ public class Diagrama_concretaElementTypes {
 	*/
 	public static IElementType getElementType(int visualID) {
 		switch (visualID) {
-		case diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.VISUAL_ID:
-			return TcdDiagramaClases_1000;
-		case diagrama_concreta.diagram.edit.parts.TcdClaseEditPart.VISUAL_ID:
-			return TcdClase_2001;
-		case diagrama_concreta.diagram.edit.parts.TcdAtributoEditPart.VISUAL_ID:
-			return TcdAtributo_3001;
-		case diagrama_concreta.diagram.edit.parts.TcdMetodoEditPart.VISUAL_ID:
-			return TcdMetodo_3002;
-		case diagrama_concreta.diagram.edit.parts.TcdAsociacionEditPart.VISUAL_ID:
-			return TcdAsociacion_4001;
-		case diagrama_concreta.diagram.edit.parts.TcdComposicionEditPart.VISUAL_ID:
-			return TcdComposicion_4002;
-		case diagrama_concreta.diagram.edit.parts.TcdDependenciaEditPart.VISUAL_ID:
-			return TcdDependencia_4003;
-		case diagrama_concreta.diagram.edit.parts.TcdHerenciaEditPart.VISUAL_ID:
-			return TcdHerencia_4004;
-		case diagrama_concreta.diagram.edit.parts.TcdAgregacionEditPart.VISUAL_ID:
-			return TcdAgregacion_4005;
+		case diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.VISUAL_ID:
+			return TCDDiagramaClases_1000;
+		case diagrama_concreta.diagram.edit.parts.TCDClaseEditPart.VISUAL_ID:
+			return TCDClase_2001;
+		case diagrama_concreta.diagram.edit.parts.TCDPaqueteEditPart.VISUAL_ID:
+			return TCDPaquete_2002;
+		case diagrama_concreta.diagram.edit.parts.TCDAtributoEditPart.VISUAL_ID:
+			return TCDAtributo_3001;
+		case diagrama_concreta.diagram.edit.parts.TCDMetodoEditPart.VISUAL_ID:
+			return TCDMetodo_3002;
+		case diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart.VISUAL_ID:
+			return TCDAgregacion_4005;
+		case diagrama_concreta.diagram.edit.parts.TCDAsociacionEditPart.VISUAL_ID:
+			return TCDAsociacion_4001;
+		case diagrama_concreta.diagram.edit.parts.TCDComposicionEditPart.VISUAL_ID:
+			return TCDComposicion_4002;
+		case diagrama_concreta.diagram.edit.parts.TCDDependenciaEditPart.VISUAL_ID:
+			return TCDDependencia_4003;
+		case diagrama_concreta.diagram.edit.parts.TCDHerenciaEditPart.VISUAL_ID:
+			return TCDHerencia_4004;
 		}
 		return null;
 	}

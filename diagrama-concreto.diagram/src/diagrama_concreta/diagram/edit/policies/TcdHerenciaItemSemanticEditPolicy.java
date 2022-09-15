@@ -10,14 +10,14 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyElementRequest;
 /**
  * @generated
  */
-public class TcdHerenciaItemSemanticEditPolicy
+public class TCDHerenciaItemSemanticEditPolicy
 		extends diagrama_concreta.diagram.edit.policies.Diagrama_concretaBaseItemSemanticEditPolicy {
 
 	/**
 	* @generated
 	*/
-	public TcdHerenciaItemSemanticEditPolicy() {
-		super(diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdHerencia_4004);
+	public TCDHerenciaItemSemanticEditPolicy() {
+		super(diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDHerencia_4004);
 	}
 
 	/**

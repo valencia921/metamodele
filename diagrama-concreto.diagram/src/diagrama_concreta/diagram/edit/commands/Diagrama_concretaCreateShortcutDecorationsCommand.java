@@ -56,7 +56,7 @@ public class Diagrama_concretaCreateShortcutDecorationsCommand extends AbstractT
 				EAnnotation shortcutAnnotation = EcoreFactory.eINSTANCE.createEAnnotation();
 				shortcutAnnotation.setSource("Shortcut"); //$NON-NLS-1$
 				shortcutAnnotation.getDetails().put("modelID", //$NON-NLS-1$
-						diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.MODEL_ID);
+						diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.MODEL_ID);
 				view.getEAnnotations().add(shortcutAnnotation);
 			}
 		}

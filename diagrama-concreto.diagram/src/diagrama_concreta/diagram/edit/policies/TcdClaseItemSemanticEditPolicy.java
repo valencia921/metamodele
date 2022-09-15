@@ -21,14 +21,14 @@ import org.eclipse.gmf.runtime.notation.View;
 /**
  * @generated
  */
-public class TcdClaseItemSemanticEditPolicy
+public class TCDClaseItemSemanticEditPolicy
 		extends diagrama_concreta.diagram.edit.policies.Diagrama_concretaBaseItemSemanticEditPolicy {
 
 	/**
 	* @generated
 	*/
-	public TcdClaseItemSemanticEditPolicy() {
-		super(diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdClase_2001);
+	public TCDClaseItemSemanticEditPolicy() {
+		super(diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDClase_2001);
 	}
 
 	/**
@@ -41,35 +41,35 @@ public class TcdClaseItemSemanticEditPolicy
 		for (Iterator<?> it = view.getTargetEdges().iterator(); it.hasNext();) {
 			Edge incomingLink = (Edge) it.next();
 			if (diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getVisualID(
-					incomingLink) == diagrama_concreta.diagram.edit.parts.TcdAsociacionEditPart.VISUAL_ID) {
+					incomingLink) == diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart.VISUAL_ID) {
 				DestroyElementRequest r = new DestroyElementRequest(incomingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
 				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
 				continue;
 			}
 			if (diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getVisualID(
-					incomingLink) == diagrama_concreta.diagram.edit.parts.TcdComposicionEditPart.VISUAL_ID) {
+					incomingLink) == diagrama_concreta.diagram.edit.parts.TCDAsociacionEditPart.VISUAL_ID) {
 				DestroyElementRequest r = new DestroyElementRequest(incomingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
 				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
 				continue;
 			}
 			if (diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getVisualID(
-					incomingLink) == diagrama_concreta.diagram.edit.parts.TcdDependenciaEditPart.VISUAL_ID) {
+					incomingLink) == diagrama_concreta.diagram.edit.parts.TCDComposicionEditPart.VISUAL_ID) {
+				DestroyElementRequest r = new DestroyElementRequest(incomingLink.getElement(), false);
+				cmd.add(new DestroyElementCommand(r));
+				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
+				continue;
+			}
+			if (diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getVisualID(
+					incomingLink) == diagrama_concreta.diagram.edit.parts.TCDDependenciaEditPart.VISUAL_ID) {
 				DestroyElementRequest r = new DestroyElementRequest(incomingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
 				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
 				continue;
 			}
 			if (diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-					.getVisualID(incomingLink) == diagrama_concreta.diagram.edit.parts.TcdHerenciaEditPart.VISUAL_ID) {
-				DestroyElementRequest r = new DestroyElementRequest(incomingLink.getElement(), false);
-				cmd.add(new DestroyElementCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
-				continue;
-			}
-			if (diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getVisualID(
-					incomingLink) == diagrama_concreta.diagram.edit.parts.TcdAgregacionEditPart.VISUAL_ID) {
+					.getVisualID(incomingLink) == diagrama_concreta.diagram.edit.parts.TCDHerenciaEditPart.VISUAL_ID) {
 				DestroyElementRequest r = new DestroyElementRequest(incomingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
 				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
@@ -79,35 +79,35 @@ public class TcdClaseItemSemanticEditPolicy
 		for (Iterator<?> it = view.getSourceEdges().iterator(); it.hasNext();) {
 			Edge outgoingLink = (Edge) it.next();
 			if (diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getVisualID(
-					outgoingLink) == diagrama_concreta.diagram.edit.parts.TcdAsociacionEditPart.VISUAL_ID) {
+					outgoingLink) == diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart.VISUAL_ID) {
 				DestroyElementRequest r = new DestroyElementRequest(outgoingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
 				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
 				continue;
 			}
 			if (diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getVisualID(
-					outgoingLink) == diagrama_concreta.diagram.edit.parts.TcdComposicionEditPart.VISUAL_ID) {
+					outgoingLink) == diagrama_concreta.diagram.edit.parts.TCDAsociacionEditPart.VISUAL_ID) {
 				DestroyElementRequest r = new DestroyElementRequest(outgoingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
 				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
 				continue;
 			}
 			if (diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getVisualID(
-					outgoingLink) == diagrama_concreta.diagram.edit.parts.TcdDependenciaEditPart.VISUAL_ID) {
+					outgoingLink) == diagrama_concreta.diagram.edit.parts.TCDComposicionEditPart.VISUAL_ID) {
+				DestroyElementRequest r = new DestroyElementRequest(outgoingLink.getElement(), false);
+				cmd.add(new DestroyElementCommand(r));
+				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
+				continue;
+			}
+			if (diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getVisualID(
+					outgoingLink) == diagrama_concreta.diagram.edit.parts.TCDDependenciaEditPart.VISUAL_ID) {
 				DestroyElementRequest r = new DestroyElementRequest(outgoingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
 				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
 				continue;
 			}
 			if (diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-					.getVisualID(outgoingLink) == diagrama_concreta.diagram.edit.parts.TcdHerenciaEditPart.VISUAL_ID) {
-				DestroyElementRequest r = new DestroyElementRequest(outgoingLink.getElement(), false);
-				cmd.add(new DestroyElementCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
-				continue;
-			}
-			if (diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getVisualID(
-					outgoingLink) == diagrama_concreta.diagram.edit.parts.TcdAgregacionEditPart.VISUAL_ID) {
+					.getVisualID(outgoingLink) == diagrama_concreta.diagram.edit.parts.TCDHerenciaEditPart.VISUAL_ID) {
 				DestroyElementRequest r = new DestroyElementRequest(outgoingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
 				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
@@ -135,11 +135,11 @@ public class TcdClaseItemSemanticEditPolicy
 		for (Iterator<?> nit = view.getChildren().iterator(); nit.hasNext();) {
 			Node node = (Node) nit.next();
 			switch (diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getVisualID(node)) {
-			case diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaAtributosCompartmentEditPart.VISUAL_ID:
+			case diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaAtributosCompartmentEditPart.VISUAL_ID:
 				for (Iterator<?> cit = node.getChildren().iterator(); cit.hasNext();) {
 					Node cnode = (Node) cit.next();
 					switch (diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getVisualID(cnode)) {
-					case diagrama_concreta.diagram.edit.parts.TcdAtributoEditPart.VISUAL_ID:
+					case diagrama_concreta.diagram.edit.parts.TCDAtributoEditPart.VISUAL_ID:
 						cmd.add(new DestroyElementCommand(
 								new DestroyElementRequest(getEditingDomain(), cnode.getElement(), false))); // directlyOwned: true
 						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
@@ -148,11 +148,11 @@ public class TcdClaseItemSemanticEditPolicy
 					}
 				}
 				break;
-			case diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaMetodosCompartmentEditPart.VISUAL_ID:
+			case diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaMetodosCompartmentEditPart.VISUAL_ID:
 				for (Iterator<?> cit = node.getChildren().iterator(); cit.hasNext();) {
 					Node cnode = (Node) cit.next();
 					switch (diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getVisualID(cnode)) {
-					case diagrama_concreta.diagram.edit.parts.TcdMetodoEditPart.VISUAL_ID:
+					case diagrama_concreta.diagram.edit.parts.TCDMetodoEditPart.VISUAL_ID:
 						cmd.add(new DestroyElementCommand(
 								new DestroyElementRequest(getEditingDomain(), cnode.getElement(), false))); // directlyOwned: true
 						// don't need explicit deletion of cnode as parent's view deletion would clean child views as well 
@@ -178,29 +178,29 @@ public class TcdClaseItemSemanticEditPolicy
 	 * @generated
 	 */
 	protected Command getStartCreateRelationshipCommand(CreateRelationshipRequest req) {
-		if (diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdAsociacion_4001 == req
+		if (diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDAgregacion_4005 == req
 				.getElementType()) {
-			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TcdAsociacionCreateCommand(req,
+			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TCDAgregacionCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdComposicion_4002 == req
+		if (diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDAsociacion_4001 == req
 				.getElementType()) {
-			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TcdComposicionCreateCommand(req,
+			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TCDAsociacionCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdDependencia_4003 == req
+		if (diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDComposicion_4002 == req
 				.getElementType()) {
-			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TcdDependenciaCreateCommand(req,
+			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TCDComposicionCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdHerencia_4004 == req
+		if (diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDDependencia_4003 == req
 				.getElementType()) {
-			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TcdHerenciaCreateCommand(req,
+			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TCDDependenciaCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdAgregacion_4005 == req
+		if (diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDHerencia_4004 == req
 				.getElementType()) {
-			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TcdAgregacionCreateCommand(req,
+			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TCDHerenciaCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
 		return null;
@@ -210,29 +210,29 @@ public class TcdClaseItemSemanticEditPolicy
 	 * @generated
 	 */
 	protected Command getCompleteCreateRelationshipCommand(CreateRelationshipRequest req) {
-		if (diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdAsociacion_4001 == req
+		if (diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDAgregacion_4005 == req
 				.getElementType()) {
-			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TcdAsociacionCreateCommand(req,
+			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TCDAgregacionCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdComposicion_4002 == req
+		if (diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDAsociacion_4001 == req
 				.getElementType()) {
-			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TcdComposicionCreateCommand(req,
+			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TCDAsociacionCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdDependencia_4003 == req
+		if (diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDComposicion_4002 == req
 				.getElementType()) {
-			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TcdDependenciaCreateCommand(req,
+			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TCDComposicionCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdHerencia_4004 == req
+		if (diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDDependencia_4003 == req
 				.getElementType()) {
-			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TcdHerenciaCreateCommand(req,
+			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TCDDependenciaCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdAgregacion_4005 == req
+		if (diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDHerencia_4004 == req
 				.getElementType()) {
-			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TcdAgregacionCreateCommand(req,
+			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TCDHerenciaCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
 		return null;
@@ -246,16 +246,16 @@ public class TcdClaseItemSemanticEditPolicy
 	 */
 	protected Command getReorientRelationshipCommand(ReorientRelationshipRequest req) {
 		switch (getVisualID(req)) {
-		case diagrama_concreta.diagram.edit.parts.TcdAsociacionEditPart.VISUAL_ID:
-			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TcdAsociacionReorientCommand(req));
-		case diagrama_concreta.diagram.edit.parts.TcdComposicionEditPart.VISUAL_ID:
-			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TcdComposicionReorientCommand(req));
-		case diagrama_concreta.diagram.edit.parts.TcdDependenciaEditPart.VISUAL_ID:
-			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TcdDependenciaReorientCommand(req));
-		case diagrama_concreta.diagram.edit.parts.TcdHerenciaEditPart.VISUAL_ID:
-			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TcdHerenciaReorientCommand(req));
-		case diagrama_concreta.diagram.edit.parts.TcdAgregacionEditPart.VISUAL_ID:
-			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TcdAgregacionReorientCommand(req));
+		case diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart.VISUAL_ID:
+			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TCDAgregacionReorientCommand(req));
+		case diagrama_concreta.diagram.edit.parts.TCDAsociacionEditPart.VISUAL_ID:
+			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TCDAsociacionReorientCommand(req));
+		case diagrama_concreta.diagram.edit.parts.TCDComposicionEditPart.VISUAL_ID:
+			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TCDComposicionReorientCommand(req));
+		case diagrama_concreta.diagram.edit.parts.TCDDependenciaEditPart.VISUAL_ID:
+			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TCDDependenciaReorientCommand(req));
+		case diagrama_concreta.diagram.edit.parts.TCDHerenciaEditPart.VISUAL_ID:
+			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TCDHerenciaReorientCommand(req));
 		}
 		return super.getReorientRelationshipCommand(req);
 	}

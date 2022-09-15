@@ -67,73 +67,79 @@ public class AbstractaSwitch<T> extends Switch<T> {
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
 			case AbstractaPackage.TCD_PAQUETE: {
-				TcdPaquete tcdPaquete = (TcdPaquete)theEObject;
-				T result = caseTcdPaquete(tcdPaquete);
+				TCDPaquete tcdPaquete = (TCDPaquete)theEObject;
+				T result = caseTCDPaquete(tcdPaquete);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AbstractaPackage.MODEL_FACTORY: {
+				ModelFactory modelFactory = (ModelFactory)theEObject;
+				T result = caseModelFactory(modelFactory);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case AbstractaPackage.TCD_CLASE: {
-				TcdClase tcdClase = (TcdClase)theEObject;
-				T result = caseTcdClase(tcdClase);
+				TCDClase tcdClase = (TCDClase)theEObject;
+				T result = caseTCDClase(tcdClase);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case AbstractaPackage.TCD_ATRIBUTO: {
-				TcdAtributo tcdAtributo = (TcdAtributo)theEObject;
-				T result = caseTcdAtributo(tcdAtributo);
+				TCDAtributo tcdAtributo = (TCDAtributo)theEObject;
+				T result = caseTCDAtributo(tcdAtributo);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case AbstractaPackage.TCD_METODO: {
-				TcdMetodo tcdMetodo = (TcdMetodo)theEObject;
-				T result = caseTcdMetodo(tcdMetodo);
+				TCDMetodo tcdMetodo = (TCDMetodo)theEObject;
+				T result = caseTCDMetodo(tcdMetodo);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case AbstractaPackage.TCD_RELACION: {
-				TcdRelacion tcdRelacion = (TcdRelacion)theEObject;
-				T result = caseTcdRelacion(tcdRelacion);
+				TCDRelacion tcdRelacion = (TCDRelacion)theEObject;
+				T result = caseTCDRelacion(tcdRelacion);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case AbstractaPackage.TCD_ASOCIACION: {
-				TcdAsociacion tcdAsociacion = (TcdAsociacion)theEObject;
-				T result = caseTcdAsociacion(tcdAsociacion);
-				if (result == null) result = caseTcdRelacion(tcdAsociacion);
+				TCDAsociacion tcdAsociacion = (TCDAsociacion)theEObject;
+				T result = caseTCDAsociacion(tcdAsociacion);
+				if (result == null) result = caseTCDRelacion(tcdAsociacion);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case AbstractaPackage.TCD_COMPOSICION: {
-				TcdComposicion tcdComposicion = (TcdComposicion)theEObject;
-				T result = caseTcdComposicion(tcdComposicion);
-				if (result == null) result = caseTcdRelacion(tcdComposicion);
+				TCDComposicion tcdComposicion = (TCDComposicion)theEObject;
+				T result = caseTCDComposicion(tcdComposicion);
+				if (result == null) result = caseTCDRelacion(tcdComposicion);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case AbstractaPackage.TCD_DEPENDENCIA: {
-				TcdDependencia tcdDependencia = (TcdDependencia)theEObject;
-				T result = caseTcdDependencia(tcdDependencia);
-				if (result == null) result = caseTcdRelacion(tcdDependencia);
+				TCDDependencia tcdDependencia = (TCDDependencia)theEObject;
+				T result = caseTCDDependencia(tcdDependencia);
+				if (result == null) result = caseTCDRelacion(tcdDependencia);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case AbstractaPackage.TCD_HERENCIA: {
-				TcdHerencia tcdHerencia = (TcdHerencia)theEObject;
-				T result = caseTcdHerencia(tcdHerencia);
-				if (result == null) result = caseTcdRelacion(tcdHerencia);
+				TCDHerencia tcdHerencia = (TCDHerencia)theEObject;
+				T result = caseTCDHerencia(tcdHerencia);
+				if (result == null) result = caseTCDRelacion(tcdHerencia);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case AbstractaPackage.TCD_AGREGACION: {
-				TcdAgregacion tcdAgregacion = (TcdAgregacion)theEObject;
-				T result = caseTcdAgregacion(tcdAgregacion);
-				if (result == null) result = caseTcdRelacion(tcdAgregacion);
+				TCDAgregacion tcdAgregacion = (TCDAgregacion)theEObject;
+				T result = caseTCDAgregacion(tcdAgregacion);
+				if (result == null) result = caseTCDRelacion(tcdAgregacion);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case AbstractaPackage.TCD_PARAMETRO: {
-				TcdParametro tcdParametro = (TcdParametro)theEObject;
-				T result = caseTcdParametro(tcdParametro);
+				TCDParametro tcdParametro = (TCDParametro)theEObject;
+				T result = caseTCDParametro(tcdParametro);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -142,167 +148,182 @@ public class AbstractaSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Tcd Paquete</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>TCD Paquete</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Tcd Paquete</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>TCD Paquete</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTcdPaquete(TcdPaquete object) {
+	public T caseTCDPaquete(TCDPaquete object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Tcd Clase</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Model Factory</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Tcd Clase</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Model Factory</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTcdClase(TcdClase object) {
+	public T caseModelFactory(ModelFactory object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Tcd Atributo</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>TCD Clase</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Tcd Atributo</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>TCD Clase</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTcdAtributo(TcdAtributo object) {
+	public T caseTCDClase(TCDClase object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Tcd Metodo</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>TCD Atributo</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Tcd Metodo</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>TCD Atributo</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTcdMetodo(TcdMetodo object) {
+	public T caseTCDAtributo(TCDAtributo object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Tcd Relacion</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>TCD Metodo</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Tcd Relacion</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>TCD Metodo</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTcdRelacion(TcdRelacion object) {
+	public T caseTCDMetodo(TCDMetodo object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Tcd Asociacion</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>TCD Relacion</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Tcd Asociacion</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>TCD Relacion</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTcdAsociacion(TcdAsociacion object) {
+	public T caseTCDRelacion(TCDRelacion object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Tcd Composicion</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>TCD Asociacion</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Tcd Composicion</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>TCD Asociacion</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTcdComposicion(TcdComposicion object) {
+	public T caseTCDAsociacion(TCDAsociacion object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Tcd Dependencia</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>TCD Composicion</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Tcd Dependencia</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>TCD Composicion</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTcdDependencia(TcdDependencia object) {
+	public T caseTCDComposicion(TCDComposicion object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Tcd Herencia</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>TCD Dependencia</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Tcd Herencia</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>TCD Dependencia</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTcdHerencia(TcdHerencia object) {
+	public T caseTCDDependencia(TCDDependencia object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Tcd Agregacion</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>TCD Herencia</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Tcd Agregacion</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>TCD Herencia</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTcdAgregacion(TcdAgregacion object) {
+	public T caseTCDHerencia(TCDHerencia object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Tcd Parametro</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>TCD Agregacion</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Tcd Parametro</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>TCD Agregacion</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTcdParametro(TcdParametro object) {
+	public T caseTCDAgregacion(TCDAgregacion object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>TCD Parametro</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>TCD Parametro</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTCDParametro(TCDParametro object) {
 		return null;
 	}
 

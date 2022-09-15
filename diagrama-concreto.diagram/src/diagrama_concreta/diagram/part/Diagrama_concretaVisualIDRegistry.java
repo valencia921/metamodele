@@ -29,8 +29,8 @@ public class Diagrama_concretaVisualIDRegistry {
 	*/
 	public static int getVisualID(View view) {
 		if (view instanceof Diagram) {
-			if (diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.MODEL_ID.equals(view.getType())) {
-				return diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.VISUAL_ID;
+			if (diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.MODEL_ID.equals(view.getType())) {
+				return diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.VISUAL_ID;
 			} else {
 				return -1;
 			}
@@ -82,9 +82,9 @@ public class Diagrama_concretaVisualIDRegistry {
 		if (domainElement == null) {
 			return -1;
 		}
-		if (diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTcdDiagramaClases().isSuperTypeOf(
-				domainElement.eClass()) && isDiagram((diagrama_concreta.TcdDiagramaClases) domainElement)) {
-			return diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.VISUAL_ID;
+		if (diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDDiagramaClases().isSuperTypeOf(
+				domainElement.eClass()) && isDiagram((diagrama_concreta.TCDDiagramaClases) domainElement)) {
+			return diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.VISUAL_ID;
 		}
 		return -1;
 	}
@@ -98,38 +98,42 @@ public class Diagrama_concretaVisualIDRegistry {
 		}
 		String containerModelID = diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
 				.getModelID(containerView);
-		if (!diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.MODEL_ID.equals(containerModelID)
+		if (!diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.MODEL_ID.equals(containerModelID)
 				&& !"diagrama_concreta".equals(containerModelID)) { //$NON-NLS-1$
 			return -1;
 		}
 		int containerVisualID;
-		if (diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.MODEL_ID.equals(containerModelID)) {
+		if (diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.MODEL_ID.equals(containerModelID)) {
 			containerVisualID = diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
 					.getVisualID(containerView);
 		} else {
 			if (containerView instanceof Diagram) {
-				containerVisualID = diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.VISUAL_ID;
+				containerVisualID = diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.VISUAL_ID;
 			} else {
 				return -1;
 			}
 		}
 		switch (containerVisualID) {
-		case diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.VISUAL_ID:
-			if (diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTcdClase()
+		case diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.VISUAL_ID:
+			if (diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDClase()
 					.isSuperTypeOf(domainElement.eClass())) {
-				return diagrama_concreta.diagram.edit.parts.TcdClaseEditPart.VISUAL_ID;
+				return diagrama_concreta.diagram.edit.parts.TCDClaseEditPart.VISUAL_ID;
+			}
+			if (diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDPaquete()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return diagrama_concreta.diagram.edit.parts.TCDPaqueteEditPart.VISUAL_ID;
 			}
 			break;
-		case diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaAtributosCompartmentEditPart.VISUAL_ID:
-			if (diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTcdAtributo()
+		case diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaAtributosCompartmentEditPart.VISUAL_ID:
+			if (diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDAtributo()
 					.isSuperTypeOf(domainElement.eClass())) {
-				return diagrama_concreta.diagram.edit.parts.TcdAtributoEditPart.VISUAL_ID;
+				return diagrama_concreta.diagram.edit.parts.TCDAtributoEditPart.VISUAL_ID;
 			}
 			break;
-		case diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaMetodosCompartmentEditPart.VISUAL_ID:
-			if (diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTcdMetodo()
+		case diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaMetodosCompartmentEditPart.VISUAL_ID:
+			if (diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDMetodo()
 					.isSuperTypeOf(domainElement.eClass())) {
-				return diagrama_concreta.diagram.edit.parts.TcdMetodoEditPart.VISUAL_ID;
+				return diagrama_concreta.diagram.edit.parts.TCDMetodoEditPart.VISUAL_ID;
 			}
 			break;
 		}
@@ -142,55 +146,63 @@ public class Diagrama_concretaVisualIDRegistry {
 	public static boolean canCreateNode(View containerView, int nodeVisualID) {
 		String containerModelID = diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
 				.getModelID(containerView);
-		if (!diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.MODEL_ID.equals(containerModelID)
+		if (!diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.MODEL_ID.equals(containerModelID)
 				&& !"diagrama_concreta".equals(containerModelID)) { //$NON-NLS-1$
 			return false;
 		}
 		int containerVisualID;
-		if (diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.MODEL_ID.equals(containerModelID)) {
+		if (diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.MODEL_ID.equals(containerModelID)) {
 			containerVisualID = diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
 					.getVisualID(containerView);
 		} else {
 			if (containerView instanceof Diagram) {
-				containerVisualID = diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.VISUAL_ID;
+				containerVisualID = diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.VISUAL_ID;
 			} else {
 				return false;
 			}
 		}
 		switch (containerVisualID) {
-		case diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.VISUAL_ID:
-			if (diagrama_concreta.diagram.edit.parts.TcdClaseEditPart.VISUAL_ID == nodeVisualID) {
+		case diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.VISUAL_ID:
+			if (diagrama_concreta.diagram.edit.parts.TCDClaseEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (diagrama_concreta.diagram.edit.parts.TCDPaqueteEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case diagrama_concreta.diagram.edit.parts.TcdClaseEditPart.VISUAL_ID:
-			if (diagrama_concreta.diagram.edit.parts.TcdClaseNombreEditPart.VISUAL_ID == nodeVisualID) {
+		case diagrama_concreta.diagram.edit.parts.TCDClaseEditPart.VISUAL_ID:
+			if (diagrama_concreta.diagram.edit.parts.TCDClaseNombreEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaAtributosCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+			if (diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaAtributosCompartmentEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaMetodosCompartmentEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case diagrama_concreta.diagram.edit.parts.TcdAtributoEditPart.VISUAL_ID:
-			if (diagrama_concreta.diagram.edit.parts.TcdAtributoNombreEditPart.VISUAL_ID == nodeVisualID) {
+			if (diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaMetodosCompartmentEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case diagrama_concreta.diagram.edit.parts.TcdMetodoEditPart.VISUAL_ID:
-			if (diagrama_concreta.diagram.edit.parts.TcdMetodoNombreEditPart.VISUAL_ID == nodeVisualID) {
+		case diagrama_concreta.diagram.edit.parts.TCDPaqueteEditPart.VISUAL_ID:
+			if (diagrama_concreta.diagram.edit.parts.TCDPaqueteNombreEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaAtributosCompartmentEditPart.VISUAL_ID:
-			if (diagrama_concreta.diagram.edit.parts.TcdAtributoEditPart.VISUAL_ID == nodeVisualID) {
+		case diagrama_concreta.diagram.edit.parts.TCDAtributoEditPart.VISUAL_ID:
+			if (diagrama_concreta.diagram.edit.parts.TCDAtributoNombreEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaMetodosCompartmentEditPart.VISUAL_ID:
-			if (diagrama_concreta.diagram.edit.parts.TcdMetodoEditPart.VISUAL_ID == nodeVisualID) {
+		case diagrama_concreta.diagram.edit.parts.TCDMetodoEditPart.VISUAL_ID:
+			if (diagrama_concreta.diagram.edit.parts.TCDMetodoNombreEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaAtributosCompartmentEditPart.VISUAL_ID:
+			if (diagrama_concreta.diagram.edit.parts.TCDAtributoEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaMetodosCompartmentEditPart.VISUAL_ID:
+			if (diagrama_concreta.diagram.edit.parts.TCDMetodoEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -205,25 +217,25 @@ public class Diagrama_concretaVisualIDRegistry {
 		if (domainElement == null) {
 			return -1;
 		}
-		if (diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTcdAsociacion()
+		if (diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDAgregacion()
 				.isSuperTypeOf(domainElement.eClass())) {
-			return diagrama_concreta.diagram.edit.parts.TcdAsociacionEditPart.VISUAL_ID;
+			return diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart.VISUAL_ID;
 		}
-		if (diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTcdComposicion()
+		if (diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDAsociacion()
 				.isSuperTypeOf(domainElement.eClass())) {
-			return diagrama_concreta.diagram.edit.parts.TcdComposicionEditPart.VISUAL_ID;
+			return diagrama_concreta.diagram.edit.parts.TCDAsociacionEditPart.VISUAL_ID;
 		}
-		if (diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTcdDependencia()
+		if (diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDComposicion()
 				.isSuperTypeOf(domainElement.eClass())) {
-			return diagrama_concreta.diagram.edit.parts.TcdDependenciaEditPart.VISUAL_ID;
+			return diagrama_concreta.diagram.edit.parts.TCDComposicionEditPart.VISUAL_ID;
 		}
-		if (diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTcdHerencia()
+		if (diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDDependencia()
 				.isSuperTypeOf(domainElement.eClass())) {
-			return diagrama_concreta.diagram.edit.parts.TcdHerenciaEditPart.VISUAL_ID;
+			return diagrama_concreta.diagram.edit.parts.TCDDependenciaEditPart.VISUAL_ID;
 		}
-		if (diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTcdAgregacion()
+		if (diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDHerencia()
 				.isSuperTypeOf(domainElement.eClass())) {
-			return diagrama_concreta.diagram.edit.parts.TcdAgregacionEditPart.VISUAL_ID;
+			return diagrama_concreta.diagram.edit.parts.TCDHerenciaEditPart.VISUAL_ID;
 		}
 		return -1;
 	}
@@ -234,7 +246,7 @@ public class Diagrama_concretaVisualIDRegistry {
 	* 
 	* @generated
 	*/
-	private static boolean isDiagram(diagrama_concreta.TcdDiagramaClases element) {
+	private static boolean isDiagram(diagrama_concreta.TCDDiagramaClases element) {
 		return true;
 	}
 
@@ -255,8 +267,8 @@ public class Diagrama_concretaVisualIDRegistry {
 	*/
 	public static boolean isCompartmentVisualID(int visualID) {
 		switch (visualID) {
-		case diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaAtributosCompartmentEditPart.VISUAL_ID:
-		case diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaMetodosCompartmentEditPart.VISUAL_ID:
+		case diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaAtributosCompartmentEditPart.VISUAL_ID:
+		case diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaMetodosCompartmentEditPart.VISUAL_ID:
 			return true;
 		default:
 			break;
@@ -269,10 +281,11 @@ public class Diagrama_concretaVisualIDRegistry {
 	*/
 	public static boolean isSemanticLeafVisualID(int visualID) {
 		switch (visualID) {
-		case diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.VISUAL_ID:
+		case diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.VISUAL_ID:
 			return false;
-		case diagrama_concreta.diagram.edit.parts.TcdAtributoEditPart.VISUAL_ID:
-		case diagrama_concreta.diagram.edit.parts.TcdMetodoEditPart.VISUAL_ID:
+		case diagrama_concreta.diagram.edit.parts.TCDPaqueteEditPart.VISUAL_ID:
+		case diagrama_concreta.diagram.edit.parts.TCDAtributoEditPart.VISUAL_ID:
+		case diagrama_concreta.diagram.edit.parts.TCDMetodoEditPart.VISUAL_ID:
 			return true;
 		default:
 			break;

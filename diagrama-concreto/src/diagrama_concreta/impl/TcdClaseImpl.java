@@ -3,9 +3,9 @@
 package diagrama_concreta.impl;
 
 import diagrama_concreta.Diagrama_concretaPackage;
-import diagrama_concreta.TcdAtributo;
-import diagrama_concreta.TcdClase;
-import diagrama_concreta.TcdMetodo;
+import diagrama_concreta.TCDAtributo;
+import diagrama_concreta.TCDClase;
+import diagrama_concreta.TCDMetodo;
 import diagrama_concreta.Visibilidad;
 
 import java.util.Collection;
@@ -26,24 +26,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Tcd Clase</b></em>'.
+ * An implementation of the model object '<em><b>TCD Clase</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link diagrama_concreta.impl.TcdClaseImpl#getListaAtributos <em>Lista Atributos</em>}</li>
- *   <li>{@link diagrama_concreta.impl.TcdClaseImpl#getListaMetodos <em>Lista Metodos</em>}</li>
- *   <li>{@link diagrama_concreta.impl.TcdClaseImpl#getNombre <em>Nombre</em>}</li>
- *   <li>{@link diagrama_concreta.impl.TcdClaseImpl#getEstereotipo <em>Estereotipo</em>}</li>
- *   <li>{@link diagrama_concreta.impl.TcdClaseImpl#getModificadorAcceso <em>Modificador Acceso</em>}</li>
- *   <li>{@link diagrama_concreta.impl.TcdClaseImpl#isIsAbstract <em>Is Abstract</em>}</li>
- *   <li>{@link diagrama_concreta.impl.TcdClaseImpl#getDocumentacion <em>Documentacion</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDClaseImpl#getListaAtributos <em>Lista Atributos</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDClaseImpl#getListaMetodos <em>Lista Metodos</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDClaseImpl#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDClaseImpl#getEstereotipo <em>Estereotipo</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDClaseImpl#getModificadorAcceso <em>Modificador Acceso</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDClaseImpl#isIsAbstract <em>Is Abstract</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDClaseImpl#getDocumentacion <em>Documentacion</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TcdClaseImpl extends EObjectImpl implements TcdClase {
+public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 	/**
 	 * The cached value of the '{@link #getListaAtributos() <em>Lista Atributos</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -52,7 +52,7 @@ public class TcdClaseImpl extends EObjectImpl implements TcdClase {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TcdAtributo> listaAtributos;
+	protected EList<TCDAtributo> listaAtributos;
 
 	/**
 	 * The cached value of the '{@link #getListaMetodos() <em>Lista Metodos</em>}' containment reference list.
@@ -62,7 +62,7 @@ public class TcdClaseImpl extends EObjectImpl implements TcdClase {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TcdMetodo> listaMetodos;
+	protected EList<TCDMetodo> listaMetodos;
 
 	/**
 	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
@@ -169,7 +169,7 @@ public class TcdClaseImpl extends EObjectImpl implements TcdClase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TcdClaseImpl() {
+	protected TCDClaseImpl() {
 		super();
 	}
 
@@ -188,9 +188,9 @@ public class TcdClaseImpl extends EObjectImpl implements TcdClase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TcdAtributo> getListaAtributos() {
+	public EList<TCDAtributo> getListaAtributos() {
 		if (listaAtributos == null) {
-			listaAtributos = new EObjectContainmentEList<TcdAtributo>(TcdAtributo.class, this, Diagrama_concretaPackage.TCD_CLASE__LISTA_ATRIBUTOS);
+			listaAtributos = new EObjectContainmentEList<TCDAtributo>(TCDAtributo.class, this, Diagrama_concretaPackage.TCD_CLASE__LISTA_ATRIBUTOS);
 		}
 		return listaAtributos;
 	}
@@ -200,9 +200,9 @@ public class TcdClaseImpl extends EObjectImpl implements TcdClase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TcdMetodo> getListaMetodos() {
+	public EList<TCDMetodo> getListaMetodos() {
 		if (listaMetodos == null) {
-			listaMetodos = new EObjectContainmentEList<TcdMetodo>(TcdMetodo.class, this, Diagrama_concretaPackage.TCD_CLASE__LISTA_METODOS);
+			listaMetodos = new EObjectContainmentEList<TCDMetodo>(TCDMetodo.class, this, Diagrama_concretaPackage.TCD_CLASE__LISTA_METODOS);
 		}
 		return listaMetodos;
 	}
@@ -365,11 +365,11 @@ public class TcdClaseImpl extends EObjectImpl implements TcdClase {
 		switch (featureID) {
 			case Diagrama_concretaPackage.TCD_CLASE__LISTA_ATRIBUTOS:
 				getListaAtributos().clear();
-				getListaAtributos().addAll((Collection<? extends TcdAtributo>)newValue);
+				getListaAtributos().addAll((Collection<? extends TCDAtributo>)newValue);
 				return;
 			case Diagrama_concretaPackage.TCD_CLASE__LISTA_METODOS:
 				getListaMetodos().clear();
-				getListaMetodos().addAll((Collection<? extends TcdMetodo>)newValue);
+				getListaMetodos().addAll((Collection<? extends TCDMetodo>)newValue);
 				return;
 			case Diagrama_concretaPackage.TCD_CLASE__NOMBRE:
 				setNombre((String)newValue);
@@ -473,4 +473,4 @@ public class TcdClaseImpl extends EObjectImpl implements TcdClase {
 		return result.toString();
 	}
 
-} //TcdClaseImpl
+} //TCDClaseImpl

@@ -4,7 +4,7 @@ package abstracta.impl;
 
 import abstracta.AbstractaPackage;
 import abstracta.Multiplicidad;
-import abstracta.TcdAgregacion;
+import abstracta.TCDAgregacion;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -14,21 +14,21 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Tcd Agregacion</b></em>'.
+ * An implementation of the model object '<em><b>TCD Agregacion</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link abstracta.impl.TcdAgregacionImpl#getNombreOrigen <em>Nombre Origen</em>}</li>
- *   <li>{@link abstracta.impl.TcdAgregacionImpl#getNombreDestino <em>Nombre Destino</em>}</li>
- *   <li>{@link abstracta.impl.TcdAgregacionImpl#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}</li>
- *   <li>{@link abstracta.impl.TcdAgregacionImpl#getMultiplicidadDestino <em>Multiplicidad Destino</em>}</li>
+ *   <li>{@link abstracta.impl.TCDAgregacionImpl#getNombreOrigen <em>Nombre Origen</em>}</li>
+ *   <li>{@link abstracta.impl.TCDAgregacionImpl#getNombreDestino <em>Nombre Destino</em>}</li>
+ *   <li>{@link abstracta.impl.TCDAgregacionImpl#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}</li>
+ *   <li>{@link abstracta.impl.TCDAgregacionImpl#getMultiplicidadDestino <em>Multiplicidad Destino</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TcdAgregacionImpl extends TcdRelacionImpl implements TcdAgregacion {
+public class TCDAgregacionImpl extends TCDRelacionImpl implements TCDAgregacion {
 	/**
 	 * The default value of the '{@link #getNombreOrigen() <em>Nombre Origen</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -114,7 +114,7 @@ public class TcdAgregacionImpl extends TcdRelacionImpl implements TcdAgregacion 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TcdAgregacionImpl() {
+	protected TCDAgregacionImpl() {
 		super();
 	}
 
@@ -322,4 +322,4 @@ public class TcdAgregacionImpl extends TcdRelacionImpl implements TcdAgregacion 
 		return result.toString();
 	}
 
-} //TcdAgregacionImpl
+} //TCDAgregacionImpl
