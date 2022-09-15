@@ -13,22 +13,25 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest;
 /**
  * @generated
  */
-public class TcdDiagramaClasesItemSemanticEditPolicy
+public class TCDDiagramaClasesItemSemanticEditPolicy
 		extends diagrama_concreta.diagram.edit.policies.Diagrama_concretaBaseItemSemanticEditPolicy {
 
 	/**
 	* @generated
 	*/
-	public TcdDiagramaClasesItemSemanticEditPolicy() {
-		super(diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdDiagramaClases_1000);
+	public TCDDiagramaClasesItemSemanticEditPolicy() {
+		super(diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDDiagramaClases_1000);
 	}
 
 	/**
 	* @generated
 	*/
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdClase_2001 == req.getElementType()) {
-			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TcdClaseCreateCommand(req));
+		if (diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDClase_2001 == req.getElementType()) {
+			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TCDClaseCreateCommand(req));
+		}
+		if (diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDPaquete_2002 == req.getElementType()) {
+			return getGEFWrapper(new diagrama_concreta.diagram.edit.commands.TCDPaqueteCreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}

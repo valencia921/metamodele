@@ -3,8 +3,8 @@
 package abstracta.impl;
 
 import abstracta.AbstractaPackage;
-import abstracta.TcdClase;
-import abstracta.TcdRelacion;
+import abstracta.TCDClase;
+import abstracta.TCDRelacion;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -16,20 +16,20 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Tcd Relacion</b></em>'.
+ * An implementation of the model object '<em><b>TCD Relacion</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link abstracta.impl.TcdRelacionImpl#getSource <em>Source</em>}</li>
- *   <li>{@link abstracta.impl.TcdRelacionImpl#getTarget <em>Target</em>}</li>
- *   <li>{@link abstracta.impl.TcdRelacionImpl#getNavegavilidad <em>Navegavilidad</em>}</li>
+ *   <li>{@link abstracta.impl.TCDRelacionImpl#getSource <em>Source</em>}</li>
+ *   <li>{@link abstracta.impl.TCDRelacionImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link abstracta.impl.TCDRelacionImpl#getNavegavilidad <em>Navegavilidad</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class TcdRelacionImpl extends EObjectImpl implements TcdRelacion {
+public abstract class TCDRelacionImpl extends EObjectImpl implements TCDRelacion {
 	/**
 	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -38,7 +38,7 @@ public abstract class TcdRelacionImpl extends EObjectImpl implements TcdRelacion
 	 * @generated
 	 * @ordered
 	 */
-	protected TcdClase source;
+	protected TCDClase source;
 
 	/**
 	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
@@ -48,7 +48,7 @@ public abstract class TcdRelacionImpl extends EObjectImpl implements TcdRelacion
 	 * @generated
 	 * @ordered
 	 */
-	protected TcdClase target;
+	protected TCDClase target;
 
 	/**
 	 * The default value of the '{@link #getNavegavilidad() <em>Navegavilidad</em>}' attribute.
@@ -75,7 +75,7 @@ public abstract class TcdRelacionImpl extends EObjectImpl implements TcdRelacion
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TcdRelacionImpl() {
+	protected TCDRelacionImpl() {
 		super();
 	}
 
@@ -94,10 +94,10 @@ public abstract class TcdRelacionImpl extends EObjectImpl implements TcdRelacion
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdClase getSource() {
+	public TCDClase getSource() {
 		if (source != null && source.eIsProxy()) {
 			InternalEObject oldSource = (InternalEObject)source;
-			source = (TcdClase)eResolveProxy(oldSource);
+			source = (TCDClase)eResolveProxy(oldSource);
 			if (source != oldSource) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AbstractaPackage.TCD_RELACION__SOURCE, oldSource, source));
@@ -111,7 +111,7 @@ public abstract class TcdRelacionImpl extends EObjectImpl implements TcdRelacion
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdClase basicGetSource() {
+	public TCDClase basicGetSource() {
 		return source;
 	}
 
@@ -120,8 +120,8 @@ public abstract class TcdRelacionImpl extends EObjectImpl implements TcdRelacion
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSource(TcdClase newSource) {
-		TcdClase oldSource = source;
+	public void setSource(TCDClase newSource) {
+		TCDClase oldSource = source;
 		source = newSource;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, AbstractaPackage.TCD_RELACION__SOURCE, oldSource, source));
@@ -132,10 +132,10 @@ public abstract class TcdRelacionImpl extends EObjectImpl implements TcdRelacion
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdClase getTarget() {
+	public TCDClase getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject)target;
-			target = (TcdClase)eResolveProxy(oldTarget);
+			target = (TCDClase)eResolveProxy(oldTarget);
 			if (target != oldTarget) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AbstractaPackage.TCD_RELACION__TARGET, oldTarget, target));
@@ -149,7 +149,7 @@ public abstract class TcdRelacionImpl extends EObjectImpl implements TcdRelacion
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdClase basicGetTarget() {
+	public TCDClase basicGetTarget() {
 		return target;
 	}
 
@@ -158,8 +158,8 @@ public abstract class TcdRelacionImpl extends EObjectImpl implements TcdRelacion
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTarget(TcdClase newTarget) {
-		TcdClase oldTarget = target;
+	public void setTarget(TCDClase newTarget) {
+		TCDClase oldTarget = target;
 		target = newTarget;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, AbstractaPackage.TCD_RELACION__TARGET, oldTarget, target));
@@ -215,10 +215,10 @@ public abstract class TcdRelacionImpl extends EObjectImpl implements TcdRelacion
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case AbstractaPackage.TCD_RELACION__SOURCE:
-				setSource((TcdClase)newValue);
+				setSource((TCDClase)newValue);
 				return;
 			case AbstractaPackage.TCD_RELACION__TARGET:
-				setTarget((TcdClase)newValue);
+				setTarget((TCDClase)newValue);
 				return;
 			case AbstractaPackage.TCD_RELACION__NAVEGAVILIDAD:
 				setNavegavilidad((String)newValue);
@@ -236,10 +236,10 @@ public abstract class TcdRelacionImpl extends EObjectImpl implements TcdRelacion
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case AbstractaPackage.TCD_RELACION__SOURCE:
-				setSource((TcdClase)null);
+				setSource((TCDClase)null);
 				return;
 			case AbstractaPackage.TCD_RELACION__TARGET:
-				setTarget((TcdClase)null);
+				setTarget((TCDClase)null);
 				return;
 			case AbstractaPackage.TCD_RELACION__NAVEGAVILIDAD:
 				setNavegavilidad(NAVEGAVILIDAD_EDEFAULT);
@@ -282,4 +282,4 @@ public abstract class TcdRelacionImpl extends EObjectImpl implements TcdRelacion
 		return result.toString();
 	}
 
-} //TcdRelacionImpl
+} //TCDRelacionImpl

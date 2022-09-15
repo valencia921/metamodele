@@ -5,13 +5,13 @@ package abstracta;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Tcd Herencia</b></em>'.
+ * A representation of the model object '<em><b>TCD Herencia</b></em>'.
  * <!-- end-user-doc -->
  *
  *
- * @see abstracta.AbstractaPackage#getTcdHerencia()
+ * @see abstracta.AbstractaPackage#getTCDHerencia()
  * @model
  * @generated
  */
-public interface TcdHerencia extends TcdRelacion {
-} // TcdHerencia
+public interface TCDHerencia extends TCDRelacion {
+} // TCDHerencia

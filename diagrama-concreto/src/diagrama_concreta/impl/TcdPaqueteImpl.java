@@ -3,8 +3,8 @@
 package diagrama_concreta.impl;
 
 import diagrama_concreta.Diagrama_concretaPackage;
-import diagrama_concreta.TcdClase;
-import diagrama_concreta.TcdPaquete;
+import diagrama_concreta.TCDClase;
+import diagrama_concreta.TCDPaquete;
 
 import java.util.Collection;
 
@@ -24,21 +24,21 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Tcd Paquete</b></em>'.
+ * An implementation of the model object '<em><b>TCD Paquete</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link diagrama_concreta.impl.TcdPaqueteImpl#getListaPaquetes <em>Lista Paquetes</em>}</li>
- *   <li>{@link diagrama_concreta.impl.TcdPaqueteImpl#getListaClases <em>Lista Clases</em>}</li>
- *   <li>{@link diagrama_concreta.impl.TcdPaqueteImpl#getNombre <em>Nombre</em>}</li>
- *   <li>{@link diagrama_concreta.impl.TcdPaqueteImpl#getRuta <em>Ruta</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDPaqueteImpl#getListaPaquetes <em>Lista Paquetes</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDPaqueteImpl#getListaClases <em>Lista Clases</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDPaqueteImpl#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDPaqueteImpl#getRuta <em>Ruta</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TcdPaqueteImpl extends EObjectImpl implements TcdPaquete {
+public class TCDPaqueteImpl extends EObjectImpl implements TCDPaquete {
 	/**
 	 * The cached value of the '{@link #getListaPaquetes() <em>Lista Paquetes</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -47,7 +47,7 @@ public class TcdPaqueteImpl extends EObjectImpl implements TcdPaquete {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TcdPaquete> listaPaquetes;
+	protected EList<TCDPaquete> listaPaquetes;
 
 	/**
 	 * The cached value of the '{@link #getListaClases() <em>Lista Clases</em>}' containment reference list.
@@ -57,7 +57,7 @@ public class TcdPaqueteImpl extends EObjectImpl implements TcdPaquete {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TcdClase> listaClases;
+	protected EList<TCDClase> listaClases;
 
 	/**
 	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
@@ -104,7 +104,7 @@ public class TcdPaqueteImpl extends EObjectImpl implements TcdPaquete {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TcdPaqueteImpl() {
+	protected TCDPaqueteImpl() {
 		super();
 	}
 
@@ -123,9 +123,9 @@ public class TcdPaqueteImpl extends EObjectImpl implements TcdPaquete {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TcdPaquete> getListaPaquetes() {
+	public EList<TCDPaquete> getListaPaquetes() {
 		if (listaPaquetes == null) {
-			listaPaquetes = new EObjectContainmentEList<TcdPaquete>(TcdPaquete.class, this, Diagrama_concretaPackage.TCD_PAQUETE__LISTA_PAQUETES);
+			listaPaquetes = new EObjectContainmentEList<TCDPaquete>(TCDPaquete.class, this, Diagrama_concretaPackage.TCD_PAQUETE__LISTA_PAQUETES);
 		}
 		return listaPaquetes;
 	}
@@ -135,9 +135,9 @@ public class TcdPaqueteImpl extends EObjectImpl implements TcdPaquete {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TcdClase> getListaClases() {
+	public EList<TCDClase> getListaClases() {
 		if (listaClases == null) {
-			listaClases = new EObjectContainmentEList<TcdClase>(TcdClase.class, this, Diagrama_concretaPackage.TCD_PAQUETE__LISTA_CLASES);
+			listaClases = new EObjectContainmentEList<TCDClase>(TCDClase.class, this, Diagrama_concretaPackage.TCD_PAQUETE__LISTA_CLASES);
 		}
 		return listaClases;
 	}
@@ -231,11 +231,11 @@ public class TcdPaqueteImpl extends EObjectImpl implements TcdPaquete {
 		switch (featureID) {
 			case Diagrama_concretaPackage.TCD_PAQUETE__LISTA_PAQUETES:
 				getListaPaquetes().clear();
-				getListaPaquetes().addAll((Collection<? extends TcdPaquete>)newValue);
+				getListaPaquetes().addAll((Collection<? extends TCDPaquete>)newValue);
 				return;
 			case Diagrama_concretaPackage.TCD_PAQUETE__LISTA_CLASES:
 				getListaClases().clear();
-				getListaClases().addAll((Collection<? extends TcdClase>)newValue);
+				getListaClases().addAll((Collection<? extends TCDClase>)newValue);
 				return;
 			case Diagrama_concretaPackage.TCD_PAQUETE__NOMBRE:
 				setNombre((String)newValue);
@@ -309,4 +309,4 @@ public class TcdPaqueteImpl extends EObjectImpl implements TcdPaquete {
 		return result.toString();
 	}
 
-} //TcdPaqueteImpl
+} //TCDPaqueteImpl

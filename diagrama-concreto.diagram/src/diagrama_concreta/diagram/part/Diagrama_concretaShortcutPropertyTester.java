@@ -28,7 +28,7 @@ public class Diagrama_concretaShortcutPropertyTester extends PropertyTester {
 		if (SHORTCUT_PROPERTY.equals(method)) {
 			EAnnotation annotation = view.getEAnnotation("Shortcut"); //$NON-NLS-1$
 			if (annotation != null) {
-				return diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.MODEL_ID
+				return diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.MODEL_ID
 						.equals(annotation.getDetails().get("modelID")); //$NON-NLS-1$
 			}
 		}

@@ -85,7 +85,7 @@ public class Diagrama_concretaViewProvider extends AbstractProvider implements I
 	* @generated
 	*/
 	protected boolean provides(CreateDiagramViewOperation op) {
-		return diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.MODEL_ID.equals(op.getSemanticHint())
+		return diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.MODEL_ID.equals(op.getSemanticHint())
 				&& diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
 						.getDiagramVisualID(getSemanticElement(op.getSemanticAdapter())) != -1;
 	}
@@ -127,15 +127,16 @@ public class Diagrama_concretaViewProvider extends AbstractProvider implements I
 					return false; // visual id for node EClass should match visual id from element type
 				}
 			} else {
-				if (!diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.MODEL_ID
+				if (!diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.MODEL_ID
 						.equals(diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
 								.getModelID(op.getContainerView()))) {
 					return false; // foreign diagram
 				}
 				switch (visualID) {
-				case diagrama_concreta.diagram.edit.parts.TcdClaseEditPart.VISUAL_ID:
-				case diagrama_concreta.diagram.edit.parts.TcdAtributoEditPart.VISUAL_ID:
-				case diagrama_concreta.diagram.edit.parts.TcdMetodoEditPart.VISUAL_ID:
+				case diagrama_concreta.diagram.edit.parts.TCDClaseEditPart.VISUAL_ID:
+				case diagrama_concreta.diagram.edit.parts.TCDPaqueteEditPart.VISUAL_ID:
+				case diagrama_concreta.diagram.edit.parts.TCDAtributoEditPart.VISUAL_ID:
+				case diagrama_concreta.diagram.edit.parts.TCDMetodoEditPart.VISUAL_ID:
 					if (domainElement == null
 							|| visualID != diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
 									.getNodeVisualID(op.getContainerView(), domainElement)) {
@@ -147,9 +148,10 @@ public class Diagrama_concretaViewProvider extends AbstractProvider implements I
 				}
 			}
 		}
-		return diagrama_concreta.diagram.edit.parts.TcdClaseEditPart.VISUAL_ID == visualID
-				|| diagrama_concreta.diagram.edit.parts.TcdAtributoEditPart.VISUAL_ID == visualID
-				|| diagrama_concreta.diagram.edit.parts.TcdMetodoEditPart.VISUAL_ID == visualID;
+		return diagrama_concreta.diagram.edit.parts.TCDClaseEditPart.VISUAL_ID == visualID
+				|| diagrama_concreta.diagram.edit.parts.TCDPaqueteEditPart.VISUAL_ID == visualID
+				|| diagrama_concreta.diagram.edit.parts.TCDAtributoEditPart.VISUAL_ID == visualID
+				|| diagrama_concreta.diagram.edit.parts.TCDMetodoEditPart.VISUAL_ID == visualID;
 	}
 
 	/**
@@ -181,7 +183,7 @@ public class Diagrama_concretaViewProvider extends AbstractProvider implements I
 	public Diagram createDiagram(IAdaptable semanticAdapter, String diagramKind, PreferencesHint preferencesHint) {
 		Diagram diagram = NotationFactory.eINSTANCE.createDiagram();
 		diagram.getStyles().add(NotationFactory.eINSTANCE.createDiagramStyle());
-		diagram.setType(diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.MODEL_ID);
+		diagram.setType(diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.MODEL_ID);
 		diagram.setElement(getSemanticElement(semanticAdapter));
 		diagram.setMeasurementUnit(MeasurementUnit.PIXEL_LITERAL);
 		return diagram;
@@ -201,12 +203,14 @@ public class Diagrama_concretaViewProvider extends AbstractProvider implements I
 			visualID = diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getVisualID(semanticHint);
 		}
 		switch (visualID) {
-		case diagrama_concreta.diagram.edit.parts.TcdClaseEditPart.VISUAL_ID:
-			return createTcdClase_2001(domainElement, containerView, index, persisted, preferencesHint);
-		case diagrama_concreta.diagram.edit.parts.TcdAtributoEditPart.VISUAL_ID:
-			return createTcdAtributo_3001(domainElement, containerView, index, persisted, preferencesHint);
-		case diagrama_concreta.diagram.edit.parts.TcdMetodoEditPart.VISUAL_ID:
-			return createTcdMetodo_3002(domainElement, containerView, index, persisted, preferencesHint);
+		case diagrama_concreta.diagram.edit.parts.TCDClaseEditPart.VISUAL_ID:
+			return createTCDClase_2001(domainElement, containerView, index, persisted, preferencesHint);
+		case diagrama_concreta.diagram.edit.parts.TCDPaqueteEditPart.VISUAL_ID:
+			return createTCDPaquete_2002(domainElement, containerView, index, persisted, preferencesHint);
+		case diagrama_concreta.diagram.edit.parts.TCDAtributoEditPart.VISUAL_ID:
+			return createTCDAtributo_3001(domainElement, containerView, index, persisted, preferencesHint);
+		case diagrama_concreta.diagram.edit.parts.TCDMetodoEditPart.VISUAL_ID:
+			return createTCDMetodo_3002(domainElement, containerView, index, persisted, preferencesHint);
 		}
 		// can't happen, provided #provides(CreateNodeViewOperation) is correct
 		return null;
@@ -220,20 +224,20 @@ public class Diagrama_concretaViewProvider extends AbstractProvider implements I
 		IElementType elementType = getSemanticElementType(semanticAdapter);
 		String elementTypeHint = ((IHintedType) elementType).getSemanticHint();
 		switch (diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getVisualID(elementTypeHint)) {
-		case diagrama_concreta.diagram.edit.parts.TcdAsociacionEditPart.VISUAL_ID:
-			return createTcdAsociacion_4001(getSemanticElement(semanticAdapter), containerView, index, persisted,
+		case diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart.VISUAL_ID:
+			return createTCDAgregacion_4005(getSemanticElement(semanticAdapter), containerView, index, persisted,
 					preferencesHint);
-		case diagrama_concreta.diagram.edit.parts.TcdComposicionEditPart.VISUAL_ID:
-			return createTcdComposicion_4002(getSemanticElement(semanticAdapter), containerView, index, persisted,
+		case diagrama_concreta.diagram.edit.parts.TCDAsociacionEditPart.VISUAL_ID:
+			return createTCDAsociacion_4001(getSemanticElement(semanticAdapter), containerView, index, persisted,
 					preferencesHint);
-		case diagrama_concreta.diagram.edit.parts.TcdDependenciaEditPart.VISUAL_ID:
-			return createTcdDependencia_4003(getSemanticElement(semanticAdapter), containerView, index, persisted,
+		case diagrama_concreta.diagram.edit.parts.TCDComposicionEditPart.VISUAL_ID:
+			return createTCDComposicion_4002(getSemanticElement(semanticAdapter), containerView, index, persisted,
 					preferencesHint);
-		case diagrama_concreta.diagram.edit.parts.TcdHerenciaEditPart.VISUAL_ID:
-			return createTcdHerencia_4004(getSemanticElement(semanticAdapter), containerView, index, persisted,
+		case diagrama_concreta.diagram.edit.parts.TCDDependenciaEditPart.VISUAL_ID:
+			return createTCDDependencia_4003(getSemanticElement(semanticAdapter), containerView, index, persisted,
 					preferencesHint);
-		case diagrama_concreta.diagram.edit.parts.TcdAgregacionEditPart.VISUAL_ID:
-			return createTcdAgregacion_4005(getSemanticElement(semanticAdapter), containerView, index, persisted,
+		case diagrama_concreta.diagram.edit.parts.TCDHerenciaEditPart.VISUAL_ID:
+			return createTCDHerencia_4004(getSemanticElement(semanticAdapter), containerView, index, persisted,
 					preferencesHint);
 		}
 		// can never happen, provided #provides(CreateEdgeViewOperation) is correct
@@ -243,13 +247,16 @@ public class Diagrama_concretaViewProvider extends AbstractProvider implements I
 	/**
 	* @generated
 	*/
-	public Node createTcdClase_2001(EObject domainElement, View containerView, int index, boolean persisted,
+	public Node createTCDClase_2001(EObject domainElement, View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
-		Shape node = NotationFactory.eINSTANCE.createShape();
+		Node node = NotationFactory.eINSTANCE.createNode();
+		node.getStyles().add(NotationFactory.eINSTANCE.createDescriptionStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
 		node.getStyles().add(NotationFactory.eINSTANCE.createHintedDiagramLinkStyle());
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-				.getType(diagrama_concreta.diagram.edit.parts.TcdClaseEditPart.VISUAL_ID));
+				.getType(diagrama_concreta.diagram.edit.parts.TCDClaseEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		stampShortcut(containerView, node);
@@ -271,18 +278,14 @@ public class Diagrama_concretaViewProvider extends AbstractProvider implements I
 					IPreferenceConstants.PREF_FONT_COLOR);
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB).intValue());
 		}
-		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(prefStore,
-				IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
 		Node label5003 = createLabel(node, diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-				.getType(diagrama_concreta.diagram.edit.parts.TcdClaseNombreEditPart.VISUAL_ID));
+				.getType(diagrama_concreta.diagram.edit.parts.TCDClaseNombreEditPart.VISUAL_ID));
 		createCompartment(node, diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getType(
-				diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaAtributosCompartmentEditPart.VISUAL_ID), true,
+				diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaAtributosCompartmentEditPart.VISUAL_ID), true,
 				false, false, false);
 		createCompartment(node,
 				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getType(
-						diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaMetodosCompartmentEditPart.VISUAL_ID),
+						diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaMetodosCompartmentEditPart.VISUAL_ID),
 				true, false, false, false);
 		return node;
 	}
@@ -290,12 +293,53 @@ public class Diagrama_concretaViewProvider extends AbstractProvider implements I
 	/**
 	* @generated
 	*/
-	public Node createTcdAtributo_3001(EObject domainElement, View containerView, int index, boolean persisted,
+	public Node createTCDPaquete_2002(EObject domainElement, View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
-		Shape node = NotationFactory.eINSTANCE.createShape();
+		Node node = NotationFactory.eINSTANCE.createNode();
+		node.getStyles().add(NotationFactory.eINSTANCE.createDescriptionStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-				.getType(diagrama_concreta.diagram.edit.parts.TcdAtributoEditPart.VISUAL_ID));
+				.getType(diagrama_concreta.diagram.edit.parts.TCDPaqueteEditPart.VISUAL_ID));
+		ViewUtil.insertChildView(containerView, node, index, persisted);
+		node.setElement(domainElement);
+		stampShortcut(containerView, node);
+		// initializeFromPreferences 
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();
+
+		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(prefStore,
+				IPreferenceConstants.PREF_LINE_COLOR);
+		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getLineStyle_LineColor(),
+				FigureUtilities.RGBToInteger(lineRGB));
+		FontStyle nodeFontStyle = (FontStyle) node.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (nodeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore, IPreferenceConstants.PREF_DEFAULT_FONT);
+			nodeFontStyle.setFontName(fontData.getName());
+			nodeFontStyle.setFontHeight(fontData.getHeight());
+			nodeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			nodeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter.getColor(prefStore,
+					IPreferenceConstants.PREF_FONT_COLOR);
+			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB).intValue());
+		}
+		Node label5004 = createLabel(node, diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
+				.getType(diagrama_concreta.diagram.edit.parts.TCDPaqueteNombreEditPart.VISUAL_ID));
+		return node;
+	}
+
+	/**
+	* @generated
+	*/
+	public Node createTCDAtributo_3001(EObject domainElement, View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Node node = NotationFactory.eINSTANCE.createNode();
+		node.getStyles().add(NotationFactory.eINSTANCE.createDescriptionStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
+		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
+		node.setType(diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
+				.getType(diagrama_concreta.diagram.edit.parts.TCDAtributoEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -316,24 +360,23 @@ public class Diagrama_concretaViewProvider extends AbstractProvider implements I
 					IPreferenceConstants.PREF_FONT_COLOR);
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB).intValue());
 		}
-		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(prefStore,
-				IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
 		Node label5001 = createLabel(node, diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-				.getType(diagrama_concreta.diagram.edit.parts.TcdAtributoNombreEditPart.VISUAL_ID));
+				.getType(diagrama_concreta.diagram.edit.parts.TCDAtributoNombreEditPart.VISUAL_ID));
 		return node;
 	}
 
 	/**
 	* @generated
 	*/
-	public Node createTcdMetodo_3002(EObject domainElement, View containerView, int index, boolean persisted,
+	public Node createTCDMetodo_3002(EObject domainElement, View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
-		Shape node = NotationFactory.eINSTANCE.createShape();
+		Node node = NotationFactory.eINSTANCE.createNode();
+		node.getStyles().add(NotationFactory.eINSTANCE.createDescriptionStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		node.getStyles().add(NotationFactory.eINSTANCE.createLineStyle());
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
 		node.setType(diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-				.getType(diagrama_concreta.diagram.edit.parts.TcdMetodoEditPart.VISUAL_ID));
+				.getType(diagrama_concreta.diagram.edit.parts.TCDMetodoEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		// initializeFromPreferences 
@@ -354,21 +397,18 @@ public class Diagrama_concretaViewProvider extends AbstractProvider implements I
 					IPreferenceConstants.PREF_FONT_COLOR);
 			nodeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB).intValue());
 		}
-		org.eclipse.swt.graphics.RGB fillRGB = PreferenceConverter.getColor(prefStore,
-				IPreferenceConstants.PREF_FILL_COLOR);
-		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
-				FigureUtilities.RGBToInteger(fillRGB));
 		Node label5002 = createLabel(node, diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-				.getType(diagrama_concreta.diagram.edit.parts.TcdMetodoNombreEditPart.VISUAL_ID));
+				.getType(diagrama_concreta.diagram.edit.parts.TCDMetodoNombreEditPart.VISUAL_ID));
 		return node;
 	}
 
 	/**
 	* @generated
 	*/
-	public Edge createTcdAsociacion_4001(EObject domainElement, View containerView, int index, boolean persisted,
+	public Edge createTCDAsociacion_4001(EObject domainElement, View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
-		Connector edge = NotationFactory.eINSTANCE.createConnector();
+		Edge edge = NotationFactory.eINSTANCE.createEdge();
+		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE.createRelativeBendpoints();
 		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(2);
@@ -378,15 +418,10 @@ public class Diagrama_concretaViewProvider extends AbstractProvider implements I
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
 		edge.setType(diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-				.getType(diagrama_concreta.diagram.edit.parts.TcdAsociacionEditPart.VISUAL_ID));
+				.getType(diagrama_concreta.diagram.edit.parts.TCDAsociacionEditPart.VISUAL_ID));
 		edge.setElement(domainElement);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(prefStore,
-				IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
 		FontStyle edgeFontStyle = (FontStyle) edge.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (edgeFontStyle != null) {
 			FontData fontData = PreferenceConverter.getFontData(prefStore, IPreferenceConstants.PREF_DEFAULT_FONT);
@@ -408,9 +443,10 @@ public class Diagrama_concretaViewProvider extends AbstractProvider implements I
 	/**
 	* @generated
 	*/
-	public Edge createTcdComposicion_4002(EObject domainElement, View containerView, int index, boolean persisted,
+	public Edge createTCDComposicion_4002(EObject domainElement, View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
-		Connector edge = NotationFactory.eINSTANCE.createConnector();
+		Edge edge = NotationFactory.eINSTANCE.createEdge();
+		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE.createRelativeBendpoints();
 		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(2);
@@ -420,15 +456,10 @@ public class Diagrama_concretaViewProvider extends AbstractProvider implements I
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
 		edge.setType(diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-				.getType(diagrama_concreta.diagram.edit.parts.TcdComposicionEditPart.VISUAL_ID));
+				.getType(diagrama_concreta.diagram.edit.parts.TCDComposicionEditPart.VISUAL_ID));
 		edge.setElement(domainElement);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(prefStore,
-				IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
 		FontStyle edgeFontStyle = (FontStyle) edge.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (edgeFontStyle != null) {
 			FontData fontData = PreferenceConverter.getFontData(prefStore, IPreferenceConstants.PREF_DEFAULT_FONT);
@@ -450,9 +481,10 @@ public class Diagrama_concretaViewProvider extends AbstractProvider implements I
 	/**
 	* @generated
 	*/
-	public Edge createTcdDependencia_4003(EObject domainElement, View containerView, int index, boolean persisted,
+	public Edge createTCDDependencia_4003(EObject domainElement, View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
-		Connector edge = NotationFactory.eINSTANCE.createConnector();
+		Edge edge = NotationFactory.eINSTANCE.createEdge();
+		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE.createRelativeBendpoints();
 		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(2);
@@ -462,15 +494,10 @@ public class Diagrama_concretaViewProvider extends AbstractProvider implements I
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
 		edge.setType(diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-				.getType(diagrama_concreta.diagram.edit.parts.TcdDependenciaEditPart.VISUAL_ID));
+				.getType(diagrama_concreta.diagram.edit.parts.TCDDependenciaEditPart.VISUAL_ID));
 		edge.setElement(domainElement);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(prefStore,
-				IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
 		FontStyle edgeFontStyle = (FontStyle) edge.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (edgeFontStyle != null) {
 			FontData fontData = PreferenceConverter.getFontData(prefStore, IPreferenceConstants.PREF_DEFAULT_FONT);
@@ -492,9 +519,10 @@ public class Diagrama_concretaViewProvider extends AbstractProvider implements I
 	/**
 	* @generated
 	*/
-	public Edge createTcdHerencia_4004(EObject domainElement, View containerView, int index, boolean persisted,
+	public Edge createTCDHerencia_4004(EObject domainElement, View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
-		Connector edge = NotationFactory.eINSTANCE.createConnector();
+		Edge edge = NotationFactory.eINSTANCE.createEdge();
+		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE.createRelativeBendpoints();
 		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(2);
@@ -504,15 +532,10 @@ public class Diagrama_concretaViewProvider extends AbstractProvider implements I
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
 		edge.setType(diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-				.getType(diagrama_concreta.diagram.edit.parts.TcdHerenciaEditPart.VISUAL_ID));
+				.getType(diagrama_concreta.diagram.edit.parts.TCDHerenciaEditPart.VISUAL_ID));
 		edge.setElement(domainElement);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(prefStore,
-				IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
 		FontStyle edgeFontStyle = (FontStyle) edge.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (edgeFontStyle != null) {
 			FontData fontData = PreferenceConverter.getFontData(prefStore, IPreferenceConstants.PREF_DEFAULT_FONT);
@@ -534,9 +557,10 @@ public class Diagrama_concretaViewProvider extends AbstractProvider implements I
 	/**
 	* @generated
 	*/
-	public Edge createTcdAgregacion_4005(EObject domainElement, View containerView, int index, boolean persisted,
+	public Edge createTCDAgregacion_4005(EObject domainElement, View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
-		Connector edge = NotationFactory.eINSTANCE.createConnector();
+		Edge edge = NotationFactory.eINSTANCE.createEdge();
+		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
 		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
 		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE.createRelativeBendpoints();
 		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(2);
@@ -546,15 +570,10 @@ public class Diagrama_concretaViewProvider extends AbstractProvider implements I
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
 		edge.setType(diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-				.getType(diagrama_concreta.diagram.edit.parts.TcdAgregacionEditPart.VISUAL_ID));
+				.getType(diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart.VISUAL_ID));
 		edge.setElement(domainElement);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(prefStore,
-				IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
 		FontStyle edgeFontStyle = (FontStyle) edge.getStyle(NotationPackage.Literals.FONT_STYLE);
 		if (edgeFontStyle != null) {
 			FontData fontData = PreferenceConverter.getFontData(prefStore, IPreferenceConstants.PREF_DEFAULT_FONT);
@@ -577,12 +596,12 @@ public class Diagrama_concretaViewProvider extends AbstractProvider implements I
 	* @generated
 	*/
 	private void stampShortcut(View containerView, Node target) {
-		if (!diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.MODEL_ID
+		if (!diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.MODEL_ID
 				.equals(diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getModelID(containerView))) {
 			EAnnotation shortcutAnnotation = EcoreFactory.eINSTANCE.createEAnnotation();
 			shortcutAnnotation.setSource("Shortcut"); //$NON-NLS-1$
 			shortcutAnnotation.getDetails().put("modelID", //$NON-NLS-1$
-					diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.MODEL_ID);
+					diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.MODEL_ID);
 			target.getEAnnotations().add(shortcutAnnotation);
 		}
 	}

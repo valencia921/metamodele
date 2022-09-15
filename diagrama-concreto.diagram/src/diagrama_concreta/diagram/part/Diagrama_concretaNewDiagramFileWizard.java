@@ -67,7 +67,7 @@ public class Diagrama_concretaNewDiagramFileWizard extends Wizard {
 				diagrama_concreta.diagram.part.Messages.Diagrama_concretaNewDiagramFileWizard_CreationPageTitle);
 		myFileCreationPage.setDescription(NLS.bind(
 				diagrama_concreta.diagram.part.Messages.Diagrama_concretaNewDiagramFileWizard_CreationPageDescription,
-				diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.MODEL_ID));
+				diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.MODEL_ID));
 		IPath filePath;
 		String fileName = URI.decode(domainModelURI.trimFileExtension().lastSegment());
 		if (domainModelURI.isPlatformResource()) {
@@ -120,12 +120,12 @@ public class Diagrama_concretaNewDiagramFileWizard extends Wizard {
 					throws ExecutionException {
 				int diagramVID = diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
 						.getDiagramVisualID(diagramRootElementSelectionPage.getModelElement());
-				if (diagramVID != diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.VISUAL_ID) {
+				if (diagramVID != diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.VISUAL_ID) {
 					return CommandResult.newErrorCommandResult(
 							diagrama_concreta.diagram.part.Messages.Diagrama_concretaNewDiagramFileWizard_IncorrectRootError);
 				}
 				Diagram diagram = ViewService.createDiagram(diagramRootElementSelectionPage.getModelElement(),
-						diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.MODEL_ID,
+						diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.MODEL_ID,
 						diagrama_concreta.diagram.part.Diagrama_concretaDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT);
 				diagramResource.getContents().add(diagram);
 				return CommandResult.newOKCommandResult();
@@ -179,7 +179,7 @@ public class Diagrama_concretaNewDiagramFileWizard extends Wizard {
 			}
 			boolean result = ViewService.getInstance().provides(new CreateDiagramViewOperation(
 					new EObjectAdapter(getModelElement()),
-					diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.MODEL_ID,
+					diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.MODEL_ID,
 					diagrama_concreta.diagram.part.Diagrama_concretaDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT));
 			setErrorMessage(result ? null
 					: diagrama_concreta.diagram.part.Messages.Diagrama_concretaNewDiagramFileWizard_RootSelectionPageInvalidSelectionMessage);

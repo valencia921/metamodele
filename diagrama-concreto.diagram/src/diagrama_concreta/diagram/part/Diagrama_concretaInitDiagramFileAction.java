@@ -87,7 +87,7 @@ public class Diagrama_concretaInitDiagramFileAction implements IObjectActionDele
 		Wizard wizard = new diagrama_concreta.diagram.part.Diagrama_concretaNewDiagramFileWizard(domainModelURI,
 				diagramRoot, editingDomain);
 		wizard.setWindowTitle(NLS.bind(diagrama_concreta.diagram.part.Messages.InitDiagramFile_WizardTitle,
-				diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.MODEL_ID));
+				diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.MODEL_ID));
 		diagrama_concreta.diagram.part.Diagrama_concretaDiagramEditorUtil.runWizard(getShell(), wizard,
 				"InitDiagramFile"); //$NON-NLS-1$
 	}

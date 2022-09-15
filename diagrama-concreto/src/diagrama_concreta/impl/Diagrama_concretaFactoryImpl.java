@@ -57,18 +57,18 @@ public class Diagrama_concretaFactoryImpl extends EFactoryImpl implements Diagra
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Diagrama_concretaPackage.TCD_DIAGRAMA_CLASES: return createTcdDiagramaClases();
+			case Diagrama_concretaPackage.TCD_DIAGRAMA_CLASES: return createTCDDiagramaClases();
 			case Diagrama_concretaPackage.MODEL_FACTORY: return createModelFactory();
-			case Diagrama_concretaPackage.TCD_PAQUETE: return createTcdPaquete();
-			case Diagrama_concretaPackage.TCD_CLASE: return createTcdClase();
-			case Diagrama_concretaPackage.TCD_ASOCIACION: return createTcdAsociacion();
-			case Diagrama_concretaPackage.TCD_COMPOSICION: return createTcdComposicion();
-			case Diagrama_concretaPackage.TCD_DEPENDENCIA: return createTcdDependencia();
-			case Diagrama_concretaPackage.TCD_HERENCIA: return createTcdHerencia();
-			case Diagrama_concretaPackage.TCD_AGREGACION: return createTcdAgregacion();
-			case Diagrama_concretaPackage.TCD_ATRIBUTO: return createTcdAtributo();
-			case Diagrama_concretaPackage.TCD_METODO: return createTcdMetodo();
-			case Diagrama_concretaPackage.TCD_PARAMETRO: return createTcdParametro();
+			case Diagrama_concretaPackage.TCD_PAQUETE: return createTCDPaquete();
+			case Diagrama_concretaPackage.TCD_CLASE: return createTCDClase();
+			case Diagrama_concretaPackage.TCD_AGREGACION: return createTCDAgregacion();
+			case Diagrama_concretaPackage.TCD_ASOCIACION: return createTCDAsociacion();
+			case Diagrama_concretaPackage.TCD_COMPOSICION: return createTCDComposicion();
+			case Diagrama_concretaPackage.TCD_DEPENDENCIA: return createTCDDependencia();
+			case Diagrama_concretaPackage.TCD_HERENCIA: return createTCDHerencia();
+			case Diagrama_concretaPackage.TCD_ATRIBUTO: return createTCDAtributo();
+			case Diagrama_concretaPackage.TCD_METODO: return createTCDMetodo();
+			case Diagrama_concretaPackage.TCD_PARAMETRO: return createTCDParametro();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -82,6 +82,8 @@ public class Diagrama_concretaFactoryImpl extends EFactoryImpl implements Diagra
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
+			case Diagrama_concretaPackage.NAVEGAVILIDAD:
+				return createNavegavilidadFromString(eDataType, initialValue);
 			case Diagrama_concretaPackage.MULTIPLICIDAD:
 				return createMultiplicidadFromString(eDataType, initialValue);
 			case Diagrama_concretaPackage.TIPO_DATO:
@@ -103,6 +105,8 @@ public class Diagrama_concretaFactoryImpl extends EFactoryImpl implements Diagra
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
+			case Diagrama_concretaPackage.NAVEGAVILIDAD:
+				return convertNavegavilidadToString(eDataType, instanceValue);
 			case Diagrama_concretaPackage.MULTIPLICIDAD:
 				return convertMultiplicidadToString(eDataType, instanceValue);
 			case Diagrama_concretaPackage.TIPO_DATO:
@@ -121,8 +125,8 @@ public class Diagrama_concretaFactoryImpl extends EFactoryImpl implements Diagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdDiagramaClases createTcdDiagramaClases() {
-		TcdDiagramaClasesImpl tcdDiagramaClases = new TcdDiagramaClasesImpl();
+	public TCDDiagramaClases createTCDDiagramaClases() {
+		TCDDiagramaClasesImpl tcdDiagramaClases = new TCDDiagramaClasesImpl();
 		return tcdDiagramaClases;
 	}
 
@@ -141,8 +145,8 @@ public class Diagrama_concretaFactoryImpl extends EFactoryImpl implements Diagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdPaquete createTcdPaquete() {
-		TcdPaqueteImpl tcdPaquete = new TcdPaqueteImpl();
+	public TCDPaquete createTCDPaquete() {
+		TCDPaqueteImpl tcdPaquete = new TCDPaqueteImpl();
 		return tcdPaquete;
 	}
 
@@ -151,8 +155,8 @@ public class Diagrama_concretaFactoryImpl extends EFactoryImpl implements Diagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdClase createTcdClase() {
-		TcdClaseImpl tcdClase = new TcdClaseImpl();
+	public TCDClase createTCDClase() {
+		TCDClaseImpl tcdClase = new TCDClaseImpl();
 		return tcdClase;
 	}
 
@@ -161,8 +165,8 @@ public class Diagrama_concretaFactoryImpl extends EFactoryImpl implements Diagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdAsociacion createTcdAsociacion() {
-		TcdAsociacionImpl tcdAsociacion = new TcdAsociacionImpl();
+	public TCDAsociacion createTCDAsociacion() {
+		TCDAsociacionImpl tcdAsociacion = new TCDAsociacionImpl();
 		return tcdAsociacion;
 	}
 
@@ -171,8 +175,8 @@ public class Diagrama_concretaFactoryImpl extends EFactoryImpl implements Diagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdComposicion createTcdComposicion() {
-		TcdComposicionImpl tcdComposicion = new TcdComposicionImpl();
+	public TCDComposicion createTCDComposicion() {
+		TCDComposicionImpl tcdComposicion = new TCDComposicionImpl();
 		return tcdComposicion;
 	}
 
@@ -181,8 +185,8 @@ public class Diagrama_concretaFactoryImpl extends EFactoryImpl implements Diagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdDependencia createTcdDependencia() {
-		TcdDependenciaImpl tcdDependencia = new TcdDependenciaImpl();
+	public TCDDependencia createTCDDependencia() {
+		TCDDependenciaImpl tcdDependencia = new TCDDependenciaImpl();
 		return tcdDependencia;
 	}
 
@@ -191,8 +195,8 @@ public class Diagrama_concretaFactoryImpl extends EFactoryImpl implements Diagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdHerencia createTcdHerencia() {
-		TcdHerenciaImpl tcdHerencia = new TcdHerenciaImpl();
+	public TCDHerencia createTCDHerencia() {
+		TCDHerenciaImpl tcdHerencia = new TCDHerenciaImpl();
 		return tcdHerencia;
 	}
 
@@ -201,8 +205,8 @@ public class Diagrama_concretaFactoryImpl extends EFactoryImpl implements Diagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdAgregacion createTcdAgregacion() {
-		TcdAgregacionImpl tcdAgregacion = new TcdAgregacionImpl();
+	public TCDAgregacion createTCDAgregacion() {
+		TCDAgregacionImpl tcdAgregacion = new TCDAgregacionImpl();
 		return tcdAgregacion;
 	}
 
@@ -211,8 +215,8 @@ public class Diagrama_concretaFactoryImpl extends EFactoryImpl implements Diagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdAtributo createTcdAtributo() {
-		TcdAtributoImpl tcdAtributo = new TcdAtributoImpl();
+	public TCDAtributo createTCDAtributo() {
+		TCDAtributoImpl tcdAtributo = new TCDAtributoImpl();
 		return tcdAtributo;
 	}
 
@@ -221,8 +225,8 @@ public class Diagrama_concretaFactoryImpl extends EFactoryImpl implements Diagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdMetodo createTcdMetodo() {
-		TcdMetodoImpl tcdMetodo = new TcdMetodoImpl();
+	public TCDMetodo createTCDMetodo() {
+		TCDMetodoImpl tcdMetodo = new TCDMetodoImpl();
 		return tcdMetodo;
 	}
 
@@ -231,9 +235,29 @@ public class Diagrama_concretaFactoryImpl extends EFactoryImpl implements Diagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdParametro createTcdParametro() {
-		TcdParametroImpl tcdParametro = new TcdParametroImpl();
+	public TCDParametro createTCDParametro() {
+		TCDParametroImpl tcdParametro = new TCDParametroImpl();
 		return tcdParametro;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Navegavilidad createNavegavilidadFromString(EDataType eDataType, String initialValue) {
+		Navegavilidad result = Navegavilidad.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertNavegavilidadToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

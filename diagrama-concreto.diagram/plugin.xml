@@ -258,8 +258,8 @@
          </object>
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Diagrama_concreta"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,3001,3002"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003,4004,4005"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,3001,3002"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4005,4001,4002,4003,4004"/>
       </viewProvider>
    </extension>
 
@@ -271,13 +271,13 @@
             <method name="getType()" value="Diagrama_concreta"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2001,3001,3002"/>
+            <method name="getType()" value="2001,2002,3001,3002"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
-            <method name="getType()" value="4001,4002,4003,4004,4005"/>
+            <method name="getType()" value="4005,4001,4002,4003,4004"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5003,5001,5002"/>
+            <method name="getType()" value="5003,5004,5001,5002"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
             <method name="getType()" value="7001,7002"/>
@@ -289,25 +289,30 @@
    
    <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
       <?gmfgen generated="true"?>
-      <modelingAssistantProvider class="diagrama_concreta.diagram.providers.assistants.Diagrama_concretaModelingAssistantProviderOfTcdDiagramaClasesEditPart">
+      <modelingAssistantProvider class="diagrama_concreta.diagram.providers.assistants.Diagrama_concretaModelingAssistantProviderOfTCDDiagramaClasesEditPart">
          <Priority name="Lowest"/>
-         <object class="diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart" id="TcdDiagramaClases_1000"/>
-         <context elements="TcdDiagramaClases_1000"/>
+         <object class="diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart" id="TCDDiagramaClases_1000"/>
+         <context elements="TCDDiagramaClases_1000"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="diagrama_concreta.diagram.providers.assistants.Diagrama_concretaModelingAssistantProviderOfTcdClaseEditPart">
+            <modelingAssistantProvider class="diagrama_concreta.diagram.providers.assistants.Diagrama_concretaModelingAssistantProviderOfTCDClaseEditPart">
          <Priority name="Lowest"/>
-         <object class="diagrama_concreta.diagram.edit.parts.TcdClaseEditPart" id="TcdClase_2001"/>
-         <context elements="TcdClase_2001"/>
+         <object class="diagrama_concreta.diagram.edit.parts.TCDClaseEditPart" id="TCDClase_2001"/>
+         <context elements="TCDClase_2001"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="diagrama_concreta.diagram.providers.assistants.Diagrama_concretaModelingAssistantProviderOfTcdAtributoEditPart">
+            <modelingAssistantProvider class="diagrama_concreta.diagram.providers.assistants.Diagrama_concretaModelingAssistantProviderOfTCDPaqueteEditPart">
          <Priority name="Lowest"/>
-         <object class="diagrama_concreta.diagram.edit.parts.TcdAtributoEditPart" id="TcdAtributo_3001"/>
-         <context elements="TcdAtributo_3001"/>
+         <object class="diagrama_concreta.diagram.edit.parts.TCDPaqueteEditPart" id="TCDPaquete_2002"/>
+         <context elements="TCDPaquete_2002"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="diagrama_concreta.diagram.providers.assistants.Diagrama_concretaModelingAssistantProviderOfTcdMetodoEditPart">
+            <modelingAssistantProvider class="diagrama_concreta.diagram.providers.assistants.Diagrama_concretaModelingAssistantProviderOfTCDAtributoEditPart">
          <Priority name="Lowest"/>
-         <object class="diagrama_concreta.diagram.edit.parts.TcdMetodoEditPart" id="TcdMetodo_3002"/>
-         <context elements="TcdMetodo_3002"/>
+         <object class="diagrama_concreta.diagram.edit.parts.TCDAtributoEditPart" id="TCDAtributo_3001"/>
+         <context elements="TCDAtributo_3001"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="diagrama_concreta.diagram.providers.assistants.Diagrama_concretaModelingAssistantProviderOfTCDMetodoEditPart">
+         <Priority name="Lowest"/>
+         <object class="diagrama_concreta.diagram.edit.parts.TCDMetodoEditPart" id="TCDMetodo_3002"/>
+         <context elements="TCDMetodo_3002"/>
       </modelingAssistantProvider>
       
    </extension>
@@ -332,7 +337,7 @@
       <decoratorProvider class="diagrama_concreta.diagram.providers.Diagrama_concretaShortcutsDecoratorProvider">
          <Priority name="Lowest"/>
          <object class="org.eclipse.gmf.runtime.notation.Node(org.eclipse.gmf.runtime.notation)" id="generated-top-nodes">
-            <method name="getType()" value="2001"/>
+            <method name="getType()" value="2001,2002"/>
          </object>
          <context decoratorTargets="generated-top-nodes"/>
       </decoratorProvider>
@@ -342,92 +347,102 @@
       <?gmfgen generated="true"?>
       <metamodel nsURI="diagrama_concreta">
          <metamodelType
-               id="diagrama-concreto.diagram.TcdDiagramaClases_1000"
-               name="%metatype.name.TcdDiagramaClases_1000"
+               id="diagrama-concreto.diagram.TCDDiagramaClases_1000"
+               name="%metatype.name.TCDDiagramaClases_1000"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="TcdDiagramaClases"
-               edithelper="diagrama_concreta.diagram.edit.helpers.TcdDiagramaClasesEditHelper">
+               eclass="TCDDiagramaClases"
+               edithelper="diagrama_concreta.diagram.edit.helpers.TCDDiagramaClasesEditHelper">
             <param name="semanticHint" value="1000"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="diagrama_concreta">
          <metamodelType
-               id="diagrama-concreto.diagram.TcdClase_2001"
-               name="%metatype.name.TcdClase_2001"
+               id="diagrama-concreto.diagram.TCDClase_2001"
+               name="%metatype.name.TCDClase_2001"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="TcdClase"
-               edithelper="diagrama_concreta.diagram.edit.helpers.TcdClaseEditHelper">
+               eclass="TCDClase"
+               edithelper="diagrama_concreta.diagram.edit.helpers.TCDClaseEditHelper">
             <param name="semanticHint" value="2001"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="diagrama_concreta">
          <metamodelType
-               id="diagrama-concreto.diagram.TcdAtributo_3001"
-               name="%metatype.name.TcdAtributo_3001"
+               id="diagrama-concreto.diagram.TCDPaquete_2002"
+               name="%metatype.name.TCDPaquete_2002"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="TcdAtributo"
-               edithelper="diagrama_concreta.diagram.edit.helpers.TcdAtributoEditHelper">
+               eclass="TCDPaquete"
+               edithelper="diagrama_concreta.diagram.edit.helpers.TCDPaqueteEditHelper">
+            <param name="semanticHint" value="2002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="diagrama_concreta">
+         <metamodelType
+               id="diagrama-concreto.diagram.TCDAtributo_3001"
+               name="%metatype.name.TCDAtributo_3001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="TCDAtributo"
+               edithelper="diagrama_concreta.diagram.edit.helpers.TCDAtributoEditHelper">
             <param name="semanticHint" value="3001"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="diagrama_concreta">
          <metamodelType
-               id="diagrama-concreto.diagram.TcdMetodo_3002"
-               name="%metatype.name.TcdMetodo_3002"
+               id="diagrama-concreto.diagram.TCDMetodo_3002"
+               name="%metatype.name.TCDMetodo_3002"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="TcdMetodo"
-               edithelper="diagrama_concreta.diagram.edit.helpers.TcdMetodoEditHelper">
+               eclass="TCDMetodo"
+               edithelper="diagrama_concreta.diagram.edit.helpers.TCDMetodoEditHelper">
             <param name="semanticHint" value="3002"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="diagrama_concreta">
          <metamodelType
-               id="diagrama-concreto.diagram.TcdAsociacion_4001"
-               name="%metatype.name.TcdAsociacion_4001"
+               id="diagrama-concreto.diagram.TCDAgregacion_4005"
+               name="%metatype.name.TCDAgregacion_4005"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="TcdAsociacion"
-               edithelper="diagrama_concreta.diagram.edit.helpers.TcdAsociacionEditHelper">
+               eclass="TCDAgregacion"
+               edithelper="diagrama_concreta.diagram.edit.helpers.TCDAgregacionEditHelper">
+            <param name="semanticHint" value="4005"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="diagrama_concreta">
+         <metamodelType
+               id="diagrama-concreto.diagram.TCDAsociacion_4001"
+               name="%metatype.name.TCDAsociacion_4001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="TCDAsociacion"
+               edithelper="diagrama_concreta.diagram.edit.helpers.TCDAsociacionEditHelper">
             <param name="semanticHint" value="4001"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="diagrama_concreta">
          <metamodelType
-               id="diagrama-concreto.diagram.TcdComposicion_4002"
-               name="%metatype.name.TcdComposicion_4002"
+               id="diagrama-concreto.diagram.TCDComposicion_4002"
+               name="%metatype.name.TCDComposicion_4002"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="TcdComposicion"
-               edithelper="diagrama_concreta.diagram.edit.helpers.TcdComposicionEditHelper">
+               eclass="TCDComposicion"
+               edithelper="diagrama_concreta.diagram.edit.helpers.TCDComposicionEditHelper">
             <param name="semanticHint" value="4002"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="diagrama_concreta">
          <metamodelType
-               id="diagrama-concreto.diagram.TcdDependencia_4003"
-               name="%metatype.name.TcdDependencia_4003"
+               id="diagrama-concreto.diagram.TCDDependencia_4003"
+               name="%metatype.name.TCDDependencia_4003"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="TcdDependencia"
-               edithelper="diagrama_concreta.diagram.edit.helpers.TcdDependenciaEditHelper">
+               eclass="TCDDependencia"
+               edithelper="diagrama_concreta.diagram.edit.helpers.TCDDependenciaEditHelper">
             <param name="semanticHint" value="4003"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="diagrama_concreta">
          <metamodelType
-               id="diagrama-concreto.diagram.TcdHerencia_4004"
-               name="%metatype.name.TcdHerencia_4004"
+               id="diagrama-concreto.diagram.TCDHerencia_4004"
+               name="%metatype.name.TCDHerencia_4004"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="TcdHerencia"
-               edithelper="diagrama_concreta.diagram.edit.helpers.TcdHerenciaEditHelper">
+               eclass="TCDHerencia"
+               edithelper="diagrama_concreta.diagram.edit.helpers.TCDHerenciaEditHelper">
             <param name="semanticHint" value="4004"/>
-         </metamodelType>
-      </metamodel>
-      <metamodel nsURI="diagrama_concreta">
-         <metamodelType
-               id="diagrama-concreto.diagram.TcdAgregacion_4005"
-               name="%metatype.name.TcdAgregacion_4005"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="TcdAgregacion"
-               edithelper="diagrama_concreta.diagram.edit.helpers.TcdAgregacionEditHelper">
-            <param name="semanticHint" value="4005"/>
          </metamodelType>
       </metamodel>
    </extension>
@@ -442,15 +457,16 @@
          </enablement>
       </clientContext> 
       <binding context="diagrama-concreto.diagram.TypeContext">
-         <elementType ref="diagrama-concreto.diagram.TcdDiagramaClases_1000"/>
-         <elementType ref="diagrama-concreto.diagram.TcdClase_2001"/>
-         <elementType ref="diagrama-concreto.diagram.TcdAtributo_3001"/>
-         <elementType ref="diagrama-concreto.diagram.TcdMetodo_3002"/>
-         <elementType ref="diagrama-concreto.diagram.TcdAsociacion_4001"/>
-         <elementType ref="diagrama-concreto.diagram.TcdComposicion_4002"/>
-         <elementType ref="diagrama-concreto.diagram.TcdDependencia_4003"/>
-         <elementType ref="diagrama-concreto.diagram.TcdHerencia_4004"/>
-         <elementType ref="diagrama-concreto.diagram.TcdAgregacion_4005"/>
+         <elementType ref="diagrama-concreto.diagram.TCDDiagramaClases_1000"/>
+         <elementType ref="diagrama-concreto.diagram.TCDClase_2001"/>
+         <elementType ref="diagrama-concreto.diagram.TCDPaquete_2002"/>
+         <elementType ref="diagrama-concreto.diagram.TCDAtributo_3001"/>
+         <elementType ref="diagrama-concreto.diagram.TCDMetodo_3002"/>
+         <elementType ref="diagrama-concreto.diagram.TCDAgregacion_4005"/>
+         <elementType ref="diagrama-concreto.diagram.TCDAsociacion_4001"/>
+         <elementType ref="diagrama-concreto.diagram.TCDComposicion_4002"/>
+         <elementType ref="diagrama-concreto.diagram.TCDDependencia_4003"/>
+         <elementType ref="diagrama-concreto.diagram.TCDHerencia_4004"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>
    </extension>
@@ -618,7 +634,7 @@
                <and>
                   <with variable="activePartId"><equals value="diagrama_concreta.diagram.part.Diagrama_concretaDiagramEditorID"/></with>
                   <with variable="selection"><iterate ifEmpty="false"> 
-                     <instanceof value="diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart"/>
+                     <instanceof value="diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart"/>
                   </iterate></with>
                </and>
             </visibleWhen>

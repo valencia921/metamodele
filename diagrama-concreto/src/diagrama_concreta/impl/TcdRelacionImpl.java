@@ -3,8 +3,9 @@
 package diagrama_concreta.impl;
 
 import diagrama_concreta.Diagrama_concretaPackage;
-import diagrama_concreta.TcdClase;
-import diagrama_concreta.TcdRelacion;
+import diagrama_concreta.Navegavilidad;
+import diagrama_concreta.TCDClase;
+import diagrama_concreta.TCDRelacion;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -16,20 +17,19 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Tcd Relacion</b></em>'.
+ * An implementation of the model object '<em><b>TCD Relacion</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link diagrama_concreta.impl.TcdRelacionImpl#getSource <em>Source</em>}</li>
- *   <li>{@link diagrama_concreta.impl.TcdRelacionImpl#getTarget <em>Target</em>}</li>
- *   <li>{@link diagrama_concreta.impl.TcdRelacionImpl#getNavegavilidad <em>Navegavilidad</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDRelacionImpl#getSource <em>Source</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDRelacionImpl#getTarget <em>Target</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class TcdRelacionImpl extends EObjectImpl implements TcdRelacion {
+public abstract class TCDRelacionImpl extends EObjectImpl implements TCDRelacion {
 	/**
 	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -38,7 +38,7 @@ public abstract class TcdRelacionImpl extends EObjectImpl implements TcdRelacion
 	 * @generated
 	 * @ordered
 	 */
-	protected TcdClase source;
+	protected TCDClase source;
 
 	/**
 	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
@@ -48,34 +48,14 @@ public abstract class TcdRelacionImpl extends EObjectImpl implements TcdRelacion
 	 * @generated
 	 * @ordered
 	 */
-	protected TcdClase target;
-
-	/**
-	 * The default value of the '{@link #getNavegavilidad() <em>Navegavilidad</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNavegavilidad()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAVEGAVILIDAD_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getNavegavilidad() <em>Navegavilidad</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNavegavilidad()
-	 * @generated
-	 * @ordered
-	 */
-	protected String navegavilidad = NAVEGAVILIDAD_EDEFAULT;
+	protected TCDClase target;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TcdRelacionImpl() {
+	protected TCDRelacionImpl() {
 		super();
 	}
 
@@ -94,10 +74,10 @@ public abstract class TcdRelacionImpl extends EObjectImpl implements TcdRelacion
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdClase getSource() {
+	public TCDClase getSource() {
 		if (source != null && source.eIsProxy()) {
 			InternalEObject oldSource = (InternalEObject)source;
-			source = (TcdClase)eResolveProxy(oldSource);
+			source = (TCDClase)eResolveProxy(oldSource);
 			if (source != oldSource) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Diagrama_concretaPackage.TCD_RELACION__SOURCE, oldSource, source));
@@ -111,7 +91,7 @@ public abstract class TcdRelacionImpl extends EObjectImpl implements TcdRelacion
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdClase basicGetSource() {
+	public TCDClase basicGetSource() {
 		return source;
 	}
 
@@ -120,8 +100,8 @@ public abstract class TcdRelacionImpl extends EObjectImpl implements TcdRelacion
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSource(TcdClase newSource) {
-		TcdClase oldSource = source;
+	public void setSource(TCDClase newSource) {
+		TCDClase oldSource = source;
 		source = newSource;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Diagrama_concretaPackage.TCD_RELACION__SOURCE, oldSource, source));
@@ -132,10 +112,10 @@ public abstract class TcdRelacionImpl extends EObjectImpl implements TcdRelacion
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdClase getTarget() {
+	public TCDClase getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject)target;
-			target = (TcdClase)eResolveProxy(oldTarget);
+			target = (TCDClase)eResolveProxy(oldTarget);
 			if (target != oldTarget) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Diagrama_concretaPackage.TCD_RELACION__TARGET, oldTarget, target));
@@ -149,7 +129,7 @@ public abstract class TcdRelacionImpl extends EObjectImpl implements TcdRelacion
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdClase basicGetTarget() {
+	public TCDClase basicGetTarget() {
 		return target;
 	}
 
@@ -158,32 +138,11 @@ public abstract class TcdRelacionImpl extends EObjectImpl implements TcdRelacion
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTarget(TcdClase newTarget) {
-		TcdClase oldTarget = target;
+	public void setTarget(TCDClase newTarget) {
+		TCDClase oldTarget = target;
 		target = newTarget;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Diagrama_concretaPackage.TCD_RELACION__TARGET, oldTarget, target));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getNavegavilidad() {
-		return navegavilidad;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNavegavilidad(String newNavegavilidad) {
-		String oldNavegavilidad = navegavilidad;
-		navegavilidad = newNavegavilidad;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Diagrama_concretaPackage.TCD_RELACION__NAVEGAVILIDAD, oldNavegavilidad, navegavilidad));
 	}
 
 	/**
@@ -200,8 +159,6 @@ public abstract class TcdRelacionImpl extends EObjectImpl implements TcdRelacion
 			case Diagrama_concretaPackage.TCD_RELACION__TARGET:
 				if (resolve) return getTarget();
 				return basicGetTarget();
-			case Diagrama_concretaPackage.TCD_RELACION__NAVEGAVILIDAD:
-				return getNavegavilidad();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -215,13 +172,10 @@ public abstract class TcdRelacionImpl extends EObjectImpl implements TcdRelacion
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case Diagrama_concretaPackage.TCD_RELACION__SOURCE:
-				setSource((TcdClase)newValue);
+				setSource((TCDClase)newValue);
 				return;
 			case Diagrama_concretaPackage.TCD_RELACION__TARGET:
-				setTarget((TcdClase)newValue);
-				return;
-			case Diagrama_concretaPackage.TCD_RELACION__NAVEGAVILIDAD:
-				setNavegavilidad((String)newValue);
+				setTarget((TCDClase)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -236,13 +190,10 @@ public abstract class TcdRelacionImpl extends EObjectImpl implements TcdRelacion
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case Diagrama_concretaPackage.TCD_RELACION__SOURCE:
-				setSource((TcdClase)null);
+				setSource((TCDClase)null);
 				return;
 			case Diagrama_concretaPackage.TCD_RELACION__TARGET:
-				setTarget((TcdClase)null);
-				return;
-			case Diagrama_concretaPackage.TCD_RELACION__NAVEGAVILIDAD:
-				setNavegavilidad(NAVEGAVILIDAD_EDEFAULT);
+				setTarget((TCDClase)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -260,26 +211,8 @@ public abstract class TcdRelacionImpl extends EObjectImpl implements TcdRelacion
 				return source != null;
 			case Diagrama_concretaPackage.TCD_RELACION__TARGET:
 				return target != null;
-			case Diagrama_concretaPackage.TCD_RELACION__NAVEGAVILIDAD:
-				return NAVEGAVILIDAD_EDEFAULT == null ? navegavilidad != null : !NAVEGAVILIDAD_EDEFAULT.equals(navegavilidad);
 		}
 		return super.eIsSet(featureID);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (navegavilidad: ");
-		result.append(navegavilidad);
-		result.append(')');
-		return result.toString();
-	}
-
-} //TcdRelacionImpl
+} //TCDRelacionImpl

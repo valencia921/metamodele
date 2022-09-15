@@ -23,47 +23,53 @@ public class Diagrama_concretaEditPartFactory implements EditPartFactory {
 			View view = (View) model;
 			switch (diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getVisualID(view)) {
 
-			case diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.VISUAL_ID:
-				return new diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart(view);
+			case diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.VISUAL_ID:
+				return new diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart(view);
 
-			case diagrama_concreta.diagram.edit.parts.TcdClaseEditPart.VISUAL_ID:
-				return new diagrama_concreta.diagram.edit.parts.TcdClaseEditPart(view);
+			case diagrama_concreta.diagram.edit.parts.TCDClaseEditPart.VISUAL_ID:
+				return new diagrama_concreta.diagram.edit.parts.TCDClaseEditPart(view);
 
-			case diagrama_concreta.diagram.edit.parts.TcdClaseNombreEditPart.VISUAL_ID:
-				return new diagrama_concreta.diagram.edit.parts.TcdClaseNombreEditPart(view);
+			case diagrama_concreta.diagram.edit.parts.TCDClaseNombreEditPart.VISUAL_ID:
+				return new diagrama_concreta.diagram.edit.parts.TCDClaseNombreEditPart(view);
 
-			case diagrama_concreta.diagram.edit.parts.TcdAtributoEditPart.VISUAL_ID:
-				return new diagrama_concreta.diagram.edit.parts.TcdAtributoEditPart(view);
+			case diagrama_concreta.diagram.edit.parts.TCDPaqueteEditPart.VISUAL_ID:
+				return new diagrama_concreta.diagram.edit.parts.TCDPaqueteEditPart(view);
 
-			case diagrama_concreta.diagram.edit.parts.TcdAtributoNombreEditPart.VISUAL_ID:
-				return new diagrama_concreta.diagram.edit.parts.TcdAtributoNombreEditPart(view);
+			case diagrama_concreta.diagram.edit.parts.TCDPaqueteNombreEditPart.VISUAL_ID:
+				return new diagrama_concreta.diagram.edit.parts.TCDPaqueteNombreEditPart(view);
 
-			case diagrama_concreta.diagram.edit.parts.TcdMetodoEditPart.VISUAL_ID:
-				return new diagrama_concreta.diagram.edit.parts.TcdMetodoEditPart(view);
+			case diagrama_concreta.diagram.edit.parts.TCDAtributoEditPart.VISUAL_ID:
+				return new diagrama_concreta.diagram.edit.parts.TCDAtributoEditPart(view);
 
-			case diagrama_concreta.diagram.edit.parts.TcdMetodoNombreEditPart.VISUAL_ID:
-				return new diagrama_concreta.diagram.edit.parts.TcdMetodoNombreEditPart(view);
+			case diagrama_concreta.diagram.edit.parts.TCDAtributoNombreEditPart.VISUAL_ID:
+				return new diagrama_concreta.diagram.edit.parts.TCDAtributoNombreEditPart(view);
 
-			case diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaAtributosCompartmentEditPart.VISUAL_ID:
-				return new diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaAtributosCompartmentEditPart(view);
+			case diagrama_concreta.diagram.edit.parts.TCDMetodoEditPart.VISUAL_ID:
+				return new diagrama_concreta.diagram.edit.parts.TCDMetodoEditPart(view);
 
-			case diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaMetodosCompartmentEditPart.VISUAL_ID:
-				return new diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaMetodosCompartmentEditPart(view);
+			case diagrama_concreta.diagram.edit.parts.TCDMetodoNombreEditPart.VISUAL_ID:
+				return new diagrama_concreta.diagram.edit.parts.TCDMetodoNombreEditPart(view);
 
-			case diagrama_concreta.diagram.edit.parts.TcdAsociacionEditPart.VISUAL_ID:
-				return new diagrama_concreta.diagram.edit.parts.TcdAsociacionEditPart(view);
+			case diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaAtributosCompartmentEditPart.VISUAL_ID:
+				return new diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaAtributosCompartmentEditPart(view);
 
-			case diagrama_concreta.diagram.edit.parts.TcdComposicionEditPart.VISUAL_ID:
-				return new diagrama_concreta.diagram.edit.parts.TcdComposicionEditPart(view);
+			case diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaMetodosCompartmentEditPart.VISUAL_ID:
+				return new diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaMetodosCompartmentEditPart(view);
 
-			case diagrama_concreta.diagram.edit.parts.TcdDependenciaEditPart.VISUAL_ID:
-				return new diagrama_concreta.diagram.edit.parts.TcdDependenciaEditPart(view);
+			case diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart.VISUAL_ID:
+				return new diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart(view);
 
-			case diagrama_concreta.diagram.edit.parts.TcdHerenciaEditPart.VISUAL_ID:
-				return new diagrama_concreta.diagram.edit.parts.TcdHerenciaEditPart(view);
+			case diagrama_concreta.diagram.edit.parts.TCDAsociacionEditPart.VISUAL_ID:
+				return new diagrama_concreta.diagram.edit.parts.TCDAsociacionEditPart(view);
 
-			case diagrama_concreta.diagram.edit.parts.TcdAgregacionEditPart.VISUAL_ID:
-				return new diagrama_concreta.diagram.edit.parts.TcdAgregacionEditPart(view);
+			case diagrama_concreta.diagram.edit.parts.TCDComposicionEditPart.VISUAL_ID:
+				return new diagrama_concreta.diagram.edit.parts.TCDComposicionEditPart(view);
+
+			case diagrama_concreta.diagram.edit.parts.TCDDependenciaEditPart.VISUAL_ID:
+				return new diagrama_concreta.diagram.edit.parts.TCDDependenciaEditPart(view);
+
+			case diagrama_concreta.diagram.edit.parts.TCDHerenciaEditPart.VISUAL_ID:
+				return new diagrama_concreta.diagram.edit.parts.TCDHerenciaEditPart(view);
 
 			}
 		}

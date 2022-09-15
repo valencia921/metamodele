@@ -83,33 +83,36 @@ public class Diagrama_concretaNavigatorLabelProvider extends LabelProvider
 	*/
 	public Image getImage(View view) {
 		switch (diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getVisualID(view)) {
-		case diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.VISUAL_ID:
-			return getImage("Navigator?Diagram?diagrama_concreta?TcdDiagramaClases", //$NON-NLS-1$
-					diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdDiagramaClases_1000);
-		case diagrama_concreta.diagram.edit.parts.TcdClaseEditPart.VISUAL_ID:
-			return getImage("Navigator?TopLevelNode?diagrama_concreta?TcdClase", //$NON-NLS-1$
-					diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdClase_2001);
-		case diagrama_concreta.diagram.edit.parts.TcdAtributoEditPart.VISUAL_ID:
-			return getImage("Navigator?Node?diagrama_concreta?TcdAtributo", //$NON-NLS-1$
-					diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdAtributo_3001);
-		case diagrama_concreta.diagram.edit.parts.TcdMetodoEditPart.VISUAL_ID:
-			return getImage("Navigator?Node?diagrama_concreta?TcdMetodo", //$NON-NLS-1$
-					diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdMetodo_3002);
-		case diagrama_concreta.diagram.edit.parts.TcdAsociacionEditPart.VISUAL_ID:
-			return getImage("Navigator?Link?diagrama_concreta?TcdAsociacion", //$NON-NLS-1$
-					diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdAsociacion_4001);
-		case diagrama_concreta.diagram.edit.parts.TcdComposicionEditPart.VISUAL_ID:
-			return getImage("Navigator?Link?diagrama_concreta?TcdComposicion", //$NON-NLS-1$
-					diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdComposicion_4002);
-		case diagrama_concreta.diagram.edit.parts.TcdDependenciaEditPart.VISUAL_ID:
-			return getImage("Navigator?Link?diagrama_concreta?TcdDependencia", //$NON-NLS-1$
-					diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdDependencia_4003);
-		case diagrama_concreta.diagram.edit.parts.TcdHerenciaEditPart.VISUAL_ID:
-			return getImage("Navigator?Link?diagrama_concreta?TcdHerencia", //$NON-NLS-1$
-					diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdHerencia_4004);
-		case diagrama_concreta.diagram.edit.parts.TcdAgregacionEditPart.VISUAL_ID:
-			return getImage("Navigator?Link?diagrama_concreta?TcdAgregacion", //$NON-NLS-1$
-					diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdAgregacion_4005);
+		case diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.VISUAL_ID:
+			return getImage("Navigator?Diagram?diagrama_concreta?TCDDiagramaClases", //$NON-NLS-1$
+					diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDDiagramaClases_1000);
+		case diagrama_concreta.diagram.edit.parts.TCDClaseEditPart.VISUAL_ID:
+			return getImage("Navigator?TopLevelNode?diagrama_concreta?TCDClase", //$NON-NLS-1$
+					diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDClase_2001);
+		case diagrama_concreta.diagram.edit.parts.TCDPaqueteEditPart.VISUAL_ID:
+			return getImage("Navigator?TopLevelNode?diagrama_concreta?TCDPaquete", //$NON-NLS-1$
+					diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDPaquete_2002);
+		case diagrama_concreta.diagram.edit.parts.TCDAtributoEditPart.VISUAL_ID:
+			return getImage("Navigator?Node?diagrama_concreta?TCDAtributo", //$NON-NLS-1$
+					diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDAtributo_3001);
+		case diagrama_concreta.diagram.edit.parts.TCDMetodoEditPart.VISUAL_ID:
+			return getImage("Navigator?Node?diagrama_concreta?TCDMetodo", //$NON-NLS-1$
+					diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDMetodo_3002);
+		case diagrama_concreta.diagram.edit.parts.TCDAsociacionEditPart.VISUAL_ID:
+			return getImage("Navigator?Link?diagrama_concreta?TCDAsociacion", //$NON-NLS-1$
+					diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDAsociacion_4001);
+		case diagrama_concreta.diagram.edit.parts.TCDComposicionEditPart.VISUAL_ID:
+			return getImage("Navigator?Link?diagrama_concreta?TCDComposicion", //$NON-NLS-1$
+					diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDComposicion_4002);
+		case diagrama_concreta.diagram.edit.parts.TCDDependenciaEditPart.VISUAL_ID:
+			return getImage("Navigator?Link?diagrama_concreta?TCDDependencia", //$NON-NLS-1$
+					diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDDependencia_4003);
+		case diagrama_concreta.diagram.edit.parts.TCDHerenciaEditPart.VISUAL_ID:
+			return getImage("Navigator?Link?diagrama_concreta?TCDHerencia", //$NON-NLS-1$
+					diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDHerencia_4004);
+		case diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart.VISUAL_ID:
+			return getImage("Navigator?Link?diagrama_concreta?TCDAgregacion", //$NON-NLS-1$
+					diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDAgregacion_4005);
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -170,24 +173,26 @@ public class Diagrama_concretaNavigatorLabelProvider extends LabelProvider
 			return getUnresolvedDomainElementProxyText(view);
 		}
 		switch (diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getVisualID(view)) {
-		case diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.VISUAL_ID:
-			return getTcdDiagramaClases_1000Text(view);
-		case diagrama_concreta.diagram.edit.parts.TcdClaseEditPart.VISUAL_ID:
-			return getTcdClase_2001Text(view);
-		case diagrama_concreta.diagram.edit.parts.TcdAtributoEditPart.VISUAL_ID:
-			return getTcdAtributo_3001Text(view);
-		case diagrama_concreta.diagram.edit.parts.TcdMetodoEditPart.VISUAL_ID:
-			return getTcdMetodo_3002Text(view);
-		case diagrama_concreta.diagram.edit.parts.TcdAsociacionEditPart.VISUAL_ID:
-			return getTcdAsociacion_4001Text(view);
-		case diagrama_concreta.diagram.edit.parts.TcdComposicionEditPart.VISUAL_ID:
-			return getTcdComposicion_4002Text(view);
-		case diagrama_concreta.diagram.edit.parts.TcdDependenciaEditPart.VISUAL_ID:
-			return getTcdDependencia_4003Text(view);
-		case diagrama_concreta.diagram.edit.parts.TcdHerenciaEditPart.VISUAL_ID:
-			return getTcdHerencia_4004Text(view);
-		case diagrama_concreta.diagram.edit.parts.TcdAgregacionEditPart.VISUAL_ID:
-			return getTcdAgregacion_4005Text(view);
+		case diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.VISUAL_ID:
+			return getTCDDiagramaClases_1000Text(view);
+		case diagrama_concreta.diagram.edit.parts.TCDClaseEditPart.VISUAL_ID:
+			return getTCDClase_2001Text(view);
+		case diagrama_concreta.diagram.edit.parts.TCDPaqueteEditPart.VISUAL_ID:
+			return getTCDPaquete_2002Text(view);
+		case diagrama_concreta.diagram.edit.parts.TCDAtributoEditPart.VISUAL_ID:
+			return getTCDAtributo_3001Text(view);
+		case diagrama_concreta.diagram.edit.parts.TCDMetodoEditPart.VISUAL_ID:
+			return getTCDMetodo_3002Text(view);
+		case diagrama_concreta.diagram.edit.parts.TCDAsociacionEditPart.VISUAL_ID:
+			return getTCDAsociacion_4001Text(view);
+		case diagrama_concreta.diagram.edit.parts.TCDComposicionEditPart.VISUAL_ID:
+			return getTCDComposicion_4002Text(view);
+		case diagrama_concreta.diagram.edit.parts.TCDDependenciaEditPart.VISUAL_ID:
+			return getTCDDependencia_4003Text(view);
+		case diagrama_concreta.diagram.edit.parts.TCDHerenciaEditPart.VISUAL_ID:
+			return getTCDHerencia_4004Text(view);
+		case diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart.VISUAL_ID:
+			return getTCDAgregacion_4005Text(view);
 		}
 		return getUnknownElementText(view);
 	}
@@ -195,8 +200,8 @@ public class Diagrama_concretaNavigatorLabelProvider extends LabelProvider
 	/**
 	* @generated
 	*/
-	private String getTcdDiagramaClases_1000Text(View view) {
-		diagrama_concreta.TcdDiagramaClases domainModelElement = (diagrama_concreta.TcdDiagramaClases) view
+	private String getTCDDiagramaClases_1000Text(View view) {
+		diagrama_concreta.TCDDiagramaClases domainModelElement = (diagrama_concreta.TCDDiagramaClases) view
 				.getElement();
 		if (domainModelElement != null) {
 			return domainModelElement.getNombre();
@@ -210,12 +215,12 @@ public class Diagrama_concretaNavigatorLabelProvider extends LabelProvider
 	/**
 	* @generated
 	*/
-	private String getTcdClase_2001Text(View view) {
+	private String getTCDClase_2001Text(View view) {
 		IParser parser = diagrama_concreta.diagram.providers.Diagrama_concretaParserProvider.getParser(
-				diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdClase_2001,
+				diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDClase_2001,
 				view.getElement() != null ? view.getElement() : view,
 				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-						.getType(diagrama_concreta.diagram.edit.parts.TcdClaseNombreEditPart.VISUAL_ID));
+						.getType(diagrama_concreta.diagram.edit.parts.TCDClaseNombreEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
@@ -229,12 +234,31 @@ public class Diagrama_concretaNavigatorLabelProvider extends LabelProvider
 	/**
 	* @generated
 	*/
-	private String getTcdAtributo_3001Text(View view) {
+	private String getTCDPaquete_2002Text(View view) {
 		IParser parser = diagrama_concreta.diagram.providers.Diagrama_concretaParserProvider.getParser(
-				diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdAtributo_3001,
+				diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDPaquete_2002,
 				view.getElement() != null ? view.getElement() : view,
 				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-						.getType(diagrama_concreta.diagram.edit.parts.TcdAtributoNombreEditPart.VISUAL_ID));
+						.getType(diagrama_concreta.diagram.edit.parts.TCDPaqueteNombreEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			diagrama_concreta.diagram.part.Diagrama_concretaDiagramEditorPlugin.getInstance()
+					.logError("Parser was not found for label " + 5004); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	* @generated
+	*/
+	private String getTCDAtributo_3001Text(View view) {
+		IParser parser = diagrama_concreta.diagram.providers.Diagrama_concretaParserProvider.getParser(
+				diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDAtributo_3001,
+				view.getElement() != null ? view.getElement() : view,
+				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
+						.getType(diagrama_concreta.diagram.edit.parts.TCDAtributoNombreEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
@@ -248,12 +272,12 @@ public class Diagrama_concretaNavigatorLabelProvider extends LabelProvider
 	/**
 	* @generated
 	*/
-	private String getTcdMetodo_3002Text(View view) {
+	private String getTCDMetodo_3002Text(View view) {
 		IParser parser = diagrama_concreta.diagram.providers.Diagrama_concretaParserProvider.getParser(
-				diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdMetodo_3002,
+				diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDMetodo_3002,
 				view.getElement() != null ? view.getElement() : view,
 				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-						.getType(diagrama_concreta.diagram.edit.parts.TcdMetodoNombreEditPart.VISUAL_ID));
+						.getType(diagrama_concreta.diagram.edit.parts.TCDMetodoNombreEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
@@ -267,10 +291,10 @@ public class Diagrama_concretaNavigatorLabelProvider extends LabelProvider
 	/**
 	* @generated
 	*/
-	private String getTcdAsociacion_4001Text(View view) {
-		diagrama_concreta.TcdAsociacion domainModelElement = (diagrama_concreta.TcdAsociacion) view.getElement();
+	private String getTCDAsociacion_4001Text(View view) {
+		diagrama_concreta.TCDAsociacion domainModelElement = (diagrama_concreta.TCDAsociacion) view.getElement();
 		if (domainModelElement != null) {
-			return domainModelElement.getNavegavilidad();
+			return domainModelElement.getNombreOrigen();
 		} else {
 			diagrama_concreta.diagram.part.Diagrama_concretaDiagramEditorPlugin.getInstance()
 					.logError("No domain element for view with visualID = " + 4001); //$NON-NLS-1$
@@ -281,10 +305,10 @@ public class Diagrama_concretaNavigatorLabelProvider extends LabelProvider
 	/**
 	* @generated
 	*/
-	private String getTcdComposicion_4002Text(View view) {
-		diagrama_concreta.TcdComposicion domainModelElement = (diagrama_concreta.TcdComposicion) view.getElement();
+	private String getTCDComposicion_4002Text(View view) {
+		diagrama_concreta.TCDComposicion domainModelElement = (diagrama_concreta.TCDComposicion) view.getElement();
 		if (domainModelElement != null) {
-			return domainModelElement.getNavegavilidad();
+			return domainModelElement.getNombreOrigen();
 		} else {
 			diagrama_concreta.diagram.part.Diagrama_concretaDiagramEditorPlugin.getInstance()
 					.logError("No domain element for view with visualID = " + 4002); //$NON-NLS-1$
@@ -295,10 +319,10 @@ public class Diagrama_concretaNavigatorLabelProvider extends LabelProvider
 	/**
 	* @generated
 	*/
-	private String getTcdDependencia_4003Text(View view) {
-		diagrama_concreta.TcdDependencia domainModelElement = (diagrama_concreta.TcdDependencia) view.getElement();
+	private String getTCDDependencia_4003Text(View view) {
+		diagrama_concreta.TCDDependencia domainModelElement = (diagrama_concreta.TCDDependencia) view.getElement();
 		if (domainModelElement != null) {
-			return domainModelElement.getNavegavilidad();
+			return domainModelElement.getNombreOrigen();
 		} else {
 			diagrama_concreta.diagram.part.Diagrama_concretaDiagramEditorPlugin.getInstance()
 					.logError("No domain element for view with visualID = " + 4003); //$NON-NLS-1$
@@ -309,24 +333,17 @@ public class Diagrama_concretaNavigatorLabelProvider extends LabelProvider
 	/**
 	* @generated
 	*/
-	private String getTcdHerencia_4004Text(View view) {
-		diagrama_concreta.TcdHerencia domainModelElement = (diagrama_concreta.TcdHerencia) view.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getNavegavilidad();
-		} else {
-			diagrama_concreta.diagram.part.Diagrama_concretaDiagramEditorPlugin.getInstance()
-					.logError("No domain element for view with visualID = " + 4004); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
+	private String getTCDHerencia_4004Text(View view) {
+		return ""; //$NON-NLS-1$
 	}
 
 	/**
 	* @generated
 	*/
-	private String getTcdAgregacion_4005Text(View view) {
-		diagrama_concreta.TcdAgregacion domainModelElement = (diagrama_concreta.TcdAgregacion) view.getElement();
+	private String getTCDAgregacion_4005Text(View view) {
+		diagrama_concreta.TCDAgregacion domainModelElement = (diagrama_concreta.TCDAgregacion) view.getElement();
 		if (domainModelElement != null) {
-			return domainModelElement.getNavegavilidad();
+			return domainModelElement.getNombreOrigen();
 		} else {
 			diagrama_concreta.diagram.part.Diagrama_concretaDiagramEditorPlugin.getInstance()
 					.logError("No domain element for view with visualID = " + 4005); //$NON-NLS-1$
@@ -377,7 +394,7 @@ public class Diagrama_concretaNavigatorLabelProvider extends LabelProvider
 	* @generated
 	*/
 	private boolean isOwnView(View view) {
-		return diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.MODEL_ID
+		return diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.MODEL_ID
 				.equals(diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getModelID(view));
 	}
 

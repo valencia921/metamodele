@@ -6,25 +6,25 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Tcd Atributo</b></em>'.
+ * A representation of the model object '<em><b>TCD Atributo</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link diagrama_concreta.TcdAtributo#getNombre <em>Nombre</em>}</li>
- *   <li>{@link diagrama_concreta.TcdAtributo#getTipoDato <em>Tipo Dato</em>}</li>
- *   <li>{@link diagrama_concreta.TcdAtributo#getVisibilidad <em>Visibilidad</em>}</li>
- *   <li>{@link diagrama_concreta.TcdAtributo#isIsConstante <em>Is Constante</em>}</li>
- *   <li>{@link diagrama_concreta.TcdAtributo#isIsStatic <em>Is Static</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDAtributo#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDAtributo#getTipoDato <em>Tipo Dato</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDAtributo#getVisibilidad <em>Visibilidad</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDAtributo#isIsConstante <em>Is Constante</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDAtributo#isIsStatic <em>Is Static</em>}</li>
  * </ul>
  *
- * @see diagrama_concreta.Diagrama_concretaPackage#getTcdAtributo()
- * @model annotation="gmf.node label='nombre'"
+ * @see diagrama_concreta.Diagrama_concretaPackage#getTCDAtributo()
+ * @model annotation="gmf.node label='nombre' color='166,255,234'"
  * @generated
  */
-public interface TcdAtributo extends EObject {
+public interface TCDAtributo extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -35,14 +35,14 @@ public interface TcdAtributo extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nombre</em>' attribute.
 	 * @see #setNombre(String)
-	 * @see diagrama_concreta.Diagrama_concretaPackage#getTcdAtributo_Nombre()
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDAtributo_Nombre()
 	 * @model
 	 * @generated
 	 */
 	String getNombre();
 
 	/**
-	 * Sets the value of the '{@link diagrama_concreta.TcdAtributo#getNombre <em>Nombre</em>}' attribute.
+	 * Sets the value of the '{@link diagrama_concreta.TCDAtributo#getNombre <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Nombre</em>' attribute.
@@ -63,14 +63,14 @@ public interface TcdAtributo extends EObject {
 	 * @return the value of the '<em>Tipo Dato</em>' attribute.
 	 * @see diagrama_concreta.TipoDato
 	 * @see #setTipoDato(TipoDato)
-	 * @see diagrama_concreta.Diagrama_concretaPackage#getTcdAtributo_TipoDato()
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDAtributo_TipoDato()
 	 * @model
 	 * @generated
 	 */
 	TipoDato getTipoDato();
 
 	/**
-	 * Sets the value of the '{@link diagrama_concreta.TcdAtributo#getTipoDato <em>Tipo Dato</em>}' attribute.
+	 * Sets the value of the '{@link diagrama_concreta.TCDAtributo#getTipoDato <em>Tipo Dato</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Tipo Dato</em>' attribute.
@@ -92,14 +92,14 @@ public interface TcdAtributo extends EObject {
 	 * @return the value of the '<em>Visibilidad</em>' attribute.
 	 * @see diagrama_concreta.Visibilidad
 	 * @see #setVisibilidad(Visibilidad)
-	 * @see diagrama_concreta.Diagrama_concretaPackage#getTcdAtributo_Visibilidad()
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDAtributo_Visibilidad()
 	 * @model
 	 * @generated
 	 */
 	Visibilidad getVisibilidad();
 
 	/**
-	 * Sets the value of the '{@link diagrama_concreta.TcdAtributo#getVisibilidad <em>Visibilidad</em>}' attribute.
+	 * Sets the value of the '{@link diagrama_concreta.TCDAtributo#getVisibilidad <em>Visibilidad</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Visibilidad</em>' attribute.
@@ -119,14 +119,14 @@ public interface TcdAtributo extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Constante</em>' attribute.
 	 * @see #setIsConstante(boolean)
-	 * @see diagrama_concreta.Diagrama_concretaPackage#getTcdAtributo_IsConstante()
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDAtributo_IsConstante()
 	 * @model
 	 * @generated
 	 */
 	boolean isIsConstante();
 
 	/**
-	 * Sets the value of the '{@link diagrama_concreta.TcdAtributo#isIsConstante <em>Is Constante</em>}' attribute.
+	 * Sets the value of the '{@link diagrama_concreta.TCDAtributo#isIsConstante <em>Is Constante</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Is Constante</em>' attribute.
@@ -145,14 +145,14 @@ public interface TcdAtributo extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Static</em>' attribute.
 	 * @see #setIsStatic(boolean)
-	 * @see diagrama_concreta.Diagrama_concretaPackage#getTcdAtributo_IsStatic()
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDAtributo_IsStatic()
 	 * @model
 	 * @generated
 	 */
 	boolean isIsStatic();
 
 	/**
-	 * Sets the value of the '{@link diagrama_concreta.TcdAtributo#isIsStatic <em>Is Static</em>}' attribute.
+	 * Sets the value of the '{@link diagrama_concreta.TCDAtributo#isIsStatic <em>Is Static</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Is Static</em>' attribute.
@@ -161,4 +161,4 @@ public interface TcdAtributo extends EObject {
 	 */
 	void setIsStatic(boolean value);
 
-} // TcdAtributo
+} // TCDAtributo

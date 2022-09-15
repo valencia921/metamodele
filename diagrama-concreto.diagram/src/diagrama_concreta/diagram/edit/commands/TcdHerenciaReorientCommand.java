@@ -14,7 +14,7 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipReques
 /**
  * @generated
  */
-public class TcdHerenciaReorientCommand extends EditElementCommand {
+public class TCDHerenciaReorientCommand extends EditElementCommand {
 
 	/**
 	* @generated
@@ -34,7 +34,7 @@ public class TcdHerenciaReorientCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	public TcdHerenciaReorientCommand(ReorientRelationshipRequest request) {
+	public TCDHerenciaReorientCommand(ReorientRelationshipRequest request) {
 		super(request.getLabel(), request.getRelationship(), request);
 		reorientDirection = request.getDirection();
 		oldEnd = request.getOldRelationshipEnd();
@@ -45,7 +45,7 @@ public class TcdHerenciaReorientCommand extends EditElementCommand {
 	* @generated
 	*/
 	public boolean canExecute() {
-		if (false == getElementToEdit() instanceof diagrama_concreta.TcdHerencia) {
+		if (false == getElementToEdit() instanceof diagrama_concreta.TCDHerencia) {
 			return false;
 		}
 		if (reorientDirection == ReorientRelationshipRequest.REORIENT_SOURCE) {
@@ -61,32 +61,32 @@ public class TcdHerenciaReorientCommand extends EditElementCommand {
 	* @generated
 	*/
 	protected boolean canReorientSource() {
-		if (!(oldEnd instanceof diagrama_concreta.TcdClase && newEnd instanceof diagrama_concreta.TcdClase)) {
+		if (!(oldEnd instanceof diagrama_concreta.TCDClase && newEnd instanceof diagrama_concreta.TCDClase)) {
 			return false;
 		}
-		diagrama_concreta.TcdClase target = getLink().getTarget();
-		if (!(getLink().eContainer() instanceof diagrama_concreta.TcdDiagramaClases)) {
+		diagrama_concreta.TCDClase target = getLink().getTarget();
+		if (!(getLink().eContainer() instanceof diagrama_concreta.TCDDiagramaClases)) {
 			return false;
 		}
-		diagrama_concreta.TcdDiagramaClases container = (diagrama_concreta.TcdDiagramaClases) getLink().eContainer();
+		diagrama_concreta.TCDDiagramaClases container = (diagrama_concreta.TCDDiagramaClases) getLink().eContainer();
 		return diagrama_concreta.diagram.edit.policies.Diagrama_concretaBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistTcdHerencia_4004(container, getLink(), getNewSource(), target);
+				.canExistTCDHerencia_4004(container, getLink(), getNewSource(), target);
 	}
 
 	/**
 	* @generated
 	*/
 	protected boolean canReorientTarget() {
-		if (!(oldEnd instanceof diagrama_concreta.TcdClase && newEnd instanceof diagrama_concreta.TcdClase)) {
+		if (!(oldEnd instanceof diagrama_concreta.TCDClase && newEnd instanceof diagrama_concreta.TCDClase)) {
 			return false;
 		}
-		diagrama_concreta.TcdClase source = getLink().getSource();
-		if (!(getLink().eContainer() instanceof diagrama_concreta.TcdDiagramaClases)) {
+		diagrama_concreta.TCDClase source = getLink().getSource();
+		if (!(getLink().eContainer() instanceof diagrama_concreta.TCDDiagramaClases)) {
 			return false;
 		}
-		diagrama_concreta.TcdDiagramaClases container = (diagrama_concreta.TcdDiagramaClases) getLink().eContainer();
+		diagrama_concreta.TCDDiagramaClases container = (diagrama_concreta.TCDDiagramaClases) getLink().eContainer();
 		return diagrama_concreta.diagram.edit.policies.Diagrama_concretaBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistTcdHerencia_4004(container, getLink(), source, getNewTarget());
+				.canExistTCDHerencia_4004(container, getLink(), source, getNewTarget());
 	}
 
 	/**
@@ -124,35 +124,35 @@ public class TcdHerenciaReorientCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	protected diagrama_concreta.TcdHerencia getLink() {
-		return (diagrama_concreta.TcdHerencia) getElementToEdit();
+	protected diagrama_concreta.TCDHerencia getLink() {
+		return (diagrama_concreta.TCDHerencia) getElementToEdit();
 	}
 
 	/**
 	* @generated
 	*/
-	protected diagrama_concreta.TcdClase getOldSource() {
-		return (diagrama_concreta.TcdClase) oldEnd;
+	protected diagrama_concreta.TCDClase getOldSource() {
+		return (diagrama_concreta.TCDClase) oldEnd;
 	}
 
 	/**
 	* @generated
 	*/
-	protected diagrama_concreta.TcdClase getNewSource() {
-		return (diagrama_concreta.TcdClase) newEnd;
+	protected diagrama_concreta.TCDClase getNewSource() {
+		return (diagrama_concreta.TCDClase) newEnd;
 	}
 
 	/**
 	* @generated
 	*/
-	protected diagrama_concreta.TcdClase getOldTarget() {
-		return (diagrama_concreta.TcdClase) oldEnd;
+	protected diagrama_concreta.TCDClase getOldTarget() {
+		return (diagrama_concreta.TCDClase) oldEnd;
 	}
 
 	/**
 	* @generated
 	*/
-	protected diagrama_concreta.TcdClase getNewTarget() {
-		return (diagrama_concreta.TcdClase) newEnd;
+	protected diagrama_concreta.TCDClase getNewTarget() {
+		return (diagrama_concreta.TCDClase) newEnd;
 	}
 }

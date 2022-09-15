@@ -3,9 +3,10 @@
 package diagrama_concreta;
 
 @gmf.diagram
-class TcdDiagramaClases {
-    val TcdClase[*] listaClases;
-    val TcdRelacion[*] listaRelaciones;
+class TCDDiagramaClases {
+    val TCDClase[*] listaClases;
+    val TCDRelacion[*] listaRelaciones;
+    val TCDPaquete[*] listaPaquetes;
     
     attr String nombre;
 }
@@ -13,24 +14,24 @@ class TcdDiagramaClases {
 class ModelFactory {
 	attr String nombre;
 	attr String ruta;
-	val TcdDiagramaClases[*] listaDiagramas;
+	val TCDDiagramaClases[*] listaDiagramas;
 }
 
-@gmf.node(label = "nombre")
-class TcdPaquete {
-	val TcdPaquete[*] listaPaquetes;
-	val TcdClase[*] listaClases;
+@gmf.node(label = "nombre", color = "255,252,142")
+class TCDPaquete {
+	val TCDPaquete[*] listaPaquetes;
+	val TCDClase[*] listaClases;
 	
 	attr String nombre;
 	attr String ruta;
 }
 
-@gmf.node(label = "nombre")
-class TcdClase {
+@gmf.node(label = "nombre", color = "227,255,248")
+class TCDClase {
     @gmf.compartment
-    val TcdAtributo[*] listaAtributos;
+    val TCDAtributo[*] listaAtributos;
     @gmf.compartment
-    val TcdMetodo[*] listaMetodos;
+    val TCDMetodo[*] listaMetodos;
     
    
     attr String nombre;
@@ -40,16 +41,19 @@ class TcdClase {
     attr String documentacion;
 }
 
-@gmf.link(source="source", target="target", style="solid", width="2")
-abstract class TcdRelacion {
-    ref TcdClase source;
-    ref TcdClase target;
-    
-    attr String navegavilidad;
+@gmf.link
+abstract class TCDRelacion {
+    ref TCDClase source;
+    ref TCDClase target;
 }
 
-@gmf.link(source="source", target="target", style="dot", width="2")
-class TcdAsociacion extends TcdRelacion{
+enum Navegavilidad {
+	bidireccional;
+	unidireccional;
+}
+
+@gmf.link(source="source", target="target", style="solid", width="3", color = "39,174,96", source.decoration = "rhomb")
+class TCDAgregacion extends TCDRelacion{
 	
 	attr String nombreOrigen;
     attr String nombreDestino;
@@ -57,7 +61,18 @@ class TcdAsociacion extends TcdRelacion{
     attr Multiplicidad multiplicidadDestino;
 }
 
-class TcdComposicion extends TcdRelacion{
+@gmf.link(source="source", target="target", style="solid", width="3", color = "0,62,255")
+class TCDAsociacion extends TCDRelacion{
+	
+	attr String nombreOrigen;
+    attr String nombreDestino;
+    attr Multiplicidad multiplicidadOrigen;
+    attr Multiplicidad multiplicidadDestino;
+    attr Navegavilidad navegavilidad;
+}
+
+@gmf.link(source="source", target="target", style="dash", width="3", color = "0,255,193", source.decoration = "rhomb")
+class TCDComposicion extends TCDRelacion{
 	
 	attr String nombreOrigen;
     attr String nombreDestino;
@@ -65,7 +80,8 @@ class TcdComposicion extends TcdRelacion{
     attr Multiplicidad multiplicidadDestino;
 }
 
-class TcdDependencia extends TcdRelacion{
+@gmf.link(source="source", target="target", style="solid", width="3", color = "255,15,15", source.decoration = "filledrhomb")
+class TCDDependencia extends TCDRelacion{
 	
 	attr String nombreOrigen;
     attr String nombreDestino;
@@ -73,16 +89,9 @@ class TcdDependencia extends TcdRelacion{
     attr Multiplicidad multiplicidadDestino;
 }
 
-class TcdHerencia extends TcdRelacion{
+@gmf.link(source="source", target="target", style="solid", width="3", color = "4,255,0", source.decoration = "closedarrow")
+class TCDHerencia extends TCDRelacion{
 	
-}
-
-class TcdAgregacion extends TcdRelacion{
-	
-	attr String nombreOrigen;
-    attr String nombreDestino;
-    attr Multiplicidad multiplicidadOrigen;
-    attr Multiplicidad multiplicidadDestino;
 }
 
 enum Multiplicidad {
@@ -92,8 +101,8 @@ enum Multiplicidad {
 	uno_varios;
 }
 
-@gmf.node(label = "nombre")
-class TcdAtributo {
+@gmf.node(label = "nombre", color = "166,255,234")
+class TCDAtributo {
 	attr String nombre;
 	attr TipoDato tipoDato;
 	attr Visibilidad visibilidad;
@@ -115,9 +124,11 @@ enum Visibilidad {
 	protected;
 }
 
-@gmf.node(label = "nombre")
-class TcdMetodo {
-    val TcdParametro[*] listaParametros;
+@gmf.node(label = "nombre", border.style = "dot", color = "166,255,234")
+class TCDMetodo {
+	
+	@gmf.comparment
+    val TCDParametro[*] listaParametros;
 	
 	attr String nombre;
 	attr Visibilidad modificadorAcceso;
@@ -133,7 +144,7 @@ enum TipoRetorno {
 }
 
 @gmf.node(label = "nombre")
-class TcdParametro {
+class TCDParametro {
 	attr String nombre;
 	attr TipoDato tipoDato;
 }

@@ -3,8 +3,8 @@
 package abstracta.impl;
 
 import abstracta.AbstractaPackage;
-import abstracta.TcdClase;
-import abstracta.TcdPaquete;
+import abstracta.TCDClase;
+import abstracta.TCDPaquete;
 
 import java.util.Collection;
 
@@ -24,21 +24,21 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Tcd Paquete</b></em>'.
+ * An implementation of the model object '<em><b>TCD Paquete</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link abstracta.impl.TcdPaqueteImpl#getListaClases <em>Lista Clases</em>}</li>
- *   <li>{@link abstracta.impl.TcdPaqueteImpl#getListapaquetes <em>Listapaquetes</em>}</li>
- *   <li>{@link abstracta.impl.TcdPaqueteImpl#getNombre <em>Nombre</em>}</li>
- *   <li>{@link abstracta.impl.TcdPaqueteImpl#getRuta <em>Ruta</em>}</li>
+ *   <li>{@link abstracta.impl.TCDPaqueteImpl#getListaClases <em>Lista Clases</em>}</li>
+ *   <li>{@link abstracta.impl.TCDPaqueteImpl#getListapaquetes <em>Listapaquetes</em>}</li>
+ *   <li>{@link abstracta.impl.TCDPaqueteImpl#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link abstracta.impl.TCDPaqueteImpl#getRuta <em>Ruta</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TcdPaqueteImpl extends EObjectImpl implements TcdPaquete {
+public class TCDPaqueteImpl extends EObjectImpl implements TCDPaquete {
 	/**
 	 * The cached value of the '{@link #getListaClases() <em>Lista Clases</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -47,7 +47,7 @@ public class TcdPaqueteImpl extends EObjectImpl implements TcdPaquete {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TcdClase> listaClases;
+	protected EList<TCDClase> listaClases;
 
 	/**
 	 * The cached value of the '{@link #getListapaquetes() <em>Listapaquetes</em>}' containment reference list.
@@ -57,7 +57,7 @@ public class TcdPaqueteImpl extends EObjectImpl implements TcdPaquete {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TcdPaquete> listapaquetes;
+	protected EList<TCDPaquete> listapaquetes;
 
 	/**
 	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
@@ -104,7 +104,7 @@ public class TcdPaqueteImpl extends EObjectImpl implements TcdPaquete {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TcdPaqueteImpl() {
+	protected TCDPaqueteImpl() {
 		super();
 	}
 
@@ -123,9 +123,9 @@ public class TcdPaqueteImpl extends EObjectImpl implements TcdPaquete {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TcdClase> getListaClases() {
+	public EList<TCDClase> getListaClases() {
 		if (listaClases == null) {
-			listaClases = new EObjectContainmentEList<TcdClase>(TcdClase.class, this, AbstractaPackage.TCD_PAQUETE__LISTA_CLASES);
+			listaClases = new EObjectContainmentEList<TCDClase>(TCDClase.class, this, AbstractaPackage.TCD_PAQUETE__LISTA_CLASES);
 		}
 		return listaClases;
 	}
@@ -135,9 +135,9 @@ public class TcdPaqueteImpl extends EObjectImpl implements TcdPaquete {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TcdPaquete> getListapaquetes() {
+	public EList<TCDPaquete> getListapaquetes() {
 		if (listapaquetes == null) {
-			listapaquetes = new EObjectContainmentEList<TcdPaquete>(TcdPaquete.class, this, AbstractaPackage.TCD_PAQUETE__LISTAPAQUETES);
+			listapaquetes = new EObjectContainmentEList<TCDPaquete>(TCDPaquete.class, this, AbstractaPackage.TCD_PAQUETE__LISTAPAQUETES);
 		}
 		return listapaquetes;
 	}
@@ -231,11 +231,11 @@ public class TcdPaqueteImpl extends EObjectImpl implements TcdPaquete {
 		switch (featureID) {
 			case AbstractaPackage.TCD_PAQUETE__LISTA_CLASES:
 				getListaClases().clear();
-				getListaClases().addAll((Collection<? extends TcdClase>)newValue);
+				getListaClases().addAll((Collection<? extends TCDClase>)newValue);
 				return;
 			case AbstractaPackage.TCD_PAQUETE__LISTAPAQUETES:
 				getListapaquetes().clear();
-				getListapaquetes().addAll((Collection<? extends TcdPaquete>)newValue);
+				getListapaquetes().addAll((Collection<? extends TCDPaquete>)newValue);
 				return;
 			case AbstractaPackage.TCD_PAQUETE__NOMBRE:
 				setNombre((String)newValue);
@@ -309,4 +309,4 @@ public class TcdPaqueteImpl extends EObjectImpl implements TcdPaquete {
 		return result.toString();
 	}
 
-} //TcdPaqueteImpl
+} //TCDPaqueteImpl

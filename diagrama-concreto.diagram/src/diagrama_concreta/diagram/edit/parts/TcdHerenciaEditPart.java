@@ -3,17 +3,22 @@
  */
 package diagrama_concreta.diagram.edit.parts;
 
+import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.Connection;
+import org.eclipse.draw2d.PolygonDecoration;
+import org.eclipse.draw2d.RotatableDecoration;
+import org.eclipse.draw2d.geometry.PointList;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ITreeBranchEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.swt.graphics.Color;
 
 /**
  * @generated
  */
-public class TcdHerenciaEditPart extends ConnectionNodeEditPart implements ITreeBranchEditPart {
+public class TCDHerenciaEditPart extends ConnectionNodeEditPart implements ITreeBranchEditPart {
 
 	/**
 	* @generated
@@ -23,7 +28,7 @@ public class TcdHerenciaEditPart extends ConnectionNodeEditPart implements ITree
 	/**
 	* @generated
 	*/
-	public TcdHerenciaEditPart(View view) {
+	public TCDHerenciaEditPart(View view) {
 		super(view);
 	}
 
@@ -33,7 +38,7 @@ public class TcdHerenciaEditPart extends ConnectionNodeEditPart implements ITree
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new diagrama_concreta.diagram.edit.policies.TcdHerenciaItemSemanticEditPolicy());
+				new diagrama_concreta.diagram.edit.policies.TCDHerenciaItemSemanticEditPolicy());
 	}
 
 	/**
@@ -46,29 +51,53 @@ public class TcdHerenciaEditPart extends ConnectionNodeEditPart implements ITree
 	*/
 
 	protected Connection createConnectionFigure() {
-		return new TcdHerenciaFigure();
+		return new TCDHerenciaFigure();
 	}
 
 	/**
 	* @generated
 	*/
-	public TcdHerenciaFigure getPrimaryShape() {
-		return (TcdHerenciaFigure) getFigure();
+	public TCDHerenciaFigure getPrimaryShape() {
+		return (TCDHerenciaFigure) getFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public class TcdHerenciaFigure extends PolylineConnectionEx {
+	public class TCDHerenciaFigure extends PolylineConnectionEx {
 
 		/**
 		 * @generated
 		 */
-		public TcdHerenciaFigure() {
-			this.setLineWidth(2);
+		public TCDHerenciaFigure() {
+			this.setLineWidth(3);
+			this.setForegroundColor(THIS_FORE);
 
+			setSourceDecoration(createSourceDecoration());
+		}
+
+		/**
+		* @generated
+		*/
+		private RotatableDecoration createSourceDecoration() {
+			PolygonDecoration df = new PolygonDecoration();
+			df.setFill(true);
+			df.setBackgroundColor(ColorConstants.white);
+			PointList pl = new PointList();
+			pl.addPoint(getMapMode().DPtoLP(0), getMapMode().DPtoLP(0));
+			pl.addPoint(getMapMode().DPtoLP(-2), getMapMode().DPtoLP(2));
+			pl.addPoint(getMapMode().DPtoLP(-2), getMapMode().DPtoLP(-2));
+			pl.addPoint(getMapMode().DPtoLP(0), getMapMode().DPtoLP(0));
+			df.setTemplate(pl);
+			df.setScale(getMapMode().DPtoLP(7), getMapMode().DPtoLP(3));
+			return df;
 		}
 
 	}
+
+	/**
+	* @generated
+	*/
+	static final Color THIS_FORE = new Color(null, 4, 255, 0);
 
 }

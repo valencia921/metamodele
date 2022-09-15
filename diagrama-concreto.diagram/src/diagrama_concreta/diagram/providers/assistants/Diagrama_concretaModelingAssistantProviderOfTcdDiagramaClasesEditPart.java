@@ -12,7 +12,7 @@ import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 /**
  * @generated
  */
-public class Diagrama_concretaModelingAssistantProviderOfTcdDiagramaClasesEditPart
+public class Diagrama_concretaModelingAssistantProviderOfTCDDiagramaClasesEditPart
 		extends diagrama_concreta.diagram.providers.Diagrama_concretaModelingAssistantProvider {
 
 	/**
@@ -21,8 +21,9 @@ public class Diagrama_concretaModelingAssistantProviderOfTcdDiagramaClasesEditPa
 	@Override
 
 	public List<IElementType> getTypesForPopupBar(IAdaptable host) {
-		List<IElementType> types = new ArrayList<IElementType>(1);
-		types.add(diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdClase_2001);
+		List<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDClase_2001);
+		types.add(diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDPaquete_2002);
 		return types;
 	}
 

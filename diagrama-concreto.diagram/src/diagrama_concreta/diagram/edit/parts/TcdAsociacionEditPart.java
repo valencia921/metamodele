@@ -5,16 +5,19 @@ package diagrama_concreta.diagram.edit.parts;
 
 import org.eclipse.draw2d.Connection;
 import org.eclipse.draw2d.Graphics;
+import org.eclipse.draw2d.PolylineDecoration;
+import org.eclipse.draw2d.RotatableDecoration;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ITreeBranchEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.swt.graphics.Color;
 
 /**
  * @generated
  */
-public class TcdAsociacionEditPart extends ConnectionNodeEditPart implements ITreeBranchEditPart {
+public class TCDAsociacionEditPart extends ConnectionNodeEditPart implements ITreeBranchEditPart {
 
 	/**
 	* @generated
@@ -24,7 +27,7 @@ public class TcdAsociacionEditPart extends ConnectionNodeEditPart implements ITr
 	/**
 	* @generated
 	*/
-	public TcdAsociacionEditPart(View view) {
+	public TCDAsociacionEditPart(View view) {
 		super(view);
 	}
 
@@ -34,7 +37,7 @@ public class TcdAsociacionEditPart extends ConnectionNodeEditPart implements ITr
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new diagrama_concreta.diagram.edit.policies.TcdAsociacionItemSemanticEditPolicy());
+				new diagrama_concreta.diagram.edit.policies.TCDAsociacionItemSemanticEditPolicy());
 	}
 
 	/**
@@ -47,30 +50,35 @@ public class TcdAsociacionEditPart extends ConnectionNodeEditPart implements ITr
 	*/
 
 	protected Connection createConnectionFigure() {
-		return new TcdAsociacionFigure();
+		return new TCDAsociacionFigure();
 	}
 
 	/**
 	* @generated
 	*/
-	public TcdAsociacionFigure getPrimaryShape() {
-		return (TcdAsociacionFigure) getFigure();
+	public TCDAsociacionFigure getPrimaryShape() {
+		return (TCDAsociacionFigure) getFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public class TcdAsociacionFigure extends PolylineConnectionEx {
+	public class TCDAsociacionFigure extends PolylineConnectionEx {
 
 		/**
 		 * @generated
 		 */
-		public TcdAsociacionFigure() {
-			this.setLineWidth(2);
-			this.setLineStyle(Graphics.LINE_DOT);
+		public TCDAsociacionFigure() {
+			this.setLineWidth(3);
+			this.setForegroundColor(THIS_FORE);
 
 		}
 
 	}
+
+	/**
+	* @generated
+	*/
+	static final Color THIS_FORE = new Color(null, 0, 62, 255);
 
 }

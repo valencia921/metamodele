@@ -57,11 +57,11 @@ public interface AbstractaPackage extends EPackage {
 	AbstractaPackage eINSTANCE = abstracta.impl.AbstractaPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link abstracta.impl.TcdPaqueteImpl <em>Tcd Paquete</em>}' class.
+	 * The meta object id for the '{@link abstracta.impl.TCDPaqueteImpl <em>TCD Paquete</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see abstracta.impl.TcdPaqueteImpl
-	 * @see abstracta.impl.AbstractaPackageImpl#getTcdPaquete()
+	 * @see abstracta.impl.TCDPaqueteImpl
+	 * @see abstracta.impl.AbstractaPackageImpl#getTCDPaquete()
 	 * @generated
 	 */
 	int TCD_PAQUETE = 0;
@@ -103,7 +103,7 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_PAQUETE__RUTA = 3;
 
 	/**
-	 * The number of structural features of the '<em>Tcd Paquete</em>' class.
+	 * The number of structural features of the '<em>TCD Paquete</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -112,14 +112,60 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_PAQUETE_FEATURE_COUNT = 4;
 
 	/**
-	 * The meta object id for the '{@link abstracta.impl.TcdClaseImpl <em>Tcd Clase</em>}' class.
+	 * The meta object id for the '{@link abstracta.impl.ModelFactoryImpl <em>Model Factory</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see abstracta.impl.TcdClaseImpl
-	 * @see abstracta.impl.AbstractaPackageImpl#getTcdClase()
+	 * @see abstracta.impl.ModelFactoryImpl
+	 * @see abstracta.impl.AbstractaPackageImpl#getModelFactory()
 	 * @generated
 	 */
-	int TCD_CLASE = 1;
+	int MODEL_FACTORY = 1;
+
+	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_FACTORY__NOMBRE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Ruta</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_FACTORY__RUTA = 1;
+
+	/**
+	 * The feature id for the '<em><b>Lista Paquetes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_FACTORY__LISTA_PAQUETES = 2;
+
+	/**
+	 * The number of structural features of the '<em>Model Factory</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL_FACTORY_FEATURE_COUNT = 3;
+
+	/**
+	 * The meta object id for the '{@link abstracta.impl.TCDClaseImpl <em>TCD Clase</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see abstracta.impl.TCDClaseImpl
+	 * @see abstracta.impl.AbstractaPackageImpl#getTCDClase()
+	 * @generated
+	 */
+	int TCD_CLASE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Lista Atributos</b></em>' containment reference list.
@@ -194,7 +240,7 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_CLASE__DOCUMENTACION = 7;
 
 	/**
-	 * The number of structural features of the '<em>Tcd Clase</em>' class.
+	 * The number of structural features of the '<em>TCD Clase</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -203,14 +249,14 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_CLASE_FEATURE_COUNT = 8;
 
 	/**
-	 * The meta object id for the '{@link abstracta.impl.TcdAtributoImpl <em>Tcd Atributo</em>}' class.
+	 * The meta object id for the '{@link abstracta.impl.TCDAtributoImpl <em>TCD Atributo</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see abstracta.impl.TcdAtributoImpl
-	 * @see abstracta.impl.AbstractaPackageImpl#getTcdAtributo()
+	 * @see abstracta.impl.TCDAtributoImpl
+	 * @see abstracta.impl.AbstractaPackageImpl#getTCDAtributo()
 	 * @generated
 	 */
-	int TCD_ATRIBUTO = 2;
+	int TCD_ATRIBUTO = 3;
 
 	/**
 	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
@@ -267,7 +313,7 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_ATRIBUTO__VALOR_DEFECTO = 5;
 
 	/**
-	 * The number of structural features of the '<em>Tcd Atributo</em>' class.
+	 * The number of structural features of the '<em>TCD Atributo</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -276,14 +322,14 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_ATRIBUTO_FEATURE_COUNT = 6;
 
 	/**
-	 * The meta object id for the '{@link abstracta.impl.TcdMetodoImpl <em>Tcd Metodo</em>}' class.
+	 * The meta object id for the '{@link abstracta.impl.TCDMetodoImpl <em>TCD Metodo</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see abstracta.impl.TcdMetodoImpl
-	 * @see abstracta.impl.AbstractaPackageImpl#getTcdMetodo()
+	 * @see abstracta.impl.TCDMetodoImpl
+	 * @see abstracta.impl.AbstractaPackageImpl#getTCDMetodo()
 	 * @generated
 	 */
-	int TCD_METODO = 3;
+	int TCD_METODO = 4;
 
 	/**
 	 * The feature id for the '<em><b>Lista Parametros</b></em>' containment reference list.
@@ -331,7 +377,7 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_METODO__SEMANTICA = 4;
 
 	/**
-	 * The number of structural features of the '<em>Tcd Metodo</em>' class.
+	 * The number of structural features of the '<em>TCD Metodo</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -340,14 +386,14 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_METODO_FEATURE_COUNT = 5;
 
 	/**
-	 * The meta object id for the '{@link abstracta.impl.TcdRelacionImpl <em>Tcd Relacion</em>}' class.
+	 * The meta object id for the '{@link abstracta.impl.TCDRelacionImpl <em>TCD Relacion</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see abstracta.impl.TcdRelacionImpl
-	 * @see abstracta.impl.AbstractaPackageImpl#getTcdRelacion()
+	 * @see abstracta.impl.TCDRelacionImpl
+	 * @see abstracta.impl.AbstractaPackageImpl#getTCDRelacion()
 	 * @generated
 	 */
-	int TCD_RELACION = 4;
+	int TCD_RELACION = 5;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -377,7 +423,7 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_RELACION__NAVEGAVILIDAD = 2;
 
 	/**
-	 * The number of structural features of the '<em>Tcd Relacion</em>' class.
+	 * The number of structural features of the '<em>TCD Relacion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -386,14 +432,14 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_RELACION_FEATURE_COUNT = 3;
 
 	/**
-	 * The meta object id for the '{@link abstracta.impl.TcdAsociacionImpl <em>Tcd Asociacion</em>}' class.
+	 * The meta object id for the '{@link abstracta.impl.TCDAsociacionImpl <em>TCD Asociacion</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see abstracta.impl.TcdAsociacionImpl
-	 * @see abstracta.impl.AbstractaPackageImpl#getTcdAsociacion()
+	 * @see abstracta.impl.TCDAsociacionImpl
+	 * @see abstracta.impl.AbstractaPackageImpl#getTCDAsociacion()
 	 * @generated
 	 */
-	int TCD_ASOCIACION = 5;
+	int TCD_ASOCIACION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -459,7 +505,7 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_ASOCIACION__MULTIPLICIDAD_DESTINO = TCD_RELACION_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of structural features of the '<em>Tcd Asociacion</em>' class.
+	 * The number of structural features of the '<em>TCD Asociacion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -468,14 +514,14 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_ASOCIACION_FEATURE_COUNT = TCD_RELACION_FEATURE_COUNT + 4;
 
 	/**
-	 * The meta object id for the '{@link abstracta.impl.TcdComposicionImpl <em>Tcd Composicion</em>}' class.
+	 * The meta object id for the '{@link abstracta.impl.TCDComposicionImpl <em>TCD Composicion</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see abstracta.impl.TcdComposicionImpl
-	 * @see abstracta.impl.AbstractaPackageImpl#getTcdComposicion()
+	 * @see abstracta.impl.TCDComposicionImpl
+	 * @see abstracta.impl.AbstractaPackageImpl#getTCDComposicion()
 	 * @generated
 	 */
-	int TCD_COMPOSICION = 6;
+	int TCD_COMPOSICION = 7;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -541,7 +587,7 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_COMPOSICION__MULTIPLICIDAD_DESTINO = TCD_RELACION_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of structural features of the '<em>Tcd Composicion</em>' class.
+	 * The number of structural features of the '<em>TCD Composicion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -550,14 +596,14 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_COMPOSICION_FEATURE_COUNT = TCD_RELACION_FEATURE_COUNT + 4;
 
 	/**
-	 * The meta object id for the '{@link abstracta.impl.TcdDependenciaImpl <em>Tcd Dependencia</em>}' class.
+	 * The meta object id for the '{@link abstracta.impl.TCDDependenciaImpl <em>TCD Dependencia</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see abstracta.impl.TcdDependenciaImpl
-	 * @see abstracta.impl.AbstractaPackageImpl#getTcdDependencia()
+	 * @see abstracta.impl.TCDDependenciaImpl
+	 * @see abstracta.impl.AbstractaPackageImpl#getTCDDependencia()
 	 * @generated
 	 */
-	int TCD_DEPENDENCIA = 7;
+	int TCD_DEPENDENCIA = 8;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -623,7 +669,7 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_DEPENDENCIA__MULTIPLICIDAD_DESTINO = TCD_RELACION_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of structural features of the '<em>Tcd Dependencia</em>' class.
+	 * The number of structural features of the '<em>TCD Dependencia</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -632,14 +678,14 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_DEPENDENCIA_FEATURE_COUNT = TCD_RELACION_FEATURE_COUNT + 4;
 
 	/**
-	 * The meta object id for the '{@link abstracta.impl.TcdHerenciaImpl <em>Tcd Herencia</em>}' class.
+	 * The meta object id for the '{@link abstracta.impl.TCDHerenciaImpl <em>TCD Herencia</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see abstracta.impl.TcdHerenciaImpl
-	 * @see abstracta.impl.AbstractaPackageImpl#getTcdHerencia()
+	 * @see abstracta.impl.TCDHerenciaImpl
+	 * @see abstracta.impl.AbstractaPackageImpl#getTCDHerencia()
 	 * @generated
 	 */
-	int TCD_HERENCIA = 8;
+	int TCD_HERENCIA = 9;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -669,7 +715,7 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_HERENCIA__NAVEGAVILIDAD = TCD_RELACION__NAVEGAVILIDAD;
 
 	/**
-	 * The number of structural features of the '<em>Tcd Herencia</em>' class.
+	 * The number of structural features of the '<em>TCD Herencia</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -678,14 +724,14 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_HERENCIA_FEATURE_COUNT = TCD_RELACION_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link abstracta.impl.TcdAgregacionImpl <em>Tcd Agregacion</em>}' class.
+	 * The meta object id for the '{@link abstracta.impl.TCDAgregacionImpl <em>TCD Agregacion</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see abstracta.impl.TcdAgregacionImpl
-	 * @see abstracta.impl.AbstractaPackageImpl#getTcdAgregacion()
+	 * @see abstracta.impl.TCDAgregacionImpl
+	 * @see abstracta.impl.AbstractaPackageImpl#getTCDAgregacion()
 	 * @generated
 	 */
-	int TCD_AGREGACION = 9;
+	int TCD_AGREGACION = 10;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -751,7 +797,7 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_AGREGACION__MULTIPLICIDAD_DESTINO = TCD_RELACION_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of structural features of the '<em>Tcd Agregacion</em>' class.
+	 * The number of structural features of the '<em>TCD Agregacion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -760,14 +806,14 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_AGREGACION_FEATURE_COUNT = TCD_RELACION_FEATURE_COUNT + 4;
 
 	/**
-	 * The meta object id for the '{@link abstracta.impl.TcdParametroImpl <em>Tcd Parametro</em>}' class.
+	 * The meta object id for the '{@link abstracta.impl.TCDParametroImpl <em>TCD Parametro</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see abstracta.impl.TcdParametroImpl
-	 * @see abstracta.impl.AbstractaPackageImpl#getTcdParametro()
+	 * @see abstracta.impl.TCDParametroImpl
+	 * @see abstracta.impl.AbstractaPackageImpl#getTCDParametro()
 	 * @generated
 	 */
-	int TCD_PARAMETRO = 10;
+	int TCD_PARAMETRO = 11;
 
 	/**
 	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
@@ -788,7 +834,7 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_PARAMETRO__TIPO_DATO = 1;
 
 	/**
-	 * The number of structural features of the '<em>Tcd Parametro</em>' class.
+	 * The number of structural features of the '<em>TCD Parametro</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -804,7 +850,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @see abstracta.impl.AbstractaPackageImpl#getVisibilidad()
 	 * @generated
 	 */
-	int VISIBILIDAD = 11;
+	int VISIBILIDAD = 12;
 
 	/**
 	 * The meta object id for the '{@link abstracta.TipoDato <em>Tipo Dato</em>}' enum.
@@ -814,7 +860,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @see abstracta.impl.AbstractaPackageImpl#getTipoDato()
 	 * @generated
 	 */
-	int TIPO_DATO = 12;
+	int TIPO_DATO = 13;
 
 	/**
 	 * The meta object id for the '{@link abstracta.Multiplicidad <em>Multiplicidad</em>}' enum.
@@ -824,7 +870,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @see abstracta.impl.AbstractaPackageImpl#getMultiplicidad()
 	 * @generated
 	 */
-	int MULTIPLICIDAD = 13;
+	int MULTIPLICIDAD = 14;
 
 	/**
 	 * The meta object id for the '{@link abstracta.TipoRetorno <em>Tipo Retorno</em>}' enum.
@@ -834,602 +880,645 @@ public interface AbstractaPackage extends EPackage {
 	 * @see abstracta.impl.AbstractaPackageImpl#getTipoRetorno()
 	 * @generated
 	 */
-	int TIPO_RETORNO = 14;
+	int TIPO_RETORNO = 15;
 
 
 	/**
-	 * Returns the meta object for class '{@link abstracta.TcdPaquete <em>Tcd Paquete</em>}'.
+	 * Returns the meta object for class '{@link abstracta.TCDPaquete <em>TCD Paquete</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tcd Paquete</em>'.
-	 * @see abstracta.TcdPaquete
+	 * @return the meta object for class '<em>TCD Paquete</em>'.
+	 * @see abstracta.TCDPaquete
 	 * @generated
 	 */
-	EClass getTcdPaquete();
+	EClass getTCDPaquete();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link abstracta.TcdPaquete#getListaClases <em>Lista Clases</em>}'.
+	 * Returns the meta object for the containment reference list '{@link abstracta.TCDPaquete#getListaClases <em>Lista Clases</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Lista Clases</em>'.
-	 * @see abstracta.TcdPaquete#getListaClases()
-	 * @see #getTcdPaquete()
+	 * @see abstracta.TCDPaquete#getListaClases()
+	 * @see #getTCDPaquete()
 	 * @generated
 	 */
-	EReference getTcdPaquete_ListaClases();
+	EReference getTCDPaquete_ListaClases();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link abstracta.TcdPaquete#getListapaquetes <em>Listapaquetes</em>}'.
+	 * Returns the meta object for the containment reference list '{@link abstracta.TCDPaquete#getListapaquetes <em>Listapaquetes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Listapaquetes</em>'.
-	 * @see abstracta.TcdPaquete#getListapaquetes()
-	 * @see #getTcdPaquete()
+	 * @see abstracta.TCDPaquete#getListapaquetes()
+	 * @see #getTCDPaquete()
 	 * @generated
 	 */
-	EReference getTcdPaquete_Listapaquetes();
+	EReference getTCDPaquete_Listapaquetes();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdPaquete#getNombre <em>Nombre</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDPaquete#getNombre <em>Nombre</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Nombre</em>'.
-	 * @see abstracta.TcdPaquete#getNombre()
-	 * @see #getTcdPaquete()
+	 * @see abstracta.TCDPaquete#getNombre()
+	 * @see #getTCDPaquete()
 	 * @generated
 	 */
-	EAttribute getTcdPaquete_Nombre();
+	EAttribute getTCDPaquete_Nombre();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdPaquete#getRuta <em>Ruta</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDPaquete#getRuta <em>Ruta</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Ruta</em>'.
-	 * @see abstracta.TcdPaquete#getRuta()
-	 * @see #getTcdPaquete()
+	 * @see abstracta.TCDPaquete#getRuta()
+	 * @see #getTCDPaquete()
 	 * @generated
 	 */
-	EAttribute getTcdPaquete_Ruta();
+	EAttribute getTCDPaquete_Ruta();
 
 	/**
-	 * Returns the meta object for class '{@link abstracta.TcdClase <em>Tcd Clase</em>}'.
+	 * Returns the meta object for class '{@link abstracta.ModelFactory <em>Model Factory</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tcd Clase</em>'.
-	 * @see abstracta.TcdClase
+	 * @return the meta object for class '<em>Model Factory</em>'.
+	 * @see abstracta.ModelFactory
 	 * @generated
 	 */
-	EClass getTcdClase();
+	EClass getModelFactory();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link abstracta.TcdClase#getListaAtributos <em>Lista Atributos</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.ModelFactory#getNombre <em>Nombre</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nombre</em>'.
+	 * @see abstracta.ModelFactory#getNombre()
+	 * @see #getModelFactory()
+	 * @generated
+	 */
+	EAttribute getModelFactory_Nombre();
+
+	/**
+	 * Returns the meta object for the attribute '{@link abstracta.ModelFactory#getRuta <em>Ruta</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ruta</em>'.
+	 * @see abstracta.ModelFactory#getRuta()
+	 * @see #getModelFactory()
+	 * @generated
+	 */
+	EAttribute getModelFactory_Ruta();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link abstracta.ModelFactory#getListaPaquetes <em>Lista Paquetes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Lista Paquetes</em>'.
+	 * @see abstracta.ModelFactory#getListaPaquetes()
+	 * @see #getModelFactory()
+	 * @generated
+	 */
+	EReference getModelFactory_ListaPaquetes();
+
+	/**
+	 * Returns the meta object for class '{@link abstracta.TCDClase <em>TCD Clase</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>TCD Clase</em>'.
+	 * @see abstracta.TCDClase
+	 * @generated
+	 */
+	EClass getTCDClase();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link abstracta.TCDClase#getListaAtributos <em>Lista Atributos</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Lista Atributos</em>'.
-	 * @see abstracta.TcdClase#getListaAtributos()
-	 * @see #getTcdClase()
+	 * @see abstracta.TCDClase#getListaAtributos()
+	 * @see #getTCDClase()
 	 * @generated
 	 */
-	EReference getTcdClase_ListaAtributos();
+	EReference getTCDClase_ListaAtributos();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link abstracta.TcdClase#getListaMetodos <em>Lista Metodos</em>}'.
+	 * Returns the meta object for the containment reference list '{@link abstracta.TCDClase#getListaMetodos <em>Lista Metodos</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Lista Metodos</em>'.
-	 * @see abstracta.TcdClase#getListaMetodos()
-	 * @see #getTcdClase()
+	 * @see abstracta.TCDClase#getListaMetodos()
+	 * @see #getTCDClase()
 	 * @generated
 	 */
-	EReference getTcdClase_ListaMetodos();
+	EReference getTCDClase_ListaMetodos();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link abstracta.TcdClase#getListaRelaciones <em>Lista Relaciones</em>}'.
+	 * Returns the meta object for the containment reference list '{@link abstracta.TCDClase#getListaRelaciones <em>Lista Relaciones</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Lista Relaciones</em>'.
-	 * @see abstracta.TcdClase#getListaRelaciones()
-	 * @see #getTcdClase()
+	 * @see abstracta.TCDClase#getListaRelaciones()
+	 * @see #getTCDClase()
 	 * @generated
 	 */
-	EReference getTcdClase_ListaRelaciones();
+	EReference getTCDClase_ListaRelaciones();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdClase#getNombre <em>Nombre</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDClase#getNombre <em>Nombre</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Nombre</em>'.
-	 * @see abstracta.TcdClase#getNombre()
-	 * @see #getTcdClase()
+	 * @see abstracta.TCDClase#getNombre()
+	 * @see #getTCDClase()
 	 * @generated
 	 */
-	EAttribute getTcdClase_Nombre();
+	EAttribute getTCDClase_Nombre();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdClase#getEstereotipo <em>Estereotipo</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDClase#getEstereotipo <em>Estereotipo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Estereotipo</em>'.
-	 * @see abstracta.TcdClase#getEstereotipo()
-	 * @see #getTcdClase()
+	 * @see abstracta.TCDClase#getEstereotipo()
+	 * @see #getTCDClase()
 	 * @generated
 	 */
-	EAttribute getTcdClase_Estereotipo();
+	EAttribute getTCDClase_Estereotipo();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdClase#getModificadorAcceso <em>Modificador Acceso</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDClase#getModificadorAcceso <em>Modificador Acceso</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Modificador Acceso</em>'.
-	 * @see abstracta.TcdClase#getModificadorAcceso()
-	 * @see #getTcdClase()
+	 * @see abstracta.TCDClase#getModificadorAcceso()
+	 * @see #getTCDClase()
 	 * @generated
 	 */
-	EAttribute getTcdClase_ModificadorAcceso();
+	EAttribute getTCDClase_ModificadorAcceso();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdClase#isIsAbstract <em>Is Abstract</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDClase#isIsAbstract <em>Is Abstract</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Is Abstract</em>'.
-	 * @see abstracta.TcdClase#isIsAbstract()
-	 * @see #getTcdClase()
+	 * @see abstracta.TCDClase#isIsAbstract()
+	 * @see #getTCDClase()
 	 * @generated
 	 */
-	EAttribute getTcdClase_IsAbstract();
+	EAttribute getTCDClase_IsAbstract();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdClase#getDocumentacion <em>Documentacion</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDClase#getDocumentacion <em>Documentacion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Documentacion</em>'.
-	 * @see abstracta.TcdClase#getDocumentacion()
-	 * @see #getTcdClase()
+	 * @see abstracta.TCDClase#getDocumentacion()
+	 * @see #getTCDClase()
 	 * @generated
 	 */
-	EAttribute getTcdClase_Documentacion();
+	EAttribute getTCDClase_Documentacion();
 
 	/**
-	 * Returns the meta object for class '{@link abstracta.TcdAtributo <em>Tcd Atributo</em>}'.
+	 * Returns the meta object for class '{@link abstracta.TCDAtributo <em>TCD Atributo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tcd Atributo</em>'.
-	 * @see abstracta.TcdAtributo
+	 * @return the meta object for class '<em>TCD Atributo</em>'.
+	 * @see abstracta.TCDAtributo
 	 * @generated
 	 */
-	EClass getTcdAtributo();
+	EClass getTCDAtributo();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdAtributo#getNombre <em>Nombre</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDAtributo#getNombre <em>Nombre</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Nombre</em>'.
-	 * @see abstracta.TcdAtributo#getNombre()
-	 * @see #getTcdAtributo()
+	 * @see abstracta.TCDAtributo#getNombre()
+	 * @see #getTCDAtributo()
 	 * @generated
 	 */
-	EAttribute getTcdAtributo_Nombre();
+	EAttribute getTCDAtributo_Nombre();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdAtributo#getTipoDato <em>Tipo Dato</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDAtributo#getTipoDato <em>Tipo Dato</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Tipo Dato</em>'.
-	 * @see abstracta.TcdAtributo#getTipoDato()
-	 * @see #getTcdAtributo()
+	 * @see abstracta.TCDAtributo#getTipoDato()
+	 * @see #getTCDAtributo()
 	 * @generated
 	 */
-	EAttribute getTcdAtributo_TipoDato();
+	EAttribute getTCDAtributo_TipoDato();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdAtributo#getVisibilidad <em>Visibilidad</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDAtributo#getVisibilidad <em>Visibilidad</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Visibilidad</em>'.
-	 * @see abstracta.TcdAtributo#getVisibilidad()
-	 * @see #getTcdAtributo()
+	 * @see abstracta.TCDAtributo#getVisibilidad()
+	 * @see #getTCDAtributo()
 	 * @generated
 	 */
-	EAttribute getTcdAtributo_Visibilidad();
+	EAttribute getTCDAtributo_Visibilidad();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdAtributo#isIsConstante <em>Is Constante</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDAtributo#isIsConstante <em>Is Constante</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Is Constante</em>'.
-	 * @see abstracta.TcdAtributo#isIsConstante()
-	 * @see #getTcdAtributo()
+	 * @see abstracta.TCDAtributo#isIsConstante()
+	 * @see #getTCDAtributo()
 	 * @generated
 	 */
-	EAttribute getTcdAtributo_IsConstante();
+	EAttribute getTCDAtributo_IsConstante();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdAtributo#isIsStatic <em>Is Static</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDAtributo#isIsStatic <em>Is Static</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Is Static</em>'.
-	 * @see abstracta.TcdAtributo#isIsStatic()
-	 * @see #getTcdAtributo()
+	 * @see abstracta.TCDAtributo#isIsStatic()
+	 * @see #getTCDAtributo()
 	 * @generated
 	 */
-	EAttribute getTcdAtributo_IsStatic();
+	EAttribute getTCDAtributo_IsStatic();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdAtributo#getValorDefecto <em>Valor Defecto</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDAtributo#getValorDefecto <em>Valor Defecto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Valor Defecto</em>'.
-	 * @see abstracta.TcdAtributo#getValorDefecto()
-	 * @see #getTcdAtributo()
+	 * @see abstracta.TCDAtributo#getValorDefecto()
+	 * @see #getTCDAtributo()
 	 * @generated
 	 */
-	EAttribute getTcdAtributo_ValorDefecto();
+	EAttribute getTCDAtributo_ValorDefecto();
 
 	/**
-	 * Returns the meta object for class '{@link abstracta.TcdMetodo <em>Tcd Metodo</em>}'.
+	 * Returns the meta object for class '{@link abstracta.TCDMetodo <em>TCD Metodo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tcd Metodo</em>'.
-	 * @see abstracta.TcdMetodo
+	 * @return the meta object for class '<em>TCD Metodo</em>'.
+	 * @see abstracta.TCDMetodo
 	 * @generated
 	 */
-	EClass getTcdMetodo();
+	EClass getTCDMetodo();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link abstracta.TcdMetodo#getListaParametros <em>Lista Parametros</em>}'.
+	 * Returns the meta object for the containment reference list '{@link abstracta.TCDMetodo#getListaParametros <em>Lista Parametros</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Lista Parametros</em>'.
-	 * @see abstracta.TcdMetodo#getListaParametros()
-	 * @see #getTcdMetodo()
+	 * @see abstracta.TCDMetodo#getListaParametros()
+	 * @see #getTCDMetodo()
 	 * @generated
 	 */
-	EReference getTcdMetodo_ListaParametros();
+	EReference getTCDMetodo_ListaParametros();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdMetodo#getNombre <em>Nombre</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDMetodo#getNombre <em>Nombre</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Nombre</em>'.
-	 * @see abstracta.TcdMetodo#getNombre()
-	 * @see #getTcdMetodo()
+	 * @see abstracta.TCDMetodo#getNombre()
+	 * @see #getTCDMetodo()
 	 * @generated
 	 */
-	EAttribute getTcdMetodo_Nombre();
+	EAttribute getTCDMetodo_Nombre();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdMetodo#getModificadorAcceso <em>Modificador Acceso</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDMetodo#getModificadorAcceso <em>Modificador Acceso</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Modificador Acceso</em>'.
-	 * @see abstracta.TcdMetodo#getModificadorAcceso()
-	 * @see #getTcdMetodo()
+	 * @see abstracta.TCDMetodo#getModificadorAcceso()
+	 * @see #getTCDMetodo()
 	 * @generated
 	 */
-	EAttribute getTcdMetodo_ModificadorAcceso();
+	EAttribute getTCDMetodo_ModificadorAcceso();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdMetodo#getTipoRetorno <em>Tipo Retorno</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDMetodo#getTipoRetorno <em>Tipo Retorno</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Tipo Retorno</em>'.
-	 * @see abstracta.TcdMetodo#getTipoRetorno()
-	 * @see #getTcdMetodo()
+	 * @see abstracta.TCDMetodo#getTipoRetorno()
+	 * @see #getTCDMetodo()
 	 * @generated
 	 */
-	EAttribute getTcdMetodo_TipoRetorno();
+	EAttribute getTCDMetodo_TipoRetorno();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdMetodo#getSemantica <em>Semantica</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDMetodo#getSemantica <em>Semantica</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Semantica</em>'.
-	 * @see abstracta.TcdMetodo#getSemantica()
-	 * @see #getTcdMetodo()
+	 * @see abstracta.TCDMetodo#getSemantica()
+	 * @see #getTCDMetodo()
 	 * @generated
 	 */
-	EAttribute getTcdMetodo_Semantica();
+	EAttribute getTCDMetodo_Semantica();
 
 	/**
-	 * Returns the meta object for class '{@link abstracta.TcdRelacion <em>Tcd Relacion</em>}'.
+	 * Returns the meta object for class '{@link abstracta.TCDRelacion <em>TCD Relacion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tcd Relacion</em>'.
-	 * @see abstracta.TcdRelacion
+	 * @return the meta object for class '<em>TCD Relacion</em>'.
+	 * @see abstracta.TCDRelacion
 	 * @generated
 	 */
-	EClass getTcdRelacion();
+	EClass getTCDRelacion();
 
 	/**
-	 * Returns the meta object for the reference '{@link abstracta.TcdRelacion#getSource <em>Source</em>}'.
+	 * Returns the meta object for the reference '{@link abstracta.TCDRelacion#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Source</em>'.
-	 * @see abstracta.TcdRelacion#getSource()
-	 * @see #getTcdRelacion()
+	 * @see abstracta.TCDRelacion#getSource()
+	 * @see #getTCDRelacion()
 	 * @generated
 	 */
-	EReference getTcdRelacion_Source();
+	EReference getTCDRelacion_Source();
 
 	/**
-	 * Returns the meta object for the reference '{@link abstracta.TcdRelacion#getTarget <em>Target</em>}'.
+	 * Returns the meta object for the reference '{@link abstracta.TCDRelacion#getTarget <em>Target</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Target</em>'.
-	 * @see abstracta.TcdRelacion#getTarget()
-	 * @see #getTcdRelacion()
+	 * @see abstracta.TCDRelacion#getTarget()
+	 * @see #getTCDRelacion()
 	 * @generated
 	 */
-	EReference getTcdRelacion_Target();
+	EReference getTCDRelacion_Target();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdRelacion#getNavegavilidad <em>Navegavilidad</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDRelacion#getNavegavilidad <em>Navegavilidad</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Navegavilidad</em>'.
-	 * @see abstracta.TcdRelacion#getNavegavilidad()
-	 * @see #getTcdRelacion()
+	 * @see abstracta.TCDRelacion#getNavegavilidad()
+	 * @see #getTCDRelacion()
 	 * @generated
 	 */
-	EAttribute getTcdRelacion_Navegavilidad();
+	EAttribute getTCDRelacion_Navegavilidad();
 
 	/**
-	 * Returns the meta object for class '{@link abstracta.TcdAsociacion <em>Tcd Asociacion</em>}'.
+	 * Returns the meta object for class '{@link abstracta.TCDAsociacion <em>TCD Asociacion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tcd Asociacion</em>'.
-	 * @see abstracta.TcdAsociacion
+	 * @return the meta object for class '<em>TCD Asociacion</em>'.
+	 * @see abstracta.TCDAsociacion
 	 * @generated
 	 */
-	EClass getTcdAsociacion();
+	EClass getTCDAsociacion();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdAsociacion#getNombreOrigen <em>Nombre Origen</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nombre Origen</em>'.
-	 * @see abstracta.TcdAsociacion#getNombreOrigen()
-	 * @see #getTcdAsociacion()
-	 * @generated
-	 */
-	EAttribute getTcdAsociacion_NombreOrigen();
-
-	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdAsociacion#getNombreDestino <em>Nombre Destino</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nombre Destino</em>'.
-	 * @see abstracta.TcdAsociacion#getNombreDestino()
-	 * @see #getTcdAsociacion()
-	 * @generated
-	 */
-	EAttribute getTcdAsociacion_NombreDestino();
-
-	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdAsociacion#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Multiplicidad Origen</em>'.
-	 * @see abstracta.TcdAsociacion#getMultiplicidadOrigen()
-	 * @see #getTcdAsociacion()
-	 * @generated
-	 */
-	EAttribute getTcdAsociacion_MultiplicidadOrigen();
-
-	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdAsociacion#getMultiplicidadDestino <em>Multiplicidad Destino</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Multiplicidad Destino</em>'.
-	 * @see abstracta.TcdAsociacion#getMultiplicidadDestino()
-	 * @see #getTcdAsociacion()
-	 * @generated
-	 */
-	EAttribute getTcdAsociacion_MultiplicidadDestino();
-
-	/**
-	 * Returns the meta object for class '{@link abstracta.TcdComposicion <em>Tcd Composicion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tcd Composicion</em>'.
-	 * @see abstracta.TcdComposicion
-	 * @generated
-	 */
-	EClass getTcdComposicion();
-
-	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdComposicion#getNombreOrigen <em>Nombre Origen</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDAsociacion#getNombreOrigen <em>Nombre Origen</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Nombre Origen</em>'.
-	 * @see abstracta.TcdComposicion#getNombreOrigen()
-	 * @see #getTcdComposicion()
+	 * @see abstracta.TCDAsociacion#getNombreOrigen()
+	 * @see #getTCDAsociacion()
 	 * @generated
 	 */
-	EAttribute getTcdComposicion_NombreOrigen();
+	EAttribute getTCDAsociacion_NombreOrigen();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdComposicion#getNombreDestino <em>Nombre Destino</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDAsociacion#getNombreDestino <em>Nombre Destino</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Nombre Destino</em>'.
-	 * @see abstracta.TcdComposicion#getNombreDestino()
-	 * @see #getTcdComposicion()
+	 * @see abstracta.TCDAsociacion#getNombreDestino()
+	 * @see #getTCDAsociacion()
 	 * @generated
 	 */
-	EAttribute getTcdComposicion_NombreDestino();
+	EAttribute getTCDAsociacion_NombreDestino();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdComposicion#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDAsociacion#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Multiplicidad Origen</em>'.
-	 * @see abstracta.TcdComposicion#getMultiplicidadOrigen()
-	 * @see #getTcdComposicion()
+	 * @see abstracta.TCDAsociacion#getMultiplicidadOrigen()
+	 * @see #getTCDAsociacion()
 	 * @generated
 	 */
-	EAttribute getTcdComposicion_MultiplicidadOrigen();
+	EAttribute getTCDAsociacion_MultiplicidadOrigen();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdComposicion#getMultiplicidadDestino <em>Multiplicidad Destino</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDAsociacion#getMultiplicidadDestino <em>Multiplicidad Destino</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Multiplicidad Destino</em>'.
-	 * @see abstracta.TcdComposicion#getMultiplicidadDestino()
-	 * @see #getTcdComposicion()
+	 * @see abstracta.TCDAsociacion#getMultiplicidadDestino()
+	 * @see #getTCDAsociacion()
 	 * @generated
 	 */
-	EAttribute getTcdComposicion_MultiplicidadDestino();
+	EAttribute getTCDAsociacion_MultiplicidadDestino();
 
 	/**
-	 * Returns the meta object for class '{@link abstracta.TcdDependencia <em>Tcd Dependencia</em>}'.
+	 * Returns the meta object for class '{@link abstracta.TCDComposicion <em>TCD Composicion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tcd Dependencia</em>'.
-	 * @see abstracta.TcdDependencia
+	 * @return the meta object for class '<em>TCD Composicion</em>'.
+	 * @see abstracta.TCDComposicion
 	 * @generated
 	 */
-	EClass getTcdDependencia();
+	EClass getTCDComposicion();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdDependencia#getNombreOrigen <em>Nombre Origen</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDComposicion#getNombreOrigen <em>Nombre Origen</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Nombre Origen</em>'.
-	 * @see abstracta.TcdDependencia#getNombreOrigen()
-	 * @see #getTcdDependencia()
+	 * @see abstracta.TCDComposicion#getNombreOrigen()
+	 * @see #getTCDComposicion()
 	 * @generated
 	 */
-	EAttribute getTcdDependencia_NombreOrigen();
+	EAttribute getTCDComposicion_NombreOrigen();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdDependencia#getNombreDestino <em>Nombre Destino</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDComposicion#getNombreDestino <em>Nombre Destino</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Nombre Destino</em>'.
-	 * @see abstracta.TcdDependencia#getNombreDestino()
-	 * @see #getTcdDependencia()
+	 * @see abstracta.TCDComposicion#getNombreDestino()
+	 * @see #getTCDComposicion()
 	 * @generated
 	 */
-	EAttribute getTcdDependencia_NombreDestino();
+	EAttribute getTCDComposicion_NombreDestino();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdDependencia#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDComposicion#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Multiplicidad Origen</em>'.
-	 * @see abstracta.TcdDependencia#getMultiplicidadOrigen()
-	 * @see #getTcdDependencia()
+	 * @see abstracta.TCDComposicion#getMultiplicidadOrigen()
+	 * @see #getTCDComposicion()
 	 * @generated
 	 */
-	EAttribute getTcdDependencia_MultiplicidadOrigen();
+	EAttribute getTCDComposicion_MultiplicidadOrigen();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdDependencia#getMultiplicidadDestino <em>Multiplicidad Destino</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDComposicion#getMultiplicidadDestino <em>Multiplicidad Destino</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Multiplicidad Destino</em>'.
-	 * @see abstracta.TcdDependencia#getMultiplicidadDestino()
-	 * @see #getTcdDependencia()
+	 * @see abstracta.TCDComposicion#getMultiplicidadDestino()
+	 * @see #getTCDComposicion()
 	 * @generated
 	 */
-	EAttribute getTcdDependencia_MultiplicidadDestino();
+	EAttribute getTCDComposicion_MultiplicidadDestino();
 
 	/**
-	 * Returns the meta object for class '{@link abstracta.TcdHerencia <em>Tcd Herencia</em>}'.
+	 * Returns the meta object for class '{@link abstracta.TCDDependencia <em>TCD Dependencia</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tcd Herencia</em>'.
-	 * @see abstracta.TcdHerencia
+	 * @return the meta object for class '<em>TCD Dependencia</em>'.
+	 * @see abstracta.TCDDependencia
 	 * @generated
 	 */
-	EClass getTcdHerencia();
+	EClass getTCDDependencia();
 
 	/**
-	 * Returns the meta object for class '{@link abstracta.TcdAgregacion <em>Tcd Agregacion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tcd Agregacion</em>'.
-	 * @see abstracta.TcdAgregacion
-	 * @generated
-	 */
-	EClass getTcdAgregacion();
-
-	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdAgregacion#getNombreOrigen <em>Nombre Origen</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDDependencia#getNombreOrigen <em>Nombre Origen</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Nombre Origen</em>'.
-	 * @see abstracta.TcdAgregacion#getNombreOrigen()
-	 * @see #getTcdAgregacion()
+	 * @see abstracta.TCDDependencia#getNombreOrigen()
+	 * @see #getTCDDependencia()
 	 * @generated
 	 */
-	EAttribute getTcdAgregacion_NombreOrigen();
+	EAttribute getTCDDependencia_NombreOrigen();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdAgregacion#getNombreDestino <em>Nombre Destino</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDDependencia#getNombreDestino <em>Nombre Destino</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Nombre Destino</em>'.
-	 * @see abstracta.TcdAgregacion#getNombreDestino()
-	 * @see #getTcdAgregacion()
+	 * @see abstracta.TCDDependencia#getNombreDestino()
+	 * @see #getTCDDependencia()
 	 * @generated
 	 */
-	EAttribute getTcdAgregacion_NombreDestino();
+	EAttribute getTCDDependencia_NombreDestino();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdAgregacion#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDDependencia#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Multiplicidad Origen</em>'.
-	 * @see abstracta.TcdAgregacion#getMultiplicidadOrigen()
-	 * @see #getTcdAgregacion()
+	 * @see abstracta.TCDDependencia#getMultiplicidadOrigen()
+	 * @see #getTCDDependencia()
 	 * @generated
 	 */
-	EAttribute getTcdAgregacion_MultiplicidadOrigen();
+	EAttribute getTCDDependencia_MultiplicidadOrigen();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdAgregacion#getMultiplicidadDestino <em>Multiplicidad Destino</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDDependencia#getMultiplicidadDestino <em>Multiplicidad Destino</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Multiplicidad Destino</em>'.
-	 * @see abstracta.TcdAgregacion#getMultiplicidadDestino()
-	 * @see #getTcdAgregacion()
+	 * @see abstracta.TCDDependencia#getMultiplicidadDestino()
+	 * @see #getTCDDependencia()
 	 * @generated
 	 */
-	EAttribute getTcdAgregacion_MultiplicidadDestino();
+	EAttribute getTCDDependencia_MultiplicidadDestino();
 
 	/**
-	 * Returns the meta object for class '{@link abstracta.TcdParametro <em>Tcd Parametro</em>}'.
+	 * Returns the meta object for class '{@link abstracta.TCDHerencia <em>TCD Herencia</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tcd Parametro</em>'.
-	 * @see abstracta.TcdParametro
+	 * @return the meta object for class '<em>TCD Herencia</em>'.
+	 * @see abstracta.TCDHerencia
 	 * @generated
 	 */
-	EClass getTcdParametro();
+	EClass getTCDHerencia();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdParametro#getNombre <em>Nombre</em>}'.
+	 * Returns the meta object for class '{@link abstracta.TCDAgregacion <em>TCD Agregacion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>TCD Agregacion</em>'.
+	 * @see abstracta.TCDAgregacion
+	 * @generated
+	 */
+	EClass getTCDAgregacion();
+
+	/**
+	 * Returns the meta object for the attribute '{@link abstracta.TCDAgregacion#getNombreOrigen <em>Nombre Origen</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nombre Origen</em>'.
+	 * @see abstracta.TCDAgregacion#getNombreOrigen()
+	 * @see #getTCDAgregacion()
+	 * @generated
+	 */
+	EAttribute getTCDAgregacion_NombreOrigen();
+
+	/**
+	 * Returns the meta object for the attribute '{@link abstracta.TCDAgregacion#getNombreDestino <em>Nombre Destino</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nombre Destino</em>'.
+	 * @see abstracta.TCDAgregacion#getNombreDestino()
+	 * @see #getTCDAgregacion()
+	 * @generated
+	 */
+	EAttribute getTCDAgregacion_NombreDestino();
+
+	/**
+	 * Returns the meta object for the attribute '{@link abstracta.TCDAgregacion#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Multiplicidad Origen</em>'.
+	 * @see abstracta.TCDAgregacion#getMultiplicidadOrigen()
+	 * @see #getTCDAgregacion()
+	 * @generated
+	 */
+	EAttribute getTCDAgregacion_MultiplicidadOrigen();
+
+	/**
+	 * Returns the meta object for the attribute '{@link abstracta.TCDAgregacion#getMultiplicidadDestino <em>Multiplicidad Destino</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Multiplicidad Destino</em>'.
+	 * @see abstracta.TCDAgregacion#getMultiplicidadDestino()
+	 * @see #getTCDAgregacion()
+	 * @generated
+	 */
+	EAttribute getTCDAgregacion_MultiplicidadDestino();
+
+	/**
+	 * Returns the meta object for class '{@link abstracta.TCDParametro <em>TCD Parametro</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>TCD Parametro</em>'.
+	 * @see abstracta.TCDParametro
+	 * @generated
+	 */
+	EClass getTCDParametro();
+
+	/**
+	 * Returns the meta object for the attribute '{@link abstracta.TCDParametro#getNombre <em>Nombre</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Nombre</em>'.
-	 * @see abstracta.TcdParametro#getNombre()
-	 * @see #getTcdParametro()
+	 * @see abstracta.TCDParametro#getNombre()
+	 * @see #getTCDParametro()
 	 * @generated
 	 */
-	EAttribute getTcdParametro_Nombre();
+	EAttribute getTCDParametro_Nombre();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TcdParametro#getTipoDato <em>Tipo Dato</em>}'.
+	 * Returns the meta object for the attribute '{@link abstracta.TCDParametro#getTipoDato <em>Tipo Dato</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Tipo Dato</em>'.
-	 * @see abstracta.TcdParametro#getTipoDato()
-	 * @see #getTcdParametro()
+	 * @see abstracta.TCDParametro#getTipoDato()
+	 * @see #getTCDParametro()
 	 * @generated
 	 */
-	EAttribute getTcdParametro_TipoDato();
+	EAttribute getTCDParametro_TipoDato();
 
 	/**
 	 * Returns the meta object for enum '{@link abstracta.Visibilidad <em>Visibilidad</em>}'.
@@ -1494,14 +1583,14 @@ public interface AbstractaPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link abstracta.impl.TcdPaqueteImpl <em>Tcd Paquete</em>}' class.
+		 * The meta object literal for the '{@link abstracta.impl.TCDPaqueteImpl <em>TCD Paquete</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see abstracta.impl.TcdPaqueteImpl
-		 * @see abstracta.impl.AbstractaPackageImpl#getTcdPaquete()
+		 * @see abstracta.impl.TCDPaqueteImpl
+		 * @see abstracta.impl.AbstractaPackageImpl#getTCDPaquete()
 		 * @generated
 		 */
-		EClass TCD_PAQUETE = eINSTANCE.getTcdPaquete();
+		EClass TCD_PAQUETE = eINSTANCE.getTCDPaquete();
 
 		/**
 		 * The meta object literal for the '<em><b>Lista Clases</b></em>' containment reference list feature.
@@ -1509,7 +1598,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TCD_PAQUETE__LISTA_CLASES = eINSTANCE.getTcdPaquete_ListaClases();
+		EReference TCD_PAQUETE__LISTA_CLASES = eINSTANCE.getTCDPaquete_ListaClases();
 
 		/**
 		 * The meta object literal for the '<em><b>Listapaquetes</b></em>' containment reference list feature.
@@ -1517,7 +1606,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TCD_PAQUETE__LISTAPAQUETES = eINSTANCE.getTcdPaquete_Listapaquetes();
+		EReference TCD_PAQUETE__LISTAPAQUETES = eINSTANCE.getTCDPaquete_Listapaquetes();
 
 		/**
 		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
@@ -1525,7 +1614,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_PAQUETE__NOMBRE = eINSTANCE.getTcdPaquete_Nombre();
+		EAttribute TCD_PAQUETE__NOMBRE = eINSTANCE.getTCDPaquete_Nombre();
 
 		/**
 		 * The meta object literal for the '<em><b>Ruta</b></em>' attribute feature.
@@ -1533,17 +1622,51 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_PAQUETE__RUTA = eINSTANCE.getTcdPaquete_Ruta();
+		EAttribute TCD_PAQUETE__RUTA = eINSTANCE.getTCDPaquete_Ruta();
 
 		/**
-		 * The meta object literal for the '{@link abstracta.impl.TcdClaseImpl <em>Tcd Clase</em>}' class.
+		 * The meta object literal for the '{@link abstracta.impl.ModelFactoryImpl <em>Model Factory</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see abstracta.impl.TcdClaseImpl
-		 * @see abstracta.impl.AbstractaPackageImpl#getTcdClase()
+		 * @see abstracta.impl.ModelFactoryImpl
+		 * @see abstracta.impl.AbstractaPackageImpl#getModelFactory()
 		 * @generated
 		 */
-		EClass TCD_CLASE = eINSTANCE.getTcdClase();
+		EClass MODEL_FACTORY = eINSTANCE.getModelFactory();
+
+		/**
+		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODEL_FACTORY__NOMBRE = eINSTANCE.getModelFactory_Nombre();
+
+		/**
+		 * The meta object literal for the '<em><b>Ruta</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODEL_FACTORY__RUTA = eINSTANCE.getModelFactory_Ruta();
+
+		/**
+		 * The meta object literal for the '<em><b>Lista Paquetes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODEL_FACTORY__LISTA_PAQUETES = eINSTANCE.getModelFactory_ListaPaquetes();
+
+		/**
+		 * The meta object literal for the '{@link abstracta.impl.TCDClaseImpl <em>TCD Clase</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see abstracta.impl.TCDClaseImpl
+		 * @see abstracta.impl.AbstractaPackageImpl#getTCDClase()
+		 * @generated
+		 */
+		EClass TCD_CLASE = eINSTANCE.getTCDClase();
 
 		/**
 		 * The meta object literal for the '<em><b>Lista Atributos</b></em>' containment reference list feature.
@@ -1551,7 +1674,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TCD_CLASE__LISTA_ATRIBUTOS = eINSTANCE.getTcdClase_ListaAtributos();
+		EReference TCD_CLASE__LISTA_ATRIBUTOS = eINSTANCE.getTCDClase_ListaAtributos();
 
 		/**
 		 * The meta object literal for the '<em><b>Lista Metodos</b></em>' containment reference list feature.
@@ -1559,7 +1682,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TCD_CLASE__LISTA_METODOS = eINSTANCE.getTcdClase_ListaMetodos();
+		EReference TCD_CLASE__LISTA_METODOS = eINSTANCE.getTCDClase_ListaMetodos();
 
 		/**
 		 * The meta object literal for the '<em><b>Lista Relaciones</b></em>' containment reference list feature.
@@ -1567,7 +1690,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TCD_CLASE__LISTA_RELACIONES = eINSTANCE.getTcdClase_ListaRelaciones();
+		EReference TCD_CLASE__LISTA_RELACIONES = eINSTANCE.getTCDClase_ListaRelaciones();
 
 		/**
 		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
@@ -1575,7 +1698,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_CLASE__NOMBRE = eINSTANCE.getTcdClase_Nombre();
+		EAttribute TCD_CLASE__NOMBRE = eINSTANCE.getTCDClase_Nombre();
 
 		/**
 		 * The meta object literal for the '<em><b>Estereotipo</b></em>' attribute feature.
@@ -1583,7 +1706,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_CLASE__ESTEREOTIPO = eINSTANCE.getTcdClase_Estereotipo();
+		EAttribute TCD_CLASE__ESTEREOTIPO = eINSTANCE.getTCDClase_Estereotipo();
 
 		/**
 		 * The meta object literal for the '<em><b>Modificador Acceso</b></em>' attribute feature.
@@ -1591,7 +1714,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_CLASE__MODIFICADOR_ACCESO = eINSTANCE.getTcdClase_ModificadorAcceso();
+		EAttribute TCD_CLASE__MODIFICADOR_ACCESO = eINSTANCE.getTCDClase_ModificadorAcceso();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Abstract</b></em>' attribute feature.
@@ -1599,7 +1722,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_CLASE__IS_ABSTRACT = eINSTANCE.getTcdClase_IsAbstract();
+		EAttribute TCD_CLASE__IS_ABSTRACT = eINSTANCE.getTCDClase_IsAbstract();
 
 		/**
 		 * The meta object literal for the '<em><b>Documentacion</b></em>' attribute feature.
@@ -1607,17 +1730,17 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_CLASE__DOCUMENTACION = eINSTANCE.getTcdClase_Documentacion();
+		EAttribute TCD_CLASE__DOCUMENTACION = eINSTANCE.getTCDClase_Documentacion();
 
 		/**
-		 * The meta object literal for the '{@link abstracta.impl.TcdAtributoImpl <em>Tcd Atributo</em>}' class.
+		 * The meta object literal for the '{@link abstracta.impl.TCDAtributoImpl <em>TCD Atributo</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see abstracta.impl.TcdAtributoImpl
-		 * @see abstracta.impl.AbstractaPackageImpl#getTcdAtributo()
+		 * @see abstracta.impl.TCDAtributoImpl
+		 * @see abstracta.impl.AbstractaPackageImpl#getTCDAtributo()
 		 * @generated
 		 */
-		EClass TCD_ATRIBUTO = eINSTANCE.getTcdAtributo();
+		EClass TCD_ATRIBUTO = eINSTANCE.getTCDAtributo();
 
 		/**
 		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
@@ -1625,7 +1748,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_ATRIBUTO__NOMBRE = eINSTANCE.getTcdAtributo_Nombre();
+		EAttribute TCD_ATRIBUTO__NOMBRE = eINSTANCE.getTCDAtributo_Nombre();
 
 		/**
 		 * The meta object literal for the '<em><b>Tipo Dato</b></em>' attribute feature.
@@ -1633,7 +1756,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_ATRIBUTO__TIPO_DATO = eINSTANCE.getTcdAtributo_TipoDato();
+		EAttribute TCD_ATRIBUTO__TIPO_DATO = eINSTANCE.getTCDAtributo_TipoDato();
 
 		/**
 		 * The meta object literal for the '<em><b>Visibilidad</b></em>' attribute feature.
@@ -1641,7 +1764,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_ATRIBUTO__VISIBILIDAD = eINSTANCE.getTcdAtributo_Visibilidad();
+		EAttribute TCD_ATRIBUTO__VISIBILIDAD = eINSTANCE.getTCDAtributo_Visibilidad();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Constante</b></em>' attribute feature.
@@ -1649,7 +1772,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_ATRIBUTO__IS_CONSTANTE = eINSTANCE.getTcdAtributo_IsConstante();
+		EAttribute TCD_ATRIBUTO__IS_CONSTANTE = eINSTANCE.getTCDAtributo_IsConstante();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Static</b></em>' attribute feature.
@@ -1657,7 +1780,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_ATRIBUTO__IS_STATIC = eINSTANCE.getTcdAtributo_IsStatic();
+		EAttribute TCD_ATRIBUTO__IS_STATIC = eINSTANCE.getTCDAtributo_IsStatic();
 
 		/**
 		 * The meta object literal for the '<em><b>Valor Defecto</b></em>' attribute feature.
@@ -1665,17 +1788,17 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_ATRIBUTO__VALOR_DEFECTO = eINSTANCE.getTcdAtributo_ValorDefecto();
+		EAttribute TCD_ATRIBUTO__VALOR_DEFECTO = eINSTANCE.getTCDAtributo_ValorDefecto();
 
 		/**
-		 * The meta object literal for the '{@link abstracta.impl.TcdMetodoImpl <em>Tcd Metodo</em>}' class.
+		 * The meta object literal for the '{@link abstracta.impl.TCDMetodoImpl <em>TCD Metodo</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see abstracta.impl.TcdMetodoImpl
-		 * @see abstracta.impl.AbstractaPackageImpl#getTcdMetodo()
+		 * @see abstracta.impl.TCDMetodoImpl
+		 * @see abstracta.impl.AbstractaPackageImpl#getTCDMetodo()
 		 * @generated
 		 */
-		EClass TCD_METODO = eINSTANCE.getTcdMetodo();
+		EClass TCD_METODO = eINSTANCE.getTCDMetodo();
 
 		/**
 		 * The meta object literal for the '<em><b>Lista Parametros</b></em>' containment reference list feature.
@@ -1683,7 +1806,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TCD_METODO__LISTA_PARAMETROS = eINSTANCE.getTcdMetodo_ListaParametros();
+		EReference TCD_METODO__LISTA_PARAMETROS = eINSTANCE.getTCDMetodo_ListaParametros();
 
 		/**
 		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
@@ -1691,7 +1814,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_METODO__NOMBRE = eINSTANCE.getTcdMetodo_Nombre();
+		EAttribute TCD_METODO__NOMBRE = eINSTANCE.getTCDMetodo_Nombre();
 
 		/**
 		 * The meta object literal for the '<em><b>Modificador Acceso</b></em>' attribute feature.
@@ -1699,7 +1822,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_METODO__MODIFICADOR_ACCESO = eINSTANCE.getTcdMetodo_ModificadorAcceso();
+		EAttribute TCD_METODO__MODIFICADOR_ACCESO = eINSTANCE.getTCDMetodo_ModificadorAcceso();
 
 		/**
 		 * The meta object literal for the '<em><b>Tipo Retorno</b></em>' attribute feature.
@@ -1707,7 +1830,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_METODO__TIPO_RETORNO = eINSTANCE.getTcdMetodo_TipoRetorno();
+		EAttribute TCD_METODO__TIPO_RETORNO = eINSTANCE.getTCDMetodo_TipoRetorno();
 
 		/**
 		 * The meta object literal for the '<em><b>Semantica</b></em>' attribute feature.
@@ -1715,17 +1838,17 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_METODO__SEMANTICA = eINSTANCE.getTcdMetodo_Semantica();
+		EAttribute TCD_METODO__SEMANTICA = eINSTANCE.getTCDMetodo_Semantica();
 
 		/**
-		 * The meta object literal for the '{@link abstracta.impl.TcdRelacionImpl <em>Tcd Relacion</em>}' class.
+		 * The meta object literal for the '{@link abstracta.impl.TCDRelacionImpl <em>TCD Relacion</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see abstracta.impl.TcdRelacionImpl
-		 * @see abstracta.impl.AbstractaPackageImpl#getTcdRelacion()
+		 * @see abstracta.impl.TCDRelacionImpl
+		 * @see abstracta.impl.AbstractaPackageImpl#getTCDRelacion()
 		 * @generated
 		 */
-		EClass TCD_RELACION = eINSTANCE.getTcdRelacion();
+		EClass TCD_RELACION = eINSTANCE.getTCDRelacion();
 
 		/**
 		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
@@ -1733,7 +1856,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TCD_RELACION__SOURCE = eINSTANCE.getTcdRelacion_Source();
+		EReference TCD_RELACION__SOURCE = eINSTANCE.getTCDRelacion_Source();
 
 		/**
 		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
@@ -1741,7 +1864,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TCD_RELACION__TARGET = eINSTANCE.getTcdRelacion_Target();
+		EReference TCD_RELACION__TARGET = eINSTANCE.getTCDRelacion_Target();
 
 		/**
 		 * The meta object literal for the '<em><b>Navegavilidad</b></em>' attribute feature.
@@ -1749,59 +1872,17 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_RELACION__NAVEGAVILIDAD = eINSTANCE.getTcdRelacion_Navegavilidad();
+		EAttribute TCD_RELACION__NAVEGAVILIDAD = eINSTANCE.getTCDRelacion_Navegavilidad();
 
 		/**
-		 * The meta object literal for the '{@link abstracta.impl.TcdAsociacionImpl <em>Tcd Asociacion</em>}' class.
+		 * The meta object literal for the '{@link abstracta.impl.TCDAsociacionImpl <em>TCD Asociacion</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see abstracta.impl.TcdAsociacionImpl
-		 * @see abstracta.impl.AbstractaPackageImpl#getTcdAsociacion()
+		 * @see abstracta.impl.TCDAsociacionImpl
+		 * @see abstracta.impl.AbstractaPackageImpl#getTCDAsociacion()
 		 * @generated
 		 */
-		EClass TCD_ASOCIACION = eINSTANCE.getTcdAsociacion();
-
-		/**
-		 * The meta object literal for the '<em><b>Nombre Origen</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TCD_ASOCIACION__NOMBRE_ORIGEN = eINSTANCE.getTcdAsociacion_NombreOrigen();
-
-		/**
-		 * The meta object literal for the '<em><b>Nombre Destino</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TCD_ASOCIACION__NOMBRE_DESTINO = eINSTANCE.getTcdAsociacion_NombreDestino();
-
-		/**
-		 * The meta object literal for the '<em><b>Multiplicidad Origen</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TCD_ASOCIACION__MULTIPLICIDAD_ORIGEN = eINSTANCE.getTcdAsociacion_MultiplicidadOrigen();
-
-		/**
-		 * The meta object literal for the '<em><b>Multiplicidad Destino</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TCD_ASOCIACION__MULTIPLICIDAD_DESTINO = eINSTANCE.getTcdAsociacion_MultiplicidadDestino();
-
-		/**
-		 * The meta object literal for the '{@link abstracta.impl.TcdComposicionImpl <em>Tcd Composicion</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see abstracta.impl.TcdComposicionImpl
-		 * @see abstracta.impl.AbstractaPackageImpl#getTcdComposicion()
-		 * @generated
-		 */
-		EClass TCD_COMPOSICION = eINSTANCE.getTcdComposicion();
+		EClass TCD_ASOCIACION = eINSTANCE.getTCDAsociacion();
 
 		/**
 		 * The meta object literal for the '<em><b>Nombre Origen</b></em>' attribute feature.
@@ -1809,7 +1890,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_COMPOSICION__NOMBRE_ORIGEN = eINSTANCE.getTcdComposicion_NombreOrigen();
+		EAttribute TCD_ASOCIACION__NOMBRE_ORIGEN = eINSTANCE.getTCDAsociacion_NombreOrigen();
 
 		/**
 		 * The meta object literal for the '<em><b>Nombre Destino</b></em>' attribute feature.
@@ -1817,7 +1898,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_COMPOSICION__NOMBRE_DESTINO = eINSTANCE.getTcdComposicion_NombreDestino();
+		EAttribute TCD_ASOCIACION__NOMBRE_DESTINO = eINSTANCE.getTCDAsociacion_NombreDestino();
 
 		/**
 		 * The meta object literal for the '<em><b>Multiplicidad Origen</b></em>' attribute feature.
@@ -1825,7 +1906,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_COMPOSICION__MULTIPLICIDAD_ORIGEN = eINSTANCE.getTcdComposicion_MultiplicidadOrigen();
+		EAttribute TCD_ASOCIACION__MULTIPLICIDAD_ORIGEN = eINSTANCE.getTCDAsociacion_MultiplicidadOrigen();
 
 		/**
 		 * The meta object literal for the '<em><b>Multiplicidad Destino</b></em>' attribute feature.
@@ -1833,17 +1914,17 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_COMPOSICION__MULTIPLICIDAD_DESTINO = eINSTANCE.getTcdComposicion_MultiplicidadDestino();
+		EAttribute TCD_ASOCIACION__MULTIPLICIDAD_DESTINO = eINSTANCE.getTCDAsociacion_MultiplicidadDestino();
 
 		/**
-		 * The meta object literal for the '{@link abstracta.impl.TcdDependenciaImpl <em>Tcd Dependencia</em>}' class.
+		 * The meta object literal for the '{@link abstracta.impl.TCDComposicionImpl <em>TCD Composicion</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see abstracta.impl.TcdDependenciaImpl
-		 * @see abstracta.impl.AbstractaPackageImpl#getTcdDependencia()
+		 * @see abstracta.impl.TCDComposicionImpl
+		 * @see abstracta.impl.AbstractaPackageImpl#getTCDComposicion()
 		 * @generated
 		 */
-		EClass TCD_DEPENDENCIA = eINSTANCE.getTcdDependencia();
+		EClass TCD_COMPOSICION = eINSTANCE.getTCDComposicion();
 
 		/**
 		 * The meta object literal for the '<em><b>Nombre Origen</b></em>' attribute feature.
@@ -1851,7 +1932,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_DEPENDENCIA__NOMBRE_ORIGEN = eINSTANCE.getTcdDependencia_NombreOrigen();
+		EAttribute TCD_COMPOSICION__NOMBRE_ORIGEN = eINSTANCE.getTCDComposicion_NombreOrigen();
 
 		/**
 		 * The meta object literal for the '<em><b>Nombre Destino</b></em>' attribute feature.
@@ -1859,7 +1940,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_DEPENDENCIA__NOMBRE_DESTINO = eINSTANCE.getTcdDependencia_NombreDestino();
+		EAttribute TCD_COMPOSICION__NOMBRE_DESTINO = eINSTANCE.getTCDComposicion_NombreDestino();
 
 		/**
 		 * The meta object literal for the '<em><b>Multiplicidad Origen</b></em>' attribute feature.
@@ -1867,7 +1948,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_DEPENDENCIA__MULTIPLICIDAD_ORIGEN = eINSTANCE.getTcdDependencia_MultiplicidadOrigen();
+		EAttribute TCD_COMPOSICION__MULTIPLICIDAD_ORIGEN = eINSTANCE.getTCDComposicion_MultiplicidadOrigen();
 
 		/**
 		 * The meta object literal for the '<em><b>Multiplicidad Destino</b></em>' attribute feature.
@@ -1875,27 +1956,17 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_DEPENDENCIA__MULTIPLICIDAD_DESTINO = eINSTANCE.getTcdDependencia_MultiplicidadDestino();
+		EAttribute TCD_COMPOSICION__MULTIPLICIDAD_DESTINO = eINSTANCE.getTCDComposicion_MultiplicidadDestino();
 
 		/**
-		 * The meta object literal for the '{@link abstracta.impl.TcdHerenciaImpl <em>Tcd Herencia</em>}' class.
+		 * The meta object literal for the '{@link abstracta.impl.TCDDependenciaImpl <em>TCD Dependencia</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see abstracta.impl.TcdHerenciaImpl
-		 * @see abstracta.impl.AbstractaPackageImpl#getTcdHerencia()
+		 * @see abstracta.impl.TCDDependenciaImpl
+		 * @see abstracta.impl.AbstractaPackageImpl#getTCDDependencia()
 		 * @generated
 		 */
-		EClass TCD_HERENCIA = eINSTANCE.getTcdHerencia();
-
-		/**
-		 * The meta object literal for the '{@link abstracta.impl.TcdAgregacionImpl <em>Tcd Agregacion</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see abstracta.impl.TcdAgregacionImpl
-		 * @see abstracta.impl.AbstractaPackageImpl#getTcdAgregacion()
-		 * @generated
-		 */
-		EClass TCD_AGREGACION = eINSTANCE.getTcdAgregacion();
+		EClass TCD_DEPENDENCIA = eINSTANCE.getTCDDependencia();
 
 		/**
 		 * The meta object literal for the '<em><b>Nombre Origen</b></em>' attribute feature.
@@ -1903,7 +1974,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_AGREGACION__NOMBRE_ORIGEN = eINSTANCE.getTcdAgregacion_NombreOrigen();
+		EAttribute TCD_DEPENDENCIA__NOMBRE_ORIGEN = eINSTANCE.getTCDDependencia_NombreOrigen();
 
 		/**
 		 * The meta object literal for the '<em><b>Nombre Destino</b></em>' attribute feature.
@@ -1911,7 +1982,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_AGREGACION__NOMBRE_DESTINO = eINSTANCE.getTcdAgregacion_NombreDestino();
+		EAttribute TCD_DEPENDENCIA__NOMBRE_DESTINO = eINSTANCE.getTCDDependencia_NombreDestino();
 
 		/**
 		 * The meta object literal for the '<em><b>Multiplicidad Origen</b></em>' attribute feature.
@@ -1919,7 +1990,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_AGREGACION__MULTIPLICIDAD_ORIGEN = eINSTANCE.getTcdAgregacion_MultiplicidadOrigen();
+		EAttribute TCD_DEPENDENCIA__MULTIPLICIDAD_ORIGEN = eINSTANCE.getTCDDependencia_MultiplicidadOrigen();
 
 		/**
 		 * The meta object literal for the '<em><b>Multiplicidad Destino</b></em>' attribute feature.
@@ -1927,17 +1998,69 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_AGREGACION__MULTIPLICIDAD_DESTINO = eINSTANCE.getTcdAgregacion_MultiplicidadDestino();
+		EAttribute TCD_DEPENDENCIA__MULTIPLICIDAD_DESTINO = eINSTANCE.getTCDDependencia_MultiplicidadDestino();
 
 		/**
-		 * The meta object literal for the '{@link abstracta.impl.TcdParametroImpl <em>Tcd Parametro</em>}' class.
+		 * The meta object literal for the '{@link abstracta.impl.TCDHerenciaImpl <em>TCD Herencia</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see abstracta.impl.TcdParametroImpl
-		 * @see abstracta.impl.AbstractaPackageImpl#getTcdParametro()
+		 * @see abstracta.impl.TCDHerenciaImpl
+		 * @see abstracta.impl.AbstractaPackageImpl#getTCDHerencia()
 		 * @generated
 		 */
-		EClass TCD_PARAMETRO = eINSTANCE.getTcdParametro();
+		EClass TCD_HERENCIA = eINSTANCE.getTCDHerencia();
+
+		/**
+		 * The meta object literal for the '{@link abstracta.impl.TCDAgregacionImpl <em>TCD Agregacion</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see abstracta.impl.TCDAgregacionImpl
+		 * @see abstracta.impl.AbstractaPackageImpl#getTCDAgregacion()
+		 * @generated
+		 */
+		EClass TCD_AGREGACION = eINSTANCE.getTCDAgregacion();
+
+		/**
+		 * The meta object literal for the '<em><b>Nombre Origen</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TCD_AGREGACION__NOMBRE_ORIGEN = eINSTANCE.getTCDAgregacion_NombreOrigen();
+
+		/**
+		 * The meta object literal for the '<em><b>Nombre Destino</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TCD_AGREGACION__NOMBRE_DESTINO = eINSTANCE.getTCDAgregacion_NombreDestino();
+
+		/**
+		 * The meta object literal for the '<em><b>Multiplicidad Origen</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TCD_AGREGACION__MULTIPLICIDAD_ORIGEN = eINSTANCE.getTCDAgregacion_MultiplicidadOrigen();
+
+		/**
+		 * The meta object literal for the '<em><b>Multiplicidad Destino</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TCD_AGREGACION__MULTIPLICIDAD_DESTINO = eINSTANCE.getTCDAgregacion_MultiplicidadDestino();
+
+		/**
+		 * The meta object literal for the '{@link abstracta.impl.TCDParametroImpl <em>TCD Parametro</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see abstracta.impl.TCDParametroImpl
+		 * @see abstracta.impl.AbstractaPackageImpl#getTCDParametro()
+		 * @generated
+		 */
+		EClass TCD_PARAMETRO = eINSTANCE.getTCDParametro();
 
 		/**
 		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
@@ -1945,7 +2068,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_PARAMETRO__NOMBRE = eINSTANCE.getTcdParametro_Nombre();
+		EAttribute TCD_PARAMETRO__NOMBRE = eINSTANCE.getTCDParametro_Nombre();
 
 		/**
 		 * The meta object literal for the '<em><b>Tipo Dato</b></em>' attribute feature.
@@ -1953,7 +2076,7 @@ public interface AbstractaPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_PARAMETRO__TIPO_DATO = eINSTANCE.getTcdParametro_TipoDato();
+		EAttribute TCD_PARAMETRO__TIPO_DATO = eINSTANCE.getTCDParametro_TipoDato();
 
 		/**
 		 * The meta object literal for the '{@link abstracta.Visibilidad <em>Visibilidad</em>}' enum.

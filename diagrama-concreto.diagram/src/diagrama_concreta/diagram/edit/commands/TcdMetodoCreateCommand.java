@@ -18,12 +18,12 @@ import org.eclipse.gmf.runtime.notation.View;
 /**
  * @generated
  */
-public class TcdMetodoCreateCommand extends EditElementCommand {
+public class TCDMetodoCreateCommand extends EditElementCommand {
 
 	/**
 	* @generated
 	*/
-	public TcdMetodoCreateCommand(CreateElementRequest req) {
+	public TCDMetodoCreateCommand(CreateElementRequest req) {
 		super(req.getLabel(), null, req);
 	}
 
@@ -51,9 +51,9 @@ public class TcdMetodoCreateCommand extends EditElementCommand {
 	* @generated
 	*/
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
-		diagrama_concreta.TcdMetodo newElement = diagrama_concreta.Diagrama_concretaFactory.eINSTANCE.createTcdMetodo();
+		diagrama_concreta.TCDMetodo newElement = diagrama_concreta.Diagrama_concretaFactory.eINSTANCE.createTCDMetodo();
 
-		diagrama_concreta.TcdClase owner = (diagrama_concreta.TcdClase) getElementToEdit();
+		diagrama_concreta.TCDClase owner = (diagrama_concreta.TCDClase) getElementToEdit();
 		owner.getListaMetodos().add(newElement);
 
 		doConfigure(newElement, monitor, info);
@@ -65,7 +65,7 @@ public class TcdMetodoCreateCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	protected void doConfigure(diagrama_concreta.TcdMetodo newElement, IProgressMonitor monitor, IAdaptable info)
+	protected void doConfigure(diagrama_concreta.TCDMetodo newElement, IProgressMonitor monitor, IAdaptable info)
 			throws ExecutionException {
 		IElementType elementType = ((CreateElementRequest) getRequest()).getElementType();
 		ConfigureRequest configureRequest = new ConfigureRequest(getEditingDomain(), newElement, elementType);

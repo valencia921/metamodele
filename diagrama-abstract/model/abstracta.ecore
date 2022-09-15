@@ -2,28 +2,34 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="abstracta" nsURI="abstracta" nsPrefix="abstracta">
   <eAnnotations source="gmf"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TcdPaquete">
+  <eClassifiers xsi:type="ecore:EClass" name="TCDPaquete">
     <eStructuralFeatures xsi:type="ecore:EReference" name="listaClases" upperBound="-1"
-        eType="#//TcdClase" containment="true"/>
+        eType="#//TCDClase" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="listapaquetes" upperBound="-1"
-        eType="#//TcdPaquete" containment="true"/>
+        eType="#//TCDPaquete" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TcdClase">
+  <eClassifiers xsi:type="ecore:EClass" name="ModelFactory">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listaPaquetes" upperBound="-1"
+        eType="#//TCDPaquete" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TCDClase">
     <eStructuralFeatures xsi:type="ecore:EReference" name="listaAtributos" upperBound="-1"
-        eType="#//TcdAtributo" containment="true"/>
+        eType="#//TCDAtributo" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="listaMetodos" upperBound="-1"
-        eType="#//TcdMetodo" containment="true"/>
+        eType="#//TCDMetodo" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="listaRelaciones" upperBound="-1"
-        eType="#//TcdRelacion" containment="true"/>
+        eType="#//TCDRelacion" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="estereotipo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="modificadorAcceso" eType="#//Visibilidad"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAbstract" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="documentacion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TcdAtributo">
+  <eClassifiers xsi:type="ecore:EClass" name="TCDAtributo">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoDato" eType="#//TipoDato"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="visibilidad" eType="#//Visibilidad"/>
@@ -31,45 +37,45 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isStatic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valorDefecto" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TcdMetodo">
+  <eClassifiers xsi:type="ecore:EClass" name="TCDMetodo">
     <eStructuralFeatures xsi:type="ecore:EReference" name="listaParametros" upperBound="-1"
-        eType="#//TcdParametro" containment="true"/>
+        eType="#//TCDParametro" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="modificadorAcceso" eType="#//Visibilidad"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoRetorno" eType="#//TipoRetorno"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="semantica" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TcdRelacion" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//TcdClase"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//TcdClase"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TCDRelacion" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//TCDClase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//TCDClase"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="navegavilidad" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TcdAsociacion" eSuperTypes="#//TcdRelacion">
+  <eClassifiers xsi:type="ecore:EClass" name="TCDAsociacion" eSuperTypes="#//TCDRelacion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreOrigen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreDestino" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadOrigen" eType="#//Multiplicidad"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadDestino" eType="#//Multiplicidad"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TcdComposicion" eSuperTypes="#//TcdRelacion">
+  <eClassifiers xsi:type="ecore:EClass" name="TCDComposicion" eSuperTypes="#//TCDRelacion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreOrigen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreDestino" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadOrigen" eType="#//Multiplicidad"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadDestino" eType="#//Multiplicidad"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TcdDependencia" eSuperTypes="#//TcdRelacion">
+  <eClassifiers xsi:type="ecore:EClass" name="TCDDependencia" eSuperTypes="#//TCDRelacion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreOrigen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreDestino" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadOrigen" eType="#//Multiplicidad"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadDestino" eType="#//Multiplicidad"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TcdHerencia" eSuperTypes="#//TcdRelacion"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TcdAgregacion" eSuperTypes="#//TcdRelacion">
+  <eClassifiers xsi:type="ecore:EClass" name="TCDHerencia" eSuperTypes="#//TCDRelacion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TCDAgregacion" eSuperTypes="#//TCDRelacion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreOrigen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreDestino" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadOrigen" eType="#//Multiplicidad"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadDestino" eType="#//Multiplicidad"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TcdParametro">
+  <eClassifiers xsi:type="ecore:EClass" name="TCDParametro">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoDato" eType="#//TipoDato"/>
   </eClassifiers>

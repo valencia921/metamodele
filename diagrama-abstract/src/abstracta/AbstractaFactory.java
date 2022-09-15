@@ -22,94 +22,103 @@ public interface AbstractaFactory extends EFactory {
 	AbstractaFactory eINSTANCE = abstracta.impl.AbstractaFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Tcd Paquete</em>'.
+	 * Returns a new object of class '<em>TCD Paquete</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tcd Paquete</em>'.
+	 * @return a new object of class '<em>TCD Paquete</em>'.
 	 * @generated
 	 */
-	TcdPaquete createTcdPaquete();
+	TCDPaquete createTCDPaquete();
 
 	/**
-	 * Returns a new object of class '<em>Tcd Clase</em>'.
+	 * Returns a new object of class '<em>Model Factory</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tcd Clase</em>'.
+	 * @return a new object of class '<em>Model Factory</em>'.
 	 * @generated
 	 */
-	TcdClase createTcdClase();
+	ModelFactory createModelFactory();
 
 	/**
-	 * Returns a new object of class '<em>Tcd Atributo</em>'.
+	 * Returns a new object of class '<em>TCD Clase</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tcd Atributo</em>'.
+	 * @return a new object of class '<em>TCD Clase</em>'.
 	 * @generated
 	 */
-	TcdAtributo createTcdAtributo();
+	TCDClase createTCDClase();
 
 	/**
-	 * Returns a new object of class '<em>Tcd Metodo</em>'.
+	 * Returns a new object of class '<em>TCD Atributo</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tcd Metodo</em>'.
+	 * @return a new object of class '<em>TCD Atributo</em>'.
 	 * @generated
 	 */
-	TcdMetodo createTcdMetodo();
+	TCDAtributo createTCDAtributo();
 
 	/**
-	 * Returns a new object of class '<em>Tcd Asociacion</em>'.
+	 * Returns a new object of class '<em>TCD Metodo</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tcd Asociacion</em>'.
+	 * @return a new object of class '<em>TCD Metodo</em>'.
 	 * @generated
 	 */
-	TcdAsociacion createTcdAsociacion();
+	TCDMetodo createTCDMetodo();
 
 	/**
-	 * Returns a new object of class '<em>Tcd Composicion</em>'.
+	 * Returns a new object of class '<em>TCD Asociacion</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tcd Composicion</em>'.
+	 * @return a new object of class '<em>TCD Asociacion</em>'.
 	 * @generated
 	 */
-	TcdComposicion createTcdComposicion();
+	TCDAsociacion createTCDAsociacion();
 
 	/**
-	 * Returns a new object of class '<em>Tcd Dependencia</em>'.
+	 * Returns a new object of class '<em>TCD Composicion</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tcd Dependencia</em>'.
+	 * @return a new object of class '<em>TCD Composicion</em>'.
 	 * @generated
 	 */
-	TcdDependencia createTcdDependencia();
+	TCDComposicion createTCDComposicion();
 
 	/**
-	 * Returns a new object of class '<em>Tcd Herencia</em>'.
+	 * Returns a new object of class '<em>TCD Dependencia</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tcd Herencia</em>'.
+	 * @return a new object of class '<em>TCD Dependencia</em>'.
 	 * @generated
 	 */
-	TcdHerencia createTcdHerencia();
+	TCDDependencia createTCDDependencia();
 
 	/**
-	 * Returns a new object of class '<em>Tcd Agregacion</em>'.
+	 * Returns a new object of class '<em>TCD Herencia</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tcd Agregacion</em>'.
+	 * @return a new object of class '<em>TCD Herencia</em>'.
 	 * @generated
 	 */
-	TcdAgregacion createTcdAgregacion();
+	TCDHerencia createTCDHerencia();
 
 	/**
-	 * Returns a new object of class '<em>Tcd Parametro</em>'.
+	 * Returns a new object of class '<em>TCD Agregacion</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tcd Parametro</em>'.
+	 * @return a new object of class '<em>TCD Agregacion</em>'.
 	 * @generated
 	 */
-	TcdParametro createTcdParametro();
+	TCDAgregacion createTCDAgregacion();
+
+	/**
+	 * Returns a new object of class '<em>TCD Parametro</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>TCD Parametro</em>'.
+	 * @generated
+	 */
+	TCDParametro createTCDParametro();
 
 	/**
 	 * Returns the package supported by this factory.

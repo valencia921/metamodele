@@ -5,24 +5,25 @@ package diagrama_concreta;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Tcd Asociacion</b></em>'.
+ * A representation of the model object '<em><b>TCD Asociacion</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link diagrama_concreta.TcdAsociacion#getNombreOrigen <em>Nombre Origen</em>}</li>
- *   <li>{@link diagrama_concreta.TcdAsociacion#getNombreDestino <em>Nombre Destino</em>}</li>
- *   <li>{@link diagrama_concreta.TcdAsociacion#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}</li>
- *   <li>{@link diagrama_concreta.TcdAsociacion#getMultiplicidadDestino <em>Multiplicidad Destino</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDAsociacion#getNombreOrigen <em>Nombre Origen</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDAsociacion#getNombreDestino <em>Nombre Destino</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDAsociacion#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDAsociacion#getMultiplicidadDestino <em>Multiplicidad Destino</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDAsociacion#getNavegavilidad <em>Navegavilidad</em>}</li>
  * </ul>
  *
- * @see diagrama_concreta.Diagrama_concretaPackage#getTcdAsociacion()
- * @model annotation="gmf.link source='source' target='target' style='dot' width='2'"
+ * @see diagrama_concreta.Diagrama_concretaPackage#getTCDAsociacion()
+ * @model annotation="gmf.link source='source' target='target' style='solid' width='3' color='0,62,255'"
  * @generated
  */
-public interface TcdAsociacion extends TcdRelacion {
+public interface TCDAsociacion extends TCDRelacion {
 	/**
 	 * Returns the value of the '<em><b>Nombre Origen</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -33,14 +34,14 @@ public interface TcdAsociacion extends TcdRelacion {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nombre Origen</em>' attribute.
 	 * @see #setNombreOrigen(String)
-	 * @see diagrama_concreta.Diagrama_concretaPackage#getTcdAsociacion_NombreOrigen()
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDAsociacion_NombreOrigen()
 	 * @model
 	 * @generated
 	 */
 	String getNombreOrigen();
 
 	/**
-	 * Sets the value of the '{@link diagrama_concreta.TcdAsociacion#getNombreOrigen <em>Nombre Origen</em>}' attribute.
+	 * Sets the value of the '{@link diagrama_concreta.TCDAsociacion#getNombreOrigen <em>Nombre Origen</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Nombre Origen</em>' attribute.
@@ -59,14 +60,14 @@ public interface TcdAsociacion extends TcdRelacion {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nombre Destino</em>' attribute.
 	 * @see #setNombreDestino(String)
-	 * @see diagrama_concreta.Diagrama_concretaPackage#getTcdAsociacion_NombreDestino()
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDAsociacion_NombreDestino()
 	 * @model
 	 * @generated
 	 */
 	String getNombreDestino();
 
 	/**
-	 * Sets the value of the '{@link diagrama_concreta.TcdAsociacion#getNombreDestino <em>Nombre Destino</em>}' attribute.
+	 * Sets the value of the '{@link diagrama_concreta.TCDAsociacion#getNombreDestino <em>Nombre Destino</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Nombre Destino</em>' attribute.
@@ -87,14 +88,14 @@ public interface TcdAsociacion extends TcdRelacion {
 	 * @return the value of the '<em>Multiplicidad Origen</em>' attribute.
 	 * @see diagrama_concreta.Multiplicidad
 	 * @see #setMultiplicidadOrigen(Multiplicidad)
-	 * @see diagrama_concreta.Diagrama_concretaPackage#getTcdAsociacion_MultiplicidadOrigen()
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDAsociacion_MultiplicidadOrigen()
 	 * @model
 	 * @generated
 	 */
 	Multiplicidad getMultiplicidadOrigen();
 
 	/**
-	 * Sets the value of the '{@link diagrama_concreta.TcdAsociacion#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}' attribute.
+	 * Sets the value of the '{@link diagrama_concreta.TCDAsociacion#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Multiplicidad Origen</em>' attribute.
@@ -116,14 +117,14 @@ public interface TcdAsociacion extends TcdRelacion {
 	 * @return the value of the '<em>Multiplicidad Destino</em>' attribute.
 	 * @see diagrama_concreta.Multiplicidad
 	 * @see #setMultiplicidadDestino(Multiplicidad)
-	 * @see diagrama_concreta.Diagrama_concretaPackage#getTcdAsociacion_MultiplicidadDestino()
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDAsociacion_MultiplicidadDestino()
 	 * @model
 	 * @generated
 	 */
 	Multiplicidad getMultiplicidadDestino();
 
 	/**
-	 * Sets the value of the '{@link diagrama_concreta.TcdAsociacion#getMultiplicidadDestino <em>Multiplicidad Destino</em>}' attribute.
+	 * Sets the value of the '{@link diagrama_concreta.TCDAsociacion#getMultiplicidadDestino <em>Multiplicidad Destino</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Multiplicidad Destino</em>' attribute.
@@ -133,4 +134,33 @@ public interface TcdAsociacion extends TcdRelacion {
 	 */
 	void setMultiplicidadDestino(Multiplicidad value);
 
-} // TcdAsociacion
+	/**
+	 * Returns the value of the '<em><b>Navegavilidad</b></em>' attribute.
+	 * The literals are from the enumeration {@link diagrama_concreta.Navegavilidad}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Navegavilidad</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Navegavilidad</em>' attribute.
+	 * @see diagrama_concreta.Navegavilidad
+	 * @see #setNavegavilidad(Navegavilidad)
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDAsociacion_Navegavilidad()
+	 * @model
+	 * @generated
+	 */
+	Navegavilidad getNavegavilidad();
+
+	/**
+	 * Sets the value of the '{@link diagrama_concreta.TCDAsociacion#getNavegavilidad <em>Navegavilidad</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Navegavilidad</em>' attribute.
+	 * @see diagrama_concreta.Navegavilidad
+	 * @see #getNavegavilidad()
+	 * @generated
+	 */
+	void setNavegavilidad(Navegavilidad value);
+
+} // TCDAsociacion

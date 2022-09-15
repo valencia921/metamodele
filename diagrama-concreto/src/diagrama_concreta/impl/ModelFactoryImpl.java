@@ -4,7 +4,7 @@ package diagrama_concreta.impl;
 
 import diagrama_concreta.Diagrama_concretaPackage;
 import diagrama_concreta.ModelFactory;
-import diagrama_concreta.TcdDiagramaClases;
+import diagrama_concreta.TCDDiagramaClases;
 
 import java.util.Collection;
 
@@ -86,7 +86,7 @@ public class ModelFactoryImpl extends EObjectImpl implements ModelFactory {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TcdDiagramaClases> listaDiagramas;
+	protected EList<TCDDiagramaClases> listaDiagramas;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -154,9 +154,9 @@ public class ModelFactoryImpl extends EObjectImpl implements ModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TcdDiagramaClases> getListaDiagramas() {
+	public EList<TCDDiagramaClases> getListaDiagramas() {
 		if (listaDiagramas == null) {
-			listaDiagramas = new EObjectContainmentEList<TcdDiagramaClases>(TcdDiagramaClases.class, this, Diagrama_concretaPackage.MODEL_FACTORY__LISTA_DIAGRAMAS);
+			listaDiagramas = new EObjectContainmentEList<TCDDiagramaClases>(TCDDiagramaClases.class, this, Diagrama_concretaPackage.MODEL_FACTORY__LISTA_DIAGRAMAS);
 		}
 		return listaDiagramas;
 	}
@@ -210,7 +210,7 @@ public class ModelFactoryImpl extends EObjectImpl implements ModelFactory {
 				return;
 			case Diagrama_concretaPackage.MODEL_FACTORY__LISTA_DIAGRAMAS:
 				getListaDiagramas().clear();
-				getListaDiagramas().addAll((Collection<? extends TcdDiagramaClases>)newValue);
+				getListaDiagramas().addAll((Collection<? extends TCDDiagramaClases>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

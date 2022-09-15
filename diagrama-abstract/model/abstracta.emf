@@ -2,18 +2,24 @@
 @gmf
 package abstracta;
 
-class TcdPaquete {
-    val TcdClase[*] listaClases;
-    val TcdPaquete[*] listapaquetes;
+class ModelFactory {
+	attr String nombre;
+	attr String ruta;
+	val TCDPaquete[*] listaPaquetes;
+}
+
+class TCDPaquete {
+    val TCDClase[*] listaClases;
+    val TCDPaquete[*] listapaquetes;
     
     attr String nombre;
     attr String ruta;
 }
 
-class TcdClase {
-    val TcdAtributo[*] listaAtributos;
-    val TcdMetodo[*] listaMetodos;
-    val TcdRelacion[*] listaRelaciones;
+class TCDClase {
+    val TCDAtributo[*] listaAtributos;
+    val TCDMetodo[*] listaMetodos;
+    val TCDRelacion[*] listaRelaciones;
     
     attr String nombre;
     attr String estereotipo;
@@ -22,7 +28,7 @@ class TcdClase {
     attr String documentacion;
 }
 
-class TcdAtributo {
+class TCDAtributo {
     attr String nombre;
 	attr TipoDato tipoDato;
 	attr Visibilidad visibilidad;
@@ -31,8 +37,8 @@ class TcdAtributo {
 	attr String valorDefecto;
 }
 
-class TcdMetodo {
-    val TcdParametro[*] listaParametros;
+class TCDMetodo {
+    val TCDParametro[*] listaParametros;
 	
 	attr String nombre;
 	attr Visibilidad modificadorAcceso;
@@ -40,14 +46,14 @@ class TcdMetodo {
 	attr String semantica;
 }
 
-abstract class TcdRelacion {
-    ref TcdClase source;
-    ref TcdClase target;
+abstract class TCDRelacion {
+    ref TCDClase source;
+    ref TCDClase target;
     
     attr String navegavilidad;
 }
 
-class TcdAsociacion extends TcdRelacion{
+class TCDAsociacion extends TCDRelacion{
 	
 	attr String nombreOrigen;
     attr String nombreDestino;
@@ -55,7 +61,7 @@ class TcdAsociacion extends TcdRelacion{
     attr Multiplicidad multiplicidadDestino;
 }
 
-class TcdComposicion extends TcdRelacion{
+class TCDComposicion extends TCDRelacion{
 	
 	attr String nombreOrigen;
     attr String nombreDestino;
@@ -63,7 +69,7 @@ class TcdComposicion extends TcdRelacion{
     attr Multiplicidad multiplicidadDestino;
 }
 
-class TcdDependencia extends TcdRelacion{
+class TCDDependencia extends TCDRelacion{
 	
 	attr String nombreOrigen;
     attr String nombreDestino;
@@ -71,11 +77,11 @@ class TcdDependencia extends TcdRelacion{
     attr Multiplicidad multiplicidadDestino;
 }
 
-class TcdHerencia extends TcdRelacion{
+class TCDHerencia extends TCDRelacion{
 	
 }
 
-class TcdAgregacion extends TcdRelacion{
+class TCDAgregacion extends TCDRelacion{
 	
 	attr String nombreOrigen;
     attr String nombreDestino;
@@ -83,7 +89,7 @@ class TcdAgregacion extends TcdRelacion{
     attr Multiplicidad multiplicidadDestino;
 }
 
-class TcdParametro {
+class TCDParametro {
     attr String nombre;
 	attr TipoDato tipoDato;
 }

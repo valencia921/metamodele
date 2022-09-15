@@ -24,58 +24,77 @@ public class Diagrama_concretaParserProvider extends AbstractProvider implements
 	/**
 	* @generated
 	*/
-	private IParser tcdClaseNombre_5003Parser;
+	private IParser tCDClaseNombre_5003Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getTcdClaseNombre_5003Parser() {
-		if (tcdClaseNombre_5003Parser == null) {
+	private IParser getTCDClaseNombre_5003Parser() {
+		if (tCDClaseNombre_5003Parser == null) {
 			EAttribute[] features = new EAttribute[] {
-					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTcdClase_Nombre() };
+					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDClase_Nombre() };
 			diagrama_concreta.diagram.parsers.MessageFormatParser parser = new diagrama_concreta.diagram.parsers.MessageFormatParser(
 					features);
-			tcdClaseNombre_5003Parser = parser;
+			tCDClaseNombre_5003Parser = parser;
 		}
-		return tcdClaseNombre_5003Parser;
+		return tCDClaseNombre_5003Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser tcdAtributoNombre_5001Parser;
+	private IParser tCDPaqueteNombre_5004Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getTcdAtributoNombre_5001Parser() {
-		if (tcdAtributoNombre_5001Parser == null) {
+	private IParser getTCDPaqueteNombre_5004Parser() {
+		if (tCDPaqueteNombre_5004Parser == null) {
 			EAttribute[] features = new EAttribute[] {
-					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTcdAtributo_Nombre() };
+					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDPaquete_Nombre() };
 			diagrama_concreta.diagram.parsers.MessageFormatParser parser = new diagrama_concreta.diagram.parsers.MessageFormatParser(
 					features);
-			tcdAtributoNombre_5001Parser = parser;
+			tCDPaqueteNombre_5004Parser = parser;
 		}
-		return tcdAtributoNombre_5001Parser;
+		return tCDPaqueteNombre_5004Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser tcdMetodoNombre_5002Parser;
+	private IParser tCDAtributoNombre_5001Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getTcdMetodoNombre_5002Parser() {
-		if (tcdMetodoNombre_5002Parser == null) {
+	private IParser getTCDAtributoNombre_5001Parser() {
+		if (tCDAtributoNombre_5001Parser == null) {
 			EAttribute[] features = new EAttribute[] {
-					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTcdMetodo_Nombre() };
+					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDAtributo_Nombre() };
 			diagrama_concreta.diagram.parsers.MessageFormatParser parser = new diagrama_concreta.diagram.parsers.MessageFormatParser(
 					features);
-			tcdMetodoNombre_5002Parser = parser;
+			tCDAtributoNombre_5001Parser = parser;
 		}
-		return tcdMetodoNombre_5002Parser;
+		return tCDAtributoNombre_5001Parser;
+	}
+
+	/**
+	* @generated
+	*/
+	private IParser tCDMetodoNombre_5002Parser;
+
+	/**
+	* @generated
+	*/
+	private IParser getTCDMetodoNombre_5002Parser() {
+		if (tCDMetodoNombre_5002Parser == null) {
+			EAttribute[] features = new EAttribute[] {
+					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDMetodo_Nombre() };
+			diagrama_concreta.diagram.parsers.MessageFormatParser parser = new diagrama_concreta.diagram.parsers.MessageFormatParser(
+					features);
+			tCDMetodoNombre_5002Parser = parser;
+		}
+		return tCDMetodoNombre_5002Parser;
 	}
 
 	/**
@@ -83,12 +102,14 @@ public class Diagrama_concretaParserProvider extends AbstractProvider implements
 	*/
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
-		case diagrama_concreta.diagram.edit.parts.TcdClaseNombreEditPart.VISUAL_ID:
-			return getTcdClaseNombre_5003Parser();
-		case diagrama_concreta.diagram.edit.parts.TcdAtributoNombreEditPart.VISUAL_ID:
-			return getTcdAtributoNombre_5001Parser();
-		case diagrama_concreta.diagram.edit.parts.TcdMetodoNombreEditPart.VISUAL_ID:
-			return getTcdMetodoNombre_5002Parser();
+		case diagrama_concreta.diagram.edit.parts.TCDClaseNombreEditPart.VISUAL_ID:
+			return getTCDClaseNombre_5003Parser();
+		case diagrama_concreta.diagram.edit.parts.TCDPaqueteNombreEditPart.VISUAL_ID:
+			return getTCDPaqueteNombre_5004Parser();
+		case diagrama_concreta.diagram.edit.parts.TCDAtributoNombreEditPart.VISUAL_ID:
+			return getTCDAtributoNombre_5001Parser();
+		case diagrama_concreta.diagram.edit.parts.TCDMetodoNombreEditPart.VISUAL_ID:
+			return getTCDMetodoNombre_5002Parser();
 		}
 		return null;
 	}

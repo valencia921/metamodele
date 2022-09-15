@@ -183,7 +183,7 @@ public class Diagrama_concretaNavigatorContentProvider implements ICommonContent
 				}
 			}
 			result.addAll(createNavigatorItems(selectViewsByType(topViews,
-					diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.MODEL_ID), file, false));
+					diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.MODEL_ID), file, false));
 			return result.toArray();
 		}
 
@@ -220,37 +220,41 @@ public class Diagrama_concretaNavigatorContentProvider implements ICommonContent
 	private Object[] getViewChildren(View view, Object parentElement) {
 		switch (diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getVisualID(view)) {
 
-		case diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.VISUAL_ID: {
+		case diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.VISUAL_ID: {
 			LinkedList<diagrama_concreta.diagram.navigator.Diagrama_concretaAbstractNavigatorItem> result = new LinkedList<diagrama_concreta.diagram.navigator.Diagrama_concretaAbstractNavigatorItem>();
 			result.addAll(getForeignShortcuts((Diagram) view, parentElement));
 			Diagram sv = (Diagram) view;
 			diagrama_concreta.diagram.navigator.Diagrama_concretaNavigatorGroup links = new diagrama_concreta.diagram.navigator.Diagrama_concretaNavigatorGroup(
-					diagrama_concreta.diagram.part.Messages.NavigatorGroupName_TcdDiagramaClases_1000_links,
+					diagrama_concreta.diagram.part.Messages.NavigatorGroupName_TCDDiagramaClases_1000_links,
 					"icons/linksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getChildrenByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdClaseEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDClaseEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
+					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
+							.getType(diagrama_concreta.diagram.edit.parts.TCDPaqueteEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdAsociacionEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart.VISUAL_ID));
 			links.addChildren(createNavigatorItems(connectedViews, links, false));
 			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdComposicionEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDAsociacionEditPart.VISUAL_ID));
 			links.addChildren(createNavigatorItems(connectedViews, links, false));
 			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdDependenciaEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDComposicionEditPart.VISUAL_ID));
 			links.addChildren(createNavigatorItems(connectedViews, links, false));
 			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdHerenciaEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDDependenciaEditPart.VISUAL_ID));
 			links.addChildren(createNavigatorItems(connectedViews, links, false));
 			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdAgregacionEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDHerenciaEditPart.VISUAL_ID));
 			links.addChildren(createNavigatorItems(connectedViews, links, false));
 			if (!links.isEmpty()) {
 				result.add(links);
@@ -258,69 +262,69 @@ public class Diagrama_concretaNavigatorContentProvider implements ICommonContent
 			return result.toArray();
 		}
 
-		case diagrama_concreta.diagram.edit.parts.TcdClaseEditPart.VISUAL_ID: {
+		case diagrama_concreta.diagram.edit.parts.TCDClaseEditPart.VISUAL_ID: {
 			LinkedList<diagrama_concreta.diagram.navigator.Diagrama_concretaAbstractNavigatorItem> result = new LinkedList<diagrama_concreta.diagram.navigator.Diagrama_concretaAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			diagrama_concreta.diagram.navigator.Diagrama_concretaNavigatorGroup incominglinks = new diagrama_concreta.diagram.navigator.Diagrama_concretaNavigatorGroup(
-					diagrama_concreta.diagram.part.Messages.NavigatorGroupName_TcdClase_2001_incominglinks,
+					diagrama_concreta.diagram.part.Messages.NavigatorGroupName_TCDClase_2001_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			diagrama_concreta.diagram.navigator.Diagrama_concretaNavigatorGroup outgoinglinks = new diagrama_concreta.diagram.navigator.Diagrama_concretaNavigatorGroup(
-					diagrama_concreta.diagram.part.Messages.NavigatorGroupName_TcdClase_2001_outgoinglinks,
+					diagrama_concreta.diagram.part.Messages.NavigatorGroupName_TCDClase_2001_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getChildrenByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getType(
-							diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaAtributosCompartmentEditPart.VISUAL_ID));
+							diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaAtributosCompartmentEditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdAtributoEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDAtributoEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getType(
-							diagrama_concreta.diagram.edit.parts.TcdClaseTcdClaseListaMetodosCompartmentEditPart.VISUAL_ID));
+							diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaMetodosCompartmentEditPart.VISUAL_ID));
 			connectedViews = getChildrenByType(connectedViews,
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdMetodoEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDMetodoEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdAsociacionEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdAsociacionEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart.VISUAL_ID));
 			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdComposicionEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDAsociacionEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdComposicionEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDAsociacionEditPart.VISUAL_ID));
 			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdDependenciaEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDComposicionEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdDependenciaEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDComposicionEditPart.VISUAL_ID));
 			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdHerenciaEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDDependenciaEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdHerenciaEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDDependenciaEditPart.VISUAL_ID));
 			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdAgregacionEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDHerenciaEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdAgregacionEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDHerenciaEditPart.VISUAL_ID));
 			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
 			if (!incominglinks.isEmpty()) {
 				result.add(incominglinks);
@@ -331,23 +335,23 @@ public class Diagrama_concretaNavigatorContentProvider implements ICommonContent
 			return result.toArray();
 		}
 
-		case diagrama_concreta.diagram.edit.parts.TcdAsociacionEditPart.VISUAL_ID: {
+		case diagrama_concreta.diagram.edit.parts.TCDAsociacionEditPart.VISUAL_ID: {
 			LinkedList<diagrama_concreta.diagram.navigator.Diagrama_concretaAbstractNavigatorItem> result = new LinkedList<diagrama_concreta.diagram.navigator.Diagrama_concretaAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			diagrama_concreta.diagram.navigator.Diagrama_concretaNavigatorGroup target = new diagrama_concreta.diagram.navigator.Diagrama_concretaNavigatorGroup(
-					diagrama_concreta.diagram.part.Messages.NavigatorGroupName_TcdAsociacion_4001_target,
+					diagrama_concreta.diagram.part.Messages.NavigatorGroupName_TCDAsociacion_4001_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			diagrama_concreta.diagram.navigator.Diagrama_concretaNavigatorGroup source = new diagrama_concreta.diagram.navigator.Diagrama_concretaNavigatorGroup(
-					diagrama_concreta.diagram.part.Messages.NavigatorGroupName_TcdAsociacion_4001_source,
+					diagrama_concreta.diagram.part.Messages.NavigatorGroupName_TCDAsociacion_4001_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdClaseEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDClaseEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target, true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdClaseEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDClaseEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source, true));
 			if (!target.isEmpty()) {
 				result.add(target);
@@ -358,23 +362,23 @@ public class Diagrama_concretaNavigatorContentProvider implements ICommonContent
 			return result.toArray();
 		}
 
-		case diagrama_concreta.diagram.edit.parts.TcdComposicionEditPart.VISUAL_ID: {
+		case diagrama_concreta.diagram.edit.parts.TCDComposicionEditPart.VISUAL_ID: {
 			LinkedList<diagrama_concreta.diagram.navigator.Diagrama_concretaAbstractNavigatorItem> result = new LinkedList<diagrama_concreta.diagram.navigator.Diagrama_concretaAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			diagrama_concreta.diagram.navigator.Diagrama_concretaNavigatorGroup target = new diagrama_concreta.diagram.navigator.Diagrama_concretaNavigatorGroup(
-					diagrama_concreta.diagram.part.Messages.NavigatorGroupName_TcdComposicion_4002_target,
+					diagrama_concreta.diagram.part.Messages.NavigatorGroupName_TCDComposicion_4002_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			diagrama_concreta.diagram.navigator.Diagrama_concretaNavigatorGroup source = new diagrama_concreta.diagram.navigator.Diagrama_concretaNavigatorGroup(
-					diagrama_concreta.diagram.part.Messages.NavigatorGroupName_TcdComposicion_4002_source,
+					diagrama_concreta.diagram.part.Messages.NavigatorGroupName_TCDComposicion_4002_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdClaseEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDClaseEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target, true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdClaseEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDClaseEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source, true));
 			if (!target.isEmpty()) {
 				result.add(target);
@@ -385,23 +389,23 @@ public class Diagrama_concretaNavigatorContentProvider implements ICommonContent
 			return result.toArray();
 		}
 
-		case diagrama_concreta.diagram.edit.parts.TcdDependenciaEditPart.VISUAL_ID: {
+		case diagrama_concreta.diagram.edit.parts.TCDDependenciaEditPart.VISUAL_ID: {
 			LinkedList<diagrama_concreta.diagram.navigator.Diagrama_concretaAbstractNavigatorItem> result = new LinkedList<diagrama_concreta.diagram.navigator.Diagrama_concretaAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			diagrama_concreta.diagram.navigator.Diagrama_concretaNavigatorGroup target = new diagrama_concreta.diagram.navigator.Diagrama_concretaNavigatorGroup(
-					diagrama_concreta.diagram.part.Messages.NavigatorGroupName_TcdDependencia_4003_target,
+					diagrama_concreta.diagram.part.Messages.NavigatorGroupName_TCDDependencia_4003_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			diagrama_concreta.diagram.navigator.Diagrama_concretaNavigatorGroup source = new diagrama_concreta.diagram.navigator.Diagrama_concretaNavigatorGroup(
-					diagrama_concreta.diagram.part.Messages.NavigatorGroupName_TcdDependencia_4003_source,
+					diagrama_concreta.diagram.part.Messages.NavigatorGroupName_TCDDependencia_4003_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdClaseEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDClaseEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target, true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdClaseEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDClaseEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source, true));
 			if (!target.isEmpty()) {
 				result.add(target);
@@ -412,23 +416,23 @@ public class Diagrama_concretaNavigatorContentProvider implements ICommonContent
 			return result.toArray();
 		}
 
-		case diagrama_concreta.diagram.edit.parts.TcdHerenciaEditPart.VISUAL_ID: {
+		case diagrama_concreta.diagram.edit.parts.TCDHerenciaEditPart.VISUAL_ID: {
 			LinkedList<diagrama_concreta.diagram.navigator.Diagrama_concretaAbstractNavigatorItem> result = new LinkedList<diagrama_concreta.diagram.navigator.Diagrama_concretaAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			diagrama_concreta.diagram.navigator.Diagrama_concretaNavigatorGroup target = new diagrama_concreta.diagram.navigator.Diagrama_concretaNavigatorGroup(
-					diagrama_concreta.diagram.part.Messages.NavigatorGroupName_TcdHerencia_4004_target,
+					diagrama_concreta.diagram.part.Messages.NavigatorGroupName_TCDHerencia_4004_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			diagrama_concreta.diagram.navigator.Diagrama_concretaNavigatorGroup source = new diagrama_concreta.diagram.navigator.Diagrama_concretaNavigatorGroup(
-					diagrama_concreta.diagram.part.Messages.NavigatorGroupName_TcdHerencia_4004_source,
+					diagrama_concreta.diagram.part.Messages.NavigatorGroupName_TCDHerencia_4004_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdClaseEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDClaseEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target, true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdClaseEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDClaseEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source, true));
 			if (!target.isEmpty()) {
 				result.add(target);
@@ -439,23 +443,23 @@ public class Diagrama_concretaNavigatorContentProvider implements ICommonContent
 			return result.toArray();
 		}
 
-		case diagrama_concreta.diagram.edit.parts.TcdAgregacionEditPart.VISUAL_ID: {
+		case diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart.VISUAL_ID: {
 			LinkedList<diagrama_concreta.diagram.navigator.Diagrama_concretaAbstractNavigatorItem> result = new LinkedList<diagrama_concreta.diagram.navigator.Diagrama_concretaAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			diagrama_concreta.diagram.navigator.Diagrama_concretaNavigatorGroup target = new diagrama_concreta.diagram.navigator.Diagrama_concretaNavigatorGroup(
-					diagrama_concreta.diagram.part.Messages.NavigatorGroupName_TcdAgregacion_4005_target,
+					diagrama_concreta.diagram.part.Messages.NavigatorGroupName_TCDAgregacion_4005_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			diagrama_concreta.diagram.navigator.Diagrama_concretaNavigatorGroup source = new diagrama_concreta.diagram.navigator.Diagrama_concretaNavigatorGroup(
-					diagrama_concreta.diagram.part.Messages.NavigatorGroupName_TcdAgregacion_4005_source,
+					diagrama_concreta.diagram.part.Messages.NavigatorGroupName_TCDAgregacion_4005_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdClaseEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDClaseEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target, true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-							.getType(diagrama_concreta.diagram.edit.parts.TcdClaseEditPart.VISUAL_ID));
+							.getType(diagrama_concreta.diagram.edit.parts.TCDClaseEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source, true));
 			if (!target.isEmpty()) {
 				result.add(target);
@@ -559,7 +563,7 @@ public class Diagrama_concretaNavigatorContentProvider implements ICommonContent
 	 * @generated
 	 */
 	private boolean isOwnView(View view) {
-		return diagrama_concreta.diagram.edit.parts.TcdDiagramaClasesEditPart.MODEL_ID
+		return diagrama_concreta.diagram.edit.parts.TCDDiagramaClasesEditPart.MODEL_ID
 				.equals(diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getModelID(view));
 	}
 

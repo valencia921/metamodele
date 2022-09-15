@@ -3,6 +3,7 @@
  */
 package diagrama_concreta.diagram.edit.parts;
 
+import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
 import org.eclipse.draw2d.RoundedRectangle;
@@ -29,7 +30,7 @@ import org.eclipse.swt.graphics.Color;
 /**
  * @generated
  */
-public class TcdMetodoEditPart extends ShapeNodeEditPart {
+public class TCDMetodoEditPart extends ShapeNodeEditPart {
 
 	/**
 	* @generated
@@ -49,7 +50,7 @@ public class TcdMetodoEditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public TcdMetodoEditPart(View view) {
+	public TCDMetodoEditPart(View view) {
 		super(view);
 	}
 
@@ -59,7 +60,7 @@ public class TcdMetodoEditPart extends ShapeNodeEditPart {
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new diagrama_concreta.diagram.edit.policies.TcdMetodoItemSemanticEditPolicy());
+				new diagrama_concreta.diagram.edit.policies.TCDMetodoItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
 		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
@@ -94,23 +95,23 @@ public class TcdMetodoEditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected IFigure createNodeShape() {
-		return primaryShape = new TcdMetodoFigure();
+		return primaryShape = new TCDMetodoFigure();
 	}
 
 	/**
 	* @generated
 	*/
-	public TcdMetodoFigure getPrimaryShape() {
-		return (TcdMetodoFigure) primaryShape;
+	public TCDMetodoFigure getPrimaryShape() {
+		return (TCDMetodoFigure) primaryShape;
 	}
 
 	/**
 	* @generated
 	*/
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof diagrama_concreta.diagram.edit.parts.TcdMetodoNombreEditPart) {
-			((diagrama_concreta.diagram.edit.parts.TcdMetodoNombreEditPart) childEditPart)
-					.setLabel(getPrimaryShape().getFigureTcdMetodoLabelFigure());
+		if (childEditPart instanceof diagrama_concreta.diagram.edit.parts.TCDMetodoNombreEditPart) {
+			((diagrama_concreta.diagram.edit.parts.TCDMetodoNombreEditPart) childEditPart)
+					.setLabel(getPrimaryShape().getFigureTCDMetodoLabelFigure());
 			return true;
 		}
 		return false;
@@ -120,7 +121,7 @@ public class TcdMetodoEditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof diagrama_concreta.diagram.edit.parts.TcdMetodoNombreEditPart) {
+		if (childEditPart instanceof diagrama_concreta.diagram.edit.parts.TCDMetodoNombreEditPart) {
 			return true;
 		}
 		return false;
@@ -244,24 +245,26 @@ public class TcdMetodoEditPart extends ShapeNodeEditPart {
 	*/
 	public EditPart getPrimaryChildEditPart() {
 		return getChildBySemanticHint(diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-				.getType(diagrama_concreta.diagram.edit.parts.TcdMetodoNombreEditPart.VISUAL_ID));
+				.getType(diagrama_concreta.diagram.edit.parts.TCDMetodoNombreEditPart.VISUAL_ID));
 	}
 
 	/**
 	 * @generated
 	 */
-	public class TcdMetodoFigure extends RoundedRectangle {
+	public class TCDMetodoFigure extends RoundedRectangle {
 
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigureTcdMetodoLabelFigure;
+		private WrappingLabel fFigureTCDMetodoLabelFigure;
 
 		/**
 		 * @generated
 		 */
-		public TcdMetodoFigure() {
+		public TCDMetodoFigure() {
 			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8), getMapMode().DPtoLP(8)));
+			this.setLineStyle(Graphics.LINE_DOT);
+			this.setBackgroundColor(THIS_BACK);
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
 			createContents();
@@ -272,21 +275,26 @@ public class TcdMetodoEditPart extends ShapeNodeEditPart {
 		 */
 		private void createContents() {
 
-			fFigureTcdMetodoLabelFigure = new WrappingLabel();
+			fFigureTCDMetodoLabelFigure = new WrappingLabel();
 
-			fFigureTcdMetodoLabelFigure.setText("TcdMetodo");
+			fFigureTCDMetodoLabelFigure.setText("TCDMetodo");
 
-			this.add(fFigureTcdMetodoLabelFigure);
+			this.add(fFigureTCDMetodoLabelFigure);
 
 		}
 
 		/**
 		 * @generated
 		 */
-		public WrappingLabel getFigureTcdMetodoLabelFigure() {
-			return fFigureTcdMetodoLabelFigure;
+		public WrappingLabel getFigureTCDMetodoLabelFigure() {
+			return fFigureTCDMetodoLabelFigure;
 		}
 
 	}
+
+	/**
+	* @generated
+	*/
+	static final Color THIS_BACK = new Color(null, 166, 255, 234);
 
 }

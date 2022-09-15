@@ -4,7 +4,7 @@ package abstracta.impl;
 
 import abstracta.AbstractaPackage;
 import abstracta.Multiplicidad;
-import abstracta.TcdAsociacion;
+import abstracta.TCDAsociacion;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -14,21 +14,21 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Tcd Asociacion</b></em>'.
+ * An implementation of the model object '<em><b>TCD Asociacion</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link abstracta.impl.TcdAsociacionImpl#getNombreOrigen <em>Nombre Origen</em>}</li>
- *   <li>{@link abstracta.impl.TcdAsociacionImpl#getNombreDestino <em>Nombre Destino</em>}</li>
- *   <li>{@link abstracta.impl.TcdAsociacionImpl#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}</li>
- *   <li>{@link abstracta.impl.TcdAsociacionImpl#getMultiplicidadDestino <em>Multiplicidad Destino</em>}</li>
+ *   <li>{@link abstracta.impl.TCDAsociacionImpl#getNombreOrigen <em>Nombre Origen</em>}</li>
+ *   <li>{@link abstracta.impl.TCDAsociacionImpl#getNombreDestino <em>Nombre Destino</em>}</li>
+ *   <li>{@link abstracta.impl.TCDAsociacionImpl#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}</li>
+ *   <li>{@link abstracta.impl.TCDAsociacionImpl#getMultiplicidadDestino <em>Multiplicidad Destino</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TcdAsociacionImpl extends TcdRelacionImpl implements TcdAsociacion {
+public class TCDAsociacionImpl extends TCDRelacionImpl implements TCDAsociacion {
 	/**
 	 * The default value of the '{@link #getNombreOrigen() <em>Nombre Origen</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -114,7 +114,7 @@ public class TcdAsociacionImpl extends TcdRelacionImpl implements TcdAsociacion 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TcdAsociacionImpl() {
+	protected TCDAsociacionImpl() {
 		super();
 	}
 
@@ -322,4 +322,4 @@ public class TcdAsociacionImpl extends TcdRelacionImpl implements TcdAsociacion 
 		return result.toString();
 	}
 
-} //TcdAsociacionImpl
+} //TCDAsociacionImpl

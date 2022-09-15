@@ -23,7 +23,7 @@ import org.eclipse.gmf.tooling.runtime.edit.policies.reparent.CreationEditPolicy
 /**
  * @generated
  */
-public class TcdClaseTcdClaseListaMetodosCompartmentEditPart extends ShapeCompartmentEditPart {
+public class TCDClaseTCDClaseListaMetodosCompartmentEditPart extends ShapeCompartmentEditPart {
 
 	/**
 	* @generated
@@ -33,7 +33,7 @@ public class TcdClaseTcdClaseListaMetodosCompartmentEditPart extends ShapeCompar
 	/**
 	* @generated
 	*/
-	public TcdClaseTcdClaseListaMetodosCompartmentEditPart(View view) {
+	public TCDClaseTCDClaseListaMetodosCompartmentEditPart(View view) {
 		super(view);
 	}
 
@@ -41,7 +41,7 @@ public class TcdClaseTcdClaseListaMetodosCompartmentEditPart extends ShapeCompar
 	* @generated
 	*/
 	public String getCompartmentName() {
-		return diagrama_concreta.diagram.part.Messages.TcdClaseTcdClaseListaMetodosCompartmentEditPart_title;
+		return diagrama_concreta.diagram.part.Messages.TCDClaseTCDClaseListaMetodosCompartmentEditPart_title;
 	}
 
 	/**
@@ -60,12 +60,12 @@ public class TcdClaseTcdClaseListaMetodosCompartmentEditPart extends ShapeCompar
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicy.PRIMARY_DRAG_ROLE, new ResizableCompartmentEditPolicy());
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new diagrama_concreta.diagram.edit.policies.TcdClaseTcdClaseListaMetodosCompartmentItemSemanticEditPolicy());
+				new diagrama_concreta.diagram.edit.policies.TCDClaseTCDClaseListaMetodosCompartmentItemSemanticEditPolicy());
 		installEditPolicy(EditPolicyRoles.CREATION_ROLE, new CreationEditPolicyWithCustomReparent(
 				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.TYPED_INSTANCE));
 		installEditPolicy(EditPolicyRoles.DRAG_DROP_ROLE, new DragDropEditPolicy());
 		installEditPolicy(EditPolicyRoles.CANONICAL_ROLE,
-				new diagrama_concreta.diagram.edit.policies.TcdClaseTcdClaseListaMetodosCompartmentCanonicalEditPolicy());
+				new diagrama_concreta.diagram.edit.policies.TCDClaseTCDClaseListaMetodosCompartmentCanonicalEditPolicy());
 	}
 
 	/**
@@ -85,7 +85,7 @@ public class TcdClaseTcdClaseListaMetodosCompartmentEditPart extends ShapeCompar
 			CreateElementRequestAdapter adapter = ((CreateViewAndElementRequest) request).getViewAndElementDescriptor()
 					.getCreateElementRequestAdapter();
 			IElementType type = (IElementType) adapter.getAdapter(IElementType.class);
-			if (type == diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TcdMetodo_3002) {
+			if (type == diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDMetodo_3002) {
 				return this;
 			}
 			return getParent().getTargetEditPart(request);

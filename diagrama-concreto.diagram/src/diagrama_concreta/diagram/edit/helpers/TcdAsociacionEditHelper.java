@@ -6,5 +6,5 @@ package diagrama_concreta.diagram.edit.helpers;
 /**
  * @generated
  */
-public class TcdAsociacionEditHelper extends diagrama_concreta.diagram.edit.helpers.Diagrama_concretaBaseEditHelper {
+public class TCDAsociacionEditHelper extends diagrama_concreta.diagram.edit.helpers.Diagrama_concretaBaseEditHelper {
 }

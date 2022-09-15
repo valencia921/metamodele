@@ -3,17 +3,22 @@
  */
 package diagrama_concreta.diagram.edit.parts;
 
+import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.Connection;
+import org.eclipse.draw2d.PolygonDecoration;
+import org.eclipse.draw2d.RotatableDecoration;
+import org.eclipse.draw2d.geometry.PointList;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ITreeBranchEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.swt.graphics.Color;
 
 /**
  * @generated
  */
-public class TcdAgregacionEditPart extends ConnectionNodeEditPart implements ITreeBranchEditPart {
+public class TCDAgregacionEditPart extends ConnectionNodeEditPart implements ITreeBranchEditPart {
 
 	/**
 	* @generated
@@ -23,7 +28,7 @@ public class TcdAgregacionEditPart extends ConnectionNodeEditPart implements ITr
 	/**
 	* @generated
 	*/
-	public TcdAgregacionEditPart(View view) {
+	public TCDAgregacionEditPart(View view) {
 		super(view);
 	}
 
@@ -33,7 +38,7 @@ public class TcdAgregacionEditPart extends ConnectionNodeEditPart implements ITr
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new diagrama_concreta.diagram.edit.policies.TcdAgregacionItemSemanticEditPolicy());
+				new diagrama_concreta.diagram.edit.policies.TCDAgregacionItemSemanticEditPolicy());
 	}
 
 	/**
@@ -46,29 +51,54 @@ public class TcdAgregacionEditPart extends ConnectionNodeEditPart implements ITr
 	*/
 
 	protected Connection createConnectionFigure() {
-		return new TcdAgregacionFigure();
+		return new TCDAgregacionFigure();
 	}
 
 	/**
 	* @generated
 	*/
-	public TcdAgregacionFigure getPrimaryShape() {
-		return (TcdAgregacionFigure) getFigure();
+	public TCDAgregacionFigure getPrimaryShape() {
+		return (TCDAgregacionFigure) getFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public class TcdAgregacionFigure extends PolylineConnectionEx {
+	public class TCDAgregacionFigure extends PolylineConnectionEx {
 
 		/**
 		 * @generated
 		 */
-		public TcdAgregacionFigure() {
-			this.setLineWidth(2);
+		public TCDAgregacionFigure() {
+			this.setLineWidth(3);
+			this.setForegroundColor(THIS_FORE);
 
+			setSourceDecoration(createSourceDecoration());
+		}
+
+		/**
+		* @generated
+		*/
+		private RotatableDecoration createSourceDecoration() {
+			PolygonDecoration df = new PolygonDecoration();
+			df.setFill(true);
+			df.setBackgroundColor(ColorConstants.white);
+			PointList pl = new PointList();
+			pl.addPoint(getMapMode().DPtoLP(-1), getMapMode().DPtoLP(1));
+			pl.addPoint(getMapMode().DPtoLP(0), getMapMode().DPtoLP(0));
+			pl.addPoint(getMapMode().DPtoLP(-1), getMapMode().DPtoLP(-1));
+			pl.addPoint(getMapMode().DPtoLP(-2), getMapMode().DPtoLP(0));
+			pl.addPoint(getMapMode().DPtoLP(-1), getMapMode().DPtoLP(1));
+			df.setTemplate(pl);
+			df.setScale(getMapMode().DPtoLP(7), getMapMode().DPtoLP(3));
+			return df;
 		}
 
 	}
+
+	/**
+	* @generated
+	*/
+	static final Color THIS_FORE = new Color(null, 39, 174, 96);
 
 }

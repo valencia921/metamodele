@@ -57,16 +57,17 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case AbstractaPackage.TCD_PAQUETE: return createTcdPaquete();
-			case AbstractaPackage.TCD_CLASE: return createTcdClase();
-			case AbstractaPackage.TCD_ATRIBUTO: return createTcdAtributo();
-			case AbstractaPackage.TCD_METODO: return createTcdMetodo();
-			case AbstractaPackage.TCD_ASOCIACION: return createTcdAsociacion();
-			case AbstractaPackage.TCD_COMPOSICION: return createTcdComposicion();
-			case AbstractaPackage.TCD_DEPENDENCIA: return createTcdDependencia();
-			case AbstractaPackage.TCD_HERENCIA: return createTcdHerencia();
-			case AbstractaPackage.TCD_AGREGACION: return createTcdAgregacion();
-			case AbstractaPackage.TCD_PARAMETRO: return createTcdParametro();
+			case AbstractaPackage.TCD_PAQUETE: return createTCDPaquete();
+			case AbstractaPackage.MODEL_FACTORY: return createModelFactory();
+			case AbstractaPackage.TCD_CLASE: return createTCDClase();
+			case AbstractaPackage.TCD_ATRIBUTO: return createTCDAtributo();
+			case AbstractaPackage.TCD_METODO: return createTCDMetodo();
+			case AbstractaPackage.TCD_ASOCIACION: return createTCDAsociacion();
+			case AbstractaPackage.TCD_COMPOSICION: return createTCDComposicion();
+			case AbstractaPackage.TCD_DEPENDENCIA: return createTCDDependencia();
+			case AbstractaPackage.TCD_HERENCIA: return createTCDHerencia();
+			case AbstractaPackage.TCD_AGREGACION: return createTCDAgregacion();
+			case AbstractaPackage.TCD_PARAMETRO: return createTCDParametro();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -119,8 +120,8 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdPaquete createTcdPaquete() {
-		TcdPaqueteImpl tcdPaquete = new TcdPaqueteImpl();
+	public TCDPaquete createTCDPaquete() {
+		TCDPaqueteImpl tcdPaquete = new TCDPaqueteImpl();
 		return tcdPaquete;
 	}
 
@@ -129,8 +130,18 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdClase createTcdClase() {
-		TcdClaseImpl tcdClase = new TcdClaseImpl();
+	public ModelFactory createModelFactory() {
+		ModelFactoryImpl modelFactory = new ModelFactoryImpl();
+		return modelFactory;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TCDClase createTCDClase() {
+		TCDClaseImpl tcdClase = new TCDClaseImpl();
 		return tcdClase;
 	}
 
@@ -139,8 +150,8 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdAtributo createTcdAtributo() {
-		TcdAtributoImpl tcdAtributo = new TcdAtributoImpl();
+	public TCDAtributo createTCDAtributo() {
+		TCDAtributoImpl tcdAtributo = new TCDAtributoImpl();
 		return tcdAtributo;
 	}
 
@@ -149,8 +160,8 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdMetodo createTcdMetodo() {
-		TcdMetodoImpl tcdMetodo = new TcdMetodoImpl();
+	public TCDMetodo createTCDMetodo() {
+		TCDMetodoImpl tcdMetodo = new TCDMetodoImpl();
 		return tcdMetodo;
 	}
 
@@ -159,8 +170,8 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdAsociacion createTcdAsociacion() {
-		TcdAsociacionImpl tcdAsociacion = new TcdAsociacionImpl();
+	public TCDAsociacion createTCDAsociacion() {
+		TCDAsociacionImpl tcdAsociacion = new TCDAsociacionImpl();
 		return tcdAsociacion;
 	}
 
@@ -169,8 +180,8 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdComposicion createTcdComposicion() {
-		TcdComposicionImpl tcdComposicion = new TcdComposicionImpl();
+	public TCDComposicion createTCDComposicion() {
+		TCDComposicionImpl tcdComposicion = new TCDComposicionImpl();
 		return tcdComposicion;
 	}
 
@@ -179,8 +190,8 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdDependencia createTcdDependencia() {
-		TcdDependenciaImpl tcdDependencia = new TcdDependenciaImpl();
+	public TCDDependencia createTCDDependencia() {
+		TCDDependenciaImpl tcdDependencia = new TCDDependenciaImpl();
 		return tcdDependencia;
 	}
 
@@ -189,8 +200,8 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdHerencia createTcdHerencia() {
-		TcdHerenciaImpl tcdHerencia = new TcdHerenciaImpl();
+	public TCDHerencia createTCDHerencia() {
+		TCDHerenciaImpl tcdHerencia = new TCDHerenciaImpl();
 		return tcdHerencia;
 	}
 
@@ -199,8 +210,8 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdAgregacion createTcdAgregacion() {
-		TcdAgregacionImpl tcdAgregacion = new TcdAgregacionImpl();
+	public TCDAgregacion createTCDAgregacion() {
+		TCDAgregacionImpl tcdAgregacion = new TCDAgregacionImpl();
 		return tcdAgregacion;
 	}
 
@@ -209,8 +220,8 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TcdParametro createTcdParametro() {
-		TcdParametroImpl tcdParametro = new TcdParametroImpl();
+	public TCDParametro createTCDParametro() {
+		TCDParametroImpl tcdParametro = new TCDParametroImpl();
 		return tcdParametro;
 	}
 

@@ -3,10 +3,10 @@
 package abstracta.impl;
 
 import abstracta.AbstractaPackage;
-import abstracta.TcdAtributo;
-import abstracta.TcdClase;
-import abstracta.TcdMetodo;
-import abstracta.TcdRelacion;
+import abstracta.TCDAtributo;
+import abstracta.TCDClase;
+import abstracta.TCDMetodo;
+import abstracta.TCDRelacion;
 import abstracta.Visibilidad;
 
 import java.util.Collection;
@@ -27,25 +27,25 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Tcd Clase</b></em>'.
+ * An implementation of the model object '<em><b>TCD Clase</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link abstracta.impl.TcdClaseImpl#getListaAtributos <em>Lista Atributos</em>}</li>
- *   <li>{@link abstracta.impl.TcdClaseImpl#getListaMetodos <em>Lista Metodos</em>}</li>
- *   <li>{@link abstracta.impl.TcdClaseImpl#getListaRelaciones <em>Lista Relaciones</em>}</li>
- *   <li>{@link abstracta.impl.TcdClaseImpl#getNombre <em>Nombre</em>}</li>
- *   <li>{@link abstracta.impl.TcdClaseImpl#getEstereotipo <em>Estereotipo</em>}</li>
- *   <li>{@link abstracta.impl.TcdClaseImpl#getModificadorAcceso <em>Modificador Acceso</em>}</li>
- *   <li>{@link abstracta.impl.TcdClaseImpl#isIsAbstract <em>Is Abstract</em>}</li>
- *   <li>{@link abstracta.impl.TcdClaseImpl#getDocumentacion <em>Documentacion</em>}</li>
+ *   <li>{@link abstracta.impl.TCDClaseImpl#getListaAtributos <em>Lista Atributos</em>}</li>
+ *   <li>{@link abstracta.impl.TCDClaseImpl#getListaMetodos <em>Lista Metodos</em>}</li>
+ *   <li>{@link abstracta.impl.TCDClaseImpl#getListaRelaciones <em>Lista Relaciones</em>}</li>
+ *   <li>{@link abstracta.impl.TCDClaseImpl#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link abstracta.impl.TCDClaseImpl#getEstereotipo <em>Estereotipo</em>}</li>
+ *   <li>{@link abstracta.impl.TCDClaseImpl#getModificadorAcceso <em>Modificador Acceso</em>}</li>
+ *   <li>{@link abstracta.impl.TCDClaseImpl#isIsAbstract <em>Is Abstract</em>}</li>
+ *   <li>{@link abstracta.impl.TCDClaseImpl#getDocumentacion <em>Documentacion</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TcdClaseImpl extends EObjectImpl implements TcdClase {
+public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 	/**
 	 * The cached value of the '{@link #getListaAtributos() <em>Lista Atributos</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -54,7 +54,7 @@ public class TcdClaseImpl extends EObjectImpl implements TcdClase {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TcdAtributo> listaAtributos;
+	protected EList<TCDAtributo> listaAtributos;
 
 	/**
 	 * The cached value of the '{@link #getListaMetodos() <em>Lista Metodos</em>}' containment reference list.
@@ -64,7 +64,7 @@ public class TcdClaseImpl extends EObjectImpl implements TcdClase {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TcdMetodo> listaMetodos;
+	protected EList<TCDMetodo> listaMetodos;
 
 	/**
 	 * The cached value of the '{@link #getListaRelaciones() <em>Lista Relaciones</em>}' containment reference list.
@@ -74,7 +74,7 @@ public class TcdClaseImpl extends EObjectImpl implements TcdClase {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TcdRelacion> listaRelaciones;
+	protected EList<TCDRelacion> listaRelaciones;
 
 	/**
 	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
@@ -181,7 +181,7 @@ public class TcdClaseImpl extends EObjectImpl implements TcdClase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TcdClaseImpl() {
+	protected TCDClaseImpl() {
 		super();
 	}
 
@@ -200,9 +200,9 @@ public class TcdClaseImpl extends EObjectImpl implements TcdClase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TcdAtributo> getListaAtributos() {
+	public EList<TCDAtributo> getListaAtributos() {
 		if (listaAtributos == null) {
-			listaAtributos = new EObjectContainmentEList<TcdAtributo>(TcdAtributo.class, this, AbstractaPackage.TCD_CLASE__LISTA_ATRIBUTOS);
+			listaAtributos = new EObjectContainmentEList<TCDAtributo>(TCDAtributo.class, this, AbstractaPackage.TCD_CLASE__LISTA_ATRIBUTOS);
 		}
 		return listaAtributos;
 	}
@@ -212,9 +212,9 @@ public class TcdClaseImpl extends EObjectImpl implements TcdClase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TcdMetodo> getListaMetodos() {
+	public EList<TCDMetodo> getListaMetodos() {
 		if (listaMetodos == null) {
-			listaMetodos = new EObjectContainmentEList<TcdMetodo>(TcdMetodo.class, this, AbstractaPackage.TCD_CLASE__LISTA_METODOS);
+			listaMetodos = new EObjectContainmentEList<TCDMetodo>(TCDMetodo.class, this, AbstractaPackage.TCD_CLASE__LISTA_METODOS);
 		}
 		return listaMetodos;
 	}
@@ -224,9 +224,9 @@ public class TcdClaseImpl extends EObjectImpl implements TcdClase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TcdRelacion> getListaRelaciones() {
+	public EList<TCDRelacion> getListaRelaciones() {
 		if (listaRelaciones == null) {
-			listaRelaciones = new EObjectContainmentEList<TcdRelacion>(TcdRelacion.class, this, AbstractaPackage.TCD_CLASE__LISTA_RELACIONES);
+			listaRelaciones = new EObjectContainmentEList<TCDRelacion>(TCDRelacion.class, this, AbstractaPackage.TCD_CLASE__LISTA_RELACIONES);
 		}
 		return listaRelaciones;
 	}
@@ -393,15 +393,15 @@ public class TcdClaseImpl extends EObjectImpl implements TcdClase {
 		switch (featureID) {
 			case AbstractaPackage.TCD_CLASE__LISTA_ATRIBUTOS:
 				getListaAtributos().clear();
-				getListaAtributos().addAll((Collection<? extends TcdAtributo>)newValue);
+				getListaAtributos().addAll((Collection<? extends TCDAtributo>)newValue);
 				return;
 			case AbstractaPackage.TCD_CLASE__LISTA_METODOS:
 				getListaMetodos().clear();
-				getListaMetodos().addAll((Collection<? extends TcdMetodo>)newValue);
+				getListaMetodos().addAll((Collection<? extends TCDMetodo>)newValue);
 				return;
 			case AbstractaPackage.TCD_CLASE__LISTA_RELACIONES:
 				getListaRelaciones().clear();
-				getListaRelaciones().addAll((Collection<? extends TcdRelacion>)newValue);
+				getListaRelaciones().addAll((Collection<? extends TCDRelacion>)newValue);
 				return;
 			case AbstractaPackage.TCD_CLASE__NOMBRE:
 				setNombre((String)newValue);
@@ -510,4 +510,4 @@ public class TcdClaseImpl extends EObjectImpl implements TcdClase {
 		return result.toString();
 	}
 
-} //TcdClaseImpl
+} //TCDClaseImpl

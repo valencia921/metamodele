@@ -4,7 +4,7 @@ package abstracta.impl;
 
 import abstracta.AbstractaPackage;
 import abstracta.Multiplicidad;
-import abstracta.TcdDependencia;
+import abstracta.TCDDependencia;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -14,21 +14,21 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Tcd Dependencia</b></em>'.
+ * An implementation of the model object '<em><b>TCD Dependencia</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link abstracta.impl.TcdDependenciaImpl#getNombreOrigen <em>Nombre Origen</em>}</li>
- *   <li>{@link abstracta.impl.TcdDependenciaImpl#getNombreDestino <em>Nombre Destino</em>}</li>
- *   <li>{@link abstracta.impl.TcdDependenciaImpl#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}</li>
- *   <li>{@link abstracta.impl.TcdDependenciaImpl#getMultiplicidadDestino <em>Multiplicidad Destino</em>}</li>
+ *   <li>{@link abstracta.impl.TCDDependenciaImpl#getNombreOrigen <em>Nombre Origen</em>}</li>
+ *   <li>{@link abstracta.impl.TCDDependenciaImpl#getNombreDestino <em>Nombre Destino</em>}</li>
+ *   <li>{@link abstracta.impl.TCDDependenciaImpl#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}</li>
+ *   <li>{@link abstracta.impl.TCDDependenciaImpl#getMultiplicidadDestino <em>Multiplicidad Destino</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TcdDependenciaImpl extends TcdRelacionImpl implements TcdDependencia {
+public class TCDDependenciaImpl extends TCDRelacionImpl implements TCDDependencia {
 	/**
 	 * The default value of the '{@link #getNombreOrigen() <em>Nombre Origen</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -114,7 +114,7 @@ public class TcdDependenciaImpl extends TcdRelacionImpl implements TcdDependenci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TcdDependenciaImpl() {
+	protected TCDDependenciaImpl() {
 		super();
 	}
 
@@ -322,4 +322,4 @@ public class TcdDependenciaImpl extends TcdRelacionImpl implements TcdDependenci
 		return result.toString();
 	}
 
-} //TcdDependenciaImpl
+} //TCDDependenciaImpl
