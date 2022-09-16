@@ -3,9 +3,9 @@
  */
 package diagrama_concreta.diagram.edit.parts;
 
-import org.eclipse.draw2d.Ellipse;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.MarginBorder;
+import org.eclipse.draw2d.PositionConstants;
 import org.eclipse.draw2d.RoundedRectangle;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
@@ -16,6 +16,7 @@ import org.eclipse.gef.Request;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
 import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
+import org.eclipse.gef.editpolicies.ResizableEditPolicy;
 import org.eclipse.gef.requests.CreateRequest;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
@@ -109,8 +110,8 @@ public class TCDAtributoEditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof diagrama_concreta.diagram.edit.parts.TCDAtributoNombreEditPart) {
-			((diagrama_concreta.diagram.edit.parts.TCDAtributoNombreEditPart) childEditPart)
+		if (childEditPart instanceof diagrama_concreta.diagram.edit.parts.TCDAtributoNombreTipoDatoEditPart) {
+			((diagrama_concreta.diagram.edit.parts.TCDAtributoNombreTipoDatoEditPart) childEditPart)
 					.setLabel(getPrimaryShape().getFigureTCDAtributoLabelFigure());
 			return true;
 		}
@@ -121,7 +122,7 @@ public class TCDAtributoEditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof diagrama_concreta.diagram.edit.parts.TCDAtributoNombreEditPart) {
+		if (childEditPart instanceof diagrama_concreta.diagram.edit.parts.TCDAtributoNombreTipoDatoEditPart) {
 			return true;
 		}
 		return false;
@@ -158,7 +159,7 @@ public class TCDAtributoEditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected NodeFigure createNodePlate() {
-		DefaultSizeNodeFigure result = new DefaultSizeNodeFigure(40, 40);
+		DefaultSizeNodeFigure result = new DefaultSizeNodeFigure(150, 16);
 		return result;
 	}
 
@@ -245,7 +246,7 @@ public class TCDAtributoEditPart extends ShapeNodeEditPart {
 	*/
 	public EditPart getPrimaryChildEditPart() {
 		return getChildBySemanticHint(diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-				.getType(diagrama_concreta.diagram.edit.parts.TCDAtributoNombreEditPart.VISUAL_ID));
+				.getType(diagrama_concreta.diagram.edit.parts.TCDAtributoNombreTipoDatoEditPart.VISUAL_ID));
 	}
 
 	/**
@@ -264,6 +265,7 @@ public class TCDAtributoEditPart extends ShapeNodeEditPart {
 		public TCDAtributoFigure() {
 			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8), getMapMode().DPtoLP(8)));
 			this.setBackgroundColor(THIS_BACK);
+			this.setPreferredSize(new Dimension(getMapMode().DPtoLP(150), getMapMode().DPtoLP(16)));
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
 			createContents();
@@ -292,8 +294,8 @@ public class TCDAtributoEditPart extends ShapeNodeEditPart {
 	}
 
 	/**
-	* @generated
-	*/
-	static final Color THIS_BACK = new Color(null, 166, 255, 234);
+	 * @generated
+	 */
+	static final Color THIS_BACK = new Color(null, 215, 255, 215);
 
 }

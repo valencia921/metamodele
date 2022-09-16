@@ -258,7 +258,7 @@ public class Diagrama_concretaNavigatorLabelProvider extends LabelProvider
 				diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDAtributo_3001,
 				view.getElement() != null ? view.getElement() : view,
 				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-						.getType(diagrama_concreta.diagram.edit.parts.TCDAtributoNombreEditPart.VISUAL_ID));
+						.getType(diagrama_concreta.diagram.edit.parts.TCDAtributoNombreTipoDatoEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
@@ -277,7 +277,7 @@ public class Diagrama_concretaNavigatorLabelProvider extends LabelProvider
 				diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDMetodo_3002,
 				view.getElement() != null ? view.getElement() : view,
 				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-						.getType(diagrama_concreta.diagram.edit.parts.TCDMetodoNombreEditPart.VISUAL_ID));
+						.getType(diagrama_concreta.diagram.edit.parts.TCDMetodoNombreTipoRetornoEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
@@ -292,12 +292,17 @@ public class Diagrama_concretaNavigatorLabelProvider extends LabelProvider
 	* @generated
 	*/
 	private String getTCDAsociacion_4001Text(View view) {
-		diagrama_concreta.TCDAsociacion domainModelElement = (diagrama_concreta.TCDAsociacion) view.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getNombreOrigen();
+		IParser parser = diagrama_concreta.diagram.providers.Diagrama_concretaParserProvider.getParser(
+				diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDAsociacion_4001,
+				view.getElement() != null ? view.getElement() : view,
+				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
+						.getType(diagrama_concreta.diagram.edit.parts.TCDAsociacionNombreOrigenEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
 		} else {
 			diagrama_concreta.diagram.part.Diagrama_concretaDiagramEditorPlugin.getInstance()
-					.logError("No domain element for view with visualID = " + 4001); //$NON-NLS-1$
+					.logError("Parser was not found for label " + 6002); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -306,12 +311,17 @@ public class Diagrama_concretaNavigatorLabelProvider extends LabelProvider
 	* @generated
 	*/
 	private String getTCDComposicion_4002Text(View view) {
-		diagrama_concreta.TCDComposicion domainModelElement = (diagrama_concreta.TCDComposicion) view.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getNombreOrigen();
+		IParser parser = diagrama_concreta.diagram.providers.Diagrama_concretaParserProvider.getParser(
+				diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDComposicion_4002,
+				view.getElement() != null ? view.getElement() : view,
+				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
+						.getType(diagrama_concreta.diagram.edit.parts.TCDComposicionNombreOrigenEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
 		} else {
 			diagrama_concreta.diagram.part.Diagrama_concretaDiagramEditorPlugin.getInstance()
-					.logError("No domain element for view with visualID = " + 4002); //$NON-NLS-1$
+					.logError("Parser was not found for label " + 6003); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -320,12 +330,17 @@ public class Diagrama_concretaNavigatorLabelProvider extends LabelProvider
 	* @generated
 	*/
 	private String getTCDDependencia_4003Text(View view) {
-		diagrama_concreta.TCDDependencia domainModelElement = (diagrama_concreta.TCDDependencia) view.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getNombreOrigen();
+		IParser parser = diagrama_concreta.diagram.providers.Diagrama_concretaParserProvider.getParser(
+				diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDDependencia_4003,
+				view.getElement() != null ? view.getElement() : view,
+				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
+						.getType(diagrama_concreta.diagram.edit.parts.TCDDependenciaNombreOrigenEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
 		} else {
 			diagrama_concreta.diagram.part.Diagrama_concretaDiagramEditorPlugin.getInstance()
-					.logError("No domain element for view with visualID = " + 4003); //$NON-NLS-1$
+					.logError("Parser was not found for label " + 6004); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -341,12 +356,17 @@ public class Diagrama_concretaNavigatorLabelProvider extends LabelProvider
 	* @generated
 	*/
 	private String getTCDAgregacion_4005Text(View view) {
-		diagrama_concreta.TCDAgregacion domainModelElement = (diagrama_concreta.TCDAgregacion) view.getElement();
-		if (domainModelElement != null) {
-			return domainModelElement.getNombreOrigen();
+		IParser parser = diagrama_concreta.diagram.providers.Diagrama_concretaParserProvider.getParser(
+				diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDAgregacion_4005,
+				view.getElement() != null ? view.getElement() : view,
+				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
+						.getType(diagrama_concreta.diagram.edit.parts.TCDAgregacionNombreOrigenEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
 		} else {
 			diagrama_concreta.diagram.part.Diagrama_concretaDiagramEditorPlugin.getInstance()
-					.logError("No domain element for view with visualID = " + 4005); //$NON-NLS-1$
+					.logError("Parser was not found for label " + 6001); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}

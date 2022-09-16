@@ -39,6 +39,7 @@ class TCDClase {
     attr Visibilidad modificadorAcceso;
     attr boolean isAbstract;
     attr String documentacion;
+    attr String ruta;
 }
 
 @gmf.link
@@ -52,7 +53,8 @@ enum Navegavilidad {
 	unidireccional;
 }
 
-@gmf.link(source="source", target="target", style="solid", width="3", color = "39,174,96", source.decoration = "rhomb")
+@gmf.link(source="source", target="target", style="solid", width="3", color = "39,174,96",
+ source.decoration = "rhomb", label = "nombreOrigen")
 class TCDAgregacion extends TCDRelacion{
 	
 	attr String nombreOrigen;
@@ -61,7 +63,7 @@ class TCDAgregacion extends TCDRelacion{
     attr Multiplicidad multiplicidadDestino;
 }
 
-@gmf.link(source="source", target="target", style="solid", width="3", color = "0,62,255")
+@gmf.link(source="source", target="target", style="solid", width="3", color = "0,62,255", label = "nombreOrigen")
 class TCDAsociacion extends TCDRelacion{
 	
 	attr String nombreOrigen;
@@ -71,7 +73,7 @@ class TCDAsociacion extends TCDRelacion{
     attr Navegavilidad navegavilidad;
 }
 
-@gmf.link(source="source", target="target", style="dash", width="3", color = "0,255,193", source.decoration = "rhomb")
+@gmf.link(source="source", target="target", label = "nombreOrigen", style="dash", width="3", color = "0,255,193", source.decoration = "rhomb")
 class TCDComposicion extends TCDRelacion{
 	
 	attr String nombreOrigen;
@@ -80,7 +82,8 @@ class TCDComposicion extends TCDRelacion{
     attr Multiplicidad multiplicidadDestino;
 }
 
-@gmf.link(source="source", target="target", style="solid", width="3", color = "255,15,15", source.decoration = "filledrhomb")
+@gmf.link(source="source", target="target", label = "nombreOrigen", style="solid", width="3", 
+	color = "255,15,15", source.decoration = "filledrhomb")
 class TCDDependencia extends TCDRelacion{
 	
 	attr String nombreOrigen;
@@ -101,7 +104,7 @@ enum Multiplicidad {
 	uno_varios;
 }
 
-@gmf.node(label = "nombre", color = "166,255,234")
+@gmf.node(label = "nombre, tipoDato", color = "215,255,215", label.pattern = "{0}: {1}", size = "150,16")
 class TCDAtributo {
 	attr String nombre;
 	attr TipoDato tipoDato;
@@ -111,9 +114,10 @@ class TCDAtributo {
 }
 
 enum TipoDato {
-	string;
-	number;
-	boolean;
+	String;
+	Number;
+	Boolean;
+	Array;
 	undefined;
 	null;
 }
@@ -124,11 +128,12 @@ enum Visibilidad {
 	protected;
 }
 
-@gmf.node(label = "nombre", border.style = "dot", color = "166,255,234")
+@gmf.node(label = "nombre, tipoRetorno", label.pattern = "{0}: {1}", border.style = "dot", 
+	color = "255,253,188", size = "150,16", size.maximum = "200,16")
 class TCDMetodo {
 	
 	@gmf.comparment
-    val TCDParametro[*] listaParametros;
+    attr String[*] listaParametros;
 	
 	attr String nombre;
 	attr Visibilidad modificadorAcceso;
@@ -137,14 +142,8 @@ class TCDMetodo {
 }
 
 enum TipoRetorno {
+	undefined;
 	string;
 	number;
 	boolean;
-	undefined;
-}
-
-@gmf.node(label = "nombre")
-class TCDParametro {
-	attr String nombre;
-	attr TipoDato tipoDato;
 }

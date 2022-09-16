@@ -4,7 +4,6 @@ package diagrama_concreta.impl;
 
 import diagrama_concreta.Diagrama_concretaPackage;
 import diagrama_concreta.TCDMetodo;
-import diagrama_concreta.TCDParametro;
 import diagrama_concreta.TipoRetorno;
 import diagrama_concreta.Visibilidad;
 
@@ -21,6 +20,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -43,14 +43,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class TCDMetodoImpl extends EObjectImpl implements TCDMetodo {
 	/**
-	 * The cached value of the '{@link #getListaParametros() <em>Lista Parametros</em>}' containment reference list.
+	 * The cached value of the '{@link #getListaParametros() <em>Lista Parametros</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getListaParametros()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TCDParametro> listaParametros;
+	protected EList<String> listaParametros;
 
 	/**
 	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
@@ -100,7 +100,7 @@ public class TCDMetodoImpl extends EObjectImpl implements TCDMetodo {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final TipoRetorno TIPO_RETORNO_EDEFAULT = TipoRetorno.STRING;
+	protected static final TipoRetorno TIPO_RETORNO_EDEFAULT = TipoRetorno.UNDEFINED;
 
 	/**
 	 * The cached value of the '{@link #getTipoRetorno() <em>Tipo Retorno</em>}' attribute.
@@ -156,9 +156,9 @@ public class TCDMetodoImpl extends EObjectImpl implements TCDMetodo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TCDParametro> getListaParametros() {
+	public EList<String> getListaParametros() {
 		if (listaParametros == null) {
-			listaParametros = new EObjectContainmentEList<TCDParametro>(TCDParametro.class, this, Diagrama_concretaPackage.TCD_METODO__LISTA_PARAMETROS);
+			listaParametros = new EDataTypeUniqueEList<String>(String.class, this, Diagrama_concretaPackage.TCD_METODO__LISTA_PARAMETROS);
 		}
 		return listaParametros;
 	}
@@ -253,20 +253,6 @@ public class TCDMetodoImpl extends EObjectImpl implements TCDMetodo {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case Diagrama_concretaPackage.TCD_METODO__LISTA_PARAMETROS:
-				return ((InternalEList<?>)getListaParametros()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case Diagrama_concretaPackage.TCD_METODO__LISTA_PARAMETROS:
@@ -294,7 +280,7 @@ public class TCDMetodoImpl extends EObjectImpl implements TCDMetodo {
 		switch (featureID) {
 			case Diagrama_concretaPackage.TCD_METODO__LISTA_PARAMETROS:
 				getListaParametros().clear();
-				getListaParametros().addAll((Collection<? extends TCDParametro>)newValue);
+				getListaParametros().addAll((Collection<? extends String>)newValue);
 				return;
 			case Diagrama_concretaPackage.TCD_METODO__NOMBRE:
 				setNombre((String)newValue);
@@ -371,7 +357,9 @@ public class TCDMetodoImpl extends EObjectImpl implements TCDMetodo {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (nombre: ");
+		result.append(" (listaParametros: ");
+		result.append(listaParametros);
+		result.append(", nombre: ");
 		result.append(nombre);
 		result.append(", modificadorAcceso: ");
 		result.append(modificadorAcceso);

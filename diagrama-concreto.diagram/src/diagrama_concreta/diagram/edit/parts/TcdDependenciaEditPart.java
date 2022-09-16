@@ -4,7 +4,6 @@
 package diagrama_concreta.diagram.edit.parts;
 
 import org.eclipse.draw2d.Connection;
-import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.PolygonDecoration;
 import org.eclipse.draw2d.RotatableDecoration;
 import org.eclipse.draw2d.geometry.PointList;
@@ -77,8 +76,8 @@ public class TCDDependenciaEditPart extends ConnectionNodeEditPart implements IT
 		}
 
 		/**
-		* @generated
-		*/
+		 * @generated
+		 */
 		private RotatableDecoration createSourceDecoration() {
 			PolygonDecoration df = new PolygonDecoration();
 			df.setFill(true);
@@ -96,8 +95,8 @@ public class TCDDependenciaEditPart extends ConnectionNodeEditPart implements IT
 	}
 
 	/**
-	* @generated
-	*/
+	 * @generated
+	 */
 	static final Color THIS_FORE = new Color(null, 255, 15, 15);
 
 }

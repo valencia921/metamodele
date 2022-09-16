@@ -58,6 +58,15 @@ public interface Diagrama_concretaFactory extends EFactory {
 	TCDClase createTCDClase();
 
 	/**
+	 * Returns a new object of class '<em>TCD Agregacion</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>TCD Agregacion</em>'.
+	 * @generated
+	 */
+	TCDAgregacion createTCDAgregacion();
+
+	/**
 	 * Returns a new object of class '<em>TCD Asociacion</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -94,15 +103,6 @@ public interface Diagrama_concretaFactory extends EFactory {
 	TCDHerencia createTCDHerencia();
 
 	/**
-	 * Returns a new object of class '<em>TCD Agregacion</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>TCD Agregacion</em>'.
-	 * @generated
-	 */
-	TCDAgregacion createTCDAgregacion();
-
-	/**
 	 * Returns a new object of class '<em>TCD Atributo</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -119,15 +119,6 @@ public interface Diagrama_concretaFactory extends EFactory {
 	 * @generated
 	 */
 	TCDMetodo createTCDMetodo();
-
-	/**
-	 * Returns a new object of class '<em>TCD Parametro</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>TCD Parametro</em>'.
-	 * @generated
-	 */
-	TCDParametro createTCDParametro();
 
 	/**
 	 * Returns the package supported by this factory.

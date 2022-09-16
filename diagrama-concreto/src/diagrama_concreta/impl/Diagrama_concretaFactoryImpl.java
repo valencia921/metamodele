@@ -68,7 +68,6 @@ public class Diagrama_concretaFactoryImpl extends EFactoryImpl implements Diagra
 			case Diagrama_concretaPackage.TCD_HERENCIA: return createTCDHerencia();
 			case Diagrama_concretaPackage.TCD_ATRIBUTO: return createTCDAtributo();
 			case Diagrama_concretaPackage.TCD_METODO: return createTCDMetodo();
-			case Diagrama_concretaPackage.TCD_PARAMETRO: return createTCDParametro();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -165,6 +164,16 @@ public class Diagrama_concretaFactoryImpl extends EFactoryImpl implements Diagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public TCDAgregacion createTCDAgregacion() {
+		TCDAgregacionImpl tcdAgregacion = new TCDAgregacionImpl();
+		return tcdAgregacion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TCDAsociacion createTCDAsociacion() {
 		TCDAsociacionImpl tcdAsociacion = new TCDAsociacionImpl();
 		return tcdAsociacion;
@@ -205,16 +214,6 @@ public class Diagrama_concretaFactoryImpl extends EFactoryImpl implements Diagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TCDAgregacion createTCDAgregacion() {
-		TCDAgregacionImpl tcdAgregacion = new TCDAgregacionImpl();
-		return tcdAgregacion;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public TCDAtributo createTCDAtributo() {
 		TCDAtributoImpl tcdAtributo = new TCDAtributoImpl();
 		return tcdAtributo;
@@ -228,16 +227,6 @@ public class Diagrama_concretaFactoryImpl extends EFactoryImpl implements Diagra
 	public TCDMetodo createTCDMetodo() {
 		TCDMetodoImpl tcdMetodo = new TCDMetodoImpl();
 		return tcdMetodo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TCDParametro createTCDParametro() {
-		TCDParametroImpl tcdParametro = new TCDParametroImpl();
-		return tcdParametro;
 	}
 
 	/**

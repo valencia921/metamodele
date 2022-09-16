@@ -17,7 +17,6 @@ import diagrama_concreta.TCDDiagramaClases;
 import diagrama_concreta.TCDHerencia;
 import diagrama_concreta.TCDMetodo;
 import diagrama_concreta.TCDPaquete;
-import diagrama_concreta.TCDParametro;
 import diagrama_concreta.TCDRelacion;
 import diagrama_concreta.TipoDato;
 import diagrama_concreta.TipoRetorno;
@@ -78,6 +77,13 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass tcdAgregacionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass tcdAsociacionEClass = null;
 
 	/**
@@ -106,13 +112,6 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass tcdAgregacionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass tcdAtributoEClass = null;
 
 	/**
@@ -121,13 +120,6 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 	 * @generated
 	 */
 	private EClass tcdMetodoEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tcdParametroEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -428,6 +420,15 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getTCDClase_Ruta() {
+		return (EAttribute)tcdClaseEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTCDRelacion() {
 		return tcdRelacionEClass;
 	}
@@ -448,6 +449,51 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 	 */
 	public EReference getTCDRelacion_Target() {
 		return (EReference)tcdRelacionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTCDAgregacion() {
+		return tcdAgregacionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTCDAgregacion_NombreOrigen() {
+		return (EAttribute)tcdAgregacionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTCDAgregacion_NombreDestino() {
+		return (EAttribute)tcdAgregacionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTCDAgregacion_MultiplicidadOrigen() {
+		return (EAttribute)tcdAgregacionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTCDAgregacion_MultiplicidadDestino() {
+		return (EAttribute)tcdAgregacionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -608,51 +654,6 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTCDAgregacion() {
-		return tcdAgregacionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTCDAgregacion_NombreOrigen() {
-		return (EAttribute)tcdAgregacionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTCDAgregacion_NombreDestino() {
-		return (EAttribute)tcdAgregacionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTCDAgregacion_MultiplicidadOrigen() {
-		return (EAttribute)tcdAgregacionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTCDAgregacion_MultiplicidadDestino() {
-		return (EAttribute)tcdAgregacionEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getTCDAtributo() {
 		return tcdAtributoEClass;
 	}
@@ -716,8 +717,8 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTCDMetodo_ListaParametros() {
-		return (EReference)tcdMetodoEClass.getEStructuralFeatures().get(0);
+	public EAttribute getTCDMetodo_ListaParametros() {
+		return (EAttribute)tcdMetodoEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -754,33 +755,6 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 	 */
 	public EAttribute getTCDMetodo_Semantica() {
 		return (EAttribute)tcdMetodoEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTCDParametro() {
-		return tcdParametroEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTCDParametro_Nombre() {
-		return (EAttribute)tcdParametroEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTCDParametro_TipoDato() {
-		return (EAttribute)tcdParametroEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -881,6 +855,7 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 		createEAttribute(tcdClaseEClass, TCD_CLASE__MODIFICADOR_ACCESO);
 		createEAttribute(tcdClaseEClass, TCD_CLASE__IS_ABSTRACT);
 		createEAttribute(tcdClaseEClass, TCD_CLASE__DOCUMENTACION);
+		createEAttribute(tcdClaseEClass, TCD_CLASE__RUTA);
 
 		tcdRelacionEClass = createEClass(TCD_RELACION);
 		createEReference(tcdRelacionEClass, TCD_RELACION__SOURCE);
@@ -921,15 +896,11 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 		createEAttribute(tcdAtributoEClass, TCD_ATRIBUTO__IS_STATIC);
 
 		tcdMetodoEClass = createEClass(TCD_METODO);
-		createEReference(tcdMetodoEClass, TCD_METODO__LISTA_PARAMETROS);
+		createEAttribute(tcdMetodoEClass, TCD_METODO__LISTA_PARAMETROS);
 		createEAttribute(tcdMetodoEClass, TCD_METODO__NOMBRE);
 		createEAttribute(tcdMetodoEClass, TCD_METODO__MODIFICADOR_ACCESO);
 		createEAttribute(tcdMetodoEClass, TCD_METODO__TIPO_RETORNO);
 		createEAttribute(tcdMetodoEClass, TCD_METODO__SEMANTICA);
-
-		tcdParametroEClass = createEClass(TCD_PARAMETRO);
-		createEAttribute(tcdParametroEClass, TCD_PARAMETRO__NOMBRE);
-		createEAttribute(tcdParametroEClass, TCD_PARAMETRO__TIPO_DATO);
 
 		// Create enums
 		navegavilidadEEnum = createEEnum(NAVEGAVILIDAD);
@@ -999,6 +970,7 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 		initEAttribute(getTCDClase_ModificadorAcceso(), this.getVisibilidad(), "modificadorAcceso", null, 0, 1, TCDClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDClase_IsAbstract(), ecorePackage.getEBoolean(), "isAbstract", null, 0, 1, TCDClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDClase_Documentacion(), ecorePackage.getEString(), "documentacion", null, 0, 1, TCDClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTCDClase_Ruta(), ecorePackage.getEString(), "ruta", null, 0, 1, TCDClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tcdRelacionEClass, TCDRelacion.class, "TCDRelacion", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTCDRelacion_Source(), this.getTCDClase(), null, "source", null, 0, 1, TCDRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1039,15 +1011,11 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 		initEAttribute(getTCDAtributo_IsStatic(), ecorePackage.getEBoolean(), "isStatic", null, 0, 1, TCDAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tcdMetodoEClass, TCDMetodo.class, "TCDMetodo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTCDMetodo_ListaParametros(), this.getTCDParametro(), null, "listaParametros", null, 0, -1, TCDMetodo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTCDMetodo_ListaParametros(), ecorePackage.getEString(), "listaParametros", null, 0, -1, TCDMetodo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDMetodo_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, TCDMetodo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDMetodo_ModificadorAcceso(), this.getVisibilidad(), "modificadorAcceso", null, 0, 1, TCDMetodo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDMetodo_TipoRetorno(), this.getTipoRetorno(), "tipoRetorno", null, 0, 1, TCDMetodo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDMetodo_Semantica(), ecorePackage.getEString(), "semantica", null, 0, 1, TCDMetodo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(tcdParametroEClass, TCDParametro.class, "TCDParametro", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTCDParametro_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, TCDParametro.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTCDParametro_TipoDato(), this.getTipoDato(), "tipoDato", null, 0, 1, TCDParametro.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(navegavilidadEEnum, Navegavilidad.class, "Navegavilidad");
@@ -1064,6 +1032,7 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 		addEEnumLiteral(tipoDatoEEnum, TipoDato.STRING);
 		addEEnumLiteral(tipoDatoEEnum, TipoDato.NUMBER);
 		addEEnumLiteral(tipoDatoEEnum, TipoDato.BOOLEAN);
+		addEEnumLiteral(tipoDatoEEnum, TipoDato.ARRAY);
 		addEEnumLiteral(tipoDatoEEnum, TipoDato.UNDEFINED);
 		addEEnumLiteral(tipoDatoEEnum, TipoDato.NULL);
 
@@ -1073,10 +1042,10 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 		addEEnumLiteral(visibilidadEEnum, Visibilidad.PROTECTED);
 
 		initEEnum(tipoRetornoEEnum, TipoRetorno.class, "TipoRetorno");
+		addEEnumLiteral(tipoRetornoEEnum, TipoRetorno.UNDEFINED);
 		addEEnumLiteral(tipoRetornoEEnum, TipoRetorno.STRING);
 		addEEnumLiteral(tipoRetornoEEnum, TipoRetorno.NUMBER);
 		addEEnumLiteral(tipoRetornoEEnum, TipoRetorno.BOOLEAN);
-		addEEnumLiteral(tipoRetornoEEnum, TipoRetorno.UNDEFINED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -1152,22 +1121,21 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 		  (tcdAtributoEClass, 
 		   source, 
 		   new String[] {
-			 "label", "nombre",
-			 "color", "166,255,234"
+			 "label", "nombre, tipoDato",
+			 "color", "215,255,215",
+			 "label.pattern", "{0}: {1}",
+			 "size", "150,16"
 		   });	
 		addAnnotation
 		  (tcdMetodoEClass, 
 		   source, 
 		   new String[] {
-			 "label", "nombre",
+			 "label", "nombre, tipoRetorno",
+			 "label.pattern", "{0}: {1}",
 			 "border.style", "dot",
-			 "color", "166,255,234"
-		   });	
-		addAnnotation
-		  (tcdParametroEClass, 
-		   source, 
-		   new String[] {
-			 "label", "nombre"
+			 "color", "255,253,188",
+			 "size", "150,16",
+			 "size.maximum", "200,16"
 		   });
 	}
 
@@ -1213,7 +1181,8 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 			 "style", "solid",
 			 "width", "3",
 			 "color", "39,174,96",
-			 "source.decoration", "rhomb"
+			 "source.decoration", "rhomb",
+			 "label", "nombreOrigen"
 		   });	
 		addAnnotation
 		  (tcdAsociacionEClass, 
@@ -1223,7 +1192,8 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 			 "target", "target",
 			 "style", "solid",
 			 "width", "3",
-			 "color", "0,62,255"
+			 "color", "0,62,255",
+			 "label", "nombreOrigen"
 		   });	
 		addAnnotation
 		  (tcdComposicionEClass, 
@@ -1231,6 +1201,7 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 		   new String[] {
 			 "source", "source",
 			 "target", "target",
+			 "label", "nombreOrigen",
 			 "style", "dash",
 			 "width", "3",
 			 "color", "0,255,193",
@@ -1242,6 +1213,7 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 		   new String[] {
 			 "source", "source",
 			 "target", "target",
+			 "label", "nombreOrigen",
 			 "style", "solid",
 			 "width", "3",
 			 "color", "255,15,15",

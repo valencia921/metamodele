@@ -286,13 +286,22 @@ public interface Diagrama_concretaPackage extends EPackage {
 	int TCD_CLASE__DOCUMENTACION = 6;
 
 	/**
+	 * The feature id for the '<em><b>Ruta</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TCD_CLASE__RUTA = 7;
+
+	/**
 	 * The number of structural features of the '<em>TCD Clase</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TCD_CLASE_FEATURE_COUNT = 7;
+	int TCD_CLASE_FEATURE_COUNT = 8;
 
 	/**
 	 * The meta object id for the '{@link diagrama_concreta.impl.TCDRelacionImpl <em>TCD Relacion</em>}' class.
@@ -330,46 +339,6 @@ public interface Diagrama_concretaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TCD_RELACION_FEATURE_COUNT = 2;
-
-	/**
-	 * The meta object id for the '{@link diagrama_concreta.impl.TCDAsociacionImpl <em>TCD Asociacion</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see diagrama_concreta.impl.TCDAsociacionImpl
-	 * @see diagrama_concreta.impl.Diagrama_concretaPackageImpl#getTCDAsociacion()
-	 * @generated
-	 */
-	int TCD_ASOCIACION = 6;
-
-	/**
-	 * The meta object id for the '{@link diagrama_concreta.impl.TCDComposicionImpl <em>TCD Composicion</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see diagrama_concreta.impl.TCDComposicionImpl
-	 * @see diagrama_concreta.impl.Diagrama_concretaPackageImpl#getTCDComposicion()
-	 * @generated
-	 */
-	int TCD_COMPOSICION = 7;
-
-	/**
-	 * The meta object id for the '{@link diagrama_concreta.impl.TCDDependenciaImpl <em>TCD Dependencia</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see diagrama_concreta.impl.TCDDependenciaImpl
-	 * @see diagrama_concreta.impl.Diagrama_concretaPackageImpl#getTCDDependencia()
-	 * @generated
-	 */
-	int TCD_DEPENDENCIA = 8;
-
-	/**
-	 * The meta object id for the '{@link diagrama_concreta.impl.TCDHerenciaImpl <em>TCD Herencia</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see diagrama_concreta.impl.TCDHerenciaImpl
-	 * @see diagrama_concreta.impl.Diagrama_concretaPackageImpl#getTCDHerencia()
-	 * @generated
-	 */
-	int TCD_HERENCIA = 9;
 
 	/**
 	 * The meta object id for the '{@link diagrama_concreta.impl.TCDAgregacionImpl <em>TCD Agregacion</em>}' class.
@@ -445,6 +414,16 @@ public interface Diagrama_concretaPackage extends EPackage {
 	int TCD_AGREGACION_FEATURE_COUNT = TCD_RELACION_FEATURE_COUNT + 4;
 
 	/**
+	 * The meta object id for the '{@link diagrama_concreta.impl.TCDAsociacionImpl <em>TCD Asociacion</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see diagrama_concreta.impl.TCDAsociacionImpl
+	 * @see diagrama_concreta.impl.Diagrama_concretaPackageImpl#getTCDAsociacion()
+	 * @generated
+	 */
+	int TCD_ASOCIACION = 6;
+
+	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -517,6 +496,16 @@ public interface Diagrama_concretaPackage extends EPackage {
 	int TCD_ASOCIACION_FEATURE_COUNT = TCD_RELACION_FEATURE_COUNT + 5;
 
 	/**
+	 * The meta object id for the '{@link diagrama_concreta.impl.TCDComposicionImpl <em>TCD Composicion</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see diagrama_concreta.impl.TCDComposicionImpl
+	 * @see diagrama_concreta.impl.Diagrama_concretaPackageImpl#getTCDComposicion()
+	 * @generated
+	 */
+	int TCD_COMPOSICION = 7;
+
+	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -580,6 +569,16 @@ public interface Diagrama_concretaPackage extends EPackage {
 	int TCD_COMPOSICION_FEATURE_COUNT = TCD_RELACION_FEATURE_COUNT + 4;
 
 	/**
+	 * The meta object id for the '{@link diagrama_concreta.impl.TCDDependenciaImpl <em>TCD Dependencia</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see diagrama_concreta.impl.TCDDependenciaImpl
+	 * @see diagrama_concreta.impl.Diagrama_concretaPackageImpl#getTCDDependencia()
+	 * @generated
+	 */
+	int TCD_DEPENDENCIA = 8;
+
+	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -641,6 +640,16 @@ public interface Diagrama_concretaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TCD_DEPENDENCIA_FEATURE_COUNT = TCD_RELACION_FEATURE_COUNT + 4;
+
+	/**
+	 * The meta object id for the '{@link diagrama_concreta.impl.TCDHerenciaImpl <em>TCD Herencia</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see diagrama_concreta.impl.TCDHerenciaImpl
+	 * @see diagrama_concreta.impl.Diagrama_concretaPackageImpl#getTCDHerencia()
+	 * @generated
+	 */
+	int TCD_HERENCIA = 9;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -744,7 +753,7 @@ public interface Diagrama_concretaPackage extends EPackage {
 	int TCD_METODO = 11;
 
 	/**
-	 * The feature id for the '<em><b>Lista Parametros</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Lista Parametros</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -798,43 +807,6 @@ public interface Diagrama_concretaPackage extends EPackage {
 	int TCD_METODO_FEATURE_COUNT = 5;
 
 	/**
-	 * The meta object id for the '{@link diagrama_concreta.impl.TCDParametroImpl <em>TCD Parametro</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see diagrama_concreta.impl.TCDParametroImpl
-	 * @see diagrama_concreta.impl.Diagrama_concretaPackageImpl#getTCDParametro()
-	 * @generated
-	 */
-	int TCD_PARAMETRO = 12;
-
-	/**
-	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TCD_PARAMETRO__NOMBRE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Tipo Dato</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TCD_PARAMETRO__TIPO_DATO = 1;
-
-	/**
-	 * The number of structural features of the '<em>TCD Parametro</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TCD_PARAMETRO_FEATURE_COUNT = 2;
-
-	/**
 	 * The meta object id for the '{@link diagrama_concreta.Navegavilidad <em>Navegavilidad</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -842,7 +814,7 @@ public interface Diagrama_concretaPackage extends EPackage {
 	 * @see diagrama_concreta.impl.Diagrama_concretaPackageImpl#getNavegavilidad()
 	 * @generated
 	 */
-	int NAVEGAVILIDAD = 13;
+	int NAVEGAVILIDAD = 12;
 
 	/**
 	 * The meta object id for the '{@link diagrama_concreta.Multiplicidad <em>Multiplicidad</em>}' enum.
@@ -852,7 +824,7 @@ public interface Diagrama_concretaPackage extends EPackage {
 	 * @see diagrama_concreta.impl.Diagrama_concretaPackageImpl#getMultiplicidad()
 	 * @generated
 	 */
-	int MULTIPLICIDAD = 14;
+	int MULTIPLICIDAD = 13;
 
 	/**
 	 * The meta object id for the '{@link diagrama_concreta.TipoDato <em>Tipo Dato</em>}' enum.
@@ -862,7 +834,7 @@ public interface Diagrama_concretaPackage extends EPackage {
 	 * @see diagrama_concreta.impl.Diagrama_concretaPackageImpl#getTipoDato()
 	 * @generated
 	 */
-	int TIPO_DATO = 15;
+	int TIPO_DATO = 14;
 
 	/**
 	 * The meta object id for the '{@link diagrama_concreta.Visibilidad <em>Visibilidad</em>}' enum.
@@ -872,7 +844,7 @@ public interface Diagrama_concretaPackage extends EPackage {
 	 * @see diagrama_concreta.impl.Diagrama_concretaPackageImpl#getVisibilidad()
 	 * @generated
 	 */
-	int VISIBILIDAD = 16;
+	int VISIBILIDAD = 15;
 
 	/**
 	 * The meta object id for the '{@link diagrama_concreta.TipoRetorno <em>Tipo Retorno</em>}' enum.
@@ -882,7 +854,7 @@ public interface Diagrama_concretaPackage extends EPackage {
 	 * @see diagrama_concreta.impl.Diagrama_concretaPackageImpl#getTipoRetorno()
 	 * @generated
 	 */
-	int TIPO_RETORNO = 17;
+	int TIPO_RETORNO = 16;
 
 
 	/**
@@ -1124,6 +1096,17 @@ public interface Diagrama_concretaPackage extends EPackage {
 	EAttribute getTCDClase_Documentacion();
 
 	/**
+	 * Returns the meta object for the attribute '{@link diagrama_concreta.TCDClase#getRuta <em>Ruta</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ruta</em>'.
+	 * @see diagrama_concreta.TCDClase#getRuta()
+	 * @see #getTCDClase()
+	 * @generated
+	 */
+	EAttribute getTCDClase_Ruta();
+
+	/**
 	 * Returns the meta object for class '{@link diagrama_concreta.TCDRelacion <em>TCD Relacion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1154,6 +1137,60 @@ public interface Diagrama_concretaPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTCDRelacion_Target();
+
+	/**
+	 * Returns the meta object for class '{@link diagrama_concreta.TCDAgregacion <em>TCD Agregacion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>TCD Agregacion</em>'.
+	 * @see diagrama_concreta.TCDAgregacion
+	 * @generated
+	 */
+	EClass getTCDAgregacion();
+
+	/**
+	 * Returns the meta object for the attribute '{@link diagrama_concreta.TCDAgregacion#getNombreOrigen <em>Nombre Origen</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nombre Origen</em>'.
+	 * @see diagrama_concreta.TCDAgregacion#getNombreOrigen()
+	 * @see #getTCDAgregacion()
+	 * @generated
+	 */
+	EAttribute getTCDAgregacion_NombreOrigen();
+
+	/**
+	 * Returns the meta object for the attribute '{@link diagrama_concreta.TCDAgregacion#getNombreDestino <em>Nombre Destino</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nombre Destino</em>'.
+	 * @see diagrama_concreta.TCDAgregacion#getNombreDestino()
+	 * @see #getTCDAgregacion()
+	 * @generated
+	 */
+	EAttribute getTCDAgregacion_NombreDestino();
+
+	/**
+	 * Returns the meta object for the attribute '{@link diagrama_concreta.TCDAgregacion#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Multiplicidad Origen</em>'.
+	 * @see diagrama_concreta.TCDAgregacion#getMultiplicidadOrigen()
+	 * @see #getTCDAgregacion()
+	 * @generated
+	 */
+	EAttribute getTCDAgregacion_MultiplicidadOrigen();
+
+	/**
+	 * Returns the meta object for the attribute '{@link diagrama_concreta.TCDAgregacion#getMultiplicidadDestino <em>Multiplicidad Destino</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Multiplicidad Destino</em>'.
+	 * @see diagrama_concreta.TCDAgregacion#getMultiplicidadDestino()
+	 * @see #getTCDAgregacion()
+	 * @generated
+	 */
+	EAttribute getTCDAgregacion_MultiplicidadDestino();
 
 	/**
 	 * Returns the meta object for class '{@link diagrama_concreta.TCDAsociacion <em>TCD Asociacion</em>}'.
@@ -1339,60 +1376,6 @@ public interface Diagrama_concretaPackage extends EPackage {
 	EClass getTCDHerencia();
 
 	/**
-	 * Returns the meta object for class '{@link diagrama_concreta.TCDAgregacion <em>TCD Agregacion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>TCD Agregacion</em>'.
-	 * @see diagrama_concreta.TCDAgregacion
-	 * @generated
-	 */
-	EClass getTCDAgregacion();
-
-	/**
-	 * Returns the meta object for the attribute '{@link diagrama_concreta.TCDAgregacion#getNombreOrigen <em>Nombre Origen</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nombre Origen</em>'.
-	 * @see diagrama_concreta.TCDAgregacion#getNombreOrigen()
-	 * @see #getTCDAgregacion()
-	 * @generated
-	 */
-	EAttribute getTCDAgregacion_NombreOrigen();
-
-	/**
-	 * Returns the meta object for the attribute '{@link diagrama_concreta.TCDAgregacion#getNombreDestino <em>Nombre Destino</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nombre Destino</em>'.
-	 * @see diagrama_concreta.TCDAgregacion#getNombreDestino()
-	 * @see #getTCDAgregacion()
-	 * @generated
-	 */
-	EAttribute getTCDAgregacion_NombreDestino();
-
-	/**
-	 * Returns the meta object for the attribute '{@link diagrama_concreta.TCDAgregacion#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Multiplicidad Origen</em>'.
-	 * @see diagrama_concreta.TCDAgregacion#getMultiplicidadOrigen()
-	 * @see #getTCDAgregacion()
-	 * @generated
-	 */
-	EAttribute getTCDAgregacion_MultiplicidadOrigen();
-
-	/**
-	 * Returns the meta object for the attribute '{@link diagrama_concreta.TCDAgregacion#getMultiplicidadDestino <em>Multiplicidad Destino</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Multiplicidad Destino</em>'.
-	 * @see diagrama_concreta.TCDAgregacion#getMultiplicidadDestino()
-	 * @see #getTCDAgregacion()
-	 * @generated
-	 */
-	EAttribute getTCDAgregacion_MultiplicidadDestino();
-
-	/**
 	 * Returns the meta object for class '{@link diagrama_concreta.TCDAtributo <em>TCD Atributo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1468,15 +1451,15 @@ public interface Diagrama_concretaPackage extends EPackage {
 	EClass getTCDMetodo();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link diagrama_concreta.TCDMetodo#getListaParametros <em>Lista Parametros</em>}'.
+	 * Returns the meta object for the attribute list '{@link diagrama_concreta.TCDMetodo#getListaParametros <em>Lista Parametros</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Lista Parametros</em>'.
+	 * @return the meta object for the attribute list '<em>Lista Parametros</em>'.
 	 * @see diagrama_concreta.TCDMetodo#getListaParametros()
 	 * @see #getTCDMetodo()
 	 * @generated
 	 */
-	EReference getTCDMetodo_ListaParametros();
+	EAttribute getTCDMetodo_ListaParametros();
 
 	/**
 	 * Returns the meta object for the attribute '{@link diagrama_concreta.TCDMetodo#getNombre <em>Nombre</em>}'.
@@ -1521,38 +1504,6 @@ public interface Diagrama_concretaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTCDMetodo_Semantica();
-
-	/**
-	 * Returns the meta object for class '{@link diagrama_concreta.TCDParametro <em>TCD Parametro</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>TCD Parametro</em>'.
-	 * @see diagrama_concreta.TCDParametro
-	 * @generated
-	 */
-	EClass getTCDParametro();
-
-	/**
-	 * Returns the meta object for the attribute '{@link diagrama_concreta.TCDParametro#getNombre <em>Nombre</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nombre</em>'.
-	 * @see diagrama_concreta.TCDParametro#getNombre()
-	 * @see #getTCDParametro()
-	 * @generated
-	 */
-	EAttribute getTCDParametro_Nombre();
-
-	/**
-	 * Returns the meta object for the attribute '{@link diagrama_concreta.TCDParametro#getTipoDato <em>Tipo Dato</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Tipo Dato</em>'.
-	 * @see diagrama_concreta.TCDParametro#getTipoDato()
-	 * @see #getTCDParametro()
-	 * @generated
-	 */
-	EAttribute getTCDParametro_TipoDato();
 
 	/**
 	 * Returns the meta object for enum '{@link diagrama_concreta.Navegavilidad <em>Navegavilidad</em>}'.
@@ -1811,6 +1762,14 @@ public interface Diagrama_concretaPackage extends EPackage {
 		EAttribute TCD_CLASE__DOCUMENTACION = eINSTANCE.getTCDClase_Documentacion();
 
 		/**
+		 * The meta object literal for the '<em><b>Ruta</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TCD_CLASE__RUTA = eINSTANCE.getTCDClase_Ruta();
+
+		/**
 		 * The meta object literal for the '{@link diagrama_concreta.impl.TCDRelacionImpl <em>TCD Relacion</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1835,6 +1794,48 @@ public interface Diagrama_concretaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TCD_RELACION__TARGET = eINSTANCE.getTCDRelacion_Target();
+
+		/**
+		 * The meta object literal for the '{@link diagrama_concreta.impl.TCDAgregacionImpl <em>TCD Agregacion</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see diagrama_concreta.impl.TCDAgregacionImpl
+		 * @see diagrama_concreta.impl.Diagrama_concretaPackageImpl#getTCDAgregacion()
+		 * @generated
+		 */
+		EClass TCD_AGREGACION = eINSTANCE.getTCDAgregacion();
+
+		/**
+		 * The meta object literal for the '<em><b>Nombre Origen</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TCD_AGREGACION__NOMBRE_ORIGEN = eINSTANCE.getTCDAgregacion_NombreOrigen();
+
+		/**
+		 * The meta object literal for the '<em><b>Nombre Destino</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TCD_AGREGACION__NOMBRE_DESTINO = eINSTANCE.getTCDAgregacion_NombreDestino();
+
+		/**
+		 * The meta object literal for the '<em><b>Multiplicidad Origen</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TCD_AGREGACION__MULTIPLICIDAD_ORIGEN = eINSTANCE.getTCDAgregacion_MultiplicidadOrigen();
+
+		/**
+		 * The meta object literal for the '<em><b>Multiplicidad Destino</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TCD_AGREGACION__MULTIPLICIDAD_DESTINO = eINSTANCE.getTCDAgregacion_MultiplicidadDestino();
 
 		/**
 		 * The meta object literal for the '{@link diagrama_concreta.impl.TCDAsociacionImpl <em>TCD Asociacion</em>}' class.
@@ -1981,48 +1982,6 @@ public interface Diagrama_concretaPackage extends EPackage {
 		EClass TCD_HERENCIA = eINSTANCE.getTCDHerencia();
 
 		/**
-		 * The meta object literal for the '{@link diagrama_concreta.impl.TCDAgregacionImpl <em>TCD Agregacion</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see diagrama_concreta.impl.TCDAgregacionImpl
-		 * @see diagrama_concreta.impl.Diagrama_concretaPackageImpl#getTCDAgregacion()
-		 * @generated
-		 */
-		EClass TCD_AGREGACION = eINSTANCE.getTCDAgregacion();
-
-		/**
-		 * The meta object literal for the '<em><b>Nombre Origen</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TCD_AGREGACION__NOMBRE_ORIGEN = eINSTANCE.getTCDAgregacion_NombreOrigen();
-
-		/**
-		 * The meta object literal for the '<em><b>Nombre Destino</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TCD_AGREGACION__NOMBRE_DESTINO = eINSTANCE.getTCDAgregacion_NombreDestino();
-
-		/**
-		 * The meta object literal for the '<em><b>Multiplicidad Origen</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TCD_AGREGACION__MULTIPLICIDAD_ORIGEN = eINSTANCE.getTCDAgregacion_MultiplicidadOrigen();
-
-		/**
-		 * The meta object literal for the '<em><b>Multiplicidad Destino</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TCD_AGREGACION__MULTIPLICIDAD_DESTINO = eINSTANCE.getTCDAgregacion_MultiplicidadDestino();
-
-		/**
 		 * The meta object literal for the '{@link diagrama_concreta.impl.TCDAtributoImpl <em>TCD Atributo</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2083,12 +2042,12 @@ public interface Diagrama_concretaPackage extends EPackage {
 		EClass TCD_METODO = eINSTANCE.getTCDMetodo();
 
 		/**
-		 * The meta object literal for the '<em><b>Lista Parametros</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Lista Parametros</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TCD_METODO__LISTA_PARAMETROS = eINSTANCE.getTCDMetodo_ListaParametros();
+		EAttribute TCD_METODO__LISTA_PARAMETROS = eINSTANCE.getTCDMetodo_ListaParametros();
 
 		/**
 		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
@@ -2121,32 +2080,6 @@ public interface Diagrama_concretaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TCD_METODO__SEMANTICA = eINSTANCE.getTCDMetodo_Semantica();
-
-		/**
-		 * The meta object literal for the '{@link diagrama_concreta.impl.TCDParametroImpl <em>TCD Parametro</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see diagrama_concreta.impl.TCDParametroImpl
-		 * @see diagrama_concreta.impl.Diagrama_concretaPackageImpl#getTCDParametro()
-		 * @generated
-		 */
-		EClass TCD_PARAMETRO = eINSTANCE.getTCDParametro();
-
-		/**
-		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TCD_PARAMETRO__NOMBRE = eINSTANCE.getTCDParametro_Nombre();
-
-		/**
-		 * The meta object literal for the '<em><b>Tipo Dato</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TCD_PARAMETRO__TIPO_DATO = eINSTANCE.getTCDParametro_TipoDato();
 
 		/**
 		 * The meta object literal for the '{@link diagrama_concreta.Navegavilidad <em>Navegavilidad</em>}' enum.

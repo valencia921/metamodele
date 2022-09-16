@@ -37,7 +37,6 @@ public class Diagrama_concretaPaletteFactory {
 		paletteContainer.add(createTCDClase2CreationTool());
 		paletteContainer.add(createTCDMetodo3CreationTool());
 		paletteContainer.add(createTCDPaquete4CreationTool());
-		paletteContainer.add(createTCDParametro5CreationTool());
 		return paletteContainer;
 	}
 
@@ -114,17 +113,6 @@ public class Diagrama_concretaPaletteFactory {
 		entry.setSmallIcon(diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes
 				.getImageDescriptor(diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDPaquete_2002));
 		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	* @generated
-	*/
-	private ToolEntry createTCDParametro5CreationTool() {
-		ToolEntry entry = new ToolEntry(diagrama_concreta.diagram.part.Messages.TCDParametro5CreationTool_title,
-				diagrama_concreta.diagram.part.Messages.TCDParametro5CreationTool_desc, null, null) {
-		};
-		entry.setId("createTCDParametro5CreationTool"); //$NON-NLS-1$
 		return entry;
 	}
 

@@ -3,7 +3,6 @@
 package diagrama_concreta.impl;
 
 import diagrama_concreta.Diagrama_concretaPackage;
-import diagrama_concreta.Navegavilidad;
 import diagrama_concreta.TCDClase;
 import diagrama_concreta.TCDRelacion;
 

@@ -296,16 +296,6 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
-	public static String TCDParametro5CreationTool_title;
-
-	/**
-	* @generated
-	*/
-	public static String TCDParametro5CreationTool_desc;
-
-	/**
-	* @generated
-	*/
 	public static String TCDAgregacion1CreationTool_title;
 
 	/**

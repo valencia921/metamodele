@@ -19,36 +19,6 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum TipoRetorno implements Enumerator {
 	/**
-	 * The '<em><b>String</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #STRING_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	STRING(0, "string", "string"),
-
-	/**
-	 * The '<em><b>Number</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #NUMBER_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	NUMBER(1, "number", "number"),
-
-	/**
-	 * The '<em><b>Boolean</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #BOOLEAN_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	BOOLEAN(2, "boolean", "boolean"),
-
-	/**
 	 * The '<em><b>Undefined</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,52 +26,31 @@ public enum TipoRetorno implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	UNDEFINED(3, "undefined", "undefined");
-
-	/**
-	 * The '<em><b>String</b></em>' literal value.
+	UNDEFINED(0, "undefined", "undefined"), /**
+	 * The '<em><b>String</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>String</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #STRING
-	 * @model name="string"
+	 * @see #STRING_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int STRING_VALUE = 0;
-
-	/**
-	 * The '<em><b>Number</b></em>' literal value.
+	STRING(1, "string", "string"), /**
+	 * The '<em><b>Number</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Number</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #NUMBER
-	 * @model name="number"
+	 * @see #NUMBER_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int NUMBER_VALUE = 1;
-
-	/**
-	 * The '<em><b>Boolean</b></em>' literal value.
+	NUMBER(2, "number", "number"), /**
+	 * The '<em><b>Boolean</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Boolean</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #BOOLEAN
-	 * @model name="boolean"
+	 * @see #BOOLEAN_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int BOOLEAN_VALUE = 2;
+	BOOLEAN(3, "boolean", "boolean");
 
 	/**
 	 * The '<em><b>Undefined</b></em>' literal value.
@@ -116,7 +65,52 @@ public enum TipoRetorno implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int UNDEFINED_VALUE = 3;
+	public static final int UNDEFINED_VALUE = 0;
+
+	/**
+	 * The '<em><b>String</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>String</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #STRING
+	 * @model name="string"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int STRING_VALUE = 1;
+
+	/**
+	 * The '<em><b>Number</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Number</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #NUMBER
+	 * @model name="number"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int NUMBER_VALUE = 2;
+
+	/**
+	 * The '<em><b>Boolean</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Boolean</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #BOOLEAN
+	 * @model name="boolean"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int BOOLEAN_VALUE = 3;
 
 	/**
 	 * An array of all the '<em><b>Tipo Retorno</b></em>' enumerators.
@@ -126,10 +120,10 @@ public enum TipoRetorno implements Enumerator {
 	 */
 	private static final TipoRetorno[] VALUES_ARRAY =
 		new TipoRetorno[] {
+			UNDEFINED,
 			STRING,
 			NUMBER,
 			BOOLEAN,
-			UNDEFINED,
 		};
 
 	/**
@@ -186,10 +180,10 @@ public enum TipoRetorno implements Enumerator {
 	 */
 	public static TipoRetorno get(int value) {
 		switch (value) {
+			case UNDEFINED_VALUE: return UNDEFINED;
 			case STRING_VALUE: return STRING;
 			case NUMBER_VALUE: return NUMBER;
 			case BOOLEAN_VALUE: return BOOLEAN;
-			case UNDEFINED_VALUE: return UNDEFINED;
 		}
 		return null;
 	}

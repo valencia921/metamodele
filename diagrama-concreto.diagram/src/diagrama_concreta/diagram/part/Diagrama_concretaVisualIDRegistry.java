@@ -187,12 +187,12 @@ public class Diagrama_concretaVisualIDRegistry {
 			}
 			break;
 		case diagrama_concreta.diagram.edit.parts.TCDAtributoEditPart.VISUAL_ID:
-			if (diagrama_concreta.diagram.edit.parts.TCDAtributoNombreEditPart.VISUAL_ID == nodeVisualID) {
+			if (diagrama_concreta.diagram.edit.parts.TCDAtributoNombreTipoDatoEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
 		case diagrama_concreta.diagram.edit.parts.TCDMetodoEditPart.VISUAL_ID:
-			if (diagrama_concreta.diagram.edit.parts.TCDMetodoNombreEditPart.VISUAL_ID == nodeVisualID) {
+			if (diagrama_concreta.diagram.edit.parts.TCDMetodoNombreTipoRetornoEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -203,6 +203,26 @@ public class Diagrama_concretaVisualIDRegistry {
 			break;
 		case diagrama_concreta.diagram.edit.parts.TCDClaseTCDClaseListaMetodosCompartmentEditPart.VISUAL_ID:
 			if (diagrama_concreta.diagram.edit.parts.TCDMetodoEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart.VISUAL_ID:
+			if (diagrama_concreta.diagram.edit.parts.TCDAgregacionNombreOrigenEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case diagrama_concreta.diagram.edit.parts.TCDAsociacionEditPart.VISUAL_ID:
+			if (diagrama_concreta.diagram.edit.parts.TCDAsociacionNombreOrigenEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case diagrama_concreta.diagram.edit.parts.TCDComposicionEditPart.VISUAL_ID:
+			if (diagrama_concreta.diagram.edit.parts.TCDComposicionNombreOrigenEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case diagrama_concreta.diagram.edit.parts.TCDDependenciaEditPart.VISUAL_ID:
+			if (diagrama_concreta.diagram.edit.parts.TCDDependenciaNombreOrigenEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;

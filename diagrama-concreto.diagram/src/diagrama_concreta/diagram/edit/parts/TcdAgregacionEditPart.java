@@ -77,8 +77,8 @@ public class TCDAgregacionEditPart extends ConnectionNodeEditPart implements ITr
 		}
 
 		/**
-		* @generated
-		*/
+		 * @generated
+		 */
 		private RotatableDecoration createSourceDecoration() {
 			PolygonDecoration df = new PolygonDecoration();
 			df.setFill(true);
@@ -97,8 +97,8 @@ public class TCDAgregacionEditPart extends ConnectionNodeEditPart implements ITr
 	}
 
 	/**
-	* @generated
-	*/
+	 * @generated
+	 */
 	static final Color THIS_FORE = new Color(null, 39, 174, 96);
 
 }

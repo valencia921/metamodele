@@ -79,8 +79,8 @@ public class TCDComposicionEditPart extends ConnectionNodeEditPart implements IT
 		}
 
 		/**
-		* @generated
-		*/
+		 * @generated
+		 */
 		private RotatableDecoration createSourceDecoration() {
 			PolygonDecoration df = new PolygonDecoration();
 			df.setFill(true);
@@ -99,8 +99,8 @@ public class TCDComposicionEditPart extends ConnectionNodeEditPart implements IT
 	}
 
 	/**
-	* @generated
-	*/
+	 * @generated
+	 */
 	static final Color THIS_FORE = new Color(null, 0, 255, 193);
 
 }

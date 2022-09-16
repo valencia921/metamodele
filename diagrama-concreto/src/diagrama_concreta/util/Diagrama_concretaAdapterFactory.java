@@ -116,10 +116,6 @@ public class Diagrama_concretaAdapterFactory extends AdapterFactoryImpl {
 				return createTCDMetodoAdapter();
 			}
 			@Override
-			public Adapter caseTCDParametro(TCDParametro object) {
-				return createTCDParametroAdapter();
-			}
-			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -210,6 +206,20 @@ public class Diagrama_concretaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link diagrama_concreta.TCDAgregacion <em>TCD Agregacion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see diagrama_concreta.TCDAgregacion
+	 * @generated
+	 */
+	public Adapter createTCDAgregacionAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link diagrama_concreta.TCDAsociacion <em>TCD Asociacion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -266,20 +276,6 @@ public class Diagrama_concretaAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link diagrama_concreta.TCDAgregacion <em>TCD Agregacion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see diagrama_concreta.TCDAgregacion
-	 * @generated
-	 */
-	public Adapter createTCDAgregacionAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link diagrama_concreta.TCDAtributo <em>TCD Atributo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -304,20 +300,6 @@ public class Diagrama_concretaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTCDMetodoAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link diagrama_concreta.TCDParametro <em>TCD Parametro</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see diagrama_concreta.TCDParametro
-	 * @generated
-	 */
-	public Adapter createTCDParametroAdapter() {
 		return null;
 	}
 

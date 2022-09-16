@@ -59,7 +59,8 @@
     </descriptors>
     <descriptors name="TCDAtributoFigure">
       <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="TCDAtributoFigure">
-        <backgroundColor xsi:type="gmfgraph:RGBColor" red="166" green="255" blue="234"/>
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="215" green="255" blue="215"/>
+        <preferredSize dx="150" dy="16"/>
         <border xsi:type="gmfgraph:MarginBorder">
           <insets top="5" left="5" bottom="5" right="5"/>
         </border>
@@ -69,7 +70,8 @@
     </descriptors>
     <descriptors name="TCDMetodoFigure">
       <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="TCDMetodoFigure" lineKind="LINE_DOT">
-        <backgroundColor xsi:type="gmfgraph:RGBColor" red="166" green="255" blue="234"/>
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="255" green="253" blue="188"/>
+        <preferredSize dx="150" dy="16"/>
         <border xsi:type="gmfgraph:MarginBorder">
           <insets top="5" left="5" bottom="5" right="5"/>
         </border>
@@ -77,34 +79,37 @@
       </actualFigure>
       <accessors accessor="getFigureTCDMetodoLabelFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
     </descriptors>
-    <descriptors name="TCDParametroFigure">
-      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="TCDParametroFigure">
-        <border xsi:type="gmfgraph:MarginBorder">
-          <insets top="5" left="5" bottom="5" right="5"/>
-        </border>
-        <children xsi:type="gmfgraph:Label" name="TCDParametroLabelFigure" text="TCDParametro"/>
-      </actualFigure>
-      <accessors accessor="getFigureTCDParametroLabelFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
-    </descriptors>
     <descriptors name="TCDAgregacionFigure">
       <actualFigure xsi:type="gmfgraph:PolylineConnection" name="TCDAgregacionFigure" lineWidth="3" sourceDecoration="//@figures.0/@figures.0">
         <foregroundColor xsi:type="gmfgraph:RGBColor" red="39" green="174" blue="96"/>
       </actualFigure>
+    </descriptors>
+    <descriptors name="TCDAgregacionLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="TCDAgregacionLabelLabel" text="TCDAgregacion"/>
     </descriptors>
     <descriptors name="TCDAsociacionFigure">
       <actualFigure xsi:type="gmfgraph:PolylineConnection" name="TCDAsociacionFigure" lineWidth="3">
         <foregroundColor xsi:type="gmfgraph:RGBColor" green="62" blue="255"/>
       </actualFigure>
     </descriptors>
+    <descriptors name="TCDAsociacionLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="TCDAsociacionLabelLabel" text="TCDAsociacion"/>
+    </descriptors>
     <descriptors name="TCDComposicionFigure">
       <actualFigure xsi:type="gmfgraph:PolylineConnection" name="TCDComposicionFigure" lineWidth="3" lineKind="LINE_DASH" sourceDecoration="//@figures.0/@figures.1">
         <foregroundColor xsi:type="gmfgraph:RGBColor" green="255" blue="193"/>
       </actualFigure>
     </descriptors>
+    <descriptors name="TCDComposicionLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="TCDComposicionLabelLabel" text="TCDComposicion"/>
+    </descriptors>
     <descriptors name="TCDDependenciaFigure">
       <actualFigure xsi:type="gmfgraph:PolylineConnection" name="TCDDependenciaFigure" lineWidth="3" sourceDecoration="//@figures.0/@figures.2">
         <foregroundColor xsi:type="gmfgraph:RGBColor" red="255" green="15" blue="15"/>
       </actualFigure>
+    </descriptors>
+    <descriptors name="TCDDependenciaLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="TCDDependenciaLabelLabel" text="TCDDependencia"/>
     </descriptors>
     <descriptors name="TCDHerenciaFigure">
       <actualFigure xsi:type="gmfgraph:PolylineConnection" name="TCDHerenciaFigure" lineWidth="3" sourceDecoration="//@figures.0/@figures.3">
@@ -114,9 +119,16 @@
   </figures>
   <nodes name="TCDPaquete" figure="TCDPaqueteFigure"/>
   <nodes name="TCDClase" figure="TCDClaseFigure"/>
-  <nodes name="TCDAtributo" figure="TCDAtributoFigure"/>
-  <nodes name="TCDMetodo" figure="TCDMetodoFigure"/>
-  <nodes name="TCDParametro" figure="TCDParametroFigure"/>
+  <nodes name="TCDAtributo" figure="TCDAtributoFigure">
+    <facets xsi:type="gmfgraph:DefaultSizeFacet">
+      <defaultSize dx="150" dy="16"/>
+    </facets>
+  </nodes>
+  <nodes name="TCDMetodo" figure="TCDMetodoFigure">
+    <facets xsi:type="gmfgraph:DefaultSizeFacet">
+      <defaultSize dx="150" dy="16"/>
+    </facets>
+  </nodes>
   <connections name="TCDAgregacion" figure="TCDAgregacionFigure"/>
   <connections name="TCDAsociacion" figure="TCDAsociacionFigure"/>
   <connections name="TCDComposicion" figure="TCDComposicionFigure"/>
@@ -128,5 +140,8 @@
   <labels name="TCDClaseLabel" figure="TCDClaseFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
   <labels name="TCDAtributoLabel" figure="TCDAtributoFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
   <labels name="TCDMetodoLabel" figure="TCDMetodoFigure" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
-  <labels name="TCDParametroLabel" figure="TCDParametroFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+  <labels name="TCDAgregacionLabel" figure="TCDAgregacionLabelFigure" elementIcon="false"/>
+  <labels name="TCDAsociacionLabel" figure="TCDAsociacionLabelFigure" elementIcon="false"/>
+  <labels name="TCDComposicionLabel" figure="TCDComposicionLabelFigure" elementIcon="false"/>
+  <labels name="TCDDependenciaLabel" figure="TCDDependenciaLabelFigure" elementIcon="false"/>
 </gmfgraph:Canvas>

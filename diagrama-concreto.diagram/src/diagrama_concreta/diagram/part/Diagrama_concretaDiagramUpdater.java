@@ -259,6 +259,14 @@ public class Diagrama_concretaDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor> getTCDAgregacion_4005ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor> getTCDAsociacion_4001ContainedLinks(
 			View view) {
 		return Collections.emptyList();
@@ -284,14 +292,6 @@ public class Diagrama_concretaDiagramUpdater {
 	 * @generated
 	 */
 	public static List<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor> getTCDHerencia_4004ContainedLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor> getTCDAgregacion_4005ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -340,6 +340,14 @@ public class Diagrama_concretaDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor> getTCDAgregacion_4005IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor> getTCDAsociacion_4001IncomingLinks(
 			View view) {
 		return Collections.emptyList();
@@ -365,14 +373,6 @@ public class Diagrama_concretaDiagramUpdater {
 	 * @generated
 	 */
 	public static List<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor> getTCDHerencia_4004IncomingLinks(
-			View view) {
-		return Collections.emptyList();
-	}
-
-	/**
-	 * @generated
-	 */
-	public static List<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor> getTCDAgregacion_4005IncomingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -419,6 +419,14 @@ public class Diagrama_concretaDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor> getTCDAgregacion_4005OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor> getTCDAsociacion_4001OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
@@ -449,11 +457,28 @@ public class Diagrama_concretaDiagramUpdater {
 	}
 
 	/**
-	 * @generated
-	 */
-	public static List<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor> getTCDAgregacion_4005OutgoingLinks(
-			View view) {
-		return Collections.emptyList();
+	* @generated
+	*/
+	private static Collection<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor> getContainedTypeModelFacetLinks_TCDAgregacion_4005(
+			diagrama_concreta.TCDDiagramaClases container) {
+		LinkedList<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor> result = new LinkedList<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor>();
+		for (Iterator<?> links = container.getListaRelaciones().iterator(); links.hasNext();) {
+			EObject linkObject = (EObject) links.next();
+			if (false == linkObject instanceof diagrama_concreta.TCDAgregacion) {
+				continue;
+			}
+			diagrama_concreta.TCDAgregacion link = (diagrama_concreta.TCDAgregacion) linkObject;
+			if (diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart.VISUAL_ID != diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
+					.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			diagrama_concreta.TCDClase dst = link.getTarget();
+			diagrama_concreta.TCDClase src = link.getSource();
+			result.add(new diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor(src, dst, link,
+					diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDAgregacion_4005,
+					diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart.VISUAL_ID));
+		}
+		return result;
 	}
 
 	/**
@@ -557,24 +582,25 @@ public class Diagrama_concretaDiagramUpdater {
 	}
 
 	/**
-	* @generated
-	*/
-	private static Collection<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor> getContainedTypeModelFacetLinks_TCDAgregacion_4005(
-			diagrama_concreta.TCDDiagramaClases container) {
+	 * @generated
+	 */
+	private static Collection<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor> getIncomingTypeModelFacetLinks_TCDAgregacion_4005(
+			diagrama_concreta.TCDClase target, Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
 		LinkedList<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor> result = new LinkedList<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor>();
-		for (Iterator<?> links = container.getListaRelaciones().iterator(); links.hasNext();) {
-			EObject linkObject = (EObject) links.next();
-			if (false == linkObject instanceof diagrama_concreta.TCDAgregacion) {
+		Collection<EStructuralFeature.Setting> settings = crossReferences.get(target);
+		for (EStructuralFeature.Setting setting : settings) {
+			if (setting.getEStructuralFeature() != diagrama_concreta.Diagrama_concretaPackage.eINSTANCE
+					.getTCDRelacion_Target()
+					|| false == setting.getEObject() instanceof diagrama_concreta.TCDAgregacion) {
 				continue;
 			}
-			diagrama_concreta.TCDAgregacion link = (diagrama_concreta.TCDAgregacion) linkObject;
+			diagrama_concreta.TCDAgregacion link = (diagrama_concreta.TCDAgregacion) setting.getEObject();
 			if (diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart.VISUAL_ID != diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
 					.getLinkWithClassVisualID(link)) {
 				continue;
 			}
-			diagrama_concreta.TCDClase dst = link.getTarget();
 			diagrama_concreta.TCDClase src = link.getSource();
-			result.add(new diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor(src, dst, link,
+			result.add(new diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor(src, target, link,
 					diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDAgregacion_4005,
 					diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart.VISUAL_ID));
 		}
@@ -686,25 +712,39 @@ public class Diagrama_concretaDiagramUpdater {
 	}
 
 	/**
-	 * @generated
-	 */
-	private static Collection<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor> getIncomingTypeModelFacetLinks_TCDAgregacion_4005(
-			diagrama_concreta.TCDClase target, Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
+	* @generated
+	*/
+	private static Collection<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor> getOutgoingTypeModelFacetLinks_TCDAgregacion_4005(
+			diagrama_concreta.TCDClase source) {
+		diagrama_concreta.TCDDiagramaClases container = null;
+		// Find container element for the link.
+		// Climb up by containment hierarchy starting from the source
+		// and return the first element that is instance of the container class.
+		for (EObject element = source; element != null && container == null; element = element.eContainer()) {
+			if (element instanceof diagrama_concreta.TCDDiagramaClases) {
+				container = (diagrama_concreta.TCDDiagramaClases) element;
+			}
+		}
+		if (container == null) {
+			return Collections.emptyList();
+		}
 		LinkedList<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor> result = new LinkedList<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor>();
-		Collection<EStructuralFeature.Setting> settings = crossReferences.get(target);
-		for (EStructuralFeature.Setting setting : settings) {
-			if (setting.getEStructuralFeature() != diagrama_concreta.Diagrama_concretaPackage.eINSTANCE
-					.getTCDRelacion_Target()
-					|| false == setting.getEObject() instanceof diagrama_concreta.TCDAgregacion) {
+		for (Iterator<?> links = container.getListaRelaciones().iterator(); links.hasNext();) {
+			EObject linkObject = (EObject) links.next();
+			if (false == linkObject instanceof diagrama_concreta.TCDAgregacion) {
 				continue;
 			}
-			diagrama_concreta.TCDAgregacion link = (diagrama_concreta.TCDAgregacion) setting.getEObject();
+			diagrama_concreta.TCDAgregacion link = (diagrama_concreta.TCDAgregacion) linkObject;
 			if (diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart.VISUAL_ID != diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
 					.getLinkWithClassVisualID(link)) {
 				continue;
 			}
+			diagrama_concreta.TCDClase dst = link.getTarget();
 			diagrama_concreta.TCDClase src = link.getSource();
-			result.add(new diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor(src, target, link,
+			if (src != source) {
+				continue;
+			}
+			result.add(new diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor(src, dst, link,
 					diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDAgregacion_4005,
 					diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart.VISUAL_ID));
 		}
@@ -867,46 +907,6 @@ public class Diagrama_concretaDiagramUpdater {
 			result.add(new diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor(src, dst, link,
 					diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDHerencia_4004,
 					diagrama_concreta.diagram.edit.parts.TCDHerenciaEditPart.VISUAL_ID));
-		}
-		return result;
-	}
-
-	/**
-	* @generated
-	*/
-	private static Collection<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor> getOutgoingTypeModelFacetLinks_TCDAgregacion_4005(
-			diagrama_concreta.TCDClase source) {
-		diagrama_concreta.TCDDiagramaClases container = null;
-		// Find container element for the link.
-		// Climb up by containment hierarchy starting from the source
-		// and return the first element that is instance of the container class.
-		for (EObject element = source; element != null && container == null; element = element.eContainer()) {
-			if (element instanceof diagrama_concreta.TCDDiagramaClases) {
-				container = (diagrama_concreta.TCDDiagramaClases) element;
-			}
-		}
-		if (container == null) {
-			return Collections.emptyList();
-		}
-		LinkedList<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor> result = new LinkedList<diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor>();
-		for (Iterator<?> links = container.getListaRelaciones().iterator(); links.hasNext();) {
-			EObject linkObject = (EObject) links.next();
-			if (false == linkObject instanceof diagrama_concreta.TCDAgregacion) {
-				continue;
-			}
-			diagrama_concreta.TCDAgregacion link = (diagrama_concreta.TCDAgregacion) linkObject;
-			if (diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart.VISUAL_ID != diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-					.getLinkWithClassVisualID(link)) {
-				continue;
-			}
-			diagrama_concreta.TCDClase dst = link.getTarget();
-			diagrama_concreta.TCDClase src = link.getSource();
-			if (src != source) {
-				continue;
-			}
-			result.add(new diagrama_concreta.diagram.part.Diagrama_concretaLinkDescriptor(src, dst, link,
-					diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDAgregacion_4005,
-					diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart.VISUAL_ID));
 		}
 		return result;
 	}

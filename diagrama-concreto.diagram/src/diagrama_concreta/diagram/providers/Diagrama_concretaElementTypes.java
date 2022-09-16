@@ -69,6 +69,11 @@ public class Diagrama_concretaElementTypes {
 	/**
 	* @generated
 	*/
+	public static final IElementType TCDAgregacion_4005 = getElementType(
+			"diagrama-concreto.diagram.TCDAgregacion_4005"); //$NON-NLS-1$
+	/**
+	* @generated
+	*/
 	public static final IElementType TCDAsociacion_4001 = getElementType(
 			"diagrama-concreto.diagram.TCDAsociacion_4001"); //$NON-NLS-1$
 	/**
@@ -85,11 +90,6 @@ public class Diagrama_concretaElementTypes {
 	* @generated
 	*/
 	public static final IElementType TCDHerencia_4004 = getElementType("diagrama-concreto.diagram.TCDHerencia_4004"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType TCDAgregacion_4005 = getElementType(
-			"diagrama-concreto.diagram.TCDAgregacion_4005"); //$NON-NLS-1$
 
 	/**
 	* @generated

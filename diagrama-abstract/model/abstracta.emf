@@ -5,28 +5,19 @@ package abstracta;
 class ModelFactory {
 	attr String nombre;
 	attr String ruta;
-<<<<<<< HEAD
 	val TcdDiagramaClases[*] listaDiagramas;
 }
 
 class TcdDiagramaClases {
-    val TcdClase[*] listaClases;
-    val TcdRelacion[*] listaRelaciones;
+    val TCDClase[*] listaClases;
+    val TCDRelacion[*] listaRelaciones;
     
     attr String nombre;
-}
-
-class TcdPaquete {
-    val TcdClase[*] listaClases;
-    val TcdPaquete[*] listapaquetes;
-=======
-	val TCDPaquete[*] listaPaquetes;
 }
 
 class TCDPaquete {
     val TCDClase[*] listaClases;
     val TCDPaquete[*] listapaquetes;
->>>>>>> diseño
     
     attr String nombre;
     attr String ruta;
@@ -42,6 +33,7 @@ class TCDClase {
     attr Visibilidad modificadorAcceso;
     attr boolean isAbstract;
     attr String documentacion;
+    attr String ruta;
 }
 
 class TCDAtributo {

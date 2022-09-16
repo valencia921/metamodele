@@ -23,25 +23,25 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see diagrama_concreta.Diagrama_concretaPackage#getTCDMetodo()
- * @model annotation="gmf.node label='nombre' border.style='dot' color='166,255,234'"
+ * @model annotation="gmf.node label='nombre, tipoRetorno' label.pattern='{0}: {1}' border.style='dot' color='255,253,188' size='150,16' size.maximum='200,16'"
  * @generated
  */
 public interface TCDMetodo extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Lista Parametros</b></em>' containment reference list.
-	 * The list contents are of type {@link diagrama_concreta.TCDParametro}.
+	 * Returns the value of the '<em><b>Lista Parametros</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Lista Parametros</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lista Parametros</em>' containment reference list.
+	 * @return the value of the '<em>Lista Parametros</em>' attribute list.
 	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDMetodo_ListaParametros()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
-	EList<TCDParametro> getListaParametros();
+	EList<String> getListaParametros();
 
 	/**
 	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.

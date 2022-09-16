@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see diagrama_concreta.Diagrama_concretaPackage#getTCDAtributo()
- * @model annotation="gmf.node label='nombre' color='166,255,234'"
+ * @model annotation="gmf.node label='nombre, tipoDato' color='215,255,215' label.pattern='{0}: {1}' size='150,16'"
  * @generated
  */
 public interface TCDAtributo extends EObject {

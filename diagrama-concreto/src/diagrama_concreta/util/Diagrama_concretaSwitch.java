@@ -143,12 +143,6 @@ public class Diagrama_concretaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Diagrama_concretaPackage.TCD_PARAMETRO: {
-				TCDParametro tcdParametro = (TCDParametro)theEObject;
-				T result = caseTCDParametro(tcdParametro);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -229,6 +223,21 @@ public class Diagrama_concretaSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>TCD Agregacion</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>TCD Agregacion</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTCDAgregacion(TCDAgregacion object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>TCD Asociacion</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -289,21 +298,6 @@ public class Diagrama_concretaSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>TCD Agregacion</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>TCD Agregacion</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTCDAgregacion(TCDAgregacion object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>TCD Atributo</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -330,21 +324,6 @@ public class Diagrama_concretaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTCDMetodo(TCDMetodo object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>TCD Parametro</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>TCD Parametro</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTCDParametro(TCDParametro object) {
 		return null;
 	}
 

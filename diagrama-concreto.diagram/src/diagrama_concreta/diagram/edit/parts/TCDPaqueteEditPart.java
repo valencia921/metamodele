@@ -305,8 +305,8 @@ public class TCDPaqueteEditPart extends ShapeNodeEditPart {
 	}
 
 	/**
-	* @generated
-	*/
+	 * @generated
+	 */
 	static final Color THIS_BACK = new Color(null, 255, 252, 142);
 
 }

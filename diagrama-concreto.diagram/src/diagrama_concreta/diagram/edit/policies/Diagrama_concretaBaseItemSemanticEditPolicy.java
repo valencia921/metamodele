@@ -309,6 +309,14 @@ public class Diagrama_concretaBaseItemSemanticEditPolicy extends SemanticEditPol
 		/**
 		 * @generated
 		 */
+		public boolean canCreateTCDAgregacion_4005(diagrama_concreta.TCDDiagramaClases container,
+				diagrama_concreta.TCDClase source, diagrama_concreta.TCDClase target) {
+			return canExistTCDAgregacion_4005(container, null, source, target);
+		}
+
+		/**
+		 * @generated
+		 */
 		public boolean canCreateTCDAsociacion_4001(diagrama_concreta.TCDDiagramaClases container,
 				diagrama_concreta.TCDClase source, diagrama_concreta.TCDClase target) {
 			return canExistTCDAsociacion_4001(container, null, source, target);
@@ -339,11 +347,12 @@ public class Diagrama_concretaBaseItemSemanticEditPolicy extends SemanticEditPol
 		}
 
 		/**
-		 * @generated
-		 */
-		public boolean canCreateTCDAgregacion_4005(diagrama_concreta.TCDDiagramaClases container,
-				diagrama_concreta.TCDClase source, diagrama_concreta.TCDClase target) {
-			return canExistTCDAgregacion_4005(container, null, source, target);
+		* @generated
+		*/
+		public boolean canExistTCDAgregacion_4005(diagrama_concreta.TCDDiagramaClases container,
+				diagrama_concreta.TCDAgregacion linkInstance, diagrama_concreta.TCDClase source,
+				diagrama_concreta.TCDClase target) {
+			return true;
 		}
 
 		/**
@@ -378,15 +387,6 @@ public class Diagrama_concretaBaseItemSemanticEditPolicy extends SemanticEditPol
 		*/
 		public boolean canExistTCDHerencia_4004(diagrama_concreta.TCDDiagramaClases container,
 				diagrama_concreta.TCDHerencia linkInstance, diagrama_concreta.TCDClase source,
-				diagrama_concreta.TCDClase target) {
-			return true;
-		}
-
-		/**
-		* @generated
-		*/
-		public boolean canExistTCDAgregacion_4005(diagrama_concreta.TCDDiagramaClases container,
-				diagrama_concreta.TCDAgregacion linkInstance, diagrama_concreta.TCDClase source,
 				diagrama_concreta.TCDClase target) {
 			return true;
 		}

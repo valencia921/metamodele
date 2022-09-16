@@ -26,7 +26,7 @@ public enum TipoDato implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	STRING(0, "string", "string"),
+	STRING(0, "String", "String"),
 
 	/**
 	 * The '<em><b>Number</b></em>' literal object.
@@ -36,7 +36,7 @@ public enum TipoDato implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	NUMBER(1, "number", "number"),
+	NUMBER(1, "Number", "Number"),
 
 	/**
 	 * The '<em><b>Boolean</b></em>' literal object.
@@ -46,9 +46,17 @@ public enum TipoDato implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BOOLEAN(2, "boolean", "boolean"),
+	BOOLEAN(2, "Boolean", "Boolean"),
 
 	/**
+	 * The '<em><b>Array</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ARRAY_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ARRAY(3, "Array", "Array"), /**
 	 * The '<em><b>Undefined</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,7 +64,7 @@ public enum TipoDato implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	UNDEFINED(3, "undefined", "undefined"),
+	UNDEFINED(4, "undefined", "undefined"),
 
 	/**
 	 * The '<em><b>Null</b></em>' literal object.
@@ -66,7 +74,7 @@ public enum TipoDato implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	NULL(4, "null", "null");
+	NULL(5, "null", "null");
 
 	/**
 	 * The '<em><b>String</b></em>' literal value.
@@ -77,7 +85,7 @@ public enum TipoDato implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #STRING
-	 * @model name="string"
+	 * @model name="String"
 	 * @generated
 	 * @ordered
 	 */
@@ -92,7 +100,7 @@ public enum TipoDato implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #NUMBER
-	 * @model name="number"
+	 * @model name="Number"
 	 * @generated
 	 * @ordered
 	 */
@@ -107,11 +115,26 @@ public enum TipoDato implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #BOOLEAN
-	 * @model name="boolean"
+	 * @model name="Boolean"
 	 * @generated
 	 * @ordered
 	 */
 	public static final int BOOLEAN_VALUE = 2;
+
+	/**
+	 * The '<em><b>Array</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Array</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #ARRAY
+	 * @model name="Array"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ARRAY_VALUE = 3;
 
 	/**
 	 * The '<em><b>Undefined</b></em>' literal value.
@@ -126,7 +149,7 @@ public enum TipoDato implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int UNDEFINED_VALUE = 3;
+	public static final int UNDEFINED_VALUE = 4;
 
 	/**
 	 * The '<em><b>Null</b></em>' literal value.
@@ -141,7 +164,7 @@ public enum TipoDato implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int NULL_VALUE = 4;
+	public static final int NULL_VALUE = 5;
 
 	/**
 	 * An array of all the '<em><b>Tipo Dato</b></em>' enumerators.
@@ -154,6 +177,7 @@ public enum TipoDato implements Enumerator {
 			STRING,
 			NUMBER,
 			BOOLEAN,
+			ARRAY,
 			UNDEFINED,
 			NULL,
 		};
@@ -215,6 +239,7 @@ public enum TipoDato implements Enumerator {
 			case STRING_VALUE: return STRING;
 			case NUMBER_VALUE: return NUMBER;
 			case BOOLEAN_VALUE: return BOOLEAN;
+			case ARRAY_VALUE: return ARRAY;
 			case UNDEFINED_VALUE: return UNDEFINED;
 			case NULL_VALUE: return NULL;
 		}

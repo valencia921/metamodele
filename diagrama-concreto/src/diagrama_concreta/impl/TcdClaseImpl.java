@@ -39,6 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link diagrama_concreta.impl.TCDClaseImpl#getModificadorAcceso <em>Modificador Acceso</em>}</li>
  *   <li>{@link diagrama_concreta.impl.TCDClaseImpl#isIsAbstract <em>Is Abstract</em>}</li>
  *   <li>{@link diagrama_concreta.impl.TCDClaseImpl#getDocumentacion <em>Documentacion</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDClaseImpl#getRuta <em>Ruta</em>}</li>
  * </ul>
  *
  * @generated
@@ -163,6 +164,26 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 	 * @ordered
 	 */
 	protected String documentacion = DOCUMENTACION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getRuta() <em>Ruta</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRuta()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String RUTA_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRuta() <em>Ruta</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRuta()
+	 * @generated
+	 * @ordered
+	 */
+	protected String ruta = RUTA_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -317,6 +338,27 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getRuta() {
+		return ruta;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRuta(String newRuta) {
+		String oldRuta = ruta;
+		ruta = newRuta;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Diagrama_concretaPackage.TCD_CLASE__RUTA, oldRuta, ruta));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -350,6 +392,8 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 				return isIsAbstract();
 			case Diagrama_concretaPackage.TCD_CLASE__DOCUMENTACION:
 				return getDocumentacion();
+			case Diagrama_concretaPackage.TCD_CLASE__RUTA:
+				return getRuta();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -386,6 +430,9 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 			case Diagrama_concretaPackage.TCD_CLASE__DOCUMENTACION:
 				setDocumentacion((String)newValue);
 				return;
+			case Diagrama_concretaPackage.TCD_CLASE__RUTA:
+				setRuta((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -419,6 +466,9 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 			case Diagrama_concretaPackage.TCD_CLASE__DOCUMENTACION:
 				setDocumentacion(DOCUMENTACION_EDEFAULT);
 				return;
+			case Diagrama_concretaPackage.TCD_CLASE__RUTA:
+				setRuta(RUTA_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -445,6 +495,8 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 				return isAbstract != IS_ABSTRACT_EDEFAULT;
 			case Diagrama_concretaPackage.TCD_CLASE__DOCUMENTACION:
 				return DOCUMENTACION_EDEFAULT == null ? documentacion != null : !DOCUMENTACION_EDEFAULT.equals(documentacion);
+			case Diagrama_concretaPackage.TCD_CLASE__RUTA:
+				return RUTA_EDEFAULT == null ? ruta != null : !RUTA_EDEFAULT.equals(ruta);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -469,6 +521,8 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 		result.append(isAbstract);
 		result.append(", documentacion: ");
 		result.append(documentacion);
+		result.append(", ruta: ");
+		result.append(ruta);
 		result.append(')');
 		return result.toString();
 	}

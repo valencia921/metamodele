@@ -77,8 +77,8 @@ public class TCDHerenciaEditPart extends ConnectionNodeEditPart implements ITree
 		}
 
 		/**
-		* @generated
-		*/
+		 * @generated
+		 */
 		private RotatableDecoration createSourceDecoration() {
 			PolygonDecoration df = new PolygonDecoration();
 			df.setFill(true);
@@ -96,8 +96,8 @@ public class TCDHerenciaEditPart extends ConnectionNodeEditPart implements ITree
 	}
 
 	/**
-	* @generated
-	*/
+	 * @generated
+	 */
 	static final Color THIS_FORE = new Color(null, 4, 255, 0);
 
 }

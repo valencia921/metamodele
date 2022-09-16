@@ -33,11 +33,16 @@
           <domainMetaElement
               href="concreta.ecore#//TCDAtributo"/>
           <labelMappings
-              xsi:type="gmfmap:FeatureLabelMapping">
+              xsi:type="gmfmap:FeatureLabelMapping"
+              viewPattern="{0}: {1}"
+              editorPattern="{0}: {1}"
+              editPattern="{0}: {1}">
             <diagramLabel
                 href="concreta.gmfgraph#TCDAtributoLabel"/>
             <features
                 href="concreta.ecore#//TCDAtributo/nombre"/>
+            <features
+                href="concreta.ecore#//TCDAtributo/tipoDato"/>
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
@@ -54,11 +59,16 @@
           <domainMetaElement
               href="concreta.ecore#//TCDMetodo"/>
           <labelMappings
-              xsi:type="gmfmap:FeatureLabelMapping">
+              xsi:type="gmfmap:FeatureLabelMapping"
+              viewPattern="{0}: {1}"
+              editorPattern="{0}: {1}"
+              editPattern="{0}: {1}">
             <diagramLabel
                 href="concreta.gmfgraph#TCDMetodoLabel"/>
             <features
                 href="concreta.ecore#//TCDMetodo/nombre"/>
+            <features
+                href="concreta.ecore#//TCDMetodo/tipoRetorno"/>
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
@@ -102,6 +112,13 @@
   <links>
     <domainMetaElement
         href="concreta.ecore#//TCDAgregacion"/>
+    <labelMappings
+        xsi:type="gmfmap:FeatureLabelMapping">
+      <diagramLabel
+          href="concreta.gmfgraph#TCDAgregacionLabel"/>
+      <features
+          href="concreta.ecore#//TCDAgregacion/nombreOrigen"/>
+    </labelMappings>
     <containmentFeature
         href="concreta.ecore#//TCDDiagramaClases/listaRelaciones"/>
     <tool
@@ -119,6 +136,13 @@
   <links>
     <domainMetaElement
         href="concreta.ecore#//TCDAsociacion"/>
+    <labelMappings
+        xsi:type="gmfmap:FeatureLabelMapping">
+      <diagramLabel
+          href="concreta.gmfgraph#TCDAsociacionLabel"/>
+      <features
+          href="concreta.ecore#//TCDAsociacion/nombreOrigen"/>
+    </labelMappings>
     <containmentFeature
         href="concreta.ecore#//TCDDiagramaClases/listaRelaciones"/>
     <tool
@@ -136,6 +160,13 @@
   <links>
     <domainMetaElement
         href="concreta.ecore#//TCDComposicion"/>
+    <labelMappings
+        xsi:type="gmfmap:FeatureLabelMapping">
+      <diagramLabel
+          href="concreta.gmfgraph#TCDComposicionLabel"/>
+      <features
+          href="concreta.ecore#//TCDComposicion/nombreOrigen"/>
+    </labelMappings>
     <containmentFeature
         href="concreta.ecore#//TCDDiagramaClases/listaRelaciones"/>
     <tool
@@ -153,6 +184,13 @@
   <links>
     <domainMetaElement
         href="concreta.ecore#//TCDDependencia"/>
+    <labelMappings
+        xsi:type="gmfmap:FeatureLabelMapping">
+      <diagramLabel
+          href="concreta.gmfgraph#TCDDependenciaLabel"/>
+      <features
+          href="concreta.ecore#//TCDDependencia/nombreOrigen"/>
+    </labelMappings>
     <containmentFeature
         href="concreta.ecore#//TCDDiagramaClases/listaRelaciones"/>
     <tool

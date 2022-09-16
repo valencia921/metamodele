@@ -10,38 +10,42 @@
     <childNodes visualID="3001" editPartClassName="TCDAtributoEditPart" itemSemanticEditPolicyClassName="TCDAtributoItemSemanticEditPolicy" canonicalEditPolicyClassName="TCDAtributoCanonicalEditPolicy" graphicalNodeEditPolicyClassName="TCDAtributoGraphicalNodeEditPolicy" createCommandClassName="TCDAtributoCreateCommand" containers="//@diagram/@compartments.0">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="TCDAtributoEditHelper"/>
-      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="TCDAtributoFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TCDAtributoFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureTCDAtributoLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TCDAtributoFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;&#x9;this.setBackgroundColor(THIS_BACK&#xA;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureTCDAtributoLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureTCDAtributoLabelFigure.setText(&quot;TCDAtributo&quot;);&#xA;&#xA;this.add(fFigureTCDAtributoLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureTCDAtributoLabelFigure() {&#xA;&#x9;&#x9;return fFigureTCDAtributoLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_BACK = new org.eclipse.swt.graphics.Color(null, 166, 255, 234);&#xA;&#xA;">
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="TCDAtributoFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TCDAtributoFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureTCDAtributoLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TCDAtributoFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;&#x9;this.setBackgroundColor(THIS_BACK&#xA;);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(150)&#xA;, getMapMode().DPtoLP(16)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureTCDAtributoLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureTCDAtributoLabelFigure.setText(&quot;TCDAtributo&quot;);&#xA;&#xA;this.add(fFigureTCDAtributoLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureTCDAtributoLabelFigure() {&#xA;&#x9;&#x9;return fFigureTCDAtributoLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_BACK = new org.eclipse.swt.graphics.Color(null, 215, 255, 215);&#xA;&#xA;">
         <attributes xsi:type="gmfgen:StyleAttributes" fixedBackground="true"/>
+        <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="150" height="16"/>
       </viewmap>
       <modelFacet>
         <metaClass href="concreta.genmodel#//diagrama_concreta/TCDAtributo"/>
         <containmentMetaFeature href="concreta.genmodel#//diagrama_concreta/TCDClase/listaAtributos"/>
         <childMetaFeature href="concreta.genmodel#//diagrama_concreta/TCDClase/listaAtributos"/>
       </modelFacet>
-      <labels visualID="5001" editPartClassName="TCDAtributoNombreEditPart" itemSemanticEditPolicyClassName="TCDAtributoNombreItemSemanticEditPolicy" elementIcon="true">
+      <labels visualID="5001" editPartClassName="TCDAtributoNombreTipoDatoEditPart" itemSemanticEditPolicyClassName="TCDAtributoNombreTipoDatoItemSemanticEditPolicy" elementIcon="true">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureTCDAtributoLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
-        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0" viewPattern="{0}: {1}" editorPattern="{0}: {1}" editPattern="{0}: {1}">
           <metaFeatures href="concreta.genmodel#//diagrama_concreta/TCDAtributo/nombre"/>
+          <metaFeatures href="concreta.genmodel#//diagrama_concreta/TCDAtributo/tipoDato"/>
         </modelFacet>
       </labels>
     </childNodes>
     <childNodes visualID="3002" editPartClassName="TCDMetodoEditPart" itemSemanticEditPolicyClassName="TCDMetodoItemSemanticEditPolicy" canonicalEditPolicyClassName="TCDMetodoCanonicalEditPolicy" graphicalNodeEditPolicyClassName="TCDMetodoGraphicalNodeEditPolicy" createCommandClassName="TCDMetodoCreateCommand" containers="//@diagram/@compartments.1">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="TCDMetodoEditHelper"/>
-      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="TCDMetodoFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TCDMetodoFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureTCDMetodoLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TCDMetodoFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setLineStyle(org.eclipse.draw2d.Graphics.LINE_DOT);&#xA;&#x9;this.setBackgroundColor(THIS_BACK&#xA;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureTCDMetodoLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureTCDMetodoLabelFigure.setText(&quot;TCDMetodo&quot;);&#xA;&#xA;this.add(fFigureTCDMetodoLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureTCDMetodoLabelFigure() {&#xA;&#x9;&#x9;return fFigureTCDMetodoLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_BACK = new org.eclipse.swt.graphics.Color(null, 166, 255, 234);&#xA;&#xA;">
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="TCDMetodoFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TCDMetodoFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureTCDMetodoLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TCDMetodoFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setLineStyle(org.eclipse.draw2d.Graphics.LINE_DOT);&#xA;&#x9;this.setBackgroundColor(THIS_BACK&#xA;);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(150)&#xA;, getMapMode().DPtoLP(16)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureTCDMetodoLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureTCDMetodoLabelFigure.setText(&quot;TCDMetodo&quot;);&#xA;&#xA;this.add(fFigureTCDMetodoLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureTCDMetodoLabelFigure() {&#xA;&#x9;&#x9;return fFigureTCDMetodoLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_BACK = new org.eclipse.swt.graphics.Color(null, 255, 253, 188);&#xA;&#xA;">
         <attributes xsi:type="gmfgen:StyleAttributes" fixedBackground="true"/>
+        <attributes xsi:type="gmfgen:DefaultSizeAttributes" width="150" height="16"/>
       </viewmap>
       <modelFacet>
         <metaClass href="concreta.genmodel#//diagrama_concreta/TCDMetodo"/>
         <containmentMetaFeature href="concreta.genmodel#//diagrama_concreta/TCDClase/listaMetodos"/>
         <childMetaFeature href="concreta.genmodel#//diagrama_concreta/TCDClase/listaMetodos"/>
       </modelFacet>
-      <labels visualID="5002" editPartClassName="TCDMetodoNombreEditPart" itemSemanticEditPolicyClassName="TCDMetodoNombreItemSemanticEditPolicy" elementIcon="true">
+      <labels visualID="5002" editPartClassName="TCDMetodoNombreTipoRetornoEditPart" itemSemanticEditPolicyClassName="TCDMetodoNombreTipoRetornoItemSemanticEditPolicy" elementIcon="true">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureTCDMetodoLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
-        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0" viewPattern="{0}: {1}" editorPattern="{0}: {1}" editPattern="{0}: {1}">
           <metaFeatures href="concreta.genmodel#//diagrama_concreta/TCDMetodo/nombre"/>
+          <metaFeatures href="concreta.genmodel#//diagrama_concreta/TCDMetodo/tipoRetorno"/>
         </modelFacet>
       </labels>
     </childNodes>
@@ -97,6 +101,15 @@
         <sourceMetaFeature href="concreta.genmodel#//diagrama_concreta/TCDRelacion/source"/>
         <targetMetaFeature href="concreta.genmodel#//diagrama_concreta/TCDRelacion/target"/>
       </modelFacet>
+      <labels visualID="6001" editPartClassName="TCDAgregacionNombreOrigenEditPart" itemSemanticEditPolicyClassName="TCDAgregacionNombreOrigenItemSemanticEditPolicy">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:InnerClassViewmap" className="TCDAgregacionLabelFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TCDAgregacionLabelFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TCDAgregacionLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;TCDAgregacion&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+          <attributes xsi:type="gmfgen:LabelOffsetAttributes" y="40"/>
+        </viewmap>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="concreta.genmodel#//diagrama_concreta/TCDAgregacion/nombreOrigen"/>
+        </modelFacet>
+      </labels>
     </links>
     <links visualID="4001" editPartClassName="TCDAsociacionEditPart" itemSemanticEditPolicyClassName="TCDAsociacionItemSemanticEditPolicy" createCommandClassName="TCDAsociacionCreateCommand" reorientCommandClassName="TCDAsociacionReorientCommand">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
@@ -111,6 +124,15 @@
         <sourceMetaFeature href="concreta.genmodel#//diagrama_concreta/TCDRelacion/source"/>
         <targetMetaFeature href="concreta.genmodel#//diagrama_concreta/TCDRelacion/target"/>
       </modelFacet>
+      <labels visualID="6002" editPartClassName="TCDAsociacionNombreOrigenEditPart" itemSemanticEditPolicyClassName="TCDAsociacionNombreOrigenItemSemanticEditPolicy">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:InnerClassViewmap" className="TCDAsociacionLabelFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TCDAsociacionLabelFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TCDAsociacionLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;TCDAsociacion&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+          <attributes xsi:type="gmfgen:LabelOffsetAttributes" y="40"/>
+        </viewmap>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="concreta.genmodel#//diagrama_concreta/TCDAsociacion/nombreOrigen"/>
+        </modelFacet>
+      </labels>
     </links>
     <links visualID="4002" editPartClassName="TCDComposicionEditPart" itemSemanticEditPolicyClassName="TCDComposicionItemSemanticEditPolicy" createCommandClassName="TCDComposicionCreateCommand" reorientCommandClassName="TCDComposicionReorientCommand">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
@@ -125,6 +147,15 @@
         <sourceMetaFeature href="concreta.genmodel#//diagrama_concreta/TCDRelacion/source"/>
         <targetMetaFeature href="concreta.genmodel#//diagrama_concreta/TCDRelacion/target"/>
       </modelFacet>
+      <labels visualID="6003" editPartClassName="TCDComposicionNombreOrigenEditPart" itemSemanticEditPolicyClassName="TCDComposicionNombreOrigenItemSemanticEditPolicy">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:InnerClassViewmap" className="TCDComposicionLabelFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TCDComposicionLabelFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TCDComposicionLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;TCDComposicion&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+          <attributes xsi:type="gmfgen:LabelOffsetAttributes" y="40"/>
+        </viewmap>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="concreta.genmodel#//diagrama_concreta/TCDComposicion/nombreOrigen"/>
+        </modelFacet>
+      </labels>
     </links>
     <links visualID="4003" editPartClassName="TCDDependenciaEditPart" itemSemanticEditPolicyClassName="TCDDependenciaItemSemanticEditPolicy" createCommandClassName="TCDDependenciaCreateCommand" reorientCommandClassName="TCDDependenciaReorientCommand">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
@@ -139,6 +170,15 @@
         <sourceMetaFeature href="concreta.genmodel#//diagrama_concreta/TCDRelacion/source"/>
         <targetMetaFeature href="concreta.genmodel#//diagrama_concreta/TCDRelacion/target"/>
       </modelFacet>
+      <labels visualID="6004" editPartClassName="TCDDependenciaNombreOrigenEditPart" itemSemanticEditPolicyClassName="TCDDependenciaNombreOrigenItemSemanticEditPolicy">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:InnerClassViewmap" className="TCDDependenciaLabelFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TCDDependenciaLabelFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TCDDependenciaLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;TCDDependencia&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+          <attributes xsi:type="gmfgen:LabelOffsetAttributes" y="40"/>
+        </viewmap>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="concreta.genmodel#//diagrama_concreta/TCDDependencia/nombreOrigen"/>
+        </modelFacet>
+      </labels>
     </links>
     <links visualID="4004" editPartClassName="TCDHerenciaEditPart" itemSemanticEditPolicyClassName="TCDHerenciaItemSemanticEditPolicy" createCommandClassName="TCDHerenciaCreateCommand" reorientCommandClassName="TCDHerenciaReorientCommand">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
@@ -168,7 +208,6 @@
         <entries xsi:type="gmfgen:ToolEntry" title="TCDClase" description="Create new TCDClase" genNodes="//@diagram/@topLevelNodes.0"/>
         <entries xsi:type="gmfgen:ToolEntry" title="TCDMetodo" description="Create new TCDMetodo" genNodes="//@diagram/@childNodes.1"/>
         <entries xsi:type="gmfgen:ToolEntry" title="TCDPaquete" description="Create new TCDPaquete" genNodes="//@diagram/@topLevelNodes.1"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="TCDParametro" description="Create new TCDParametro"/>
       </groups>
       <groups title="Connections" collapse="true">
         <entries xsi:type="gmfgen:ToolEntry" title="TCDAgregacion" description="Create new TCDAgregacion" genLinks="//@diagram/@links.0"/>
@@ -237,7 +276,7 @@
   </propertySheet>
   <domainGenModel href="concreta.genmodel#/"/>
   <labelParsers extensibleViaService="true">
-    <implementations xsi:type="gmfgen:PredefinedParser" uses="//@diagram/@childNodes.0/@labels.0/@modelFacet //@diagram/@childNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet"/>
+    <implementations xsi:type="gmfgen:PredefinedParser" uses="//@diagram/@childNodes.0/@labels.0/@modelFacet //@diagram/@childNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@links.0/@labels.0/@modelFacet //@diagram/@links.1/@labels.0/@modelFacet //@diagram/@links.2/@labels.0/@modelFacet //@diagram/@links.3/@labels.0/@modelFacet"/>
   </labelParsers>
   <contextMenus context="//@diagram">
     <items xsi:type="gmfgen:LoadResourceAction"/>

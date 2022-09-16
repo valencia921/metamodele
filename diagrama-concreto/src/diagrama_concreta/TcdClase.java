@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link diagrama_concreta.TCDClase#getModificadorAcceso <em>Modificador Acceso</em>}</li>
  *   <li>{@link diagrama_concreta.TCDClase#isIsAbstract <em>Is Abstract</em>}</li>
  *   <li>{@link diagrama_concreta.TCDClase#getDocumentacion <em>Documentacion</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDClase#getRuta <em>Ruta</em>}</li>
  * </ul>
  *
  * @see diagrama_concreta.Diagrama_concretaPackage#getTCDClase()
@@ -193,5 +194,31 @@ public interface TCDClase extends EObject {
 	 * @generated
 	 */
 	void setDocumentacion(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Ruta</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Ruta</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Ruta</em>' attribute.
+	 * @see #setRuta(String)
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDClase_Ruta()
+	 * @model
+	 * @generated
+	 */
+	String getRuta();
+
+	/**
+	 * Sets the value of the '{@link diagrama_concreta.TCDClase#getRuta <em>Ruta</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Ruta</em>' attribute.
+	 * @see #getRuta()
+	 * @generated
+	 */
+	void setRuta(String value);
 
 } // TCDClase
