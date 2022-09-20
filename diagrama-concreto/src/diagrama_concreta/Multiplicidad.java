@@ -19,104 +19,104 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum Multiplicidad implements Enumerator {
 	/**
-	 * The '<em><b>Uno</b></em>' literal object.
+	 * The '<em><b>UNO</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #UNO_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	UNO(0, "uno", "uno"),
+	UNO(0, "UNO", "UNO"),
 
 	/**
-	 * The '<em><b>Uno cero</b></em>' literal object.
+	 * The '<em><b>CERO UNO</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #UNO_CERO_VALUE
+	 * @see #CERO_UNO_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	UNO_CERO(1, "uno_cero", "uno_cero"),
+	CERO_UNO(1, "CERO_UNO", "CERO_UNO"),
 
 	/**
-	 * The '<em><b>Cero varios</b></em>' literal object.
+	 * The '<em><b>CERO MUCHOS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #CERO_VARIOS_VALUE
+	 * @see #CERO_MUCHOS_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	CERO_VARIOS(2, "cero_varios", "cero_varios"),
+	CERO_MUCHOS(2, "CERO_MUCHOS", "CERO_MUCHOS"),
 
 	/**
-	 * The '<em><b>Uno varios</b></em>' literal object.
+	 * The '<em><b>UNO MUCHOS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #UNO_VARIOS_VALUE
+	 * @see #UNO_MUCHOS_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	UNO_VARIOS(3, "uno_varios", "uno_varios");
+	UNO_MUCHOS(3, "UNO_MUCHOS", "UNO_MUCHOS");
 
 	/**
-	 * The '<em><b>Uno</b></em>' literal value.
+	 * The '<em><b>UNO</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Uno</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>UNO</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #UNO
-	 * @model name="uno"
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
 	public static final int UNO_VALUE = 0;
 
 	/**
-	 * The '<em><b>Uno cero</b></em>' literal value.
+	 * The '<em><b>CERO UNO</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Uno cero</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>CERO UNO</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #UNO_CERO
-	 * @model name="uno_cero"
+	 * @see #CERO_UNO
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int UNO_CERO_VALUE = 1;
+	public static final int CERO_UNO_VALUE = 1;
 
 	/**
-	 * The '<em><b>Cero varios</b></em>' literal value.
+	 * The '<em><b>CERO MUCHOS</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Cero varios</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>CERO MUCHOS</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #CERO_VARIOS
-	 * @model name="cero_varios"
+	 * @see #CERO_MUCHOS
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int CERO_VARIOS_VALUE = 2;
+	public static final int CERO_MUCHOS_VALUE = 2;
 
 	/**
-	 * The '<em><b>Uno varios</b></em>' literal value.
+	 * The '<em><b>UNO MUCHOS</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Uno varios</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>UNO MUCHOS</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #UNO_VARIOS
-	 * @model name="uno_varios"
+	 * @see #UNO_MUCHOS
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int UNO_VARIOS_VALUE = 3;
+	public static final int UNO_MUCHOS_VALUE = 3;
 
 	/**
 	 * An array of all the '<em><b>Multiplicidad</b></em>' enumerators.
@@ -127,9 +127,9 @@ public enum Multiplicidad implements Enumerator {
 	private static final Multiplicidad[] VALUES_ARRAY =
 		new Multiplicidad[] {
 			UNO,
-			UNO_CERO,
-			CERO_VARIOS,
-			UNO_VARIOS,
+			CERO_UNO,
+			CERO_MUCHOS,
+			UNO_MUCHOS,
 		};
 
 	/**
@@ -187,9 +187,9 @@ public enum Multiplicidad implements Enumerator {
 	public static Multiplicidad get(int value) {
 		switch (value) {
 			case UNO_VALUE: return UNO;
-			case UNO_CERO_VALUE: return UNO_CERO;
-			case CERO_VARIOS_VALUE: return CERO_VARIOS;
-			case UNO_VARIOS_VALUE: return UNO_VARIOS;
+			case CERO_UNO_VALUE: return CERO_UNO;
+			case CERO_MUCHOS_VALUE: return CERO_MUCHOS;
+			case UNO_MUCHOS_VALUE: return UNO_MUCHOS;
 		}
 		return null;
 	}

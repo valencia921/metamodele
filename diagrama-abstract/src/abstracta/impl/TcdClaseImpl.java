@@ -7,7 +7,6 @@ import abstracta.TCDAtributo;
 import abstracta.TCDClase;
 import abstracta.TCDMetodo;
 import abstracta.TCDRelacion;
-import abstracta.Visibilidad;
 
 import java.util.Collection;
 
@@ -38,9 +37,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link abstracta.impl.TCDClaseImpl#getListaRelaciones <em>Lista Relaciones</em>}</li>
  *   <li>{@link abstracta.impl.TCDClaseImpl#getNombre <em>Nombre</em>}</li>
  *   <li>{@link abstracta.impl.TCDClaseImpl#getEstereotipo <em>Estereotipo</em>}</li>
- *   <li>{@link abstracta.impl.TCDClaseImpl#getModificadorAcceso <em>Modificador Acceso</em>}</li>
  *   <li>{@link abstracta.impl.TCDClaseImpl#isIsAbstract <em>Is Abstract</em>}</li>
  *   <li>{@link abstracta.impl.TCDClaseImpl#getDocumentacion <em>Documentacion</em>}</li>
+ *   <li>{@link abstracta.impl.TCDClaseImpl#getRuta <em>Ruta</em>}</li>
  * </ul>
  *
  * @generated
@@ -117,26 +116,6 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 	protected String estereotipo = ESTEREOTIPO_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getModificadorAcceso() <em>Modificador Acceso</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getModificadorAcceso()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Visibilidad MODIFICADOR_ACCESO_EDEFAULT = Visibilidad.PUBLIC;
-
-	/**
-	 * The cached value of the '{@link #getModificadorAcceso() <em>Modificador Acceso</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getModificadorAcceso()
-	 * @generated
-	 * @ordered
-	 */
-	protected Visibilidad modificadorAcceso = MODIFICADOR_ACCESO_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #isIsAbstract() <em>Is Abstract</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -175,6 +154,26 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 	 * @ordered
 	 */
 	protected String documentacion = DOCUMENTACION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getRuta() <em>Ruta</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRuta()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String RUTA_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRuta() <em>Ruta</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRuta()
+	 * @generated
+	 * @ordered
+	 */
+	protected String ruta = RUTA_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -278,27 +277,6 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Visibilidad getModificadorAcceso() {
-		return modificadorAcceso;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setModificadorAcceso(Visibilidad newModificadorAcceso) {
-		Visibilidad oldModificadorAcceso = modificadorAcceso;
-		modificadorAcceso = newModificadorAcceso == null ? MODIFICADOR_ACCESO_EDEFAULT : newModificadorAcceso;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AbstractaPackage.TCD_CLASE__MODIFICADOR_ACCESO, oldModificadorAcceso, modificadorAcceso));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean isIsAbstract() {
 		return isAbstract;
 	}
@@ -341,6 +319,27 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getRuta() {
+		return ruta;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRuta(String newRuta) {
+		String oldRuta = ruta;
+		ruta = newRuta;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AbstractaPackage.TCD_CLASE__RUTA, oldRuta, ruta));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -372,12 +371,12 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 				return getNombre();
 			case AbstractaPackage.TCD_CLASE__ESTEREOTIPO:
 				return getEstereotipo();
-			case AbstractaPackage.TCD_CLASE__MODIFICADOR_ACCESO:
-				return getModificadorAcceso();
 			case AbstractaPackage.TCD_CLASE__IS_ABSTRACT:
 				return isIsAbstract();
 			case AbstractaPackage.TCD_CLASE__DOCUMENTACION:
 				return getDocumentacion();
+			case AbstractaPackage.TCD_CLASE__RUTA:
+				return getRuta();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -409,14 +408,14 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 			case AbstractaPackage.TCD_CLASE__ESTEREOTIPO:
 				setEstereotipo((String)newValue);
 				return;
-			case AbstractaPackage.TCD_CLASE__MODIFICADOR_ACCESO:
-				setModificadorAcceso((Visibilidad)newValue);
-				return;
 			case AbstractaPackage.TCD_CLASE__IS_ABSTRACT:
 				setIsAbstract((Boolean)newValue);
 				return;
 			case AbstractaPackage.TCD_CLASE__DOCUMENTACION:
 				setDocumentacion((String)newValue);
+				return;
+			case AbstractaPackage.TCD_CLASE__RUTA:
+				setRuta((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -445,14 +444,14 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 			case AbstractaPackage.TCD_CLASE__ESTEREOTIPO:
 				setEstereotipo(ESTEREOTIPO_EDEFAULT);
 				return;
-			case AbstractaPackage.TCD_CLASE__MODIFICADOR_ACCESO:
-				setModificadorAcceso(MODIFICADOR_ACCESO_EDEFAULT);
-				return;
 			case AbstractaPackage.TCD_CLASE__IS_ABSTRACT:
 				setIsAbstract(IS_ABSTRACT_EDEFAULT);
 				return;
 			case AbstractaPackage.TCD_CLASE__DOCUMENTACION:
 				setDocumentacion(DOCUMENTACION_EDEFAULT);
+				return;
+			case AbstractaPackage.TCD_CLASE__RUTA:
+				setRuta(RUTA_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -476,12 +475,12 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
 			case AbstractaPackage.TCD_CLASE__ESTEREOTIPO:
 				return ESTEREOTIPO_EDEFAULT == null ? estereotipo != null : !ESTEREOTIPO_EDEFAULT.equals(estereotipo);
-			case AbstractaPackage.TCD_CLASE__MODIFICADOR_ACCESO:
-				return modificadorAcceso != MODIFICADOR_ACCESO_EDEFAULT;
 			case AbstractaPackage.TCD_CLASE__IS_ABSTRACT:
 				return isAbstract != IS_ABSTRACT_EDEFAULT;
 			case AbstractaPackage.TCD_CLASE__DOCUMENTACION:
 				return DOCUMENTACION_EDEFAULT == null ? documentacion != null : !DOCUMENTACION_EDEFAULT.equals(documentacion);
+			case AbstractaPackage.TCD_CLASE__RUTA:
+				return RUTA_EDEFAULT == null ? ruta != null : !RUTA_EDEFAULT.equals(ruta);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -500,12 +499,12 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 		result.append(nombre);
 		result.append(", estereotipo: ");
 		result.append(estereotipo);
-		result.append(", modificadorAcceso: ");
-		result.append(modificadorAcceso);
 		result.append(", isAbstract: ");
 		result.append(isAbstract);
 		result.append(", documentacion: ");
 		result.append(documentacion);
+		result.append(", ruta: ");
+		result.append(ruta);
 		result.append(')');
 		return result.toString();
 	}

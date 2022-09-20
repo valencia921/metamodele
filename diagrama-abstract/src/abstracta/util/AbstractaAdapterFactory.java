@@ -68,12 +68,12 @@ public class AbstractaAdapterFactory extends AdapterFactoryImpl {
 	protected AbstractaSwitch<Adapter> modelSwitch =
 		new AbstractaSwitch<Adapter>() {
 			@Override
-			public Adapter caseTCDPaquete(TCDPaquete object) {
-				return createTCDPaqueteAdapter();
-			}
-			@Override
 			public Adapter caseModelFactory(ModelFactory object) {
 				return createModelFactoryAdapter();
+			}
+			@Override
+			public Adapter caseTCDPaquete(TCDPaquete object) {
+				return createTCDPaqueteAdapter();
 			}
 			@Override
 			public Adapter caseTCDClase(TCDClase object) {
@@ -136,20 +136,6 @@ public class AbstractaAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link abstracta.TCDPaquete <em>TCD Paquete</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see abstracta.TCDPaquete
-	 * @generated
-	 */
-	public Adapter createTCDPaqueteAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link abstracta.ModelFactory <em>Model Factory</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -160,6 +146,20 @@ public class AbstractaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createModelFactoryAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link abstracta.TCDPaquete <em>TCD Paquete</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see abstracta.TCDPaquete
+	 * @generated
+	 */
+	public Adapter createTCDPaqueteAdapter() {
 		return null;
 	}
 

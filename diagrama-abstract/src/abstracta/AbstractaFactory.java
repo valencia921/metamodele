@@ -22,15 +22,6 @@ public interface AbstractaFactory extends EFactory {
 	AbstractaFactory eINSTANCE = abstracta.impl.AbstractaFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>TCD Paquete</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>TCD Paquete</em>'.
-	 * @generated
-	 */
-	TCDPaquete createTCDPaquete();
-
-	/**
 	 * Returns a new object of class '<em>Model Factory</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -38,6 +29,15 @@ public interface AbstractaFactory extends EFactory {
 	 * @generated
 	 */
 	ModelFactory createModelFactory();
+
+	/**
+	 * Returns a new object of class '<em>TCD Paquete</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>TCD Paquete</em>'.
+	 * @generated
+	 */
+	TCDPaquete createTCDPaquete();
 
 	/**
 	 * Returns a new object of class '<em>TCD Clase</em>'.

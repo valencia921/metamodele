@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link abstracta.TCDAtributo#getTipoDato <em>Tipo Dato</em>}</li>
  *   <li>{@link abstracta.TCDAtributo#getVisibilidad <em>Visibilidad</em>}</li>
  *   <li>{@link abstracta.TCDAtributo#isIsConstante <em>Is Constante</em>}</li>
- *   <li>{@link abstracta.TCDAtributo#isIsStatic <em>Is Static</em>}</li>
  *   <li>{@link abstracta.TCDAtributo#getValorDefecto <em>Valor Defecto</em>}</li>
  * </ul>
  *
@@ -135,32 +134,6 @@ public interface TCDAtributo extends EObject {
 	 * @generated
 	 */
 	void setIsConstante(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Is Static</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Is Static</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Static</em>' attribute.
-	 * @see #setIsStatic(boolean)
-	 * @see abstracta.AbstractaPackage#getTCDAtributo_IsStatic()
-	 * @model
-	 * @generated
-	 */
-	boolean isIsStatic();
-
-	/**
-	 * Sets the value of the '{@link abstracta.TCDAtributo#isIsStatic <em>Is Static</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Static</em>' attribute.
-	 * @see #isIsStatic()
-	 * @generated
-	 */
-	void setIsStatic(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Valor Defecto</b></em>' attribute.

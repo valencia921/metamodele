@@ -19,7 +19,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link diagrama_concreta.TCDClase#getListaMetodos <em>Lista Metodos</em>}</li>
  *   <li>{@link diagrama_concreta.TCDClase#getNombre <em>Nombre</em>}</li>
  *   <li>{@link diagrama_concreta.TCDClase#getEstereotipo <em>Estereotipo</em>}</li>
- *   <li>{@link diagrama_concreta.TCDClase#getModificadorAcceso <em>Modificador Acceso</em>}</li>
  *   <li>{@link diagrama_concreta.TCDClase#isIsAbstract <em>Is Abstract</em>}</li>
  *   <li>{@link diagrama_concreta.TCDClase#getDocumentacion <em>Documentacion</em>}</li>
  *   <li>{@link diagrama_concreta.TCDClase#getRuta <em>Ruta</em>}</li>
@@ -113,35 +112,6 @@ public interface TCDClase extends EObject {
 	 * @generated
 	 */
 	void setEstereotipo(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Modificador Acceso</b></em>' attribute.
-	 * The literals are from the enumeration {@link diagrama_concreta.Visibilidad}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Modificador Acceso</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Modificador Acceso</em>' attribute.
-	 * @see diagrama_concreta.Visibilidad
-	 * @see #setModificadorAcceso(Visibilidad)
-	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDClase_ModificadorAcceso()
-	 * @model
-	 * @generated
-	 */
-	Visibilidad getModificadorAcceso();
-
-	/**
-	 * Sets the value of the '{@link diagrama_concreta.TCDClase#getModificadorAcceso <em>Modificador Acceso</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Modificador Acceso</em>' attribute.
-	 * @see diagrama_concreta.Visibilidad
-	 * @see #getModificadorAcceso()
-	 * @generated
-	 */
-	void setModificadorAcceso(Visibilidad value);
 
 	/**
 	 * Returns the value of the '<em><b>Is Abstract</b></em>' attribute.

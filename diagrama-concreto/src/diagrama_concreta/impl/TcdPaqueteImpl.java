@@ -3,7 +3,6 @@
 package diagrama_concreta.impl;
 
 import diagrama_concreta.Diagrama_concretaPackage;
-import diagrama_concreta.TCDClase;
 import diagrama_concreta.TCDPaquete;
 
 import java.util.Collection;
@@ -31,7 +30,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link diagrama_concreta.impl.TCDPaqueteImpl#getListaPaquetes <em>Lista Paquetes</em>}</li>
- *   <li>{@link diagrama_concreta.impl.TCDPaqueteImpl#getListaClases <em>Lista Clases</em>}</li>
  *   <li>{@link diagrama_concreta.impl.TCDPaqueteImpl#getNombre <em>Nombre</em>}</li>
  *   <li>{@link diagrama_concreta.impl.TCDPaqueteImpl#getRuta <em>Ruta</em>}</li>
  * </ul>
@@ -48,16 +46,6 @@ public class TCDPaqueteImpl extends EObjectImpl implements TCDPaquete {
 	 * @ordered
 	 */
 	protected EList<TCDPaquete> listaPaquetes;
-
-	/**
-	 * The cached value of the '{@link #getListaClases() <em>Lista Clases</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getListaClases()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<TCDClase> listaClases;
 
 	/**
 	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
@@ -135,18 +123,6 @@ public class TCDPaqueteImpl extends EObjectImpl implements TCDPaquete {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TCDClase> getListaClases() {
-		if (listaClases == null) {
-			listaClases = new EObjectContainmentEList<TCDClase>(TCDClase.class, this, Diagrama_concretaPackage.TCD_PAQUETE__LISTA_CLASES);
-		}
-		return listaClases;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getNombre() {
 		return nombre;
 	}
@@ -194,8 +170,6 @@ public class TCDPaqueteImpl extends EObjectImpl implements TCDPaquete {
 		switch (featureID) {
 			case Diagrama_concretaPackage.TCD_PAQUETE__LISTA_PAQUETES:
 				return ((InternalEList<?>)getListaPaquetes()).basicRemove(otherEnd, msgs);
-			case Diagrama_concretaPackage.TCD_PAQUETE__LISTA_CLASES:
-				return ((InternalEList<?>)getListaClases()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -210,8 +184,6 @@ public class TCDPaqueteImpl extends EObjectImpl implements TCDPaquete {
 		switch (featureID) {
 			case Diagrama_concretaPackage.TCD_PAQUETE__LISTA_PAQUETES:
 				return getListaPaquetes();
-			case Diagrama_concretaPackage.TCD_PAQUETE__LISTA_CLASES:
-				return getListaClases();
 			case Diagrama_concretaPackage.TCD_PAQUETE__NOMBRE:
 				return getNombre();
 			case Diagrama_concretaPackage.TCD_PAQUETE__RUTA:
@@ -232,10 +204,6 @@ public class TCDPaqueteImpl extends EObjectImpl implements TCDPaquete {
 			case Diagrama_concretaPackage.TCD_PAQUETE__LISTA_PAQUETES:
 				getListaPaquetes().clear();
 				getListaPaquetes().addAll((Collection<? extends TCDPaquete>)newValue);
-				return;
-			case Diagrama_concretaPackage.TCD_PAQUETE__LISTA_CLASES:
-				getListaClases().clear();
-				getListaClases().addAll((Collection<? extends TCDClase>)newValue);
 				return;
 			case Diagrama_concretaPackage.TCD_PAQUETE__NOMBRE:
 				setNombre((String)newValue);
@@ -258,9 +226,6 @@ public class TCDPaqueteImpl extends EObjectImpl implements TCDPaquete {
 			case Diagrama_concretaPackage.TCD_PAQUETE__LISTA_PAQUETES:
 				getListaPaquetes().clear();
 				return;
-			case Diagrama_concretaPackage.TCD_PAQUETE__LISTA_CLASES:
-				getListaClases().clear();
-				return;
 			case Diagrama_concretaPackage.TCD_PAQUETE__NOMBRE:
 				setNombre(NOMBRE_EDEFAULT);
 				return;
@@ -281,8 +246,6 @@ public class TCDPaqueteImpl extends EObjectImpl implements TCDPaquete {
 		switch (featureID) {
 			case Diagrama_concretaPackage.TCD_PAQUETE__LISTA_PAQUETES:
 				return listaPaquetes != null && !listaPaquetes.isEmpty();
-			case Diagrama_concretaPackage.TCD_PAQUETE__LISTA_CLASES:
-				return listaClases != null && !listaClases.isEmpty();
 			case Diagrama_concretaPackage.TCD_PAQUETE__NOMBRE:
 				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
 			case Diagrama_concretaPackage.TCD_PAQUETE__RUTA:

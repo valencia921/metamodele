@@ -57,8 +57,8 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case AbstractaPackage.TCD_PAQUETE: return createTCDPaquete();
 			case AbstractaPackage.MODEL_FACTORY: return createModelFactory();
+			case AbstractaPackage.TCD_PAQUETE: return createTCDPaquete();
 			case AbstractaPackage.TCD_CLASE: return createTCDClase();
 			case AbstractaPackage.TCD_ATRIBUTO: return createTCDAtributo();
 			case AbstractaPackage.TCD_METODO: return createTCDMetodo();
@@ -120,9 +120,9 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TCDPaquete createTCDPaquete() {
-		TCDPaqueteImpl tcdPaquete = new TCDPaqueteImpl();
-		return tcdPaquete;
+	public ModelFactory createModelFactory() {
+		ModelFactoryImpl modelFactory = new ModelFactoryImpl();
+		return modelFactory;
 	}
 
 	/**
@@ -130,9 +130,9 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ModelFactory createModelFactory() {
-		ModelFactoryImpl modelFactory = new ModelFactoryImpl();
-		return modelFactory;
+	public TCDPaquete createTCDPaquete() {
+		TCDPaqueteImpl tcdPaquete = new TCDPaqueteImpl();
+		return tcdPaquete;
 	}
 
 	/**

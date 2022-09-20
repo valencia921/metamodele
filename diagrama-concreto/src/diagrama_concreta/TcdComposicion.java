@@ -19,7 +19,7 @@ package diagrama_concreta;
  * </ul>
  *
  * @see diagrama_concreta.Diagrama_concretaPackage#getTCDComposicion()
- * @model annotation="gmf.link source='source' target='target' label='nombreOrigen' style='dash' width='3' color='0,255,193' source.decoration='rhomb'"
+ * @model annotation="gmf.link source='source' target='target' label='nombreDestino' style='dash' width='3' color='0,255,193' source.decoration='rhomb'"
  * @generated
  */
 public interface TCDComposicion extends TCDRelacion {

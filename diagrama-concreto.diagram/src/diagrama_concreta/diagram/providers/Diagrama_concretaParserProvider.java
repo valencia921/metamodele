@@ -109,77 +109,77 @@ public class Diagrama_concretaParserProvider extends AbstractProvider implements
 	/**
 	* @generated
 	*/
-	private IParser tCDAgregacionNombreOrigen_6001Parser;
+	private IParser tCDAgregacionNombreDestino_6001Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getTCDAgregacionNombreOrigen_6001Parser() {
-		if (tCDAgregacionNombreOrigen_6001Parser == null) {
+	private IParser getTCDAgregacionNombreDestino_6001Parser() {
+		if (tCDAgregacionNombreDestino_6001Parser == null) {
 			EAttribute[] features = new EAttribute[] {
-					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDAgregacion_NombreOrigen() };
+					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDAgregacion_NombreDestino() };
 			diagrama_concreta.diagram.parsers.MessageFormatParser parser = new diagrama_concreta.diagram.parsers.MessageFormatParser(
 					features);
-			tCDAgregacionNombreOrigen_6001Parser = parser;
+			tCDAgregacionNombreDestino_6001Parser = parser;
 		}
-		return tCDAgregacionNombreOrigen_6001Parser;
+		return tCDAgregacionNombreDestino_6001Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser tCDAsociacionNombreOrigen_6002Parser;
+	private IParser tCDAsociacionNombreDestino_6002Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getTCDAsociacionNombreOrigen_6002Parser() {
-		if (tCDAsociacionNombreOrigen_6002Parser == null) {
+	private IParser getTCDAsociacionNombreDestino_6002Parser() {
+		if (tCDAsociacionNombreDestino_6002Parser == null) {
 			EAttribute[] features = new EAttribute[] {
-					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDAsociacion_NombreOrigen() };
+					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDAsociacion_NombreDestino() };
 			diagrama_concreta.diagram.parsers.MessageFormatParser parser = new diagrama_concreta.diagram.parsers.MessageFormatParser(
 					features);
-			tCDAsociacionNombreOrigen_6002Parser = parser;
+			tCDAsociacionNombreDestino_6002Parser = parser;
 		}
-		return tCDAsociacionNombreOrigen_6002Parser;
+		return tCDAsociacionNombreDestino_6002Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser tCDComposicionNombreOrigen_6003Parser;
+	private IParser tCDComposicionNombreDestino_6003Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getTCDComposicionNombreOrigen_6003Parser() {
-		if (tCDComposicionNombreOrigen_6003Parser == null) {
+	private IParser getTCDComposicionNombreDestino_6003Parser() {
+		if (tCDComposicionNombreDestino_6003Parser == null) {
 			EAttribute[] features = new EAttribute[] {
-					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDComposicion_NombreOrigen() };
+					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDComposicion_NombreDestino() };
 			diagrama_concreta.diagram.parsers.MessageFormatParser parser = new diagrama_concreta.diagram.parsers.MessageFormatParser(
 					features);
-			tCDComposicionNombreOrigen_6003Parser = parser;
+			tCDComposicionNombreDestino_6003Parser = parser;
 		}
-		return tCDComposicionNombreOrigen_6003Parser;
+		return tCDComposicionNombreDestino_6003Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser tCDDependenciaNombreOrigen_6004Parser;
+	private IParser tCDDependenciaNombreDestino_6004Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getTCDDependenciaNombreOrigen_6004Parser() {
-		if (tCDDependenciaNombreOrigen_6004Parser == null) {
+	private IParser getTCDDependenciaNombreDestino_6004Parser() {
+		if (tCDDependenciaNombreDestino_6004Parser == null) {
 			EAttribute[] features = new EAttribute[] {
-					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDDependencia_NombreOrigen() };
+					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDDependencia_NombreDestino() };
 			diagrama_concreta.diagram.parsers.MessageFormatParser parser = new diagrama_concreta.diagram.parsers.MessageFormatParser(
 					features);
-			tCDDependenciaNombreOrigen_6004Parser = parser;
+			tCDDependenciaNombreDestino_6004Parser = parser;
 		}
-		return tCDDependenciaNombreOrigen_6004Parser;
+		return tCDDependenciaNombreDestino_6004Parser;
 	}
 
 	/**
@@ -195,14 +195,14 @@ public class Diagrama_concretaParserProvider extends AbstractProvider implements
 			return getTCDAtributoNombreTipoDato_5001Parser();
 		case diagrama_concreta.diagram.edit.parts.TCDMetodoNombreTipoRetornoEditPart.VISUAL_ID:
 			return getTCDMetodoNombreTipoRetorno_5002Parser();
-		case diagrama_concreta.diagram.edit.parts.TCDAgregacionNombreOrigenEditPart.VISUAL_ID:
-			return getTCDAgregacionNombreOrigen_6001Parser();
-		case diagrama_concreta.diagram.edit.parts.TCDAsociacionNombreOrigenEditPart.VISUAL_ID:
-			return getTCDAsociacionNombreOrigen_6002Parser();
-		case diagrama_concreta.diagram.edit.parts.TCDComposicionNombreOrigenEditPart.VISUAL_ID:
-			return getTCDComposicionNombreOrigen_6003Parser();
-		case diagrama_concreta.diagram.edit.parts.TCDDependenciaNombreOrigenEditPart.VISUAL_ID:
-			return getTCDDependenciaNombreOrigen_6004Parser();
+		case diagrama_concreta.diagram.edit.parts.TCDAgregacionNombreDestinoEditPart.VISUAL_ID:
+			return getTCDAgregacionNombreDestino_6001Parser();
+		case diagrama_concreta.diagram.edit.parts.TCDAsociacionNombreDestinoEditPart.VISUAL_ID:
+			return getTCDAsociacionNombreDestino_6002Parser();
+		case diagrama_concreta.diagram.edit.parts.TCDComposicionNombreDestinoEditPart.VISUAL_ID:
+			return getTCDComposicionNombreDestino_6003Parser();
+		case diagrama_concreta.diagram.edit.parts.TCDDependenciaNombreDestinoEditPart.VISUAL_ID:
+			return getTCDDependenciaNombreDestino_6004Parser();
 		}
 		return null;
 	}

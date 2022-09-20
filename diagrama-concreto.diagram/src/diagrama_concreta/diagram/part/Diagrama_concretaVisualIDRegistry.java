@@ -207,22 +207,22 @@ public class Diagrama_concretaVisualIDRegistry {
 			}
 			break;
 		case diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart.VISUAL_ID:
-			if (diagrama_concreta.diagram.edit.parts.TCDAgregacionNombreOrigenEditPart.VISUAL_ID == nodeVisualID) {
+			if (diagrama_concreta.diagram.edit.parts.TCDAgregacionNombreDestinoEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
 		case diagrama_concreta.diagram.edit.parts.TCDAsociacionEditPart.VISUAL_ID:
-			if (diagrama_concreta.diagram.edit.parts.TCDAsociacionNombreOrigenEditPart.VISUAL_ID == nodeVisualID) {
+			if (diagrama_concreta.diagram.edit.parts.TCDAsociacionNombreDestinoEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
 		case diagrama_concreta.diagram.edit.parts.TCDComposicionEditPart.VISUAL_ID:
-			if (diagrama_concreta.diagram.edit.parts.TCDComposicionNombreOrigenEditPart.VISUAL_ID == nodeVisualID) {
+			if (diagrama_concreta.diagram.edit.parts.TCDComposicionNombreDestinoEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
 		case diagrama_concreta.diagram.edit.parts.TCDDependenciaEditPart.VISUAL_ID:
-			if (diagrama_concreta.diagram.edit.parts.TCDDependenciaNombreOrigenEditPart.VISUAL_ID == nodeVisualID) {
+			if (diagrama_concreta.diagram.edit.parts.TCDDependenciaNombreDestinoEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;

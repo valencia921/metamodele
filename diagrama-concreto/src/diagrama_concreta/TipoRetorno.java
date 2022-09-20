@@ -26,7 +26,9 @@ public enum TipoRetorno implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	UNDEFINED(0, "undefined", "undefined"), /**
+	UNDEFINED(0, "undefined", "undefined"),
+
+	/**
 	 * The '<em><b>String</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -34,7 +36,9 @@ public enum TipoRetorno implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	STRING(1, "string", "string"), /**
+	STRING(1, "string", "string"),
+
+	/**
 	 * The '<em><b>Number</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -42,7 +46,9 @@ public enum TipoRetorno implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	NUMBER(2, "number", "number"), /**
+	NUMBER(2, "number", "number"),
+
+	/**
 	 * The '<em><b>Boolean</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

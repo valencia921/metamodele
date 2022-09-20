@@ -177,22 +177,13 @@ public interface Diagrama_concretaPackage extends EPackage {
 	int TCD_PAQUETE__LISTA_PAQUETES = 0;
 
 	/**
-	 * The feature id for the '<em><b>Lista Clases</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TCD_PAQUETE__LISTA_CLASES = 1;
-
-	/**
 	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TCD_PAQUETE__NOMBRE = 2;
+	int TCD_PAQUETE__NOMBRE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Ruta</b></em>' attribute.
@@ -201,7 +192,7 @@ public interface Diagrama_concretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TCD_PAQUETE__RUTA = 3;
+	int TCD_PAQUETE__RUTA = 2;
 
 	/**
 	 * The number of structural features of the '<em>TCD Paquete</em>' class.
@@ -210,7 +201,7 @@ public interface Diagrama_concretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TCD_PAQUETE_FEATURE_COUNT = 4;
+	int TCD_PAQUETE_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link diagrama_concreta.impl.TCDClaseImpl <em>TCD Clase</em>}' class.
@@ -259,22 +250,13 @@ public interface Diagrama_concretaPackage extends EPackage {
 	int TCD_CLASE__ESTEREOTIPO = 3;
 
 	/**
-	 * The feature id for the '<em><b>Modificador Acceso</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TCD_CLASE__MODIFICADOR_ACCESO = 4;
-
-	/**
 	 * The feature id for the '<em><b>Is Abstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TCD_CLASE__IS_ABSTRACT = 5;
+	int TCD_CLASE__IS_ABSTRACT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Documentacion</b></em>' attribute.
@@ -283,7 +265,7 @@ public interface Diagrama_concretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TCD_CLASE__DOCUMENTACION = 6;
+	int TCD_CLASE__DOCUMENTACION = 5;
 
 	/**
 	 * The feature id for the '<em><b>Ruta</b></em>' attribute.
@@ -292,7 +274,7 @@ public interface Diagrama_concretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TCD_CLASE__RUTA = 7;
+	int TCD_CLASE__RUTA = 6;
 
 	/**
 	 * The number of structural features of the '<em>TCD Clase</em>' class.
@@ -301,7 +283,7 @@ public interface Diagrama_concretaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TCD_CLASE_FEATURE_COUNT = 8;
+	int TCD_CLASE_FEATURE_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link diagrama_concreta.impl.TCDRelacionImpl <em>TCD Relacion</em>}' class.
@@ -725,13 +707,13 @@ public interface Diagrama_concretaPackage extends EPackage {
 	int TCD_ATRIBUTO__IS_CONSTANTE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Is Static</b></em>' attribute.
+	 * The feature id for the '<em><b>Valor Defecto</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TCD_ATRIBUTO__IS_STATIC = 4;
+	int TCD_ATRIBUTO__VALOR_DEFECTO = 4;
 
 	/**
 	 * The number of structural features of the '<em>TCD Atributo</em>' class.
@@ -976,17 +958,6 @@ public interface Diagrama_concretaPackage extends EPackage {
 	EReference getTCDPaquete_ListaPaquetes();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link diagrama_concreta.TCDPaquete#getListaClases <em>Lista Clases</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Lista Clases</em>'.
-	 * @see diagrama_concreta.TCDPaquete#getListaClases()
-	 * @see #getTCDPaquete()
-	 * @generated
-	 */
-	EReference getTCDPaquete_ListaClases();
-
-	/**
 	 * Returns the meta object for the attribute '{@link diagrama_concreta.TCDPaquete#getNombre <em>Nombre</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1061,17 +1032,6 @@ public interface Diagrama_concretaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTCDClase_Estereotipo();
-
-	/**
-	 * Returns the meta object for the attribute '{@link diagrama_concreta.TCDClase#getModificadorAcceso <em>Modificador Acceso</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Modificador Acceso</em>'.
-	 * @see diagrama_concreta.TCDClase#getModificadorAcceso()
-	 * @see #getTCDClase()
-	 * @generated
-	 */
-	EAttribute getTCDClase_ModificadorAcceso();
 
 	/**
 	 * Returns the meta object for the attribute '{@link diagrama_concreta.TCDClase#isIsAbstract <em>Is Abstract</em>}'.
@@ -1430,15 +1390,15 @@ public interface Diagrama_concretaPackage extends EPackage {
 	EAttribute getTCDAtributo_IsConstante();
 
 	/**
-	 * Returns the meta object for the attribute '{@link diagrama_concreta.TCDAtributo#isIsStatic <em>Is Static</em>}'.
+	 * Returns the meta object for the attribute '{@link diagrama_concreta.TCDAtributo#getValorDefecto <em>Valor Defecto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Static</em>'.
-	 * @see diagrama_concreta.TCDAtributo#isIsStatic()
+	 * @return the meta object for the attribute '<em>Valor Defecto</em>'.
+	 * @see diagrama_concreta.TCDAtributo#getValorDefecto()
 	 * @see #getTCDAtributo()
 	 * @generated
 	 */
-	EAttribute getTCDAtributo_IsStatic();
+	EAttribute getTCDAtributo_ValorDefecto();
 
 	/**
 	 * Returns the meta object for class '{@link diagrama_concreta.TCDMetodo <em>TCD Metodo</em>}'.
@@ -1672,14 +1632,6 @@ public interface Diagrama_concretaPackage extends EPackage {
 		EReference TCD_PAQUETE__LISTA_PAQUETES = eINSTANCE.getTCDPaquete_ListaPaquetes();
 
 		/**
-		 * The meta object literal for the '<em><b>Lista Clases</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TCD_PAQUETE__LISTA_CLASES = eINSTANCE.getTCDPaquete_ListaClases();
-
-		/**
 		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1736,14 +1688,6 @@ public interface Diagrama_concretaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TCD_CLASE__ESTEREOTIPO = eINSTANCE.getTCDClase_Estereotipo();
-
-		/**
-		 * The meta object literal for the '<em><b>Modificador Acceso</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TCD_CLASE__MODIFICADOR_ACCESO = eINSTANCE.getTCDClase_ModificadorAcceso();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Abstract</b></em>' attribute feature.
@@ -2024,12 +1968,12 @@ public interface Diagrama_concretaPackage extends EPackage {
 		EAttribute TCD_ATRIBUTO__IS_CONSTANTE = eINSTANCE.getTCDAtributo_IsConstante();
 
 		/**
-		 * The meta object literal for the '<em><b>Is Static</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Valor Defecto</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TCD_ATRIBUTO__IS_STATIC = eINSTANCE.getTCDAtributo_IsStatic();
+		EAttribute TCD_ATRIBUTO__VALOR_DEFECTO = eINSTANCE.getTCDAtributo_ValorDefecto();
 
 		/**
 		 * The meta object literal for the '{@link diagrama_concreta.impl.TCDMetodoImpl <em>TCD Metodo</em>}' class.

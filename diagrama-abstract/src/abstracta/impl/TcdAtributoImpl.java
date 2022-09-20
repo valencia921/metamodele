@@ -26,7 +26,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link abstracta.impl.TCDAtributoImpl#getTipoDato <em>Tipo Dato</em>}</li>
  *   <li>{@link abstracta.impl.TCDAtributoImpl#getVisibilidad <em>Visibilidad</em>}</li>
  *   <li>{@link abstracta.impl.TCDAtributoImpl#isIsConstante <em>Is Constante</em>}</li>
- *   <li>{@link abstracta.impl.TCDAtributoImpl#isIsStatic <em>Is Static</em>}</li>
  *   <li>{@link abstracta.impl.TCDAtributoImpl#getValorDefecto <em>Valor Defecto</em>}</li>
  * </ul>
  *
@@ -112,26 +111,6 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 	 * @ordered
 	 */
 	protected boolean isConstante = IS_CONSTANTE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isIsStatic() <em>Is Static</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsStatic()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean IS_STATIC_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isIsStatic() <em>Is Static</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsStatic()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean isStatic = IS_STATIC_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getValorDefecto() <em>Valor Defecto</em>}' attribute.
@@ -261,27 +240,6 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isIsStatic() {
-		return isStatic;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIsStatic(boolean newIsStatic) {
-		boolean oldIsStatic = isStatic;
-		isStatic = newIsStatic;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AbstractaPackage.TCD_ATRIBUTO__IS_STATIC, oldIsStatic, isStatic));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getValorDefecto() {
 		return valorDefecto;
 	}
@@ -314,8 +272,6 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 				return getVisibilidad();
 			case AbstractaPackage.TCD_ATRIBUTO__IS_CONSTANTE:
 				return isIsConstante();
-			case AbstractaPackage.TCD_ATRIBUTO__IS_STATIC:
-				return isIsStatic();
 			case AbstractaPackage.TCD_ATRIBUTO__VALOR_DEFECTO:
 				return getValorDefecto();
 		}
@@ -341,9 +297,6 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 				return;
 			case AbstractaPackage.TCD_ATRIBUTO__IS_CONSTANTE:
 				setIsConstante((Boolean)newValue);
-				return;
-			case AbstractaPackage.TCD_ATRIBUTO__IS_STATIC:
-				setIsStatic((Boolean)newValue);
 				return;
 			case AbstractaPackage.TCD_ATRIBUTO__VALOR_DEFECTO:
 				setValorDefecto((String)newValue);
@@ -372,9 +325,6 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 			case AbstractaPackage.TCD_ATRIBUTO__IS_CONSTANTE:
 				setIsConstante(IS_CONSTANTE_EDEFAULT);
 				return;
-			case AbstractaPackage.TCD_ATRIBUTO__IS_STATIC:
-				setIsStatic(IS_STATIC_EDEFAULT);
-				return;
 			case AbstractaPackage.TCD_ATRIBUTO__VALOR_DEFECTO:
 				setValorDefecto(VALOR_DEFECTO_EDEFAULT);
 				return;
@@ -398,8 +348,6 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 				return visibilidad != VISIBILIDAD_EDEFAULT;
 			case AbstractaPackage.TCD_ATRIBUTO__IS_CONSTANTE:
 				return isConstante != IS_CONSTANTE_EDEFAULT;
-			case AbstractaPackage.TCD_ATRIBUTO__IS_STATIC:
-				return isStatic != IS_STATIC_EDEFAULT;
 			case AbstractaPackage.TCD_ATRIBUTO__VALOR_DEFECTO:
 				return VALOR_DEFECTO_EDEFAULT == null ? valorDefecto != null : !VALOR_DEFECTO_EDEFAULT.equals(valorDefecto);
 		}
@@ -424,8 +372,6 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 		result.append(visibilidad);
 		result.append(", isConstante: ");
 		result.append(isConstante);
-		result.append(", isStatic: ");
-		result.append(isStatic);
 		result.append(", valorDefecto: ");
 		result.append(valorDefecto);
 		result.append(')');

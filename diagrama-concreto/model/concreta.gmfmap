@@ -117,7 +117,7 @@
       <diagramLabel
           href="concreta.gmfgraph#TCDAgregacionLabel"/>
       <features
-          href="concreta.ecore#//TCDAgregacion/nombreOrigen"/>
+          href="concreta.ecore#//TCDAgregacion/nombreDestino"/>
     </labelMappings>
     <containmentFeature
         href="concreta.ecore#//TCDDiagramaClases/listaRelaciones"/>
@@ -141,7 +141,7 @@
       <diagramLabel
           href="concreta.gmfgraph#TCDAsociacionLabel"/>
       <features
-          href="concreta.ecore#//TCDAsociacion/nombreOrigen"/>
+          href="concreta.ecore#//TCDAsociacion/nombreDestino"/>
     </labelMappings>
     <containmentFeature
         href="concreta.ecore#//TCDDiagramaClases/listaRelaciones"/>
@@ -165,7 +165,7 @@
       <diagramLabel
           href="concreta.gmfgraph#TCDComposicionLabel"/>
       <features
-          href="concreta.ecore#//TCDComposicion/nombreOrigen"/>
+          href="concreta.ecore#//TCDComposicion/nombreDestino"/>
     </labelMappings>
     <containmentFeature
         href="concreta.ecore#//TCDDiagramaClases/listaRelaciones"/>
@@ -189,7 +189,7 @@
       <diagramLabel
           href="concreta.gmfgraph#TCDDependenciaLabel"/>
       <features
-          href="concreta.ecore#//TCDDependencia/nombreOrigen"/>
+          href="concreta.ecore#//TCDDependencia/nombreDestino"/>
     </labelMappings>
     <containmentFeature
         href="concreta.ecore#//TCDDiagramaClases/listaRelaciones"/>

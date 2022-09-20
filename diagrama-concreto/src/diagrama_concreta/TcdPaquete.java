@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link diagrama_concreta.TCDPaquete#getListaPaquetes <em>Lista Paquetes</em>}</li>
- *   <li>{@link diagrama_concreta.TCDPaquete#getListaClases <em>Lista Clases</em>}</li>
  *   <li>{@link diagrama_concreta.TCDPaquete#getNombre <em>Nombre</em>}</li>
  *   <li>{@link diagrama_concreta.TCDPaquete#getRuta <em>Ruta</em>}</li>
  * </ul>
@@ -41,22 +40,6 @@ public interface TCDPaquete extends EObject {
 	 * @generated
 	 */
 	EList<TCDPaquete> getListaPaquetes();
-
-	/**
-	 * Returns the value of the '<em><b>Lista Clases</b></em>' containment reference list.
-	 * The list contents are of type {@link diagrama_concreta.TCDClase}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Lista Clases</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lista Clases</em>' containment reference list.
-	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDPaquete_ListaClases()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<TCDClase> getListaClases();
 
 	/**
 	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.

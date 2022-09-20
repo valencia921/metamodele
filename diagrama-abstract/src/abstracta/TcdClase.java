@@ -20,9 +20,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link abstracta.TCDClase#getListaRelaciones <em>Lista Relaciones</em>}</li>
  *   <li>{@link abstracta.TCDClase#getNombre <em>Nombre</em>}</li>
  *   <li>{@link abstracta.TCDClase#getEstereotipo <em>Estereotipo</em>}</li>
- *   <li>{@link abstracta.TCDClase#getModificadorAcceso <em>Modificador Acceso</em>}</li>
  *   <li>{@link abstracta.TCDClase#isIsAbstract <em>Is Abstract</em>}</li>
  *   <li>{@link abstracta.TCDClase#getDocumentacion <em>Documentacion</em>}</li>
+ *   <li>{@link abstracta.TCDClase#getRuta <em>Ruta</em>}</li>
  * </ul>
  *
  * @see abstracta.AbstractaPackage#getTCDClase()
@@ -131,35 +131,6 @@ public interface TCDClase extends EObject {
 	void setEstereotipo(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Modificador Acceso</b></em>' attribute.
-	 * The literals are from the enumeration {@link abstracta.Visibilidad}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Modificador Acceso</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Modificador Acceso</em>' attribute.
-	 * @see abstracta.Visibilidad
-	 * @see #setModificadorAcceso(Visibilidad)
-	 * @see abstracta.AbstractaPackage#getTCDClase_ModificadorAcceso()
-	 * @model
-	 * @generated
-	 */
-	Visibilidad getModificadorAcceso();
-
-	/**
-	 * Sets the value of the '{@link abstracta.TCDClase#getModificadorAcceso <em>Modificador Acceso</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Modificador Acceso</em>' attribute.
-	 * @see abstracta.Visibilidad
-	 * @see #getModificadorAcceso()
-	 * @generated
-	 */
-	void setModificadorAcceso(Visibilidad value);
-
-	/**
 	 * Returns the value of the '<em><b>Is Abstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -210,5 +181,31 @@ public interface TCDClase extends EObject {
 	 * @generated
 	 */
 	void setDocumentacion(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Ruta</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Ruta</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Ruta</em>' attribute.
+	 * @see #setRuta(String)
+	 * @see abstracta.AbstractaPackage#getTCDClase_Ruta()
+	 * @model
+	 * @generated
+	 */
+	String getRuta();
+
+	/**
+	 * Sets the value of the '{@link abstracta.TCDClase#getRuta <em>Ruta</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Ruta</em>' attribute.
+	 * @see #getRuta()
+	 * @generated
+	 */
+	void setRuta(String value);
 
 } // TCDClase

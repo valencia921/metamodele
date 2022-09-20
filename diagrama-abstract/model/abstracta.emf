@@ -5,14 +5,10 @@ package abstracta;
 class ModelFactory {
 	attr String nombre;
 	attr String ruta;
-	val TcdDiagramaClases[*] listaDiagramas;
-}
-
-class TcdDiagramaClases {
-    val TCDClase[*] listaClases;
-    val TCDRelacion[*] listaRelaciones;
-    
-    attr String nombre;
+	
+	val TCDPaquete[*] listaPaquetes;
+	ref TCDClase[*] listaTodasClases;
+	ref TCDPaquete[*] listaTodosPaquetes;
 }
 
 class TCDPaquete {
@@ -30,7 +26,6 @@ class TCDClase {
     
     attr String nombre;
     attr String estereotipo;
-    attr Visibilidad modificadorAcceso;
     attr boolean isAbstract;
     attr String documentacion;
     attr String ruta;
@@ -41,12 +36,11 @@ class TCDAtributo {
 	attr TipoDato tipoDato;
 	attr Visibilidad visibilidad;
 	attr boolean isConstante;
-	attr boolean isStatic;
 	attr String valorDefecto;
 }
 
 class TCDMetodo {
-    val TCDParametro[*] listaParametros;
+    attr String[*] listaParametros;
 	
 	attr String nombre;
 	attr Visibilidad modificadorAcceso;
@@ -103,29 +97,30 @@ class TCDParametro {
 }
 
 enum Visibilidad {
-	public;
-	private;
-	protected;
+	Public;
+	Private;
+	Protected;
+	Readonly;
 }
 
 enum TipoDato {
 	string;
-	number;
+	Number;
 	boolean;
 	undefined;
 	null;
 }
 
 enum Multiplicidad {
-	uno;
-	uno_cero;
-	cero_varios;
-	uno_varios;
+	UNO;
+	CERO_UNO;
+	CERO_MUCHOS;
+	UNO_MUCHOS;
 }
 
 enum TipoRetorno {
+	undefined;
 	string;
 	number;
 	boolean;
-	undefined;
 }

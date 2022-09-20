@@ -26,7 +26,7 @@ public enum Visibilidad implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	PUBLIC(0, "public", "public"),
+	PUBLIC(0, "Public", "Public"),
 
 	/**
 	 * The '<em><b>Private</b></em>' literal object.
@@ -36,7 +36,7 @@ public enum Visibilidad implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	PRIVATE(1, "private", "private"),
+	PRIVATE(1, "Private", "Private"),
 
 	/**
 	 * The '<em><b>Protected</b></em>' literal object.
@@ -46,7 +46,17 @@ public enum Visibilidad implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	PROTECTED(2, "protected", "protected");
+	PROTECTED(2, "Protected", "Protected"),
+
+	/**
+	 * The '<em><b>Readonly</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #READONLY_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	READONLY(3, "Readonly", "Readonly");
 
 	/**
 	 * The '<em><b>Public</b></em>' literal value.
@@ -57,7 +67,7 @@ public enum Visibilidad implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #PUBLIC
-	 * @model name="public"
+	 * @model name="Public"
 	 * @generated
 	 * @ordered
 	 */
@@ -72,7 +82,7 @@ public enum Visibilidad implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #PRIVATE
-	 * @model name="private"
+	 * @model name="Private"
 	 * @generated
 	 * @ordered
 	 */
@@ -87,11 +97,26 @@ public enum Visibilidad implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #PROTECTED
-	 * @model name="protected"
+	 * @model name="Protected"
 	 * @generated
 	 * @ordered
 	 */
 	public static final int PROTECTED_VALUE = 2;
+
+	/**
+	 * The '<em><b>Readonly</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Readonly</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #READONLY
+	 * @model name="Readonly"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int READONLY_VALUE = 3;
 
 	/**
 	 * An array of all the '<em><b>Visibilidad</b></em>' enumerators.
@@ -104,6 +129,7 @@ public enum Visibilidad implements Enumerator {
 			PUBLIC,
 			PRIVATE,
 			PROTECTED,
+			READONLY,
 		};
 
 	/**
@@ -163,6 +189,7 @@ public enum Visibilidad implements Enumerator {
 			case PUBLIC_VALUE: return PUBLIC;
 			case PRIVATE_VALUE: return PRIVATE;
 			case PROTECTED_VALUE: return PROTECTED;
+			case READONLY_VALUE: return READONLY;
 		}
 		return null;
 	}

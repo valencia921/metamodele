@@ -296,7 +296,7 @@ public class Diagrama_concretaNavigatorLabelProvider extends LabelProvider
 				diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDAsociacion_4001,
 				view.getElement() != null ? view.getElement() : view,
 				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-						.getType(diagrama_concreta.diagram.edit.parts.TCDAsociacionNombreOrigenEditPart.VISUAL_ID));
+						.getType(diagrama_concreta.diagram.edit.parts.TCDAsociacionNombreDestinoEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
@@ -315,7 +315,7 @@ public class Diagrama_concretaNavigatorLabelProvider extends LabelProvider
 				diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDComposicion_4002,
 				view.getElement() != null ? view.getElement() : view,
 				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-						.getType(diagrama_concreta.diagram.edit.parts.TCDComposicionNombreOrigenEditPart.VISUAL_ID));
+						.getType(diagrama_concreta.diagram.edit.parts.TCDComposicionNombreDestinoEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
@@ -334,7 +334,7 @@ public class Diagrama_concretaNavigatorLabelProvider extends LabelProvider
 				diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDDependencia_4003,
 				view.getElement() != null ? view.getElement() : view,
 				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-						.getType(diagrama_concreta.diagram.edit.parts.TCDDependenciaNombreOrigenEditPart.VISUAL_ID));
+						.getType(diagrama_concreta.diagram.edit.parts.TCDDependenciaNombreDestinoEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
@@ -360,7 +360,7 @@ public class Diagrama_concretaNavigatorLabelProvider extends LabelProvider
 				diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDAgregacion_4005,
 				view.getElement() != null ? view.getElement() : view,
 				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-						.getType(diagrama_concreta.diagram.edit.parts.TCDAgregacionNombreOrigenEditPart.VISUAL_ID));
+						.getType(diagrama_concreta.diagram.edit.parts.TCDAgregacionNombreDestinoEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());

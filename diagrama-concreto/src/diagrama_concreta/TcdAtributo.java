@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link diagrama_concreta.TCDAtributo#getTipoDato <em>Tipo Dato</em>}</li>
  *   <li>{@link diagrama_concreta.TCDAtributo#getVisibilidad <em>Visibilidad</em>}</li>
  *   <li>{@link diagrama_concreta.TCDAtributo#isIsConstante <em>Is Constante</em>}</li>
- *   <li>{@link diagrama_concreta.TCDAtributo#isIsStatic <em>Is Static</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDAtributo#getValorDefecto <em>Valor Defecto</em>}</li>
  * </ul>
  *
  * @see diagrama_concreta.Diagrama_concretaPackage#getTCDAtributo()
@@ -136,29 +136,29 @@ public interface TCDAtributo extends EObject {
 	void setIsConstante(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Is Static</b></em>' attribute.
+	 * Returns the value of the '<em><b>Valor Defecto</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Is Static</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Valor Defecto</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Static</em>' attribute.
-	 * @see #setIsStatic(boolean)
-	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDAtributo_IsStatic()
+	 * @return the value of the '<em>Valor Defecto</em>' attribute.
+	 * @see #setValorDefecto(String)
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDAtributo_ValorDefecto()
 	 * @model
 	 * @generated
 	 */
-	boolean isIsStatic();
+	String getValorDefecto();
 
 	/**
-	 * Sets the value of the '{@link diagrama_concreta.TCDAtributo#isIsStatic <em>Is Static</em>}' attribute.
+	 * Sets the value of the '{@link diagrama_concreta.TCDAtributo#getValorDefecto <em>Valor Defecto</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Static</em>' attribute.
-	 * @see #isIsStatic()
+	 * @param value the new value of the '<em>Valor Defecto</em>' attribute.
+	 * @see #getValorDefecto()
 	 * @generated
 	 */
-	void setIsStatic(boolean value);
+	void setValorDefecto(String value);
 
 } // TCDAtributo

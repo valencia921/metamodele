@@ -4,6 +4,7 @@ package abstracta.impl;
 
 import abstracta.AbstractaPackage;
 import abstracta.ModelFactory;
+import abstracta.TCDClase;
 import abstracta.TCDPaquete;
 
 import java.util.Collection;
@@ -20,6 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -33,6 +35,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link abstracta.impl.ModelFactoryImpl#getNombre <em>Nombre</em>}</li>
  *   <li>{@link abstracta.impl.ModelFactoryImpl#getRuta <em>Ruta</em>}</li>
  *   <li>{@link abstracta.impl.ModelFactoryImpl#getListaPaquetes <em>Lista Paquetes</em>}</li>
+ *   <li>{@link abstracta.impl.ModelFactoryImpl#getListaTodasClases <em>Lista Todas Clases</em>}</li>
+ *   <li>{@link abstracta.impl.ModelFactoryImpl#getListaTodosPaquetes <em>Lista Todos Paquetes</em>}</li>
  * </ul>
  *
  * @generated
@@ -87,6 +91,26 @@ public class ModelFactoryImpl extends EObjectImpl implements ModelFactory {
 	 * @ordered
 	 */
 	protected EList<TCDPaquete> listaPaquetes;
+
+	/**
+	 * The cached value of the '{@link #getListaTodasClases() <em>Lista Todas Clases</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getListaTodasClases()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<TCDClase> listaTodasClases;
+
+	/**
+	 * The cached value of the '{@link #getListaTodosPaquetes() <em>Lista Todos Paquetes</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getListaTodosPaquetes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<TCDPaquete> listaTodosPaquetes;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -166,6 +190,30 @@ public class ModelFactoryImpl extends EObjectImpl implements ModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<TCDClase> getListaTodasClases() {
+		if (listaTodasClases == null) {
+			listaTodasClases = new EObjectResolvingEList<TCDClase>(TCDClase.class, this, AbstractaPackage.MODEL_FACTORY__LISTA_TODAS_CLASES);
+		}
+		return listaTodasClases;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<TCDPaquete> getListaTodosPaquetes() {
+		if (listaTodosPaquetes == null) {
+			listaTodosPaquetes = new EObjectResolvingEList<TCDPaquete>(TCDPaquete.class, this, AbstractaPackage.MODEL_FACTORY__LISTA_TODOS_PAQUETES);
+		}
+		return listaTodosPaquetes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -189,6 +237,10 @@ public class ModelFactoryImpl extends EObjectImpl implements ModelFactory {
 				return getRuta();
 			case AbstractaPackage.MODEL_FACTORY__LISTA_PAQUETES:
 				return getListaPaquetes();
+			case AbstractaPackage.MODEL_FACTORY__LISTA_TODAS_CLASES:
+				return getListaTodasClases();
+			case AbstractaPackage.MODEL_FACTORY__LISTA_TODOS_PAQUETES:
+				return getListaTodosPaquetes();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -212,6 +264,14 @@ public class ModelFactoryImpl extends EObjectImpl implements ModelFactory {
 				getListaPaquetes().clear();
 				getListaPaquetes().addAll((Collection<? extends TCDPaquete>)newValue);
 				return;
+			case AbstractaPackage.MODEL_FACTORY__LISTA_TODAS_CLASES:
+				getListaTodasClases().clear();
+				getListaTodasClases().addAll((Collection<? extends TCDClase>)newValue);
+				return;
+			case AbstractaPackage.MODEL_FACTORY__LISTA_TODOS_PAQUETES:
+				getListaTodosPaquetes().clear();
+				getListaTodosPaquetes().addAll((Collection<? extends TCDPaquete>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -233,6 +293,12 @@ public class ModelFactoryImpl extends EObjectImpl implements ModelFactory {
 			case AbstractaPackage.MODEL_FACTORY__LISTA_PAQUETES:
 				getListaPaquetes().clear();
 				return;
+			case AbstractaPackage.MODEL_FACTORY__LISTA_TODAS_CLASES:
+				getListaTodasClases().clear();
+				return;
+			case AbstractaPackage.MODEL_FACTORY__LISTA_TODOS_PAQUETES:
+				getListaTodosPaquetes().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -251,6 +317,10 @@ public class ModelFactoryImpl extends EObjectImpl implements ModelFactory {
 				return RUTA_EDEFAULT == null ? ruta != null : !RUTA_EDEFAULT.equals(ruta);
 			case AbstractaPackage.MODEL_FACTORY__LISTA_PAQUETES:
 				return listaPaquetes != null && !listaPaquetes.isEmpty();
+			case AbstractaPackage.MODEL_FACTORY__LISTA_TODAS_CLASES:
+				return listaTodasClases != null && !listaTodasClases.isEmpty();
+			case AbstractaPackage.MODEL_FACTORY__LISTA_TODOS_PAQUETES:
+				return listaTodosPaquetes != null && !listaTodosPaquetes.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

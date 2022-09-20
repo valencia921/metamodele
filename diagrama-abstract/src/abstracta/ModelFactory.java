@@ -18,6 +18,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link abstracta.ModelFactory#getNombre <em>Nombre</em>}</li>
  *   <li>{@link abstracta.ModelFactory#getRuta <em>Ruta</em>}</li>
  *   <li>{@link abstracta.ModelFactory#getListaPaquetes <em>Lista Paquetes</em>}</li>
+ *   <li>{@link abstracta.ModelFactory#getListaTodasClases <em>Lista Todas Clases</em>}</li>
+ *   <li>{@link abstracta.ModelFactory#getListaTodosPaquetes <em>Lista Todos Paquetes</em>}</li>
  * </ul>
  *
  * @see abstracta.AbstractaPackage#getModelFactory()
@@ -92,5 +94,37 @@ public interface ModelFactory extends EObject {
 	 * @generated
 	 */
 	EList<TCDPaquete> getListaPaquetes();
+
+	/**
+	 * Returns the value of the '<em><b>Lista Todas Clases</b></em>' reference list.
+	 * The list contents are of type {@link abstracta.TCDClase}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lista Todas Clases</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lista Todas Clases</em>' reference list.
+	 * @see abstracta.AbstractaPackage#getModelFactory_ListaTodasClases()
+	 * @model
+	 * @generated
+	 */
+	EList<TCDClase> getListaTodasClases();
+
+	/**
+	 * Returns the value of the '<em><b>Lista Todos Paquetes</b></em>' reference list.
+	 * The list contents are of type {@link abstracta.TCDPaquete}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lista Todos Paquetes</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lista Todos Paquetes</em>' reference list.
+	 * @see abstracta.AbstractaPackage#getModelFactory_ListaTodosPaquetes()
+	 * @model
+	 * @generated
+	 */
+	EList<TCDPaquete> getListaTodosPaquetes();
 
 } // ModelFactory

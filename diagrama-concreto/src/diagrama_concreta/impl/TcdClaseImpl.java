@@ -6,7 +6,6 @@ import diagrama_concreta.Diagrama_concretaPackage;
 import diagrama_concreta.TCDAtributo;
 import diagrama_concreta.TCDClase;
 import diagrama_concreta.TCDMetodo;
-import diagrama_concreta.Visibilidad;
 
 import java.util.Collection;
 
@@ -36,7 +35,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link diagrama_concreta.impl.TCDClaseImpl#getListaMetodos <em>Lista Metodos</em>}</li>
  *   <li>{@link diagrama_concreta.impl.TCDClaseImpl#getNombre <em>Nombre</em>}</li>
  *   <li>{@link diagrama_concreta.impl.TCDClaseImpl#getEstereotipo <em>Estereotipo</em>}</li>
- *   <li>{@link diagrama_concreta.impl.TCDClaseImpl#getModificadorAcceso <em>Modificador Acceso</em>}</li>
  *   <li>{@link diagrama_concreta.impl.TCDClaseImpl#isIsAbstract <em>Is Abstract</em>}</li>
  *   <li>{@link diagrama_concreta.impl.TCDClaseImpl#getDocumentacion <em>Documentacion</em>}</li>
  *   <li>{@link diagrama_concreta.impl.TCDClaseImpl#getRuta <em>Ruta</em>}</li>
@@ -104,26 +102,6 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 	 * @ordered
 	 */
 	protected String estereotipo = ESTEREOTIPO_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getModificadorAcceso() <em>Modificador Acceso</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getModificadorAcceso()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Visibilidad MODIFICADOR_ACCESO_EDEFAULT = Visibilidad.PUBLIC;
-
-	/**
-	 * The cached value of the '{@link #getModificadorAcceso() <em>Modificador Acceso</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getModificadorAcceso()
-	 * @generated
-	 * @ordered
-	 */
-	protected Visibilidad modificadorAcceso = MODIFICADOR_ACCESO_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isIsAbstract() <em>Is Abstract</em>}' attribute.
@@ -275,27 +253,6 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Visibilidad getModificadorAcceso() {
-		return modificadorAcceso;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setModificadorAcceso(Visibilidad newModificadorAcceso) {
-		Visibilidad oldModificadorAcceso = modificadorAcceso;
-		modificadorAcceso = newModificadorAcceso == null ? MODIFICADOR_ACCESO_EDEFAULT : newModificadorAcceso;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Diagrama_concretaPackage.TCD_CLASE__MODIFICADOR_ACCESO, oldModificadorAcceso, modificadorAcceso));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean isIsAbstract() {
 		return isAbstract;
 	}
@@ -386,8 +343,6 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 				return getNombre();
 			case Diagrama_concretaPackage.TCD_CLASE__ESTEREOTIPO:
 				return getEstereotipo();
-			case Diagrama_concretaPackage.TCD_CLASE__MODIFICADOR_ACCESO:
-				return getModificadorAcceso();
 			case Diagrama_concretaPackage.TCD_CLASE__IS_ABSTRACT:
 				return isIsAbstract();
 			case Diagrama_concretaPackage.TCD_CLASE__DOCUMENTACION:
@@ -420,9 +375,6 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 				return;
 			case Diagrama_concretaPackage.TCD_CLASE__ESTEREOTIPO:
 				setEstereotipo((String)newValue);
-				return;
-			case Diagrama_concretaPackage.TCD_CLASE__MODIFICADOR_ACCESO:
-				setModificadorAcceso((Visibilidad)newValue);
 				return;
 			case Diagrama_concretaPackage.TCD_CLASE__IS_ABSTRACT:
 				setIsAbstract((Boolean)newValue);
@@ -457,9 +409,6 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 			case Diagrama_concretaPackage.TCD_CLASE__ESTEREOTIPO:
 				setEstereotipo(ESTEREOTIPO_EDEFAULT);
 				return;
-			case Diagrama_concretaPackage.TCD_CLASE__MODIFICADOR_ACCESO:
-				setModificadorAcceso(MODIFICADOR_ACCESO_EDEFAULT);
-				return;
 			case Diagrama_concretaPackage.TCD_CLASE__IS_ABSTRACT:
 				setIsAbstract(IS_ABSTRACT_EDEFAULT);
 				return;
@@ -489,8 +438,6 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
 			case Diagrama_concretaPackage.TCD_CLASE__ESTEREOTIPO:
 				return ESTEREOTIPO_EDEFAULT == null ? estereotipo != null : !ESTEREOTIPO_EDEFAULT.equals(estereotipo);
-			case Diagrama_concretaPackage.TCD_CLASE__MODIFICADOR_ACCESO:
-				return modificadorAcceso != MODIFICADOR_ACCESO_EDEFAULT;
 			case Diagrama_concretaPackage.TCD_CLASE__IS_ABSTRACT:
 				return isAbstract != IS_ABSTRACT_EDEFAULT;
 			case Diagrama_concretaPackage.TCD_CLASE__DOCUMENTACION:
@@ -515,8 +462,6 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 		result.append(nombre);
 		result.append(", estereotipo: ");
 		result.append(estereotipo);
-		result.append(", modificadorAcceso: ");
-		result.append(modificadorAcceso);
 		result.append(", isAbstract: ");
 		result.append(isAbstract);
 		result.append(", documentacion: ");

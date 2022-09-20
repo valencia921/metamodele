@@ -25,8 +25,6 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="listaPaquetes" upperBound="-1"
         eType="#//TCDPaquete" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="listaClases" upperBound="-1"
-        eType="#//TCDClase" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -45,7 +43,6 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="estereotipo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modificadorAcceso" eType="#//Visibilidad"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAbstract" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="documentacion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ruta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -67,7 +64,7 @@
       <details key="width" value="3"/>
       <details key="color" value="39,174,96"/>
       <details key="source.decoration" value="rhomb"/>
-      <details key="label" value="nombreOrigen"/>
+      <details key="label" value="nombreDestino"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreOrigen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreDestino" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -81,7 +78,7 @@
       <details key="style" value="solid"/>
       <details key="width" value="3"/>
       <details key="color" value="0,62,255"/>
-      <details key="label" value="nombreOrigen"/>
+      <details key="label" value="nombreDestino"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreOrigen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreDestino" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -93,7 +90,7 @@
     <eAnnotations source="gmf.link">
       <details key="source" value="source"/>
       <details key="target" value="target"/>
-      <details key="label" value="nombreOrigen"/>
+      <details key="label" value="nombreDestino"/>
       <details key="style" value="dash"/>
       <details key="width" value="3"/>
       <details key="color" value="0,255,193"/>
@@ -108,7 +105,7 @@
     <eAnnotations source="gmf.link">
       <details key="source" value="source"/>
       <details key="target" value="target"/>
-      <details key="label" value="nombreOrigen"/>
+      <details key="label" value="nombreDestino"/>
       <details key="style" value="solid"/>
       <details key="width" value="3"/>
       <details key="color" value="255,15,15"/>
@@ -130,10 +127,10 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Multiplicidad">
-    <eLiterals name="uno"/>
-    <eLiterals name="uno_cero" value="1"/>
-    <eLiterals name="cero_varios" value="2"/>
-    <eLiterals name="uno_varios" value="3"/>
+    <eLiterals name="UNO"/>
+    <eLiterals name="CERO_UNO" value="1"/>
+    <eLiterals name="CERO_MUCHOS" value="2"/>
+    <eLiterals name="UNO_MUCHOS" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TCDAtributo">
     <eAnnotations source="gmf.node">
@@ -146,20 +143,20 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoDato" eType="#//TipoDato"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="visibilidad" eType="#//Visibilidad"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isConstante" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isStatic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valorDefecto" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TipoDato">
-    <eLiterals name="String"/>
+    <eLiterals name="string"/>
     <eLiterals name="Number" value="1"/>
-    <eLiterals name="Boolean" value="2"/>
-    <eLiterals name="Array" value="3"/>
-    <eLiterals name="undefined" value="4"/>
-    <eLiterals name="null" value="5"/>
+    <eLiterals name="boolean" value="2"/>
+    <eLiterals name="undefined" value="3"/>
+    <eLiterals name="null" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Visibilidad">
-    <eLiterals name="public"/>
-    <eLiterals name="private" value="1"/>
-    <eLiterals name="protected" value="2"/>
+    <eLiterals name="Public"/>
+    <eLiterals name="Private" value="1"/>
+    <eLiterals name="Protected" value="2"/>
+    <eLiterals name="Readonly" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TCDMetodo">
     <eAnnotations source="gmf.node">

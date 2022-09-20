@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link diagrama_concreta.impl.TCDAtributoImpl#getTipoDato <em>Tipo Dato</em>}</li>
  *   <li>{@link diagrama_concreta.impl.TCDAtributoImpl#getVisibilidad <em>Visibilidad</em>}</li>
  *   <li>{@link diagrama_concreta.impl.TCDAtributoImpl#isIsConstante <em>Is Constante</em>}</li>
- *   <li>{@link diagrama_concreta.impl.TCDAtributoImpl#isIsStatic <em>Is Static</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDAtributoImpl#getValorDefecto <em>Valor Defecto</em>}</li>
  * </ul>
  *
  * @generated
@@ -113,24 +113,24 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 	protected boolean isConstante = IS_CONSTANTE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isIsStatic() <em>Is Static</em>}' attribute.
+	 * The default value of the '{@link #getValorDefecto() <em>Valor Defecto</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isIsStatic()
+	 * @see #getValorDefecto()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean IS_STATIC_EDEFAULT = false;
+	protected static final String VALOR_DEFECTO_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #isIsStatic() <em>Is Static</em>}' attribute.
+	 * The cached value of the '{@link #getValorDefecto() <em>Valor Defecto</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isIsStatic()
+	 * @see #getValorDefecto()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean isStatic = IS_STATIC_EDEFAULT;
+	protected String valorDefecto = VALOR_DEFECTO_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -240,8 +240,8 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isIsStatic() {
-		return isStatic;
+	public String getValorDefecto() {
+		return valorDefecto;
 	}
 
 	/**
@@ -249,11 +249,11 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIsStatic(boolean newIsStatic) {
-		boolean oldIsStatic = isStatic;
-		isStatic = newIsStatic;
+	public void setValorDefecto(String newValorDefecto) {
+		String oldValorDefecto = valorDefecto;
+		valorDefecto = newValorDefecto;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Diagrama_concretaPackage.TCD_ATRIBUTO__IS_STATIC, oldIsStatic, isStatic));
+			eNotify(new ENotificationImpl(this, Notification.SET, Diagrama_concretaPackage.TCD_ATRIBUTO__VALOR_DEFECTO, oldValorDefecto, valorDefecto));
 	}
 
 	/**
@@ -272,8 +272,8 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 				return getVisibilidad();
 			case Diagrama_concretaPackage.TCD_ATRIBUTO__IS_CONSTANTE:
 				return isIsConstante();
-			case Diagrama_concretaPackage.TCD_ATRIBUTO__IS_STATIC:
-				return isIsStatic();
+			case Diagrama_concretaPackage.TCD_ATRIBUTO__VALOR_DEFECTO:
+				return getValorDefecto();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -298,8 +298,8 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 			case Diagrama_concretaPackage.TCD_ATRIBUTO__IS_CONSTANTE:
 				setIsConstante((Boolean)newValue);
 				return;
-			case Diagrama_concretaPackage.TCD_ATRIBUTO__IS_STATIC:
-				setIsStatic((Boolean)newValue);
+			case Diagrama_concretaPackage.TCD_ATRIBUTO__VALOR_DEFECTO:
+				setValorDefecto((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -325,8 +325,8 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 			case Diagrama_concretaPackage.TCD_ATRIBUTO__IS_CONSTANTE:
 				setIsConstante(IS_CONSTANTE_EDEFAULT);
 				return;
-			case Diagrama_concretaPackage.TCD_ATRIBUTO__IS_STATIC:
-				setIsStatic(IS_STATIC_EDEFAULT);
+			case Diagrama_concretaPackage.TCD_ATRIBUTO__VALOR_DEFECTO:
+				setValorDefecto(VALOR_DEFECTO_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -348,8 +348,8 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 				return visibilidad != VISIBILIDAD_EDEFAULT;
 			case Diagrama_concretaPackage.TCD_ATRIBUTO__IS_CONSTANTE:
 				return isConstante != IS_CONSTANTE_EDEFAULT;
-			case Diagrama_concretaPackage.TCD_ATRIBUTO__IS_STATIC:
-				return isStatic != IS_STATIC_EDEFAULT;
+			case Diagrama_concretaPackage.TCD_ATRIBUTO__VALOR_DEFECTO:
+				return VALOR_DEFECTO_EDEFAULT == null ? valorDefecto != null : !VALOR_DEFECTO_EDEFAULT.equals(valorDefecto);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -372,8 +372,8 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 		result.append(visibilidad);
 		result.append(", isConstante: ");
 		result.append(isConstante);
-		result.append(", isStatic: ");
-		result.append(isStatic);
+		result.append(", valorDefecto: ");
+		result.append(valorDefecto);
 		result.append(')');
 		return result.toString();
 	}

@@ -28,20 +28,20 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface TCDMetodo extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Lista Parametros</b></em>' containment reference list.
-	 * The list contents are of type {@link abstracta.TCDParametro}.
+	 * Returns the value of the '<em><b>Lista Parametros</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Lista Parametros</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Lista Parametros</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lista Parametros</em>' containment reference list.
+	 * @return the value of the '<em>Lista Parametros</em>' attribute list.
 	 * @see abstracta.AbstractaPackage#getTCDMetodo_ListaParametros()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
-	EList<TCDParametro> getListaParametros();
+	EList<String> getListaParametros();
 
 	/**
 	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
