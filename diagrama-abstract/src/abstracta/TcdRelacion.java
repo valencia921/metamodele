@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link abstracta.TCDRelacion#getSource <em>Source</em>}</li>
  *   <li>{@link abstracta.TCDRelacion#getTarget <em>Target</em>}</li>
- *   <li>{@link abstracta.TCDRelacion#getNavegavilidad <em>Navegavilidad</em>}</li>
  * </ul>
  *
  * @see abstracta.AbstractaPackage#getTCDRelacion()
@@ -74,31 +73,5 @@ public interface TCDRelacion extends EObject {
 	 * @generated
 	 */
 	void setTarget(TCDClase value);
-
-	/**
-	 * Returns the value of the '<em><b>Navegavilidad</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Navegavilidad</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Navegavilidad</em>' attribute.
-	 * @see #setNavegavilidad(String)
-	 * @see abstracta.AbstractaPackage#getTCDRelacion_Navegavilidad()
-	 * @model
-	 * @generated
-	 */
-	String getNavegavilidad();
-
-	/**
-	 * Sets the value of the '{@link abstracta.TCDRelacion#getNavegavilidad <em>Navegavilidad</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Navegavilidad</em>' attribute.
-	 * @see #getNavegavilidad()
-	 * @generated
-	 */
-	void setNavegavilidad(String value);
 
 } // TCDRelacion

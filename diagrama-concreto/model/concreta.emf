@@ -47,8 +47,8 @@ abstract class TCDRelacion {
 }
 
 enum Navegavilidad {
-	bidireccional;
-	unidireccional;
+	Bidireccional;
+	Unidireccional;
 }
 
 @gmf.link(source="source", target="target", style="solid", width="3", color = "39,174,96",

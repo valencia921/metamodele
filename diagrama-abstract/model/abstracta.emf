@@ -51,8 +51,6 @@ class TCDMetodo {
 abstract class TCDRelacion {
     ref TCDClase source;
     ref TCDClase target;
-    
-    attr String navegavilidad;
 }
 
 class TCDAsociacion extends TCDRelacion{
@@ -61,6 +59,7 @@ class TCDAsociacion extends TCDRelacion{
     attr String nombreDestino;
     attr Multiplicidad multiplicidadOrigen;
     attr Multiplicidad multiplicidadDestino;
+    attr Navegavilidad navegavilidad;
 }
 
 class TCDComposicion extends TCDRelacion{
@@ -123,4 +122,10 @@ enum TipoRetorno {
 	string;
 	number;
 	boolean;
+}
+
+enum Navegavilidad {
+	Bidireccional;
+	Unidireccional;
+	None;
 }

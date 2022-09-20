@@ -6,6 +6,7 @@ import abstracta.AbstractaFactory;
 import abstracta.AbstractaPackage;
 import abstracta.ModelFactory;
 import abstracta.Multiplicidad;
+import abstracta.Navegavilidad;
 import abstracta.TCDAgregacion;
 import abstracta.TCDAsociacion;
 import abstracta.TCDAtributo;
@@ -147,6 +148,13 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * @generated
 	 */
 	private EEnum tipoRetornoEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum navegavilidadEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -529,15 +537,6 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTCDRelacion_Navegavilidad() {
-		return (EAttribute)tcdRelacionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getTCDAsociacion() {
 		return tcdAsociacionEClass;
 	}
@@ -576,6 +575,15 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 */
 	public EAttribute getTCDAsociacion_MultiplicidadDestino() {
 		return (EAttribute)tcdAsociacionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTCDAsociacion_Navegavilidad() {
+		return (EAttribute)tcdAsociacionEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -790,6 +798,15 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getNavegavilidad() {
+		return navegavilidadEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public AbstractaFactory getAbstractaFactory() {
 		return (AbstractaFactory)getEFactoryInstance();
 	}
@@ -853,13 +870,13 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		tcdRelacionEClass = createEClass(TCD_RELACION);
 		createEReference(tcdRelacionEClass, TCD_RELACION__SOURCE);
 		createEReference(tcdRelacionEClass, TCD_RELACION__TARGET);
-		createEAttribute(tcdRelacionEClass, TCD_RELACION__NAVEGAVILIDAD);
 
 		tcdAsociacionEClass = createEClass(TCD_ASOCIACION);
 		createEAttribute(tcdAsociacionEClass, TCD_ASOCIACION__NOMBRE_ORIGEN);
 		createEAttribute(tcdAsociacionEClass, TCD_ASOCIACION__NOMBRE_DESTINO);
 		createEAttribute(tcdAsociacionEClass, TCD_ASOCIACION__MULTIPLICIDAD_ORIGEN);
 		createEAttribute(tcdAsociacionEClass, TCD_ASOCIACION__MULTIPLICIDAD_DESTINO);
+		createEAttribute(tcdAsociacionEClass, TCD_ASOCIACION__NAVEGAVILIDAD);
 
 		tcdComposicionEClass = createEClass(TCD_COMPOSICION);
 		createEAttribute(tcdComposicionEClass, TCD_COMPOSICION__NOMBRE_ORIGEN);
@@ -890,6 +907,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		tipoDatoEEnum = createEEnum(TIPO_DATO);
 		multiplicidadEEnum = createEEnum(MULTIPLICIDAD);
 		tipoRetornoEEnum = createEEnum(TIPO_RETORNO);
+		navegavilidadEEnum = createEEnum(NAVEGAVILIDAD);
 	}
 
 	/**
@@ -967,13 +985,13 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		initEClass(tcdRelacionEClass, TCDRelacion.class, "TCDRelacion", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTCDRelacion_Source(), this.getTCDClase(), null, "source", null, 0, 1, TCDRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTCDRelacion_Target(), this.getTCDClase(), null, "target", null, 0, 1, TCDRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTCDRelacion_Navegavilidad(), ecorePackage.getEString(), "navegavilidad", null, 0, 1, TCDRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tcdAsociacionEClass, TCDAsociacion.class, "TCDAsociacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTCDAsociacion_NombreOrigen(), ecorePackage.getEString(), "nombreOrigen", null, 0, 1, TCDAsociacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDAsociacion_NombreDestino(), ecorePackage.getEString(), "nombreDestino", null, 0, 1, TCDAsociacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDAsociacion_MultiplicidadOrigen(), this.getMultiplicidad(), "multiplicidadOrigen", null, 0, 1, TCDAsociacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDAsociacion_MultiplicidadDestino(), this.getMultiplicidad(), "multiplicidadDestino", null, 0, 1, TCDAsociacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTCDAsociacion_Navegavilidad(), this.getNavegavilidad(), "navegavilidad", null, 0, 1, TCDAsociacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tcdComposicionEClass, TCDComposicion.class, "TCDComposicion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTCDComposicion_NombreOrigen(), ecorePackage.getEString(), "nombreOrigen", null, 0, 1, TCDComposicion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1024,6 +1042,11 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		addEEnumLiteral(tipoRetornoEEnum, TipoRetorno.STRING);
 		addEEnumLiteral(tipoRetornoEEnum, TipoRetorno.NUMBER);
 		addEEnumLiteral(tipoRetornoEEnum, TipoRetorno.BOOLEAN);
+
+		initEEnum(navegavilidadEEnum, Navegavilidad.class, "Navegavilidad");
+		addEEnumLiteral(navegavilidadEEnum, Navegavilidad.BIDIRECCIONAL);
+		addEEnumLiteral(navegavilidadEEnum, Navegavilidad.UNIDIRECCIONAL);
+		addEEnumLiteral(navegavilidadEEnum, Navegavilidad.NONE);
 
 		// Create resource
 		createResource(eNS_URI);

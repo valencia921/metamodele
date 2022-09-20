@@ -423,22 +423,13 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_RELACION__TARGET = 1;
 
 	/**
-	 * The feature id for the '<em><b>Navegavilidad</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TCD_RELACION__NAVEGAVILIDAD = 2;
-
-	/**
 	 * The number of structural features of the '<em>TCD Relacion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TCD_RELACION_FEATURE_COUNT = 3;
+	int TCD_RELACION_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link abstracta.impl.TCDAsociacionImpl <em>TCD Asociacion</em>}' class.
@@ -467,15 +458,6 @@ public interface AbstractaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TCD_ASOCIACION__TARGET = TCD_RELACION__TARGET;
-
-	/**
-	 * The feature id for the '<em><b>Navegavilidad</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TCD_ASOCIACION__NAVEGAVILIDAD = TCD_RELACION__NAVEGAVILIDAD;
 
 	/**
 	 * The feature id for the '<em><b>Nombre Origen</b></em>' attribute.
@@ -514,13 +496,22 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_ASOCIACION__MULTIPLICIDAD_DESTINO = TCD_RELACION_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Navegavilidad</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TCD_ASOCIACION__NAVEGAVILIDAD = TCD_RELACION_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>TCD Asociacion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TCD_ASOCIACION_FEATURE_COUNT = TCD_RELACION_FEATURE_COUNT + 4;
+	int TCD_ASOCIACION_FEATURE_COUNT = TCD_RELACION_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link abstracta.impl.TCDComposicionImpl <em>TCD Composicion</em>}' class.
@@ -549,15 +540,6 @@ public interface AbstractaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TCD_COMPOSICION__TARGET = TCD_RELACION__TARGET;
-
-	/**
-	 * The feature id for the '<em><b>Navegavilidad</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TCD_COMPOSICION__NAVEGAVILIDAD = TCD_RELACION__NAVEGAVILIDAD;
 
 	/**
 	 * The feature id for the '<em><b>Nombre Origen</b></em>' attribute.
@@ -633,15 +615,6 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_DEPENDENCIA__TARGET = TCD_RELACION__TARGET;
 
 	/**
-	 * The feature id for the '<em><b>Navegavilidad</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TCD_DEPENDENCIA__NAVEGAVILIDAD = TCD_RELACION__NAVEGAVILIDAD;
-
-	/**
 	 * The feature id for the '<em><b>Nombre Origen</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -715,15 +688,6 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_HERENCIA__TARGET = TCD_RELACION__TARGET;
 
 	/**
-	 * The feature id for the '<em><b>Navegavilidad</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TCD_HERENCIA__NAVEGAVILIDAD = TCD_RELACION__NAVEGAVILIDAD;
-
-	/**
 	 * The number of structural features of the '<em>TCD Herencia</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -759,15 +723,6 @@ public interface AbstractaPackage extends EPackage {
 	 * @ordered
 	 */
 	int TCD_AGREGACION__TARGET = TCD_RELACION__TARGET;
-
-	/**
-	 * The feature id for the '<em><b>Navegavilidad</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TCD_AGREGACION__NAVEGAVILIDAD = TCD_RELACION__NAVEGAVILIDAD;
 
 	/**
 	 * The feature id for the '<em><b>Nombre Origen</b></em>' attribute.
@@ -890,6 +845,16 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 */
 	int TIPO_RETORNO = 15;
+
+	/**
+	 * The meta object id for the '{@link abstracta.Navegavilidad <em>Navegavilidad</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see abstracta.Navegavilidad
+	 * @see abstracta.impl.AbstractaPackageImpl#getNavegavilidad()
+	 * @generated
+	 */
+	int NAVEGAVILIDAD = 16;
 
 
 	/**
@@ -1272,17 +1237,6 @@ public interface AbstractaPackage extends EPackage {
 	EReference getTCDRelacion_Target();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TCDRelacion#getNavegavilidad <em>Navegavilidad</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Navegavilidad</em>'.
-	 * @see abstracta.TCDRelacion#getNavegavilidad()
-	 * @see #getTCDRelacion()
-	 * @generated
-	 */
-	EAttribute getTCDRelacion_Navegavilidad();
-
-	/**
 	 * Returns the meta object for class '{@link abstracta.TCDAsociacion <em>TCD Asociacion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1335,6 +1289,17 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTCDAsociacion_MultiplicidadDestino();
+
+	/**
+	 * Returns the meta object for the attribute '{@link abstracta.TCDAsociacion#getNavegavilidad <em>Navegavilidad</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Navegavilidad</em>'.
+	 * @see abstracta.TCDAsociacion#getNavegavilidad()
+	 * @see #getTCDAsociacion()
+	 * @generated
+	 */
+	EAttribute getTCDAsociacion_Navegavilidad();
 
 	/**
 	 * Returns the meta object for class '{@link abstracta.TCDComposicion <em>TCD Composicion</em>}'.
@@ -1579,6 +1544,16 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getTipoRetorno();
+
+	/**
+	 * Returns the meta object for enum '{@link abstracta.Navegavilidad <em>Navegavilidad</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Navegavilidad</em>'.
+	 * @see abstracta.Navegavilidad
+	 * @generated
+	 */
+	EEnum getNavegavilidad();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1895,14 +1870,6 @@ public interface AbstractaPackage extends EPackage {
 		EReference TCD_RELACION__TARGET = eINSTANCE.getTCDRelacion_Target();
 
 		/**
-		 * The meta object literal for the '<em><b>Navegavilidad</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TCD_RELACION__NAVEGAVILIDAD = eINSTANCE.getTCDRelacion_Navegavilidad();
-
-		/**
 		 * The meta object literal for the '{@link abstracta.impl.TCDAsociacionImpl <em>TCD Asociacion</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1943,6 +1910,14 @@ public interface AbstractaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TCD_ASOCIACION__MULTIPLICIDAD_DESTINO = eINSTANCE.getTCDAsociacion_MultiplicidadDestino();
+
+		/**
+		 * The meta object literal for the '<em><b>Navegavilidad</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TCD_ASOCIACION__NAVEGAVILIDAD = eINSTANCE.getTCDAsociacion_Navegavilidad();
 
 		/**
 		 * The meta object literal for the '{@link abstracta.impl.TCDComposicionImpl <em>TCD Composicion</em>}' class.
@@ -2145,6 +2120,16 @@ public interface AbstractaPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum TIPO_RETORNO = eINSTANCE.getTipoRetorno();
+
+		/**
+		 * The meta object literal for the '{@link abstracta.Navegavilidad <em>Navegavilidad</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see abstracta.Navegavilidad
+		 * @see abstracta.impl.AbstractaPackageImpl#getNavegavilidad()
+		 * @generated
+		 */
+		EEnum NAVEGAVILIDAD = eINSTANCE.getNavegavilidad();
 
 	}
 

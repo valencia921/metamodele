@@ -51,13 +51,13 @@
   <eClassifiers xsi:type="ecore:EClass" name="TCDRelacion" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//TCDClase"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//TCDClase"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="navegavilidad" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TCDAsociacion" eSuperTypes="#//TCDRelacion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreOrigen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreDestino" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadOrigen" eType="#//Multiplicidad"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadDestino" eType="#//Multiplicidad"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="navegavilidad" eType="#//Navegavilidad"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TCDComposicion" eSuperTypes="#//TCDRelacion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreOrigen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -106,5 +106,10 @@
     <eLiterals name="string" value="1"/>
     <eLiterals name="number" value="2"/>
     <eLiterals name="boolean" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Navegavilidad">
+    <eLiterals name="Bidireccional"/>
+    <eLiterals name="Unidireccional" value="1"/>
+    <eLiterals name="None" value="2"/>
   </eClassifiers>
 </ecore:EPackage>

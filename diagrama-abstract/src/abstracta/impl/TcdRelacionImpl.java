@@ -24,7 +24,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <ul>
  *   <li>{@link abstracta.impl.TCDRelacionImpl#getSource <em>Source</em>}</li>
  *   <li>{@link abstracta.impl.TCDRelacionImpl#getTarget <em>Target</em>}</li>
- *   <li>{@link abstracta.impl.TCDRelacionImpl#getNavegavilidad <em>Navegavilidad</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,26 +48,6 @@ public abstract class TCDRelacionImpl extends EObjectImpl implements TCDRelacion
 	 * @ordered
 	 */
 	protected TCDClase target;
-
-	/**
-	 * The default value of the '{@link #getNavegavilidad() <em>Navegavilidad</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNavegavilidad()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAVEGAVILIDAD_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getNavegavilidad() <em>Navegavilidad</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNavegavilidad()
-	 * @generated
-	 * @ordered
-	 */
-	protected String navegavilidad = NAVEGAVILIDAD_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -170,27 +149,6 @@ public abstract class TCDRelacionImpl extends EObjectImpl implements TCDRelacion
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNavegavilidad() {
-		return navegavilidad;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNavegavilidad(String newNavegavilidad) {
-		String oldNavegavilidad = navegavilidad;
-		navegavilidad = newNavegavilidad;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AbstractaPackage.TCD_RELACION__NAVEGAVILIDAD, oldNavegavilidad, navegavilidad));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -200,8 +158,6 @@ public abstract class TCDRelacionImpl extends EObjectImpl implements TCDRelacion
 			case AbstractaPackage.TCD_RELACION__TARGET:
 				if (resolve) return getTarget();
 				return basicGetTarget();
-			case AbstractaPackage.TCD_RELACION__NAVEGAVILIDAD:
-				return getNavegavilidad();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -219,9 +175,6 @@ public abstract class TCDRelacionImpl extends EObjectImpl implements TCDRelacion
 				return;
 			case AbstractaPackage.TCD_RELACION__TARGET:
 				setTarget((TCDClase)newValue);
-				return;
-			case AbstractaPackage.TCD_RELACION__NAVEGAVILIDAD:
-				setNavegavilidad((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -241,9 +194,6 @@ public abstract class TCDRelacionImpl extends EObjectImpl implements TCDRelacion
 			case AbstractaPackage.TCD_RELACION__TARGET:
 				setTarget((TCDClase)null);
 				return;
-			case AbstractaPackage.TCD_RELACION__NAVEGAVILIDAD:
-				setNavegavilidad(NAVEGAVILIDAD_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -260,26 +210,8 @@ public abstract class TCDRelacionImpl extends EObjectImpl implements TCDRelacion
 				return source != null;
 			case AbstractaPackage.TCD_RELACION__TARGET:
 				return target != null;
-			case AbstractaPackage.TCD_RELACION__NAVEGAVILIDAD:
-				return NAVEGAVILIDAD_EDEFAULT == null ? navegavilidad != null : !NAVEGAVILIDAD_EDEFAULT.equals(navegavilidad);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (navegavilidad: ");
-		result.append(navegavilidad);
-		result.append(')');
-		return result.toString();
 	}
 
 } //TCDRelacionImpl

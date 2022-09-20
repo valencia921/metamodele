@@ -89,6 +89,8 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 				return createMultiplicidadFromString(eDataType, initialValue);
 			case AbstractaPackage.TIPO_RETORNO:
 				return createTipoRetornoFromString(eDataType, initialValue);
+			case AbstractaPackage.NAVEGAVILIDAD:
+				return createNavegavilidadFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -110,6 +112,8 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 				return convertMultiplicidadToString(eDataType, instanceValue);
 			case AbstractaPackage.TIPO_RETORNO:
 				return convertTipoRetornoToString(eDataType, instanceValue);
+			case AbstractaPackage.NAVEGAVILIDAD:
+				return convertNavegavilidadToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -302,6 +306,26 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 	 * @generated
 	 */
 	public String convertTipoRetornoToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Navegavilidad createNavegavilidadFromString(EDataType eDataType, String initialValue) {
+		Navegavilidad result = Navegavilidad.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertNavegavilidadToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
