@@ -12,23 +12,26 @@
       <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//Visibilidad/Readonly"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="abstracta.ecore#//TipoDato">
+      <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//TipoDato/any"/>
       <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//TipoDato/string"/>
       <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//TipoDato/Number"/>
       <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//TipoDato/boolean"/>
       <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//TipoDato/undefined"/>
       <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//TipoDato/null"/>
+      <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//TipoDato/Void"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="abstracta.ecore#//Multiplicidad">
-      <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//Multiplicidad/UNO"/>
-      <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//Multiplicidad/CERO_UNO"/>
-      <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//Multiplicidad/CERO_MUCHOS"/>
-      <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//Multiplicidad/UNO_MUCHOS"/>
+      <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//Multiplicidad/_1"/>
+      <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//Multiplicidad/_0_1"/>
+      <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//Multiplicidad/_0_n"/>
+      <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//Multiplicidad/_1_n"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="abstracta.ecore#//TipoRetorno">
       <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//TipoRetorno/undefined"/>
       <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//TipoRetorno/string"/>
       <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//TipoRetorno/number"/>
       <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//TipoRetorno/boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//TipoRetorno/Void"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="abstracta.ecore#//Navegavilidad">
       <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//Navegavilidad/Bidireccional"/>

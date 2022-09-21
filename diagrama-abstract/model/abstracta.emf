@@ -103,18 +103,20 @@ enum Visibilidad {
 }
 
 enum TipoDato {
+	any;
 	string;
 	Number;
 	boolean;
 	undefined;
 	null;
+	Void;
 }
 
 enum Multiplicidad {
-	UNO;
-	CERO_UNO;
-	CERO_MUCHOS;
-	UNO_MUCHOS;
+	_1;
+	_0_1;
+	_0_n;
+	_1_n;
 }
 
 enum TipoRetorno {
@@ -122,6 +124,7 @@ enum TipoRetorno {
 	string;
 	number;
 	boolean;
+	Void;
 }
 
 enum Navegavilidad {

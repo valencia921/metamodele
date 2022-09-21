@@ -77,7 +77,7 @@ public class TCDAgregacionImpl extends TCDRelacionImpl implements TCDAgregacion 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Multiplicidad MULTIPLICIDAD_ORIGEN_EDEFAULT = Multiplicidad.UNO;
+	protected static final Multiplicidad MULTIPLICIDAD_ORIGEN_EDEFAULT = Multiplicidad._1;
 
 	/**
 	 * The cached value of the '{@link #getMultiplicidadOrigen() <em>Multiplicidad Origen</em>}' attribute.
@@ -97,7 +97,7 @@ public class TCDAgregacionImpl extends TCDRelacionImpl implements TCDAgregacion 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Multiplicidad MULTIPLICIDAD_DESTINO_EDEFAULT = Multiplicidad.UNO;
+	protected static final Multiplicidad MULTIPLICIDAD_DESTINO_EDEFAULT = Multiplicidad._1;
 
 	/**
 	 * The cached value of the '{@link #getMultiplicidadDestino() <em>Multiplicidad Destino</em>}' attribute.

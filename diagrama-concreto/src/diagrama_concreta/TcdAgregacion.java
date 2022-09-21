@@ -19,7 +19,7 @@ package diagrama_concreta;
  * </ul>
  *
  * @see diagrama_concreta.Diagrama_concretaPackage#getTCDAgregacion()
- * @model annotation="gmf.link source='source' target='target' style='solid' width='3' color='39,174,96' source.decoration='rhomb' label='nombreDestino'"
+ * @model annotation="gmf.link source='source' target='target' style='solid' width='3' color='39,174,96' source.decoration='rhomb' label='nombreDestino, multiplicidadDestino' label.pattern='{0}  {1}'"
  * @generated
  */
 public interface TCDAgregacion extends TCDRelacion {

@@ -26,7 +26,7 @@ public enum Navegavilidad implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BIDIRECCIONAL(0, "bidireccional", "bidireccional"),
+	BIDIRECCIONAL(0, "Bidireccional", "Bidireccional"),
 
 	/**
 	 * The '<em><b>Unidireccional</b></em>' literal object.
@@ -36,7 +36,7 @@ public enum Navegavilidad implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	UNIDIRECCIONAL(1, "unidireccional", "unidireccional");
+	UNIDIRECCIONAL(1, "Unidireccional", "Unidireccional");
 
 	/**
 	 * The '<em><b>Bidireccional</b></em>' literal value.
@@ -47,7 +47,7 @@ public enum Navegavilidad implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #BIDIRECCIONAL
-	 * @model name="bidireccional"
+	 * @model name="Bidireccional"
 	 * @generated
 	 * @ordered
 	 */
@@ -62,7 +62,7 @@ public enum Navegavilidad implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #UNIDIRECCIONAL
-	 * @model name="unidireccional"
+	 * @model name="Unidireccional"
 	 * @generated
 	 * @ordered
 	 */

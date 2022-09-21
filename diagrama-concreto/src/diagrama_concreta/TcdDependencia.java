@@ -19,7 +19,7 @@ package diagrama_concreta;
  * </ul>
  *
  * @see diagrama_concreta.Diagrama_concretaPackage#getTCDDependencia()
- * @model annotation="gmf.link source='source' target='target' label='nombreDestino' style='solid' width='3' color='255,15,15' source.decoration='filledrhomb'"
+ * @model annotation="gmf.link source='source' target='target' label='nombreDestino, multiplicidadDestino' style='solid' width='3' label.pattern='{0}  {1}' color='255,15,15' source.decoration='filledrhomb'"
  * @generated
  */
 public interface TCDDependencia extends TCDRelacion {

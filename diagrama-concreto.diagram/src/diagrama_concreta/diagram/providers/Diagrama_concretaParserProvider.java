@@ -109,77 +109,93 @@ public class Diagrama_concretaParserProvider extends AbstractProvider implements
 	/**
 	* @generated
 	*/
-	private IParser tCDAgregacionNombreDestino_6001Parser;
+	private IParser tCDAgregacionNombreDestinoMultiplicidadDestino_6001Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getTCDAgregacionNombreDestino_6001Parser() {
-		if (tCDAgregacionNombreDestino_6001Parser == null) {
+	private IParser getTCDAgregacionNombreDestinoMultiplicidadDestino_6001Parser() {
+		if (tCDAgregacionNombreDestinoMultiplicidadDestino_6001Parser == null) {
 			EAttribute[] features = new EAttribute[] {
-					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDAgregacion_NombreDestino() };
+					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDAgregacion_NombreDestino(),
+					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDAgregacion_MultiplicidadDestino() };
 			diagrama_concreta.diagram.parsers.MessageFormatParser parser = new diagrama_concreta.diagram.parsers.MessageFormatParser(
 					features);
-			tCDAgregacionNombreDestino_6001Parser = parser;
+			parser.setViewPattern("{0}  {1}"); //$NON-NLS-1$
+			parser.setEditorPattern("{0}  {1}"); //$NON-NLS-1$
+			parser.setEditPattern("{0}  {1}"); //$NON-NLS-1$
+			tCDAgregacionNombreDestinoMultiplicidadDestino_6001Parser = parser;
 		}
-		return tCDAgregacionNombreDestino_6001Parser;
+		return tCDAgregacionNombreDestinoMultiplicidadDestino_6001Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser tCDAsociacionNombreDestino_6002Parser;
+	private IParser tCDAsociacionNombreDestinoMultiplicidadDestino_6002Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getTCDAsociacionNombreDestino_6002Parser() {
-		if (tCDAsociacionNombreDestino_6002Parser == null) {
+	private IParser getTCDAsociacionNombreDestinoMultiplicidadDestino_6002Parser() {
+		if (tCDAsociacionNombreDestinoMultiplicidadDestino_6002Parser == null) {
 			EAttribute[] features = new EAttribute[] {
-					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDAsociacion_NombreDestino() };
+					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDAsociacion_NombreDestino(),
+					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDAsociacion_MultiplicidadDestino() };
 			diagrama_concreta.diagram.parsers.MessageFormatParser parser = new diagrama_concreta.diagram.parsers.MessageFormatParser(
 					features);
-			tCDAsociacionNombreDestino_6002Parser = parser;
+			parser.setViewPattern("{0}  {1}"); //$NON-NLS-1$
+			parser.setEditorPattern("{0}  {1}"); //$NON-NLS-1$
+			parser.setEditPattern("{0}  {1}"); //$NON-NLS-1$
+			tCDAsociacionNombreDestinoMultiplicidadDestino_6002Parser = parser;
 		}
-		return tCDAsociacionNombreDestino_6002Parser;
+		return tCDAsociacionNombreDestinoMultiplicidadDestino_6002Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser tCDComposicionNombreDestino_6003Parser;
+	private IParser tCDComposicionNombreDestinoMultiplicidadDestino_6003Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getTCDComposicionNombreDestino_6003Parser() {
-		if (tCDComposicionNombreDestino_6003Parser == null) {
+	private IParser getTCDComposicionNombreDestinoMultiplicidadDestino_6003Parser() {
+		if (tCDComposicionNombreDestinoMultiplicidadDestino_6003Parser == null) {
 			EAttribute[] features = new EAttribute[] {
-					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDComposicion_NombreDestino() };
+					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDComposicion_NombreDestino(),
+					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDComposicion_MultiplicidadDestino() };
 			diagrama_concreta.diagram.parsers.MessageFormatParser parser = new diagrama_concreta.diagram.parsers.MessageFormatParser(
 					features);
-			tCDComposicionNombreDestino_6003Parser = parser;
+			parser.setViewPattern("{0}  {1}"); //$NON-NLS-1$
+			parser.setEditorPattern("{0}  {1}"); //$NON-NLS-1$
+			parser.setEditPattern("{0}  {1}"); //$NON-NLS-1$
+			tCDComposicionNombreDestinoMultiplicidadDestino_6003Parser = parser;
 		}
-		return tCDComposicionNombreDestino_6003Parser;
+		return tCDComposicionNombreDestinoMultiplicidadDestino_6003Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser tCDDependenciaNombreDestino_6004Parser;
+	private IParser tCDDependenciaNombreDestinoMultiplicidadDestino_6004Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getTCDDependenciaNombreDestino_6004Parser() {
-		if (tCDDependenciaNombreDestino_6004Parser == null) {
+	private IParser getTCDDependenciaNombreDestinoMultiplicidadDestino_6004Parser() {
+		if (tCDDependenciaNombreDestinoMultiplicidadDestino_6004Parser == null) {
 			EAttribute[] features = new EAttribute[] {
-					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDDependencia_NombreDestino() };
+					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDDependencia_NombreDestino(),
+					diagrama_concreta.Diagrama_concretaPackage.eINSTANCE.getTCDDependencia_MultiplicidadDestino() };
 			diagrama_concreta.diagram.parsers.MessageFormatParser parser = new diagrama_concreta.diagram.parsers.MessageFormatParser(
 					features);
-			tCDDependenciaNombreDestino_6004Parser = parser;
+			parser.setViewPattern("{0}  {1}"); //$NON-NLS-1$
+			parser.setEditorPattern("{0}  {1}"); //$NON-NLS-1$
+			parser.setEditPattern("{0}  {1}"); //$NON-NLS-1$
+			tCDDependenciaNombreDestinoMultiplicidadDestino_6004Parser = parser;
 		}
-		return tCDDependenciaNombreDestino_6004Parser;
+		return tCDDependenciaNombreDestinoMultiplicidadDestino_6004Parser;
 	}
 
 	/**
@@ -195,14 +211,14 @@ public class Diagrama_concretaParserProvider extends AbstractProvider implements
 			return getTCDAtributoNombreTipoDato_5001Parser();
 		case diagrama_concreta.diagram.edit.parts.TCDMetodoNombreTipoRetornoEditPart.VISUAL_ID:
 			return getTCDMetodoNombreTipoRetorno_5002Parser();
-		case diagrama_concreta.diagram.edit.parts.TCDAgregacionNombreDestinoEditPart.VISUAL_ID:
-			return getTCDAgregacionNombreDestino_6001Parser();
-		case diagrama_concreta.diagram.edit.parts.TCDAsociacionNombreDestinoEditPart.VISUAL_ID:
-			return getTCDAsociacionNombreDestino_6002Parser();
-		case diagrama_concreta.diagram.edit.parts.TCDComposicionNombreDestinoEditPart.VISUAL_ID:
-			return getTCDComposicionNombreDestino_6003Parser();
-		case diagrama_concreta.diagram.edit.parts.TCDDependenciaNombreDestinoEditPart.VISUAL_ID:
-			return getTCDDependenciaNombreDestino_6004Parser();
+		case diagrama_concreta.diagram.edit.parts.TCDAgregacionNombreDestinoMultipliciEditPart.VISUAL_ID:
+			return getTCDAgregacionNombreDestinoMultiplicidadDestino_6001Parser();
+		case diagrama_concreta.diagram.edit.parts.TCDAsociacionNombreDestinoMultipliciEditPart.VISUAL_ID:
+			return getTCDAsociacionNombreDestinoMultiplicidadDestino_6002Parser();
+		case diagrama_concreta.diagram.edit.parts.TCDComposicionNombreDestinoMultipliciEditPart.VISUAL_ID:
+			return getTCDComposicionNombreDestinoMultiplicidadDestino_6003Parser();
+		case diagrama_concreta.diagram.edit.parts.TCDDependenciaNombreDestinoMultipliciEditPart.VISUAL_ID:
+			return getTCDDependenciaNombreDestinoMultiplicidadDestino_6004Parser();
 		}
 		return null;
 	}

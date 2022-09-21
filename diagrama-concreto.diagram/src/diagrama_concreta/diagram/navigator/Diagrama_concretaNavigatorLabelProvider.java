@@ -295,8 +295,8 @@ public class Diagrama_concretaNavigatorLabelProvider extends LabelProvider
 		IParser parser = diagrama_concreta.diagram.providers.Diagrama_concretaParserProvider.getParser(
 				diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDAsociacion_4001,
 				view.getElement() != null ? view.getElement() : view,
-				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-						.getType(diagrama_concreta.diagram.edit.parts.TCDAsociacionNombreDestinoEditPart.VISUAL_ID));
+				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getType(
+						diagrama_concreta.diagram.edit.parts.TCDAsociacionNombreDestinoMultipliciEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
@@ -314,8 +314,8 @@ public class Diagrama_concretaNavigatorLabelProvider extends LabelProvider
 		IParser parser = diagrama_concreta.diagram.providers.Diagrama_concretaParserProvider.getParser(
 				diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDComposicion_4002,
 				view.getElement() != null ? view.getElement() : view,
-				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-						.getType(diagrama_concreta.diagram.edit.parts.TCDComposicionNombreDestinoEditPart.VISUAL_ID));
+				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getType(
+						diagrama_concreta.diagram.edit.parts.TCDComposicionNombreDestinoMultipliciEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
@@ -333,8 +333,8 @@ public class Diagrama_concretaNavigatorLabelProvider extends LabelProvider
 		IParser parser = diagrama_concreta.diagram.providers.Diagrama_concretaParserProvider.getParser(
 				diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDDependencia_4003,
 				view.getElement() != null ? view.getElement() : view,
-				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-						.getType(diagrama_concreta.diagram.edit.parts.TCDDependenciaNombreDestinoEditPart.VISUAL_ID));
+				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getType(
+						diagrama_concreta.diagram.edit.parts.TCDDependenciaNombreDestinoMultipliciEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
@@ -359,8 +359,8 @@ public class Diagrama_concretaNavigatorLabelProvider extends LabelProvider
 		IParser parser = diagrama_concreta.diagram.providers.Diagrama_concretaParserProvider.getParser(
 				diagrama_concreta.diagram.providers.Diagrama_concretaElementTypes.TCDAgregacion_4005,
 				view.getElement() != null ? view.getElement() : view,
-				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry
-						.getType(diagrama_concreta.diagram.edit.parts.TCDAgregacionNombreDestinoEditPart.VISUAL_ID));
+				diagrama_concreta.diagram.part.Diagrama_concretaVisualIDRegistry.getType(
+						diagrama_concreta.diagram.edit.parts.TCDAgregacionNombreDestinoMultipliciEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());

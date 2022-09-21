@@ -19,104 +19,98 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum Multiplicidad implements Enumerator {
 	/**
-	 * The '<em><b>UNO</b></em>' literal object.
+	 * The '<em><b>1</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #UNO_VALUE
+	 * @see #_1_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	UNO(0, "UNO", "UNO"),
-
-	/**
-	 * The '<em><b>CERO UNO</b></em>' literal object.
+	_1(0, "_1", "_1"), /**
+	 * The '<em><b>01</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #CERO_UNO_VALUE
+	 * @see #_01_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	CERO_UNO(1, "CERO_UNO", "CERO_UNO"),
-
-	/**
-	 * The '<em><b>CERO MUCHOS</b></em>' literal object.
+	_01(1, "_0_1", "_0_1"), /**
+	 * The '<em><b>0n</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #CERO_MUCHOS_VALUE
+	 * @see #_0N_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	CERO_MUCHOS(2, "CERO_MUCHOS", "CERO_MUCHOS"),
-
-	/**
-	 * The '<em><b>UNO MUCHOS</b></em>' literal object.
+	_0N(2, "_0_n", "_0_n"), /**
+	 * The '<em><b>1n</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #UNO_MUCHOS_VALUE
+	 * @see #_1N_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	UNO_MUCHOS(3, "UNO_MUCHOS", "UNO_MUCHOS");
+	_1N(3, "_1_n", "_1_n");
 
 	/**
-	 * The '<em><b>UNO</b></em>' literal value.
+	 * The '<em><b>1</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>UNO</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>1</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #UNO
+	 * @see #_1
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int UNO_VALUE = 0;
+	public static final int _1_VALUE = 0;
 
 	/**
-	 * The '<em><b>CERO UNO</b></em>' literal value.
+	 * The '<em><b>01</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>CERO UNO</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>01</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #CERO_UNO
-	 * @model
+	 * @see #_01
+	 * @model name="_0_1"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int CERO_UNO_VALUE = 1;
+	public static final int _01_VALUE = 1;
 
 	/**
-	 * The '<em><b>CERO MUCHOS</b></em>' literal value.
+	 * The '<em><b>0n</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>CERO MUCHOS</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>0n</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #CERO_MUCHOS
-	 * @model
+	 * @see #_0N
+	 * @model name="_0_n"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int CERO_MUCHOS_VALUE = 2;
+	public static final int _0N_VALUE = 2;
 
 	/**
-	 * The '<em><b>UNO MUCHOS</b></em>' literal value.
+	 * The '<em><b>1n</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>UNO MUCHOS</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>1n</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #UNO_MUCHOS
-	 * @model
+	 * @see #_1N
+	 * @model name="_1_n"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int UNO_MUCHOS_VALUE = 3;
+	public static final int _1N_VALUE = 3;
 
 	/**
 	 * An array of all the '<em><b>Multiplicidad</b></em>' enumerators.
@@ -126,10 +120,10 @@ public enum Multiplicidad implements Enumerator {
 	 */
 	private static final Multiplicidad[] VALUES_ARRAY =
 		new Multiplicidad[] {
-			UNO,
-			CERO_UNO,
-			CERO_MUCHOS,
-			UNO_MUCHOS,
+			_1,
+			_01,
+			_0N,
+			_1N,
 		};
 
 	/**
@@ -186,10 +180,10 @@ public enum Multiplicidad implements Enumerator {
 	 */
 	public static Multiplicidad get(int value) {
 		switch (value) {
-			case UNO_VALUE: return UNO;
-			case CERO_UNO_VALUE: return CERO_UNO;
-			case CERO_MUCHOS_VALUE: return CERO_MUCHOS;
-			case UNO_MUCHOS_VALUE: return UNO_MUCHOS;
+			case _1_VALUE: return _1;
+			case _01_VALUE: return _01;
+			case _0N_VALUE: return _0N;
+			case _1N_VALUE: return _1N;
 		}
 		return null;
 	}

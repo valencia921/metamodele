@@ -53,8 +53,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//TCDClase"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Navegavilidad">
-    <eLiterals name="bidireccional"/>
-    <eLiterals name="unidireccional" value="1"/>
+    <eLiterals name="Bidireccional"/>
+    <eLiterals name="Unidireccional" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TCDAgregacion" eSuperTypes="#//TCDRelacion">
     <eAnnotations source="gmf.link">
@@ -64,7 +64,8 @@
       <details key="width" value="3"/>
       <details key="color" value="39,174,96"/>
       <details key="source.decoration" value="rhomb"/>
-      <details key="label" value="nombreDestino"/>
+      <details key="label" value="nombreDestino, multiplicidadDestino"/>
+      <details key="label.pattern" value="{0}  {1}"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreOrigen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreDestino" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -78,7 +79,8 @@
       <details key="style" value="solid"/>
       <details key="width" value="3"/>
       <details key="color" value="0,62,255"/>
-      <details key="label" value="nombreDestino"/>
+      <details key="label" value="nombreDestino, multiplicidadDestino"/>
+      <details key="label.pattern" value="{0}  {1}"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreOrigen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreDestino" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -90,7 +92,8 @@
     <eAnnotations source="gmf.link">
       <details key="source" value="source"/>
       <details key="target" value="target"/>
-      <details key="label" value="nombreDestino"/>
+      <details key="label" value="nombreDestino, multiplicidadDestino"/>
+      <details key="label.pattern" value="{0}  {1}"/>
       <details key="style" value="dash"/>
       <details key="width" value="3"/>
       <details key="color" value="0,255,193"/>
@@ -105,9 +108,10 @@
     <eAnnotations source="gmf.link">
       <details key="source" value="source"/>
       <details key="target" value="target"/>
-      <details key="label" value="nombreDestino"/>
+      <details key="label" value="nombreDestino, multiplicidadDestino"/>
       <details key="style" value="solid"/>
       <details key="width" value="3"/>
+      <details key="label.pattern" value="{0}  {1}"/>
       <details key="color" value="255,15,15"/>
       <details key="source.decoration" value="filledrhomb"/>
     </eAnnotations>
@@ -127,10 +131,10 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Multiplicidad">
-    <eLiterals name="UNO"/>
-    <eLiterals name="CERO_UNO" value="1"/>
-    <eLiterals name="CERO_MUCHOS" value="2"/>
-    <eLiterals name="UNO_MUCHOS" value="3"/>
+    <eLiterals name="_1"/>
+    <eLiterals name="_0_1" value="1"/>
+    <eLiterals name="_0_n" value="2"/>
+    <eLiterals name="_1_n" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TCDAtributo">
     <eAnnotations source="gmf.node">
@@ -146,11 +150,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valorDefecto" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TipoDato">
-    <eLiterals name="string"/>
-    <eLiterals name="Number" value="1"/>
-    <eLiterals name="boolean" value="2"/>
-    <eLiterals name="undefined" value="3"/>
-    <eLiterals name="null" value="4"/>
+    <eLiterals name="any"/>
+    <eLiterals name="string" value="1"/>
+    <eLiterals name="Number" value="2"/>
+    <eLiterals name="boolean" value="3"/>
+    <eLiterals name="undefined" value="4"/>
+    <eLiterals name="null" value="5"/>
+    <eLiterals name="Void" value="6"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Visibilidad">
     <eLiterals name="Public"/>
@@ -181,5 +187,6 @@
     <eLiterals name="string" value="1"/>
     <eLiterals name="number" value="2"/>
     <eLiterals name="boolean" value="3"/>
+    <eLiterals name="Void" value="4"/>
   </eClassifiers>
 </ecore:EPackage>

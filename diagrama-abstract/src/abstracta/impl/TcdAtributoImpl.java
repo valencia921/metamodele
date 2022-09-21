@@ -60,7 +60,7 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final TipoDato TIPO_DATO_EDEFAULT = TipoDato.STRING;
+	protected static final TipoDato TIPO_DATO_EDEFAULT = TipoDato.ANY;
 
 	/**
 	 * The cached value of the '{@link #getTipoDato() <em>Tipo Dato</em>}' attribute.

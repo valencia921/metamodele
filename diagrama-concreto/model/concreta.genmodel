@@ -6,21 +6,23 @@
   <foreignModel>concreta.emf</foreignModel>
   <genPackages prefix="Diagrama_concreta" disposableProviderFactory="true" ecorePackage="concreta.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="concreta.ecore#//Navegavilidad">
-      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Navegavilidad/bidireccional"/>
-      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Navegavilidad/unidireccional"/>
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Navegavilidad/Bidireccional"/>
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Navegavilidad/Unidireccional"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="concreta.ecore#//Multiplicidad">
-      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Multiplicidad/UNO"/>
-      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Multiplicidad/CERO_UNO"/>
-      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Multiplicidad/CERO_MUCHOS"/>
-      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Multiplicidad/UNO_MUCHOS"/>
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Multiplicidad/_1"/>
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Multiplicidad/_0_1"/>
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Multiplicidad/_0_n"/>
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Multiplicidad/_1_n"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="concreta.ecore#//TipoDato">
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoDato/any"/>
       <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoDato/string"/>
       <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoDato/Number"/>
       <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoDato/boolean"/>
       <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoDato/undefined"/>
       <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoDato/null"/>
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoDato/Void"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="concreta.ecore#//Visibilidad">
       <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Visibilidad/Public"/>
@@ -33,6 +35,7 @@
       <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoRetorno/string"/>
       <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoRetorno/number"/>
       <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoRetorno/boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoRetorno/Void"/>
     </genEnums>
     <genClasses ecoreClass="concreta.ecore#//TCDDiagramaClases">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//TCDDiagramaClases/listaClases"/>

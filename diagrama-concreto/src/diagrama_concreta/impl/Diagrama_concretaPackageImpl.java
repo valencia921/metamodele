@@ -1001,17 +1001,19 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 		addEEnumLiteral(navegavilidadEEnum, Navegavilidad.UNIDIRECCIONAL);
 
 		initEEnum(multiplicidadEEnum, Multiplicidad.class, "Multiplicidad");
-		addEEnumLiteral(multiplicidadEEnum, Multiplicidad.UNO);
-		addEEnumLiteral(multiplicidadEEnum, Multiplicidad.CERO_UNO);
-		addEEnumLiteral(multiplicidadEEnum, Multiplicidad.CERO_MUCHOS);
-		addEEnumLiteral(multiplicidadEEnum, Multiplicidad.UNO_MUCHOS);
+		addEEnumLiteral(multiplicidadEEnum, Multiplicidad._1);
+		addEEnumLiteral(multiplicidadEEnum, Multiplicidad._01);
+		addEEnumLiteral(multiplicidadEEnum, Multiplicidad._0N);
+		addEEnumLiteral(multiplicidadEEnum, Multiplicidad._1N);
 
 		initEEnum(tipoDatoEEnum, TipoDato.class, "TipoDato");
+		addEEnumLiteral(tipoDatoEEnum, TipoDato.ANY);
 		addEEnumLiteral(tipoDatoEEnum, TipoDato.STRING);
 		addEEnumLiteral(tipoDatoEEnum, TipoDato.NUMBER);
 		addEEnumLiteral(tipoDatoEEnum, TipoDato.BOOLEAN);
 		addEEnumLiteral(tipoDatoEEnum, TipoDato.UNDEFINED);
 		addEEnumLiteral(tipoDatoEEnum, TipoDato.NULL);
+		addEEnumLiteral(tipoDatoEEnum, TipoDato.VOID);
 
 		initEEnum(visibilidadEEnum, Visibilidad.class, "Visibilidad");
 		addEEnumLiteral(visibilidadEEnum, Visibilidad.PUBLIC);
@@ -1024,6 +1026,7 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 		addEEnumLiteral(tipoRetornoEEnum, TipoRetorno.STRING);
 		addEEnumLiteral(tipoRetornoEEnum, TipoRetorno.NUMBER);
 		addEEnumLiteral(tipoRetornoEEnum, TipoRetorno.BOOLEAN);
+		addEEnumLiteral(tipoRetornoEEnum, TipoRetorno.VOID);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -1160,7 +1163,8 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 			 "width", "3",
 			 "color", "39,174,96",
 			 "source.decoration", "rhomb",
-			 "label", "nombreDestino"
+			 "label", "nombreDestino, multiplicidadDestino",
+			 "label.pattern", "{0}  {1}"
 		   });	
 		addAnnotation
 		  (tcdAsociacionEClass, 
@@ -1171,7 +1175,8 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 			 "style", "solid",
 			 "width", "3",
 			 "color", "0,62,255",
-			 "label", "nombreDestino"
+			 "label", "nombreDestino, multiplicidadDestino",
+			 "label.pattern", "{0}  {1}"
 		   });	
 		addAnnotation
 		  (tcdComposicionEClass, 
@@ -1179,7 +1184,8 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 		   new String[] {
 			 "source", "source",
 			 "target", "target",
-			 "label", "nombreDestino",
+			 "label", "nombreDestino, multiplicidadDestino",
+			 "label.pattern", "{0}  {1}",
 			 "style", "dash",
 			 "width", "3",
 			 "color", "0,255,193",
@@ -1191,9 +1197,10 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 		   new String[] {
 			 "source", "source",
 			 "target", "target",
-			 "label", "nombreDestino",
+			 "label", "nombreDestino, multiplicidadDestino",
 			 "style", "solid",
 			 "width", "3",
+			 "label.pattern", "{0}  {1}",
 			 "color", "255,15,15",
 			 "source.decoration", "filledrhomb"
 		   });	

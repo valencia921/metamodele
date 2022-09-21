@@ -19,6 +19,14 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum TipoDato implements Enumerator {
 	/**
+	 * The '<em><b>Any</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ANY_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ANY(0, "any", "any"), /**
 	 * The '<em><b>String</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -26,7 +34,7 @@ public enum TipoDato implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	STRING(0, "string", "string"),
+	STRING(1, "string", "string"),
 
 	/**
 	 * The '<em><b>Number</b></em>' literal object.
@@ -36,7 +44,7 @@ public enum TipoDato implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	NUMBER(1, "Number", "Number"),
+	NUMBER(2, "Number", "Number"),
 
 	/**
 	 * The '<em><b>Boolean</b></em>' literal object.
@@ -46,7 +54,7 @@ public enum TipoDato implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BOOLEAN(2, "boolean", "boolean"),
+	BOOLEAN(3, "boolean", "boolean"),
 
 	/**
 	 * The '<em><b>Undefined</b></em>' literal object.
@@ -56,7 +64,7 @@ public enum TipoDato implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	UNDEFINED(3, "undefined", "undefined"),
+	UNDEFINED(4, "undefined", "undefined"),
 
 	/**
 	 * The '<em><b>Null</b></em>' literal object.
@@ -66,7 +74,30 @@ public enum TipoDato implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	NULL(4, "null", "null");
+	NULL(5, "null", "null"), /**
+	 * The '<em><b>Void</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #VOID_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	VOID(6, "Void", "Void");
+
+	/**
+	 * The '<em><b>Any</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Any</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #ANY
+	 * @model name="any"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ANY_VALUE = 0;
 
 	/**
 	 * The '<em><b>String</b></em>' literal value.
@@ -81,7 +112,7 @@ public enum TipoDato implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int STRING_VALUE = 0;
+	public static final int STRING_VALUE = 1;
 
 	/**
 	 * The '<em><b>Number</b></em>' literal value.
@@ -96,7 +127,7 @@ public enum TipoDato implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int NUMBER_VALUE = 1;
+	public static final int NUMBER_VALUE = 2;
 
 	/**
 	 * The '<em><b>Boolean</b></em>' literal value.
@@ -111,7 +142,7 @@ public enum TipoDato implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int BOOLEAN_VALUE = 2;
+	public static final int BOOLEAN_VALUE = 3;
 
 	/**
 	 * The '<em><b>Undefined</b></em>' literal value.
@@ -126,7 +157,7 @@ public enum TipoDato implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int UNDEFINED_VALUE = 3;
+	public static final int UNDEFINED_VALUE = 4;
 
 	/**
 	 * The '<em><b>Null</b></em>' literal value.
@@ -141,7 +172,22 @@ public enum TipoDato implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int NULL_VALUE = 4;
+	public static final int NULL_VALUE = 5;
+
+	/**
+	 * The '<em><b>Void</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Void</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #VOID
+	 * @model name="Void"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int VOID_VALUE = 6;
 
 	/**
 	 * An array of all the '<em><b>Tipo Dato</b></em>' enumerators.
@@ -151,11 +197,13 @@ public enum TipoDato implements Enumerator {
 	 */
 	private static final TipoDato[] VALUES_ARRAY =
 		new TipoDato[] {
+			ANY,
 			STRING,
 			NUMBER,
 			BOOLEAN,
 			UNDEFINED,
 			NULL,
+			VOID,
 		};
 
 	/**
@@ -212,11 +260,13 @@ public enum TipoDato implements Enumerator {
 	 */
 	public static TipoDato get(int value) {
 		switch (value) {
+			case ANY_VALUE: return ANY;
 			case STRING_VALUE: return STRING;
 			case NUMBER_VALUE: return NUMBER;
 			case BOOLEAN_VALUE: return BOOLEAN;
 			case UNDEFINED_VALUE: return UNDEFINED;
 			case NULL_VALUE: return NULL;
+			case VOID_VALUE: return VOID;
 		}
 		return null;
 	}

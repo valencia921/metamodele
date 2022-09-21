@@ -56,7 +56,15 @@ public enum TipoRetorno implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BOOLEAN(3, "boolean", "boolean");
+	BOOLEAN(3, "boolean", "boolean"), /**
+	 * The '<em><b>Void</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #VOID_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	VOID(4, "Void", "Void");
 
 	/**
 	 * The '<em><b>Undefined</b></em>' literal value.
@@ -119,6 +127,21 @@ public enum TipoRetorno implements Enumerator {
 	public static final int BOOLEAN_VALUE = 3;
 
 	/**
+	 * The '<em><b>Void</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Void</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #VOID
+	 * @model name="Void"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int VOID_VALUE = 4;
+
+	/**
 	 * An array of all the '<em><b>Tipo Retorno</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -130,6 +153,7 @@ public enum TipoRetorno implements Enumerator {
 			STRING,
 			NUMBER,
 			BOOLEAN,
+			VOID,
 		};
 
 	/**
@@ -190,6 +214,7 @@ public enum TipoRetorno implements Enumerator {
 			case STRING_VALUE: return STRING;
 			case NUMBER_VALUE: return NUMBER;
 			case BOOLEAN_VALUE: return BOOLEAN;
+			case VOID_VALUE: return VOID;
 		}
 		return null;
 	}

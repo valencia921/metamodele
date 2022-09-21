@@ -59,26 +59,26 @@ public class Diagrama_concretaEditPartFactory implements EditPartFactory {
 			case diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart.VISUAL_ID:
 				return new diagrama_concreta.diagram.edit.parts.TCDAgregacionEditPart(view);
 
-			case diagrama_concreta.diagram.edit.parts.TCDAgregacionNombreDestinoEditPart.VISUAL_ID:
-				return new diagrama_concreta.diagram.edit.parts.TCDAgregacionNombreDestinoEditPart(view);
+			case diagrama_concreta.diagram.edit.parts.TCDAgregacionNombreDestinoMultipliciEditPart.VISUAL_ID:
+				return new diagrama_concreta.diagram.edit.parts.TCDAgregacionNombreDestinoMultipliciEditPart(view);
 
 			case diagrama_concreta.diagram.edit.parts.TCDAsociacionEditPart.VISUAL_ID:
 				return new diagrama_concreta.diagram.edit.parts.TCDAsociacionEditPart(view);
 
-			case diagrama_concreta.diagram.edit.parts.TCDAsociacionNombreDestinoEditPart.VISUAL_ID:
-				return new diagrama_concreta.diagram.edit.parts.TCDAsociacionNombreDestinoEditPart(view);
+			case diagrama_concreta.diagram.edit.parts.TCDAsociacionNombreDestinoMultipliciEditPart.VISUAL_ID:
+				return new diagrama_concreta.diagram.edit.parts.TCDAsociacionNombreDestinoMultipliciEditPart(view);
 
 			case diagrama_concreta.diagram.edit.parts.TCDComposicionEditPart.VISUAL_ID:
 				return new diagrama_concreta.diagram.edit.parts.TCDComposicionEditPart(view);
 
-			case diagrama_concreta.diagram.edit.parts.TCDComposicionNombreDestinoEditPart.VISUAL_ID:
-				return new diagrama_concreta.diagram.edit.parts.TCDComposicionNombreDestinoEditPart(view);
+			case diagrama_concreta.diagram.edit.parts.TCDComposicionNombreDestinoMultipliciEditPart.VISUAL_ID:
+				return new diagrama_concreta.diagram.edit.parts.TCDComposicionNombreDestinoMultipliciEditPart(view);
 
 			case diagrama_concreta.diagram.edit.parts.TCDDependenciaEditPart.VISUAL_ID:
 				return new diagrama_concreta.diagram.edit.parts.TCDDependenciaEditPart(view);
 
-			case diagrama_concreta.diagram.edit.parts.TCDDependenciaNombreDestinoEditPart.VISUAL_ID:
-				return new diagrama_concreta.diagram.edit.parts.TCDDependenciaNombreDestinoEditPart(view);
+			case diagrama_concreta.diagram.edit.parts.TCDDependenciaNombreDestinoMultipliciEditPart.VISUAL_ID:
+				return new diagrama_concreta.diagram.edit.parts.TCDDependenciaNombreDestinoMultipliciEditPart(view);
 
 			case diagrama_concreta.diagram.edit.parts.TCDHerenciaEditPart.VISUAL_ID:
 				return new diagrama_concreta.diagram.edit.parts.TCDHerenciaEditPart(view);

@@ -1025,23 +1025,26 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		addEEnumLiteral(visibilidadEEnum, Visibilidad.READONLY);
 
 		initEEnum(tipoDatoEEnum, TipoDato.class, "TipoDato");
+		addEEnumLiteral(tipoDatoEEnum, TipoDato.ANY);
 		addEEnumLiteral(tipoDatoEEnum, TipoDato.STRING);
 		addEEnumLiteral(tipoDatoEEnum, TipoDato.NUMBER);
 		addEEnumLiteral(tipoDatoEEnum, TipoDato.BOOLEAN);
 		addEEnumLiteral(tipoDatoEEnum, TipoDato.UNDEFINED);
 		addEEnumLiteral(tipoDatoEEnum, TipoDato.NULL);
+		addEEnumLiteral(tipoDatoEEnum, TipoDato.VOID);
 
 		initEEnum(multiplicidadEEnum, Multiplicidad.class, "Multiplicidad");
-		addEEnumLiteral(multiplicidadEEnum, Multiplicidad.UNO);
-		addEEnumLiteral(multiplicidadEEnum, Multiplicidad.CERO_UNO);
-		addEEnumLiteral(multiplicidadEEnum, Multiplicidad.CERO_MUCHOS);
-		addEEnumLiteral(multiplicidadEEnum, Multiplicidad.UNO_MUCHOS);
+		addEEnumLiteral(multiplicidadEEnum, Multiplicidad._1);
+		addEEnumLiteral(multiplicidadEEnum, Multiplicidad._01);
+		addEEnumLiteral(multiplicidadEEnum, Multiplicidad._0N);
+		addEEnumLiteral(multiplicidadEEnum, Multiplicidad._1N);
 
 		initEEnum(tipoRetornoEEnum, TipoRetorno.class, "TipoRetorno");
 		addEEnumLiteral(tipoRetornoEEnum, TipoRetorno.UNDEFINED);
 		addEEnumLiteral(tipoRetornoEEnum, TipoRetorno.STRING);
 		addEEnumLiteral(tipoRetornoEEnum, TipoRetorno.NUMBER);
 		addEEnumLiteral(tipoRetornoEEnum, TipoRetorno.BOOLEAN);
+		addEEnumLiteral(tipoRetornoEEnum, TipoRetorno.VOID);
 
 		initEEnum(navegavilidadEEnum, Navegavilidad.class, "Navegavilidad");
 		addEEnumLiteral(navegavilidadEEnum, Navegavilidad.BIDIRECCIONAL);

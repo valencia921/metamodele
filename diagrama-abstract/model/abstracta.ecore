@@ -89,23 +89,26 @@
     <eLiterals name="Readonly" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TipoDato">
-    <eLiterals name="string"/>
-    <eLiterals name="Number" value="1"/>
-    <eLiterals name="boolean" value="2"/>
-    <eLiterals name="undefined" value="3"/>
-    <eLiterals name="null" value="4"/>
+    <eLiterals name="any"/>
+    <eLiterals name="string" value="1"/>
+    <eLiterals name="Number" value="2"/>
+    <eLiterals name="boolean" value="3"/>
+    <eLiterals name="undefined" value="4"/>
+    <eLiterals name="null" value="5"/>
+    <eLiterals name="Void" value="6"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Multiplicidad">
-    <eLiterals name="UNO"/>
-    <eLiterals name="CERO_UNO" value="1"/>
-    <eLiterals name="CERO_MUCHOS" value="2"/>
-    <eLiterals name="UNO_MUCHOS" value="3"/>
+    <eLiterals name="_1"/>
+    <eLiterals name="_0_1" value="1"/>
+    <eLiterals name="_0_n" value="2"/>
+    <eLiterals name="_1_n" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TipoRetorno">
     <eLiterals name="undefined"/>
     <eLiterals name="string" value="1"/>
     <eLiterals name="number" value="2"/>
     <eLiterals name="boolean" value="3"/>
+    <eLiterals name="Void" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Navegavilidad">
     <eLiterals name="Bidireccional"/>

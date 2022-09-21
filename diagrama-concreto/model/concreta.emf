@@ -52,7 +52,7 @@ enum Navegavilidad {
 }
 
 @gmf.link(source="source", target="target", style="solid", width="3", color = "39,174,96",
- source.decoration = "rhomb", label = "nombreDestino")
+	source.decoration = "rhomb", label = "nombreDestino, multiplicidadDestino", label.pattern = "{0}  {1}")
 class TCDAgregacion extends TCDRelacion{
 	
 	attr String nombreOrigen;
@@ -61,7 +61,8 @@ class TCDAgregacion extends TCDRelacion{
     attr Multiplicidad multiplicidadDestino;
 }
 
-@gmf.link(source="source", target="target", style="solid", width="3", color = "0,62,255", label = "nombreDestino")
+@gmf.link(source="source", target="target", style="solid", width="3", color = "0,62,255", 
+	label = "nombreDestino, multiplicidadDestino", label.pattern = "{0}  {1}")
 class TCDAsociacion extends TCDRelacion{
 	
 	attr String nombreOrigen;
@@ -71,7 +72,8 @@ class TCDAsociacion extends TCDRelacion{
     attr Navegavilidad navegavilidad;
 }
 
-@gmf.link(source="source", target="target", label = "nombreDestino", style="dash", width="3", color = "0,255,193", source.decoration = "rhomb")
+@gmf.link(source="source", target="target", label = "nombreDestino, multiplicidadDestino", label.pattern = "{0}  {1}",
+	style="dash", width="3", color = "0,255,193", source.decoration = "rhomb")
 class TCDComposicion extends TCDRelacion{
 	
 	attr String nombreOrigen;
@@ -80,8 +82,8 @@ class TCDComposicion extends TCDRelacion{
     attr Multiplicidad multiplicidadDestino;
 }
 
-@gmf.link(source="source", target="target", label = "nombreDestino", style="solid", width="3", 
-	color = "255,15,15", source.decoration = "filledrhomb")
+@gmf.link(source="source", target="target", label = "nombreDestino, multiplicidadDestino", 
+	style="solid", width="3", label.pattern = "{0}  {1}", color = "255,15,15", source.decoration = "filledrhomb")
 class TCDDependencia extends TCDRelacion{
 	
 	attr String nombreOrigen;
@@ -96,10 +98,10 @@ class TCDHerencia extends TCDRelacion{
 }
 
 enum Multiplicidad {
-	UNO;
-	CERO_UNO;
-	CERO_MUCHOS;
-	UNO_MUCHOS;
+	_1;
+	_0_1;
+	_0_n;
+	_1_n;
 }
 
 @gmf.node(label = "nombre, tipoDato", color = "215,255,215", label.pattern = "{0}: {1}", size = "150,16")
@@ -112,11 +114,13 @@ class TCDAtributo {
 }
 
 enum TipoDato {
+	any;
 	string;
 	Number;
 	boolean;
 	undefined;
 	null;
+	Void;
 }
 
 enum Visibilidad {
@@ -143,4 +147,5 @@ enum TipoRetorno {
 	string;
 	number;
 	boolean;
+	Void;
 }
