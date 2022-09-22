@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link abstracta.TCDAtributo#getNombre <em>Nombre</em>}</li>
  *   <li>{@link abstracta.TCDAtributo#getTipoDato <em>Tipo Dato</em>}</li>
  *   <li>{@link abstracta.TCDAtributo#getVisibilidad <em>Visibilidad</em>}</li>
- *   <li>{@link abstracta.TCDAtributo#isIsConstante <em>Is Constante</em>}</li>
  *   <li>{@link abstracta.TCDAtributo#getValorDefecto <em>Valor Defecto</em>}</li>
  * </ul>
  *
@@ -108,32 +107,6 @@ public interface TCDAtributo extends EObject {
 	 * @generated
 	 */
 	void setVisibilidad(Visibilidad value);
-
-	/**
-	 * Returns the value of the '<em><b>Is Constante</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Is Constante</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Constante</em>' attribute.
-	 * @see #setIsConstante(boolean)
-	 * @see abstracta.AbstractaPackage#getTCDAtributo_IsConstante()
-	 * @model
-	 * @generated
-	 */
-	boolean isIsConstante();
-
-	/**
-	 * Sets the value of the '{@link abstracta.TCDAtributo#isIsConstante <em>Is Constante</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Constante</em>' attribute.
-	 * @see #isIsConstante()
-	 * @generated
-	 */
-	void setIsConstante(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Valor Defecto</b></em>' attribute.

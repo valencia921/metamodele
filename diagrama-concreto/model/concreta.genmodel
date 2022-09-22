@@ -18,7 +18,7 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="concreta.ecore#//TipoDato">
       <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoDato/any"/>
       <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoDato/string"/>
-      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoDato/Number"/>
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoDato/number"/>
       <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoDato/boolean"/>
       <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoDato/undefined"/>
       <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoDato/null"/>
@@ -96,7 +96,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TCDAtributo/nombre"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TCDAtributo/tipoDato"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TCDAtributo/visibilidad"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TCDAtributo/isConstante"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TCDAtributo/valorDefecto"/>
     </genClasses>
     <genClasses ecoreClass="concreta.ecore#//TCDMetodo">

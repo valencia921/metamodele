@@ -304,22 +304,13 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_ATRIBUTO__VISIBILIDAD = 2;
 
 	/**
-	 * The feature id for the '<em><b>Is Constante</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TCD_ATRIBUTO__IS_CONSTANTE = 3;
-
-	/**
 	 * The feature id for the '<em><b>Valor Defecto</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TCD_ATRIBUTO__VALOR_DEFECTO = 4;
+	int TCD_ATRIBUTO__VALOR_DEFECTO = 3;
 
 	/**
 	 * The number of structural features of the '<em>TCD Atributo</em>' class.
@@ -328,7 +319,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TCD_ATRIBUTO_FEATURE_COUNT = 5;
+	int TCD_ATRIBUTO_FEATURE_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link abstracta.impl.TCDMetodoImpl <em>TCD Metodo</em>}' class.
@@ -1118,17 +1109,6 @@ public interface AbstractaPackage extends EPackage {
 	EAttribute getTCDAtributo_Visibilidad();
 
 	/**
-	 * Returns the meta object for the attribute '{@link abstracta.TCDAtributo#isIsConstante <em>Is Constante</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Constante</em>'.
-	 * @see abstracta.TCDAtributo#isIsConstante()
-	 * @see #getTCDAtributo()
-	 * @generated
-	 */
-	EAttribute getTCDAtributo_IsConstante();
-
-	/**
 	 * Returns the meta object for the attribute '{@link abstracta.TCDAtributo#getValorDefecto <em>Valor Defecto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1776,14 +1756,6 @@ public interface AbstractaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TCD_ATRIBUTO__VISIBILIDAD = eINSTANCE.getTCDAtributo_Visibilidad();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Constante</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TCD_ATRIBUTO__IS_CONSTANTE = eINSTANCE.getTCDAtributo_IsConstante();
 
 		/**
 		 * The meta object literal for the '<em><b>Valor Defecto</b></em>' attribute feature.

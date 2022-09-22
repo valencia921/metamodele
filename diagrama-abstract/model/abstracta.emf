@@ -35,7 +35,6 @@ class TCDAtributo {
     attr String nombre;
 	attr TipoDato tipoDato;
 	attr Visibilidad visibilidad;
-	attr boolean isConstante;
 	attr String valorDefecto;
 }
 
@@ -105,7 +104,7 @@ enum Visibilidad {
 enum TipoDato {
 	any;
 	string;
-	Number;
+	number;
 	boolean;
 	undefined;
 	null;

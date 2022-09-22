@@ -139,20 +139,20 @@
   <eClassifiers xsi:type="ecore:EClass" name="TCDAtributo">
     <eAnnotations source="gmf.node">
       <details key="label" value="nombre, tipoDato"/>
-      <details key="color" value="215,255,215"/>
+      <details key="color" value="215,255,242"/>
       <details key="label.pattern" value="{0}: {1}"/>
       <details key="size" value="150,16"/>
+      <details key="border" value="null"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoDato" eType="#//TipoDato"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="visibilidad" eType="#//Visibilidad"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isConstante" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valorDefecto" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TipoDato">
     <eLiterals name="any"/>
     <eLiterals name="string" value="1"/>
-    <eLiterals name="Number" value="2"/>
+    <eLiterals name="number" value="2"/>
     <eLiterals name="boolean" value="3"/>
     <eLiterals name="undefined" value="4"/>
     <eLiterals name="null" value="5"/>

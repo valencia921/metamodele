@@ -104,19 +104,18 @@ enum Multiplicidad {
 	_1_n;
 }
 
-@gmf.node(label = "nombre, tipoDato", color = "215,255,215", label.pattern = "{0}: {1}", size = "150,16")
+@gmf.node(label = "nombre, tipoDato", color = "215,255,242", label.pattern = "{0}: {1}", size = "150,16", border = null)
 class TCDAtributo {
 	attr String nombre;
 	attr TipoDato tipoDato;
 	attr Visibilidad visibilidad;
-	attr boolean isConstante;
 	attr String valorDefecto;
 }
 
 enum TipoDato {
 	any;
 	string;
-	Number;
+	number;
 	boolean;
 	undefined;
 	null;

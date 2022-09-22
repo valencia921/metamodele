@@ -44,7 +44,7 @@ public enum TipoDato implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	NUMBER(2, "Number", "Number"),
+	NUMBER(2, "number", "number"),
 
 	/**
 	 * The '<em><b>Boolean</b></em>' literal object.
@@ -123,7 +123,7 @@ public enum TipoDato implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #NUMBER
-	 * @model name="Number"
+	 * @model name="number"
 	 * @generated
 	 * @ordered
 	 */

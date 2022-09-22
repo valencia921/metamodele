@@ -14,7 +14,7 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="abstracta.ecore#//TipoDato">
       <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//TipoDato/any"/>
       <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//TipoDato/string"/>
-      <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//TipoDato/Number"/>
+      <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//TipoDato/number"/>
       <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//TipoDato/boolean"/>
       <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//TipoDato/undefined"/>
       <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//TipoDato/null"/>
@@ -65,7 +65,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//TCDAtributo/nombre"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//TCDAtributo/tipoDato"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//TCDAtributo/visibilidad"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//TCDAtributo/isConstante"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//TCDAtributo/valorDefecto"/>
     </genClasses>
     <genClasses ecoreClass="abstracta.ecore#//TCDMetodo">

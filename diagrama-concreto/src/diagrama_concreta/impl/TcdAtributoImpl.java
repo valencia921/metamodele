@@ -3,8 +3,10 @@
 package diagrama_concreta.impl;
 
 import diagrama_concreta.Diagrama_concretaPackage;
+import diagrama_concreta.ModificadorAcceso;
 import diagrama_concreta.TCDAtributo;
 import diagrama_concreta.TipoDato;
+import diagrama_concreta.TipoVariable;
 import diagrama_concreta.Visibilidad;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -25,7 +27,6 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link diagrama_concreta.impl.TCDAtributoImpl#getNombre <em>Nombre</em>}</li>
  *   <li>{@link diagrama_concreta.impl.TCDAtributoImpl#getTipoDato <em>Tipo Dato</em>}</li>
  *   <li>{@link diagrama_concreta.impl.TCDAtributoImpl#getVisibilidad <em>Visibilidad</em>}</li>
- *   <li>{@link diagrama_concreta.impl.TCDAtributoImpl#isIsConstante <em>Is Constante</em>}</li>
  *   <li>{@link diagrama_concreta.impl.TCDAtributoImpl#getValorDefecto <em>Valor Defecto</em>}</li>
  * </ul>
  *
@@ -91,26 +92,6 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 	 * @ordered
 	 */
 	protected Visibilidad visibilidad = VISIBILIDAD_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isIsConstante() <em>Is Constante</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsConstante()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean IS_CONSTANTE_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isIsConstante() <em>Is Constante</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isIsConstante()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean isConstante = IS_CONSTANTE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getValorDefecto() <em>Valor Defecto</em>}' attribute.
@@ -219,27 +200,6 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isIsConstante() {
-		return isConstante;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIsConstante(boolean newIsConstante) {
-		boolean oldIsConstante = isConstante;
-		isConstante = newIsConstante;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Diagrama_concretaPackage.TCD_ATRIBUTO__IS_CONSTANTE, oldIsConstante, isConstante));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getValorDefecto() {
 		return valorDefecto;
 	}
@@ -270,8 +230,6 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 				return getTipoDato();
 			case Diagrama_concretaPackage.TCD_ATRIBUTO__VISIBILIDAD:
 				return getVisibilidad();
-			case Diagrama_concretaPackage.TCD_ATRIBUTO__IS_CONSTANTE:
-				return isIsConstante();
 			case Diagrama_concretaPackage.TCD_ATRIBUTO__VALOR_DEFECTO:
 				return getValorDefecto();
 		}
@@ -294,9 +252,6 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 				return;
 			case Diagrama_concretaPackage.TCD_ATRIBUTO__VISIBILIDAD:
 				setVisibilidad((Visibilidad)newValue);
-				return;
-			case Diagrama_concretaPackage.TCD_ATRIBUTO__IS_CONSTANTE:
-				setIsConstante((Boolean)newValue);
 				return;
 			case Diagrama_concretaPackage.TCD_ATRIBUTO__VALOR_DEFECTO:
 				setValorDefecto((String)newValue);
@@ -322,9 +277,6 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 			case Diagrama_concretaPackage.TCD_ATRIBUTO__VISIBILIDAD:
 				setVisibilidad(VISIBILIDAD_EDEFAULT);
 				return;
-			case Diagrama_concretaPackage.TCD_ATRIBUTO__IS_CONSTANTE:
-				setIsConstante(IS_CONSTANTE_EDEFAULT);
-				return;
 			case Diagrama_concretaPackage.TCD_ATRIBUTO__VALOR_DEFECTO:
 				setValorDefecto(VALOR_DEFECTO_EDEFAULT);
 				return;
@@ -346,8 +298,6 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 				return tipoDato != TIPO_DATO_EDEFAULT;
 			case Diagrama_concretaPackage.TCD_ATRIBUTO__VISIBILIDAD:
 				return visibilidad != VISIBILIDAD_EDEFAULT;
-			case Diagrama_concretaPackage.TCD_ATRIBUTO__IS_CONSTANTE:
-				return isConstante != IS_CONSTANTE_EDEFAULT;
 			case Diagrama_concretaPackage.TCD_ATRIBUTO__VALOR_DEFECTO:
 				return VALOR_DEFECTO_EDEFAULT == null ? valorDefecto != null : !VALOR_DEFECTO_EDEFAULT.equals(valorDefecto);
 		}
@@ -370,8 +320,6 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 		result.append(tipoDato);
 		result.append(", visibilidad: ");
 		result.append(visibilidad);
-		result.append(", isConstante: ");
-		result.append(isConstante);
 		result.append(", valorDefecto: ");
 		result.append(valorDefecto);
 		result.append(')');

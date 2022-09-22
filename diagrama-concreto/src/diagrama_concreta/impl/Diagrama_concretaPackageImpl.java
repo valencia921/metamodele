@@ -5,6 +5,7 @@ package diagrama_concreta.impl;
 import diagrama_concreta.Diagrama_concretaFactory;
 import diagrama_concreta.Diagrama_concretaPackage;
 import diagrama_concreta.ModelFactory;
+import diagrama_concreta.ModificadorAcceso;
 import diagrama_concreta.Multiplicidad;
 import diagrama_concreta.Navegavilidad;
 import diagrama_concreta.TCDAgregacion;
@@ -20,6 +21,7 @@ import diagrama_concreta.TCDPaquete;
 import diagrama_concreta.TCDRelacion;
 import diagrama_concreta.TipoDato;
 import diagrama_concreta.TipoRetorno;
+import diagrama_concreta.TipoVariable;
 import diagrama_concreta.Visibilidad;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -672,17 +674,8 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTCDAtributo_IsConstante() {
-		return (EAttribute)tcdAtributoEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getTCDAtributo_ValorDefecto() {
-		return (EAttribute)tcdAtributoEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)tcdAtributoEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -872,7 +865,6 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 		createEAttribute(tcdAtributoEClass, TCD_ATRIBUTO__NOMBRE);
 		createEAttribute(tcdAtributoEClass, TCD_ATRIBUTO__TIPO_DATO);
 		createEAttribute(tcdAtributoEClass, TCD_ATRIBUTO__VISIBILIDAD);
-		createEAttribute(tcdAtributoEClass, TCD_ATRIBUTO__IS_CONSTANTE);
 		createEAttribute(tcdAtributoEClass, TCD_ATRIBUTO__VALOR_DEFECTO);
 
 		tcdMetodoEClass = createEClass(TCD_METODO);
@@ -985,7 +977,6 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 		initEAttribute(getTCDAtributo_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, TCDAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDAtributo_TipoDato(), this.getTipoDato(), "tipoDato", null, 0, 1, TCDAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDAtributo_Visibilidad(), this.getVisibilidad(), "visibilidad", null, 0, 1, TCDAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTCDAtributo_IsConstante(), ecorePackage.getEBoolean(), "isConstante", null, 0, 1, TCDAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDAtributo_ValorDefecto(), ecorePackage.getEString(), "valorDefecto", null, 0, 1, TCDAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tcdMetodoEClass, TCDMetodo.class, "TCDMetodo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1103,9 +1094,10 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 		   source, 
 		   new String[] {
 			 "label", "nombre, tipoDato",
-			 "color", "215,255,215",
+			 "color", "215,255,242",
 			 "label.pattern", "{0}: {1}",
-			 "size", "150,16"
+			 "size", "150,16",
+			 "border", "null"
 		   });	
 		addAnnotation
 		  (tcdMetodoEClass, 

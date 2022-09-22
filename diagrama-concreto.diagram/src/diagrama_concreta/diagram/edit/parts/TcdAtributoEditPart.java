@@ -296,6 +296,6 @@ public class TCDAtributoEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	static final Color THIS_BACK = new Color(null, 215, 255, 215);
+	static final Color THIS_BACK = new Color(null, 215, 255, 242);
 
 }

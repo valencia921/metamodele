@@ -16,12 +16,11 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link diagrama_concreta.TCDAtributo#getNombre <em>Nombre</em>}</li>
  *   <li>{@link diagrama_concreta.TCDAtributo#getTipoDato <em>Tipo Dato</em>}</li>
  *   <li>{@link diagrama_concreta.TCDAtributo#getVisibilidad <em>Visibilidad</em>}</li>
- *   <li>{@link diagrama_concreta.TCDAtributo#isIsConstante <em>Is Constante</em>}</li>
  *   <li>{@link diagrama_concreta.TCDAtributo#getValorDefecto <em>Valor Defecto</em>}</li>
  * </ul>
  *
  * @see diagrama_concreta.Diagrama_concretaPackage#getTCDAtributo()
- * @model annotation="gmf.node label='nombre, tipoDato' color='215,255,215' label.pattern='{0}: {1}' size='150,16'"
+ * @model annotation="gmf.node label='nombre, tipoDato' color='215,255,242' label.pattern='{0}: {1}' size='150,16' border='null'"
  * @generated
  */
 public interface TCDAtributo extends EObject {
@@ -108,32 +107,6 @@ public interface TCDAtributo extends EObject {
 	 * @generated
 	 */
 	void setVisibilidad(Visibilidad value);
-
-	/**
-	 * Returns the value of the '<em><b>Is Constante</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Is Constante</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Constante</em>' attribute.
-	 * @see #setIsConstante(boolean)
-	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDAtributo_IsConstante()
-	 * @model
-	 * @generated
-	 */
-	boolean isIsConstante();
-
-	/**
-	 * Sets the value of the '{@link diagrama_concreta.TCDAtributo#isIsConstante <em>Is Constante</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Constante</em>' attribute.
-	 * @see #isIsConstante()
-	 * @generated
-	 */
-	void setIsConstante(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Valor Defecto</b></em>' attribute.

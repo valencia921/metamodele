@@ -5,6 +5,7 @@ package abstracta.impl;
 import abstracta.AbstractaFactory;
 import abstracta.AbstractaPackage;
 import abstracta.ModelFactory;
+import abstracta.ModificadorAcceso;
 import abstracta.Multiplicidad;
 import abstracta.Navegavilidad;
 import abstracta.TCDAgregacion;
@@ -20,6 +21,7 @@ import abstracta.TCDParametro;
 import abstracta.TCDRelacion;
 import abstracta.TipoDato;
 import abstracta.TipoRetorno;
+import abstracta.TipoVariable;
 import abstracta.Visibilidad;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -438,17 +440,8 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTCDAtributo_IsConstante() {
-		return (EAttribute)tcdAtributoEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getTCDAtributo_ValorDefecto() {
-		return (EAttribute)tcdAtributoEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)tcdAtributoEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -857,7 +850,6 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		createEAttribute(tcdAtributoEClass, TCD_ATRIBUTO__NOMBRE);
 		createEAttribute(tcdAtributoEClass, TCD_ATRIBUTO__TIPO_DATO);
 		createEAttribute(tcdAtributoEClass, TCD_ATRIBUTO__VISIBILIDAD);
-		createEAttribute(tcdAtributoEClass, TCD_ATRIBUTO__IS_CONSTANTE);
 		createEAttribute(tcdAtributoEClass, TCD_ATRIBUTO__VALOR_DEFECTO);
 
 		tcdMetodoEClass = createEClass(TCD_METODO);
@@ -972,7 +964,6 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		initEAttribute(getTCDAtributo_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, TCDAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDAtributo_TipoDato(), this.getTipoDato(), "tipoDato", null, 0, 1, TCDAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDAtributo_Visibilidad(), this.getVisibilidad(), "visibilidad", null, 0, 1, TCDAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTCDAtributo_IsConstante(), ecorePackage.getEBoolean(), "isConstante", null, 0, 1, TCDAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDAtributo_ValorDefecto(), ecorePackage.getEString(), "valorDefecto", null, 0, 1, TCDAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tcdMetodoEClass, TCDMetodo.class, "TCDMetodo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
