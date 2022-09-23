@@ -123,9 +123,9 @@ enum TipoDato {
 }
 
 enum Visibilidad {
-	Public;
-	Private;
-	Protected;
+	public;
+	private;
+	protected;
 	Readonly;
 }
 

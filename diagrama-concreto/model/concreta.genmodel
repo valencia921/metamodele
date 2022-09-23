@@ -25,9 +25,9 @@
       <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//TipoDato/Void"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="concreta.ecore#//Visibilidad">
-      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Visibilidad/Public"/>
-      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Visibilidad/Private"/>
-      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Visibilidad/Protected"/>
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Visibilidad/public"/>
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Visibilidad/private"/>
+      <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Visibilidad/protected"/>
       <genEnumLiterals ecoreEnumLiteral="concreta.ecore#//Visibilidad/Readonly"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="concreta.ecore#//TipoRetorno">

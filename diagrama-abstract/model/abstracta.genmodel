@@ -6,9 +6,9 @@
   <foreignModel>abstracta.emf</foreignModel>
   <genPackages prefix="Abstracta" disposableProviderFactory="true" ecorePackage="abstracta.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="abstracta.ecore#//Visibilidad">
-      <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//Visibilidad/Public"/>
-      <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//Visibilidad/Private"/>
-      <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//Visibilidad/Protected"/>
+      <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//Visibilidad/public"/>
+      <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//Visibilidad/private"/>
+      <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//Visibilidad/protected"/>
       <genEnumLiterals ecoreEnumLiteral="abstracta.ecore#//Visibilidad/Readonly"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="abstracta.ecore#//TipoDato">

@@ -82,9 +82,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoDato" eType="#//TipoDato"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Visibilidad">
-    <eLiterals name="Public"/>
-    <eLiterals name="Private" value="1"/>
-    <eLiterals name="Protected" value="2"/>
+    <eLiterals name="public"/>
+    <eLiterals name="private" value="1"/>
+    <eLiterals name="protected" value="2"/>
     <eLiterals name="Readonly" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TipoDato">
