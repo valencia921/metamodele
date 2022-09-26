@@ -16,6 +16,7 @@ package diagrama_concreta;
  *   <li>{@link diagrama_concreta.TCDAgregacion#getNombreDestino <em>Nombre Destino</em>}</li>
  *   <li>{@link diagrama_concreta.TCDAgregacion#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}</li>
  *   <li>{@link diagrama_concreta.TCDAgregacion#getMultiplicidadDestino <em>Multiplicidad Destino</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDAgregacion#getNavegavilidad <em>Navegavilidad</em>}</li>
  * </ul>
  *
  * @see diagrama_concreta.Diagrama_concretaPackage#getTCDAgregacion()
@@ -132,5 +133,34 @@ public interface TCDAgregacion extends TCDRelacion {
 	 * @generated
 	 */
 	void setMultiplicidadDestino(Multiplicidad value);
+
+	/**
+	 * Returns the value of the '<em><b>Navegavilidad</b></em>' attribute.
+	 * The literals are from the enumeration {@link diagrama_concreta.Navegavilidad}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Navegavilidad</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Navegavilidad</em>' attribute.
+	 * @see diagrama_concreta.Navegavilidad
+	 * @see #setNavegavilidad(Navegavilidad)
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDAgregacion_Navegavilidad()
+	 * @model
+	 * @generated
+	 */
+	Navegavilidad getNavegavilidad();
+
+	/**
+	 * Sets the value of the '{@link diagrama_concreta.TCDAgregacion#getNavegavilidad <em>Navegavilidad</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Navegavilidad</em>' attribute.
+	 * @see diagrama_concreta.Navegavilidad
+	 * @see #getNavegavilidad()
+	 * @generated
+	 */
+	void setNavegavilidad(Navegavilidad value);
 
 } // TCDAgregacion

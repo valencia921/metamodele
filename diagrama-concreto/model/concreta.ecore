@@ -71,6 +71,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreDestino" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadOrigen" eType="#//Multiplicidad"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadDestino" eType="#//Multiplicidad"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="navegavilidad" eType="#//Navegavilidad"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TCDAsociacion" eSuperTypes="#//TCDRelacion">
     <eAnnotations source="gmf.link">
@@ -103,6 +104,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreDestino" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadOrigen" eType="#//Multiplicidad"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadDestino" eType="#//Multiplicidad"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="navegavilidad" eType="#//Navegavilidad"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TCDDependencia" eSuperTypes="#//TCDRelacion">
     <eAnnotations source="gmf.link">
@@ -119,6 +121,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreDestino" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadOrigen" eType="#//Multiplicidad"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadDestino" eType="#//Multiplicidad"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="navegavilidad" eType="#//Navegavilidad"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TCDHerencia" eSuperTypes="#//TCDRelacion">
     <eAnnotations source="gmf.link">

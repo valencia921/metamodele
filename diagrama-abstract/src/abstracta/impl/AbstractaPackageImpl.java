@@ -629,6 +629,15 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getTCDComposicion_Navegavilidad() {
+		return (EAttribute)tcdComposicionEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTCDDependencia() {
 		return tcdDependenciaEClass;
 	}
@@ -667,6 +676,15 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 */
 	public EAttribute getTCDDependencia_MultiplicidadDestino() {
 		return (EAttribute)tcdDependenciaEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTCDDependencia_Navegavilidad() {
+		return (EAttribute)tcdDependenciaEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -721,6 +739,15 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 */
 	public EAttribute getTCDAgregacion_MultiplicidadDestino() {
 		return (EAttribute)tcdAgregacionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTCDAgregacion_Navegavilidad() {
+		return (EAttribute)tcdAgregacionEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -875,12 +902,14 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		createEAttribute(tcdComposicionEClass, TCD_COMPOSICION__NOMBRE_DESTINO);
 		createEAttribute(tcdComposicionEClass, TCD_COMPOSICION__MULTIPLICIDAD_ORIGEN);
 		createEAttribute(tcdComposicionEClass, TCD_COMPOSICION__MULTIPLICIDAD_DESTINO);
+		createEAttribute(tcdComposicionEClass, TCD_COMPOSICION__NAVEGAVILIDAD);
 
 		tcdDependenciaEClass = createEClass(TCD_DEPENDENCIA);
 		createEAttribute(tcdDependenciaEClass, TCD_DEPENDENCIA__NOMBRE_ORIGEN);
 		createEAttribute(tcdDependenciaEClass, TCD_DEPENDENCIA__NOMBRE_DESTINO);
 		createEAttribute(tcdDependenciaEClass, TCD_DEPENDENCIA__MULTIPLICIDAD_ORIGEN);
 		createEAttribute(tcdDependenciaEClass, TCD_DEPENDENCIA__MULTIPLICIDAD_DESTINO);
+		createEAttribute(tcdDependenciaEClass, TCD_DEPENDENCIA__NAVEGAVILIDAD);
 
 		tcdHerenciaEClass = createEClass(TCD_HERENCIA);
 
@@ -889,6 +918,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		createEAttribute(tcdAgregacionEClass, TCD_AGREGACION__NOMBRE_DESTINO);
 		createEAttribute(tcdAgregacionEClass, TCD_AGREGACION__MULTIPLICIDAD_ORIGEN);
 		createEAttribute(tcdAgregacionEClass, TCD_AGREGACION__MULTIPLICIDAD_DESTINO);
+		createEAttribute(tcdAgregacionEClass, TCD_AGREGACION__NAVEGAVILIDAD);
 
 		tcdParametroEClass = createEClass(TCD_PARAMETRO);
 		createEAttribute(tcdParametroEClass, TCD_PARAMETRO__NOMBRE);
@@ -989,12 +1019,14 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		initEAttribute(getTCDComposicion_NombreDestino(), ecorePackage.getEString(), "nombreDestino", null, 0, 1, TCDComposicion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDComposicion_MultiplicidadOrigen(), this.getMultiplicidad(), "multiplicidadOrigen", null, 0, 1, TCDComposicion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDComposicion_MultiplicidadDestino(), this.getMultiplicidad(), "multiplicidadDestino", null, 0, 1, TCDComposicion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTCDComposicion_Navegavilidad(), this.getNavegavilidad(), "navegavilidad", null, 0, 1, TCDComposicion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tcdDependenciaEClass, TCDDependencia.class, "TCDDependencia", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTCDDependencia_NombreOrigen(), ecorePackage.getEString(), "nombreOrigen", null, 0, 1, TCDDependencia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDDependencia_NombreDestino(), ecorePackage.getEString(), "nombreDestino", null, 0, 1, TCDDependencia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDDependencia_MultiplicidadOrigen(), this.getMultiplicidad(), "multiplicidadOrigen", null, 0, 1, TCDDependencia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDDependencia_MultiplicidadDestino(), this.getMultiplicidad(), "multiplicidadDestino", null, 0, 1, TCDDependencia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTCDDependencia_Navegavilidad(), this.getNavegavilidad(), "navegavilidad", null, 0, 1, TCDDependencia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tcdHerenciaEClass, TCDHerencia.class, "TCDHerencia", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1003,6 +1035,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		initEAttribute(getTCDAgregacion_NombreDestino(), ecorePackage.getEString(), "nombreDestino", null, 0, 1, TCDAgregacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDAgregacion_MultiplicidadOrigen(), this.getMultiplicidad(), "multiplicidadOrigen", null, 0, 1, TCDAgregacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDAgregacion_MultiplicidadDestino(), this.getMultiplicidad(), "multiplicidadDestino", null, 0, 1, TCDAgregacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTCDAgregacion_Navegavilidad(), this.getNavegavilidad(), "navegavilidad", null, 0, 1, TCDAgregacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tcdParametroEClass, TCDParametro.class, "TCDParametro", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTCDParametro_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, TCDParametro.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

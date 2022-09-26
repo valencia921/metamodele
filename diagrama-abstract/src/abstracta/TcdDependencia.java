@@ -16,6 +16,7 @@ package abstracta;
  *   <li>{@link abstracta.TCDDependencia#getNombreDestino <em>Nombre Destino</em>}</li>
  *   <li>{@link abstracta.TCDDependencia#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}</li>
  *   <li>{@link abstracta.TCDDependencia#getMultiplicidadDestino <em>Multiplicidad Destino</em>}</li>
+ *   <li>{@link abstracta.TCDDependencia#getNavegavilidad <em>Navegavilidad</em>}</li>
  * </ul>
  *
  * @see abstracta.AbstractaPackage#getTCDDependencia()
@@ -132,5 +133,34 @@ public interface TCDDependencia extends TCDRelacion {
 	 * @generated
 	 */
 	void setMultiplicidadDestino(Multiplicidad value);
+
+	/**
+	 * Returns the value of the '<em><b>Navegavilidad</b></em>' attribute.
+	 * The literals are from the enumeration {@link abstracta.Navegavilidad}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Navegavilidad</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Navegavilidad</em>' attribute.
+	 * @see abstracta.Navegavilidad
+	 * @see #setNavegavilidad(Navegavilidad)
+	 * @see abstracta.AbstractaPackage#getTCDDependencia_Navegavilidad()
+	 * @model
+	 * @generated
+	 */
+	Navegavilidad getNavegavilidad();
+
+	/**
+	 * Sets the value of the '{@link abstracta.TCDDependencia#getNavegavilidad <em>Navegavilidad</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Navegavilidad</em>' attribute.
+	 * @see abstracta.Navegavilidad
+	 * @see #getNavegavilidad()
+	 * @generated
+	 */
+	void setNavegavilidad(Navegavilidad value);
 
 } // TCDDependencia

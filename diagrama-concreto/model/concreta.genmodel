@@ -71,6 +71,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TCDAgregacion/nombreDestino"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TCDAgregacion/multiplicidadOrigen"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TCDAgregacion/multiplicidadDestino"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TCDAgregacion/navegavilidad"/>
     </genClasses>
     <genClasses ecoreClass="concreta.ecore#//TCDAsociacion">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TCDAsociacion/nombreOrigen"/>
@@ -84,12 +85,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TCDComposicion/nombreDestino"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TCDComposicion/multiplicidadOrigen"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TCDComposicion/multiplicidadDestino"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TCDComposicion/navegavilidad"/>
     </genClasses>
     <genClasses ecoreClass="concreta.ecore#//TCDDependencia">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TCDDependencia/nombreOrigen"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TCDDependencia/nombreDestino"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TCDDependencia/multiplicidadOrigen"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TCDDependencia/multiplicidadDestino"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TCDDependencia/navegavilidad"/>
     </genClasses>
     <genClasses ecoreClass="concreta.ecore#//TCDHerencia"/>
     <genClasses ecoreClass="concreta.ecore#//TCDAtributo">

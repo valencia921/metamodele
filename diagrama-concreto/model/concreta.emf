@@ -59,6 +59,7 @@ class TCDAgregacion extends TCDRelacion{
     attr String nombreDestino;
     attr Multiplicidad multiplicidadOrigen;
     attr Multiplicidad multiplicidadDestino;
+    attr Navegavilidad navegavilidad;
 }
 
 @gmf.link(source="source", target="target", style="solid", width="3", color = "0,62,255", 
@@ -80,6 +81,7 @@ class TCDComposicion extends TCDRelacion{
     attr String nombreDestino;
     attr Multiplicidad multiplicidadOrigen;
     attr Multiplicidad multiplicidadDestino;
+    attr Navegavilidad navegavilidad;
 }
 
 @gmf.link(source="source", target="target", label = "nombreDestino, multiplicidadDestino", 
@@ -90,6 +92,7 @@ class TCDDependencia extends TCDRelacion{
     attr String nombreDestino;
     attr Multiplicidad multiplicidadOrigen;
     attr Multiplicidad multiplicidadDestino;
+    attr Navegavilidad navegavilidad;
 }
 
 @gmf.link(source="source", target="target", style="solid", width="3", color = "4,255,0", source.decoration = "closedarrow")

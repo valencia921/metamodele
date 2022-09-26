@@ -63,12 +63,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreDestino" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadOrigen" eType="#//Multiplicidad"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadDestino" eType="#//Multiplicidad"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="navegavilidad" eType="#//Navegavilidad"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TCDDependencia" eSuperTypes="#//TCDRelacion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreOrigen" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreDestino" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadOrigen" eType="#//Multiplicidad"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadDestino" eType="#//Multiplicidad"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="navegavilidad" eType="#//Navegavilidad"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TCDHerencia" eSuperTypes="#//TCDRelacion"/>
   <eClassifiers xsi:type="ecore:EClass" name="TCDAgregacion" eSuperTypes="#//TCDRelacion">
@@ -76,6 +78,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreDestino" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadOrigen" eType="#//Multiplicidad"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicidadDestino" eType="#//Multiplicidad"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="navegavilidad" eType="#//Navegavilidad"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TCDParametro">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

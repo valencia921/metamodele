@@ -67,6 +67,7 @@ class TCDComposicion extends TCDRelacion{
     attr String nombreDestino;
     attr Multiplicidad multiplicidadOrigen;
     attr Multiplicidad multiplicidadDestino;
+    attr Navegavilidad navegavilidad;
 }
 
 class TCDDependencia extends TCDRelacion{
@@ -75,6 +76,7 @@ class TCDDependencia extends TCDRelacion{
     attr String nombreDestino;
     attr Multiplicidad multiplicidadOrigen;
     attr Multiplicidad multiplicidadDestino;
+    attr Navegavilidad navegavilidad;
 }
 
 class TCDHerencia extends TCDRelacion{
@@ -87,6 +89,7 @@ class TCDAgregacion extends TCDRelacion{
     attr String nombreDestino;
     attr Multiplicidad multiplicidadOrigen;
     attr Multiplicidad multiplicidadDestino;
+    attr Navegavilidad navegavilidad;
 }
 
 class TCDParametro {

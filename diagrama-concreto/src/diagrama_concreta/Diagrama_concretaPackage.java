@@ -387,13 +387,22 @@ public interface Diagrama_concretaPackage extends EPackage {
 	int TCD_AGREGACION__MULTIPLICIDAD_DESTINO = TCD_RELACION_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Navegavilidad</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TCD_AGREGACION__NAVEGAVILIDAD = TCD_RELACION_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>TCD Agregacion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TCD_AGREGACION_FEATURE_COUNT = TCD_RELACION_FEATURE_COUNT + 4;
+	int TCD_AGREGACION_FEATURE_COUNT = TCD_RELACION_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link diagrama_concreta.impl.TCDAsociacionImpl <em>TCD Asociacion</em>}' class.
@@ -542,13 +551,22 @@ public interface Diagrama_concretaPackage extends EPackage {
 	int TCD_COMPOSICION__MULTIPLICIDAD_DESTINO = TCD_RELACION_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Navegavilidad</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TCD_COMPOSICION__NAVEGAVILIDAD = TCD_RELACION_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>TCD Composicion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TCD_COMPOSICION_FEATURE_COUNT = TCD_RELACION_FEATURE_COUNT + 4;
+	int TCD_COMPOSICION_FEATURE_COUNT = TCD_RELACION_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link diagrama_concreta.impl.TCDDependenciaImpl <em>TCD Dependencia</em>}' class.
@@ -615,13 +633,22 @@ public interface Diagrama_concretaPackage extends EPackage {
 	int TCD_DEPENDENCIA__MULTIPLICIDAD_DESTINO = TCD_RELACION_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Navegavilidad</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TCD_DEPENDENCIA__NAVEGAVILIDAD = TCD_RELACION_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>TCD Dependencia</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TCD_DEPENDENCIA_FEATURE_COUNT = TCD_RELACION_FEATURE_COUNT + 4;
+	int TCD_DEPENDENCIA_FEATURE_COUNT = TCD_RELACION_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link diagrama_concreta.impl.TCDHerenciaImpl <em>TCD Herencia</em>}' class.
@@ -1144,6 +1171,17 @@ public interface Diagrama_concretaPackage extends EPackage {
 	EAttribute getTCDAgregacion_MultiplicidadDestino();
 
 	/**
+	 * Returns the meta object for the attribute '{@link diagrama_concreta.TCDAgregacion#getNavegavilidad <em>Navegavilidad</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Navegavilidad</em>'.
+	 * @see diagrama_concreta.TCDAgregacion#getNavegavilidad()
+	 * @see #getTCDAgregacion()
+	 * @generated
+	 */
+	EAttribute getTCDAgregacion_Navegavilidad();
+
+	/**
 	 * Returns the meta object for class '{@link diagrama_concreta.TCDAsociacion <em>TCD Asociacion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1263,6 +1301,17 @@ public interface Diagrama_concretaPackage extends EPackage {
 	EAttribute getTCDComposicion_MultiplicidadDestino();
 
 	/**
+	 * Returns the meta object for the attribute '{@link diagrama_concreta.TCDComposicion#getNavegavilidad <em>Navegavilidad</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Navegavilidad</em>'.
+	 * @see diagrama_concreta.TCDComposicion#getNavegavilidad()
+	 * @see #getTCDComposicion()
+	 * @generated
+	 */
+	EAttribute getTCDComposicion_Navegavilidad();
+
+	/**
 	 * Returns the meta object for class '{@link diagrama_concreta.TCDDependencia <em>TCD Dependencia</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1315,6 +1364,17 @@ public interface Diagrama_concretaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTCDDependencia_MultiplicidadDestino();
+
+	/**
+	 * Returns the meta object for the attribute '{@link diagrama_concreta.TCDDependencia#getNavegavilidad <em>Navegavilidad</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Navegavilidad</em>'.
+	 * @see diagrama_concreta.TCDDependencia#getNavegavilidad()
+	 * @see #getTCDDependencia()
+	 * @generated
+	 */
+	EAttribute getTCDDependencia_Navegavilidad();
 
 	/**
 	 * Returns the meta object for class '{@link diagrama_concreta.TCDHerencia <em>TCD Herencia</em>}'.
@@ -1762,6 +1822,14 @@ public interface Diagrama_concretaPackage extends EPackage {
 		EAttribute TCD_AGREGACION__MULTIPLICIDAD_DESTINO = eINSTANCE.getTCDAgregacion_MultiplicidadDestino();
 
 		/**
+		 * The meta object literal for the '<em><b>Navegavilidad</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TCD_AGREGACION__NAVEGAVILIDAD = eINSTANCE.getTCDAgregacion_Navegavilidad();
+
+		/**
 		 * The meta object literal for the '{@link diagrama_concreta.impl.TCDAsociacionImpl <em>TCD Asociacion</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1854,6 +1922,14 @@ public interface Diagrama_concretaPackage extends EPackage {
 		EAttribute TCD_COMPOSICION__MULTIPLICIDAD_DESTINO = eINSTANCE.getTCDComposicion_MultiplicidadDestino();
 
 		/**
+		 * The meta object literal for the '<em><b>Navegavilidad</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TCD_COMPOSICION__NAVEGAVILIDAD = eINSTANCE.getTCDComposicion_Navegavilidad();
+
+		/**
 		 * The meta object literal for the '{@link diagrama_concreta.impl.TCDDependenciaImpl <em>TCD Dependencia</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1894,6 +1970,14 @@ public interface Diagrama_concretaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TCD_DEPENDENCIA__MULTIPLICIDAD_DESTINO = eINSTANCE.getTCDDependencia_MultiplicidadDestino();
+
+		/**
+		 * The meta object literal for the '<em><b>Navegavilidad</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TCD_DEPENDENCIA__NAVEGAVILIDAD = eINSTANCE.getTCDDependencia_Navegavilidad();
 
 		/**
 		 * The meta object literal for the '{@link diagrama_concreta.impl.TCDHerenciaImpl <em>TCD Herencia</em>}' class.

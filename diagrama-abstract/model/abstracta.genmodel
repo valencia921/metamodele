@@ -90,12 +90,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//TCDComposicion/nombreDestino"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//TCDComposicion/multiplicidadOrigen"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//TCDComposicion/multiplicidadDestino"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//TCDComposicion/navegavilidad"/>
     </genClasses>
     <genClasses ecoreClass="abstracta.ecore#//TCDDependencia">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//TCDDependencia/nombreOrigen"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//TCDDependencia/nombreDestino"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//TCDDependencia/multiplicidadOrigen"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//TCDDependencia/multiplicidadDestino"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//TCDDependencia/navegavilidad"/>
     </genClasses>
     <genClasses ecoreClass="abstracta.ecore#//TCDHerencia"/>
     <genClasses ecoreClass="abstracta.ecore#//TCDAgregacion">
@@ -103,6 +105,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//TCDAgregacion/nombreDestino"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//TCDAgregacion/multiplicidadOrigen"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//TCDAgregacion/multiplicidadDestino"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//TCDAgregacion/navegavilidad"/>
     </genClasses>
     <genClasses ecoreClass="abstracta.ecore#//TCDParametro">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute abstracta.ecore#//TCDParametro/nombre"/>

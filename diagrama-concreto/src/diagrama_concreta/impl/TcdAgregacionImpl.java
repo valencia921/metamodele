@@ -4,6 +4,7 @@ package diagrama_concreta.impl;
 
 import diagrama_concreta.Diagrama_concretaPackage;
 import diagrama_concreta.Multiplicidad;
+import diagrama_concreta.Navegavilidad;
 import diagrama_concreta.TCDAgregacion;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -24,6 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link diagrama_concreta.impl.TCDAgregacionImpl#getNombreDestino <em>Nombre Destino</em>}</li>
  *   <li>{@link diagrama_concreta.impl.TCDAgregacionImpl#getMultiplicidadOrigen <em>Multiplicidad Origen</em>}</li>
  *   <li>{@link diagrama_concreta.impl.TCDAgregacionImpl#getMultiplicidadDestino <em>Multiplicidad Destino</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDAgregacionImpl#getNavegavilidad <em>Navegavilidad</em>}</li>
  * </ul>
  *
  * @generated
@@ -108,6 +110,26 @@ public class TCDAgregacionImpl extends TCDRelacionImpl implements TCDAgregacion 
 	 * @ordered
 	 */
 	protected Multiplicidad multiplicidadDestino = MULTIPLICIDAD_DESTINO_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNavegavilidad() <em>Navegavilidad</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNavegavilidad()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Navegavilidad NAVEGAVILIDAD_EDEFAULT = Navegavilidad.BIDIRECCIONAL;
+
+	/**
+	 * The cached value of the '{@link #getNavegavilidad() <em>Navegavilidad</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNavegavilidad()
+	 * @generated
+	 * @ordered
+	 */
+	protected Navegavilidad navegavilidad = NAVEGAVILIDAD_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -217,6 +239,27 @@ public class TCDAgregacionImpl extends TCDRelacionImpl implements TCDAgregacion 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Navegavilidad getNavegavilidad() {
+		return navegavilidad;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNavegavilidad(Navegavilidad newNavegavilidad) {
+		Navegavilidad oldNavegavilidad = navegavilidad;
+		navegavilidad = newNavegavilidad == null ? NAVEGAVILIDAD_EDEFAULT : newNavegavilidad;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Diagrama_concretaPackage.TCD_AGREGACION__NAVEGAVILIDAD, oldNavegavilidad, navegavilidad));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -228,6 +271,8 @@ public class TCDAgregacionImpl extends TCDRelacionImpl implements TCDAgregacion 
 				return getMultiplicidadOrigen();
 			case Diagrama_concretaPackage.TCD_AGREGACION__MULTIPLICIDAD_DESTINO:
 				return getMultiplicidadDestino();
+			case Diagrama_concretaPackage.TCD_AGREGACION__NAVEGAVILIDAD:
+				return getNavegavilidad();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -251,6 +296,9 @@ public class TCDAgregacionImpl extends TCDRelacionImpl implements TCDAgregacion 
 				return;
 			case Diagrama_concretaPackage.TCD_AGREGACION__MULTIPLICIDAD_DESTINO:
 				setMultiplicidadDestino((Multiplicidad)newValue);
+				return;
+			case Diagrama_concretaPackage.TCD_AGREGACION__NAVEGAVILIDAD:
+				setNavegavilidad((Navegavilidad)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -276,6 +324,9 @@ public class TCDAgregacionImpl extends TCDRelacionImpl implements TCDAgregacion 
 			case Diagrama_concretaPackage.TCD_AGREGACION__MULTIPLICIDAD_DESTINO:
 				setMultiplicidadDestino(MULTIPLICIDAD_DESTINO_EDEFAULT);
 				return;
+			case Diagrama_concretaPackage.TCD_AGREGACION__NAVEGAVILIDAD:
+				setNavegavilidad(NAVEGAVILIDAD_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -296,6 +347,8 @@ public class TCDAgregacionImpl extends TCDRelacionImpl implements TCDAgregacion 
 				return multiplicidadOrigen != MULTIPLICIDAD_ORIGEN_EDEFAULT;
 			case Diagrama_concretaPackage.TCD_AGREGACION__MULTIPLICIDAD_DESTINO:
 				return multiplicidadDestino != MULTIPLICIDAD_DESTINO_EDEFAULT;
+			case Diagrama_concretaPackage.TCD_AGREGACION__NAVEGAVILIDAD:
+				return navegavilidad != NAVEGAVILIDAD_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -318,6 +371,8 @@ public class TCDAgregacionImpl extends TCDRelacionImpl implements TCDAgregacion 
 		result.append(multiplicidadOrigen);
 		result.append(", multiplicidadDestino: ");
 		result.append(multiplicidadDestino);
+		result.append(", navegavilidad: ");
+		result.append(navegavilidad);
 		result.append(')');
 		return result.toString();
 	}
