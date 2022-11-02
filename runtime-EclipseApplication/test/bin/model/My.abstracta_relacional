@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<abstracta_relacional:Schema xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:abstracta_relacional="http://abstracta_relacional" name="uni" user="admin" password="root">
+  <listTables name="biene">
+    <primaryKey columna="//@listTables.0/@listColumns.0"/>
+    <listRelations nameSource="bie" nameTarget="list person" multiplicidadSource="1" multiplicidadTarget="1" tableSource="//@listTables.0" tableTarget="//@listTables.1"/>
+    <listColumns name="id" is_not_null="true" is_unique="true"/>
+    <listColumns name="name"/>
+  </listTables>
+  <listTables name="persona"/>
+</abstracta_relacional:Schema>

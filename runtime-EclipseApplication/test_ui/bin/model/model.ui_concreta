@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui_concreta:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui_concreta="ui_concreta">
+  <lstUI_Diagrams nombre="ejemplo">
+    <userInterface>
+      <lstModelElements xsi:type="ui_concreta:Img"/>
+      <lstModelElements xsi:type="ui_concreta:Label"/>
+      <lstModelElements xsi:type="ui_concreta:Table"/>
+      <lstModelElements xsi:type="ui_concreta:Ul"/>
+      <lstModelElements xsi:type="ui_concreta:Container">
+        <lstChildModelElements xsi:type="ui_concreta:Button"/>
+      </lstModelElements>
+    </userInterface>
+  </lstUI_Diagrams>
+</ui_concreta:ModelFactory>
