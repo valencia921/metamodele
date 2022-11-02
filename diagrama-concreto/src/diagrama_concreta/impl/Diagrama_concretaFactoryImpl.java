@@ -67,6 +67,7 @@ public class Diagrama_concretaFactoryImpl extends EFactoryImpl implements Diagra
 			case Diagrama_concretaPackage.TCD_DEPENDENCIA: return createTCDDependencia();
 			case Diagrama_concretaPackage.TCD_HERENCIA: return createTCDHerencia();
 			case Diagrama_concretaPackage.TCD_ATRIBUTO: return createTCDAtributo();
+			case Diagrama_concretaPackage.CLASS_IDENTIFIER: return createclass_identifier();
 			case Diagrama_concretaPackage.TCD_METODO: return createTCDMetodo();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -217,6 +218,16 @@ public class Diagrama_concretaFactoryImpl extends EFactoryImpl implements Diagra
 	public TCDAtributo createTCDAtributo() {
 		TCDAtributoImpl tcdAtributo = new TCDAtributoImpl();
 		return tcdAtributo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public class_identifier createclass_identifier() {
+		class_identifierImpl class_identifier = new class_identifierImpl();
+		return class_identifier;
 	}
 
 	/**

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/diagrama-concreto/src" modelPluginID="diagrama-concreto"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/diagrama-concreto/src" modelPluginID="diagrama-concreto"
     modelName="Diagrama_concreta" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
     copyrightFields="false">
   <foreignModel>concreta.emf</foreignModel>
@@ -100,6 +100,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TCDAtributo/tipoDato"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TCDAtributo/visibilidad"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TCDAtributo/valorDefecto"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference concreta.ecore#//TCDAtributo/identificadores"/>
+    </genClasses>
+    <genClasses ecoreClass="concreta.ecore#//class_identifier">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference concreta.ecore#//class_identifier/identificador"/>
     </genClasses>
     <genClasses ecoreClass="concreta.ecore#//TCDMetodo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute concreta.ecore#//TCDMetodo/listaParametros"/>

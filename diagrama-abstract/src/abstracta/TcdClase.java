@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link abstracta.TCDClase#getListaAtributos <em>Lista Atributos</em>}</li>
  *   <li>{@link abstracta.TCDClase#getListaMetodos <em>Lista Metodos</em>}</li>
  *   <li>{@link abstracta.TCDClase#getListaRelaciones <em>Lista Relaciones</em>}</li>
+ *   <li>{@link abstracta.TCDClase#getIdentificadores <em>Identificadores</em>}</li>
  *   <li>{@link abstracta.TCDClase#getNombre <em>Nombre</em>}</li>
  *   <li>{@link abstracta.TCDClase#getEstereotipo <em>Estereotipo</em>}</li>
  *   <li>{@link abstracta.TCDClase#isIsAbstract <em>Is Abstract</em>}</li>
@@ -77,6 +78,22 @@ public interface TCDClase extends EObject {
 	 * @generated
 	 */
 	EList<TCDRelacion> getListaRelaciones();
+
+	/**
+	 * Returns the value of the '<em><b>Identificadores</b></em>' containment reference list.
+	 * The list contents are of type {@link abstracta.TCDClass_identifier}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Identificadores</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Identificadores</em>' containment reference list.
+	 * @see abstracta.AbstractaPackage#getTCDClase_Identificadores()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<TCDClass_identifier> getIdentificadores();
 
 	/**
 	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.

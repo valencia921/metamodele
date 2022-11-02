@@ -4,8 +4,8 @@ package abstracta_relacional.impl;
 
 import abstracta_relacional.Abstracta_relacionalPackage;
 import abstracta_relacional.Column;
-
 import abstracta_relacional.Type;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;

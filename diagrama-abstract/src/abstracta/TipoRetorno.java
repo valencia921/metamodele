@@ -56,7 +56,9 @@ public enum TipoRetorno implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BOOLEAN(3, "boolean", "boolean"), /**
+	BOOLEAN(3, "boolean", "boolean"),
+
+	/**
 	 * The '<em><b>Void</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

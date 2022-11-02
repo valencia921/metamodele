@@ -26,7 +26,9 @@ public enum Multiplicidad implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	_1(0, "_1", "_1"), /**
+	_1(0, "_1", "_1"),
+
+	/**
 	 * The '<em><b>01</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -34,7 +36,9 @@ public enum Multiplicidad implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	_01(1, "_0_1", "_0_1"), /**
+	_01(1, "_0_1", "_0_1"),
+
+	/**
 	 * The '<em><b>0n</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -42,7 +46,9 @@ public enum Multiplicidad implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	_0N(2, "_0_n", "_0_n"), /**
+	_0N(2, "_0_n", "_0_n"),
+
+	/**
 	 * The '<em><b>1n</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -112,6 +112,10 @@ public class Diagrama_concretaAdapterFactory extends AdapterFactoryImpl {
 				return createTCDAtributoAdapter();
 			}
 			@Override
+			public Adapter caseclass_identifier(class_identifier object) {
+				return createclass_identifierAdapter();
+			}
+			@Override
 			public Adapter caseTCDMetodo(TCDMetodo object) {
 				return createTCDMetodoAdapter();
 			}
@@ -286,6 +290,20 @@ public class Diagrama_concretaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTCDAtributoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link diagrama_concreta.class_identifier <em>class identifier</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see diagrama_concreta.class_identifier
+	 * @generated
+	 */
+	public Adapter createclass_identifierAdapter() {
 		return null;
 	}
 

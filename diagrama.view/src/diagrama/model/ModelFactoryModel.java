@@ -3,6 +3,7 @@ package diagrama.model;
 import javax.swing.JOptionPane;
 
 import abstracta.AbstractaPackage;
+import abstracta_relacional.Abstracta_relacionalPackage;
 import diagrama_concreta.Diagrama_concretaPackage;
 import diagrama_concreta.ModelFactory;
 
@@ -82,7 +83,7 @@ public class ModelFactoryModel {
 	public abstracta_relacional.ModelFactory cargarAbstractaRelacional() {
 		abstracta_relacional.ModelFactory modelFactory = null;
 
-		AbstractaPackage whoownmePackage = AbstractaPackage.eINSTANCE;
+		Abstracta_relacionalPackage whoownmePackage = Abstracta_relacionalPackage.eINSTANCE;
 		org.eclipse.emf.ecore.resource.ResourceSet resourceSet = new org.eclipse.emf.ecore.resource.impl.ResourceSetImpl();
 
 		org.eclipse.emf.common.util.URI uri = org.eclipse.emf.common.util.URI

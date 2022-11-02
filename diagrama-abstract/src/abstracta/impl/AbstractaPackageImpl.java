@@ -5,13 +5,13 @@ package abstracta.impl;
 import abstracta.AbstractaFactory;
 import abstracta.AbstractaPackage;
 import abstracta.ModelFactory;
-import abstracta.ModificadorAcceso;
 import abstracta.Multiplicidad;
 import abstracta.Navegavilidad;
 import abstracta.TCDAgregacion;
 import abstracta.TCDAsociacion;
 import abstracta.TCDAtributo;
 import abstracta.TCDClase;
+import abstracta.TCDClass_identifier;
 import abstracta.TCDComposicion;
 import abstracta.TCDDependencia;
 import abstracta.TCDHerencia;
@@ -21,7 +21,6 @@ import abstracta.TCDParametro;
 import abstracta.TCDRelacion;
 import abstracta.TipoDato;
 import abstracta.TipoRetorno;
-import abstracta.TipoVariable;
 import abstracta.Visibilidad;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -66,6 +65,13 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * @generated
 	 */
 	private EClass tcdAtributoEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tcdClass_identifierEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -359,8 +365,8 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTCDClase_Nombre() {
-		return (EAttribute)tcdClaseEClass.getEStructuralFeatures().get(3);
+	public EReference getTCDClase_Identificadores() {
+		return (EReference)tcdClaseEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -368,7 +374,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTCDClase_Estereotipo() {
+	public EAttribute getTCDClase_Nombre() {
 		return (EAttribute)tcdClaseEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -377,7 +383,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTCDClase_IsAbstract() {
+	public EAttribute getTCDClase_Estereotipo() {
 		return (EAttribute)tcdClaseEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -386,7 +392,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTCDClase_Documentacion() {
+	public EAttribute getTCDClase_IsAbstract() {
 		return (EAttribute)tcdClaseEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -395,8 +401,17 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTCDClase_Ruta() {
+	public EAttribute getTCDClase_Documentacion() {
 		return (EAttribute)tcdClaseEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTCDClase_Ruta() {
+		return (EAttribute)tcdClaseEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -442,6 +457,24 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 	 */
 	public EAttribute getTCDAtributo_ValorDefecto() {
 		return (EAttribute)tcdAtributoEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTCDClass_identifier() {
+		return tcdClass_identifierEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTCDClass_identifier_Identificador() {
+		return (EReference)tcdClass_identifierEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -867,6 +900,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		createEReference(tcdClaseEClass, TCD_CLASE__LISTA_ATRIBUTOS);
 		createEReference(tcdClaseEClass, TCD_CLASE__LISTA_METODOS);
 		createEReference(tcdClaseEClass, TCD_CLASE__LISTA_RELACIONES);
+		createEReference(tcdClaseEClass, TCD_CLASE__IDENTIFICADORES);
 		createEAttribute(tcdClaseEClass, TCD_CLASE__NOMBRE);
 		createEAttribute(tcdClaseEClass, TCD_CLASE__ESTEREOTIPO);
 		createEAttribute(tcdClaseEClass, TCD_CLASE__IS_ABSTRACT);
@@ -878,6 +912,9 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		createEAttribute(tcdAtributoEClass, TCD_ATRIBUTO__TIPO_DATO);
 		createEAttribute(tcdAtributoEClass, TCD_ATRIBUTO__VISIBILIDAD);
 		createEAttribute(tcdAtributoEClass, TCD_ATRIBUTO__VALOR_DEFECTO);
+
+		tcdClass_identifierEClass = createEClass(TCD_CLASS_IDENTIFIER);
+		createEReference(tcdClass_identifierEClass, TCD_CLASS_IDENTIFIER__IDENTIFICADOR);
 
 		tcdMetodoEClass = createEClass(TCD_METODO);
 		createEAttribute(tcdMetodoEClass, TCD_METODO__LISTA_PARAMETROS);
@@ -984,6 +1021,7 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		initEReference(getTCDClase_ListaAtributos(), this.getTCDAtributo(), null, "listaAtributos", null, 0, -1, TCDClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTCDClase_ListaMetodos(), this.getTCDMetodo(), null, "listaMetodos", null, 0, -1, TCDClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTCDClase_ListaRelaciones(), this.getTCDRelacion(), null, "listaRelaciones", null, 0, -1, TCDClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTCDClase_Identificadores(), this.getTCDClass_identifier(), null, "identificadores", null, 0, -1, TCDClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDClase_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, TCDClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDClase_Estereotipo(), ecorePackage.getEString(), "estereotipo", null, 0, 1, TCDClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDClase_IsAbstract(), ecorePackage.getEBoolean(), "isAbstract", null, 0, 1, TCDClase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -995,6 +1033,9 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		initEAttribute(getTCDAtributo_TipoDato(), this.getTipoDato(), "tipoDato", null, 0, 1, TCDAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDAtributo_Visibilidad(), this.getVisibilidad(), "visibilidad", null, 0, 1, TCDAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDAtributo_ValorDefecto(), ecorePackage.getEString(), "valorDefecto", null, 0, 1, TCDAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tcdClass_identifierEClass, TCDClass_identifier.class, "TCDClass_identifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTCDClass_identifier_Identificador(), this.getTCDAtributo(), null, "identificador", null, 0, 1, TCDClass_identifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tcdMetodoEClass, TCDMetodo.class, "TCDMetodo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTCDMetodo_ListaParametros(), ecorePackage.getEString(), "listaParametros", null, 0, -1, TCDMetodo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1081,6 +1122,8 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		// Create annotations
 		// gmf
 		createGmfAnnotations();
+		// gmf.node
+		createGmf_1Annotations();
 	}
 
 	/**
@@ -1093,6 +1136,21 @@ public class AbstractaPackageImpl extends EPackageImpl implements AbstractaPacka
 		String source = "gmf";	
 		addAnnotation
 		  (this, 
+		   source, 
+		   new String[] {
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>gmf.node</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGmf_1Annotations() {
+		String source = "gmf.node";	
+		addAnnotation
+		  (tcdClass_identifierEClass, 
 		   source, 
 		   new String[] {
 		   });

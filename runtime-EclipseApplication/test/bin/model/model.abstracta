@@ -2,23 +2,25 @@
 <abstracta:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:abstracta="abstracta" listaTodasClases="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.0/@listaClases.0 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.0 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.0/@listaClases.1 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.0/@listaClases.2 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.0/@listaClases.3 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.1 //@listaPaquetes.0/@listapaquetes.1/@listaClases.0 //@listaPaquetes.0/@listaClases.0 //@listaPaquetes.0/@listapaquetes.0/@listaClases.0 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.2 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.3 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.4 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.5 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listapaquetes.0/@listaClases.0" listaTodosPaquetes="//@listaPaquetes.0 //@listaPaquetes.0/@listapaquetes.0 //@listaPaquetes.0/@listapaquetes.1 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.0 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1 //@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listapaquetes.0">
   <listaPaquetes nombre="root" ruta="">
     <listaClases nombre="ClaseTest1" ruta="root">
+      <listaAtributos nombre="id_test1" tipoDato="string"/>
       <listaRelaciones xsi:type="abstracta:TCDAsociacion" source="//@listaPaquetes.0/@listaClases.0" target="//@listaPaquetes.0/@listapaquetes.0/@listaClases.0" nombreOrigen="test1" nombreDestino="listTest2" multiplicidadDestino="_0_n" navegavilidad="Unidireccional"/>
     </listaClases>
     <listapaquetes nombre="root2" ruta="root/">
       <listaClases nombre="ClaseTest2" ruta="root/root2">
+        <listaAtributos nombre="id_test2" tipoDato="number"/>
         <listaRelaciones xsi:type="abstracta:TCDAsociacion" source="//@listaPaquetes.0/@listapaquetes.0/@listaClases.0" target="//@listaPaquetes.0/@listaClases.0" nombreOrigen="listTest2" nombreDestino="test1" multiplicidadOrigen="_0_n" navegavilidad="None"/>
         <listaRelaciones xsi:type="abstracta:TCDAsociacion" source="//@listaPaquetes.0/@listapaquetes.0/@listaClases.0" target="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listapaquetes.0/@listaClases.0" nombreOrigen="claseTest2" nombreDestino="testPrueba"/>
       </listaClases>
     </listapaquetes>
     <listapaquetes nombre="universidad" ruta="root/">
       <listaClases nombre="Lugar" ruta="root/universidad">
-        <listaAtributos nombre="nombre" tipoDato="string" valorDefecto=""/>
+        <listaAtributos nombre="nombre_lugar" tipoDato="string" valorDefecto=""/>
         <listaRelaciones xsi:type="abstracta:TCDAgregacion" source="//@listaPaquetes.0/@listapaquetes.1/@listaClases.0" target="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.0/@listaClases.0" nombreOrigen="lugares" nombreDestino="bienestar" multiplicidadOrigen="_0_n"/>
         <listaRelaciones xsi:type="abstracta:TCDAsociacion" source="//@listaPaquetes.0/@listapaquetes.1/@listaClases.0" target="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.0" nombreOrigen="lugares" nombreDestino="creditos" multiplicidadOrigen="_1_n" multiplicidadDestino="_0_n"/>
       </listaClases>
       <listapaquetes nombre="bienestar" ruta="root/universidad/">
         <listaClases nombre="Bienestar" ruta="root/universidad/bienestar">
-          <listaAtributos nombre="codigo" tipoDato="string" valorDefecto=""/>
+          <listaAtributos nombre="codigo_bie" tipoDato="string" valorDefecto=""/>
           <listaMetodos nombre="registrarCred"/>
           <listaMetodos nombre="registrarPer"/>
           <listaRelaciones xsi:type="abstracta:TCDDependencia" source="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.0/@listaClases.0" target="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.0" nombreOrigen="bienestar" nombreDestino="creditos" multiplicidadDestino="_0_n" navegavilidad="Unidireccional"/>
@@ -55,8 +57,8 @@
       </listapaquetes>
       <listapaquetes nombre="credito" ruta="root/universidad/">
         <listaClases nombre="Credito" isAbstract="true" ruta="root/universidad/credito">
-          <listaAtributos nombre="codigo" tipoDato="number"/>
-          <listaAtributos nombre="nombre" tipoDato="string"/>
+          <listaAtributos nombre="codigo_cre" tipoDato="number"/>
+          <listaAtributos nombre="nombre_cre" tipoDato="string"/>
           <listaAtributos nombre="horario" tipoDato="undefined"/>
           <listaMetodos nombre="EstReprobados"/>
           <listaRelaciones xsi:type="abstracta:TCDDependencia" source="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.0" target="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.0/@listaClases.0" nombreOrigen="creditos" nombreDestino="bienestar" multiplicidadOrigen="_0_n" navegavilidad="None"/>
@@ -87,6 +89,7 @@
           <listaAtributos nombre="dia" tipoDato="undefined"/>
           <listaAtributos nombre="horaIni" tipoDato="string"/>
           <listaAtributos nombre="horaFin" tipoDato="string"/>
+          <listaAtributos nombre="id_horario"/>
           <listaRelaciones xsi:type="abstracta:TCDDependencia" source="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.5" target="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.0/@listaClases.0" nombreOrigen="horarios" nombreDestino="bienestar" multiplicidadOrigen="_0_n"/>
           <listaRelaciones xsi:type="abstracta:TCDAsociacion" source="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.5" target="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.0" nombreOrigen="horarios" nombreDestino="creditos" multiplicidadOrigen="_1_n" multiplicidadDestino="_0_n"/>
           <listaRelaciones xsi:type="abstracta:TCDAsociacion" source="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.5" target="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listaClases.1" nombreOrigen="horario" nombreDestino="asignaciones" multiplicidadDestino="_0_n"/>
@@ -94,6 +97,7 @@
         </listaClases>
         <listapaquetes nombre="prueba" ruta="root/universidad/credito/">
           <listaClases nombre="TestPrueba" ruta="root/universidad/credito/prueba">
+            <listaAtributos nombre="id_test3" tipoDato="number"/>
             <listaRelaciones xsi:type="abstracta:TCDAsociacion" source="//@listaPaquetes.0/@listapaquetes.1/@listapaquetes.1/@listapaquetes.0/@listaClases.0" target="//@listaPaquetes.0/@listapaquetes.0/@listaClases.0" nombreOrigen="testPrueba" nombreDestino="claseTest2"/>
           </listaClases>
         </listapaquetes>

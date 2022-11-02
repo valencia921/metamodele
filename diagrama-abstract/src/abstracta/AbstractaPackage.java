@@ -213,13 +213,22 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_CLASE__LISTA_RELACIONES = 2;
 
 	/**
+	 * The feature id for the '<em><b>Identificadores</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TCD_CLASE__IDENTIFICADORES = 3;
+
+	/**
 	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TCD_CLASE__NOMBRE = 3;
+	int TCD_CLASE__NOMBRE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Estereotipo</b></em>' attribute.
@@ -228,7 +237,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TCD_CLASE__ESTEREOTIPO = 4;
+	int TCD_CLASE__ESTEREOTIPO = 5;
 
 	/**
 	 * The feature id for the '<em><b>Is Abstract</b></em>' attribute.
@@ -237,7 +246,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TCD_CLASE__IS_ABSTRACT = 5;
+	int TCD_CLASE__IS_ABSTRACT = 6;
 
 	/**
 	 * The feature id for the '<em><b>Documentacion</b></em>' attribute.
@@ -246,7 +255,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TCD_CLASE__DOCUMENTACION = 6;
+	int TCD_CLASE__DOCUMENTACION = 7;
 
 	/**
 	 * The feature id for the '<em><b>Ruta</b></em>' attribute.
@@ -255,7 +264,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TCD_CLASE__RUTA = 7;
+	int TCD_CLASE__RUTA = 8;
 
 	/**
 	 * The number of structural features of the '<em>TCD Clase</em>' class.
@@ -264,7 +273,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TCD_CLASE_FEATURE_COUNT = 8;
+	int TCD_CLASE_FEATURE_COUNT = 9;
 
 	/**
 	 * The meta object id for the '{@link abstracta.impl.TCDAtributoImpl <em>TCD Atributo</em>}' class.
@@ -322,6 +331,34 @@ public interface AbstractaPackage extends EPackage {
 	int TCD_ATRIBUTO_FEATURE_COUNT = 4;
 
 	/**
+	 * The meta object id for the '{@link abstracta.impl.TCDClass_identifierImpl <em>TCD Class identifier</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see abstracta.impl.TCDClass_identifierImpl
+	 * @see abstracta.impl.AbstractaPackageImpl#getTCDClass_identifier()
+	 * @generated
+	 */
+	int TCD_CLASS_IDENTIFIER = 4;
+
+	/**
+	 * The feature id for the '<em><b>Identificador</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TCD_CLASS_IDENTIFIER__IDENTIFICADOR = 0;
+
+	/**
+	 * The number of structural features of the '<em>TCD Class identifier</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TCD_CLASS_IDENTIFIER_FEATURE_COUNT = 1;
+
+	/**
 	 * The meta object id for the '{@link abstracta.impl.TCDMetodoImpl <em>TCD Metodo</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -329,7 +366,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @see abstracta.impl.AbstractaPackageImpl#getTCDMetodo()
 	 * @generated
 	 */
-	int TCD_METODO = 4;
+	int TCD_METODO = 5;
 
 	/**
 	 * The feature id for the '<em><b>Lista Parametros</b></em>' attribute list.
@@ -393,7 +430,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @see abstracta.impl.AbstractaPackageImpl#getTCDRelacion()
 	 * @generated
 	 */
-	int TCD_RELACION = 5;
+	int TCD_RELACION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -430,7 +467,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @see abstracta.impl.AbstractaPackageImpl#getTCDAsociacion()
 	 * @generated
 	 */
-	int TCD_ASOCIACION = 6;
+	int TCD_ASOCIACION = 7;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -512,7 +549,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @see abstracta.impl.AbstractaPackageImpl#getTCDComposicion()
 	 * @generated
 	 */
-	int TCD_COMPOSICION = 7;
+	int TCD_COMPOSICION = 8;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -594,7 +631,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @see abstracta.impl.AbstractaPackageImpl#getTCDDependencia()
 	 * @generated
 	 */
-	int TCD_DEPENDENCIA = 8;
+	int TCD_DEPENDENCIA = 9;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -676,7 +713,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @see abstracta.impl.AbstractaPackageImpl#getTCDHerencia()
 	 * @generated
 	 */
-	int TCD_HERENCIA = 9;
+	int TCD_HERENCIA = 10;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -713,7 +750,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @see abstracta.impl.AbstractaPackageImpl#getTCDAgregacion()
 	 * @generated
 	 */
-	int TCD_AGREGACION = 10;
+	int TCD_AGREGACION = 11;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -795,7 +832,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @see abstracta.impl.AbstractaPackageImpl#getTCDParametro()
 	 * @generated
 	 */
-	int TCD_PARAMETRO = 11;
+	int TCD_PARAMETRO = 12;
 
 	/**
 	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
@@ -832,7 +869,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @see abstracta.impl.AbstractaPackageImpl#getVisibilidad()
 	 * @generated
 	 */
-	int VISIBILIDAD = 12;
+	int VISIBILIDAD = 13;
 
 	/**
 	 * The meta object id for the '{@link abstracta.TipoDato <em>Tipo Dato</em>}' enum.
@@ -842,7 +879,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @see abstracta.impl.AbstractaPackageImpl#getTipoDato()
 	 * @generated
 	 */
-	int TIPO_DATO = 13;
+	int TIPO_DATO = 14;
 
 	/**
 	 * The meta object id for the '{@link abstracta.Multiplicidad <em>Multiplicidad</em>}' enum.
@@ -852,7 +889,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @see abstracta.impl.AbstractaPackageImpl#getMultiplicidad()
 	 * @generated
 	 */
-	int MULTIPLICIDAD = 14;
+	int MULTIPLICIDAD = 15;
 
 	/**
 	 * The meta object id for the '{@link abstracta.TipoRetorno <em>Tipo Retorno</em>}' enum.
@@ -862,7 +899,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @see abstracta.impl.AbstractaPackageImpl#getTipoRetorno()
 	 * @generated
 	 */
-	int TIPO_RETORNO = 15;
+	int TIPO_RETORNO = 16;
 
 	/**
 	 * The meta object id for the '{@link abstracta.Navegavilidad <em>Navegavilidad</em>}' enum.
@@ -872,7 +909,7 @@ public interface AbstractaPackage extends EPackage {
 	 * @see abstracta.impl.AbstractaPackageImpl#getNavegavilidad()
 	 * @generated
 	 */
-	int NAVEGAVILIDAD = 16;
+	int NAVEGAVILIDAD = 17;
 
 
 	/**
@@ -1038,6 +1075,17 @@ public interface AbstractaPackage extends EPackage {
 	EReference getTCDClase_ListaRelaciones();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link abstracta.TCDClase#getIdentificadores <em>Identificadores</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Identificadores</em>'.
+	 * @see abstracta.TCDClase#getIdentificadores()
+	 * @see #getTCDClase()
+	 * @generated
+	 */
+	EReference getTCDClase_Identificadores();
+
+	/**
 	 * Returns the meta object for the attribute '{@link abstracta.TCDClase#getNombre <em>Nombre</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1145,6 +1193,27 @@ public interface AbstractaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTCDAtributo_ValorDefecto();
+
+	/**
+	 * Returns the meta object for class '{@link abstracta.TCDClass_identifier <em>TCD Class identifier</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>TCD Class identifier</em>'.
+	 * @see abstracta.TCDClass_identifier
+	 * @generated
+	 */
+	EClass getTCDClass_identifier();
+
+	/**
+	 * Returns the meta object for the reference '{@link abstracta.TCDClass_identifier#getIdentificador <em>Identificador</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Identificador</em>'.
+	 * @see abstracta.TCDClass_identifier#getIdentificador()
+	 * @see #getTCDClass_identifier()
+	 * @generated
+	 */
+	EReference getTCDClass_identifier_Identificador();
 
 	/**
 	 * Returns the meta object for class '{@link abstracta.TCDMetodo <em>TCD Metodo</em>}'.
@@ -1744,6 +1813,14 @@ public interface AbstractaPackage extends EPackage {
 		EReference TCD_CLASE__LISTA_RELACIONES = eINSTANCE.getTCDClase_ListaRelaciones();
 
 		/**
+		 * The meta object literal for the '<em><b>Identificadores</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TCD_CLASE__IDENTIFICADORES = eINSTANCE.getTCDClase_Identificadores();
+
+		/**
 		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1824,6 +1901,24 @@ public interface AbstractaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TCD_ATRIBUTO__VALOR_DEFECTO = eINSTANCE.getTCDAtributo_ValorDefecto();
+
+		/**
+		 * The meta object literal for the '{@link abstracta.impl.TCDClass_identifierImpl <em>TCD Class identifier</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see abstracta.impl.TCDClass_identifierImpl
+		 * @see abstracta.impl.AbstractaPackageImpl#getTCDClass_identifier()
+		 * @generated
+		 */
+		EClass TCD_CLASS_IDENTIFIER = eINSTANCE.getTCDClass_identifier();
+
+		/**
+		 * The meta object literal for the '<em><b>Identificador</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TCD_CLASS_IDENTIFIER__IDENTIFICADOR = eINSTANCE.getTCDClass_identifier_Identificador();
 
 		/**
 		 * The meta object literal for the '{@link abstracta.impl.TCDMetodoImpl <em>TCD Metodo</em>}' class.

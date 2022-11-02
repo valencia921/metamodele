@@ -302,6 +302,29 @@ public class Diagrama_concretaItemProviderAdapterFactory extends Diagrama_concre
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link diagrama_concreta.class_identifier} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected class_identifierItemProvider class_identifierItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link diagrama_concreta.class_identifier}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createclass_identifierAdapter() {
+		if (class_identifierItemProvider == null) {
+			class_identifierItemProvider = new class_identifierItemProvider(this);
+		}
+
+		return class_identifierItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link diagrama_concreta.TCDMetodo} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -433,6 +456,7 @@ public class Diagrama_concretaItemProviderAdapterFactory extends Diagrama_concre
 		if (tcdDependenciaItemProvider != null) tcdDependenciaItemProvider.dispose();
 		if (tcdHerenciaItemProvider != null) tcdHerenciaItemProvider.dispose();
 		if (tcdAtributoItemProvider != null) tcdAtributoItemProvider.dispose();
+		if (class_identifierItemProvider != null) class_identifierItemProvider.dispose();
 		if (tcdMetodoItemProvider != null) tcdMetodoItemProvider.dispose();
 	}
 

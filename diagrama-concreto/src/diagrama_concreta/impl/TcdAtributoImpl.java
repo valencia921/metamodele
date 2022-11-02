@@ -9,12 +9,19 @@ import diagrama_concreta.TipoDato;
 import diagrama_concreta.TipoVariable;
 import diagrama_concreta.Visibilidad;
 
+import diagrama_concreta.class_identifier;
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,6 +35,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link diagrama_concreta.impl.TCDAtributoImpl#getTipoDato <em>Tipo Dato</em>}</li>
  *   <li>{@link diagrama_concreta.impl.TCDAtributoImpl#getVisibilidad <em>Visibilidad</em>}</li>
  *   <li>{@link diagrama_concreta.impl.TCDAtributoImpl#getValorDefecto <em>Valor Defecto</em>}</li>
+ *   <li>{@link diagrama_concreta.impl.TCDAtributoImpl#getIdentificadores <em>Identificadores</em>}</li>
  * </ul>
  *
  * @generated
@@ -112,6 +120,16 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 	 * @ordered
 	 */
 	protected String valorDefecto = VALOR_DEFECTO_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getIdentificadores() <em>Identificadores</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIdentificadores()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<class_identifier> identificadores;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -221,6 +239,32 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<class_identifier> getIdentificadores() {
+		if (identificadores == null) {
+			identificadores = new EObjectContainmentEList<class_identifier>(class_identifier.class, this, Diagrama_concretaPackage.TCD_ATRIBUTO__IDENTIFICADORES);
+		}
+		return identificadores;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case Diagrama_concretaPackage.TCD_ATRIBUTO__IDENTIFICADORES:
+				return ((InternalEList<?>)getIdentificadores()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -232,6 +276,8 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 				return getVisibilidad();
 			case Diagrama_concretaPackage.TCD_ATRIBUTO__VALOR_DEFECTO:
 				return getValorDefecto();
+			case Diagrama_concretaPackage.TCD_ATRIBUTO__IDENTIFICADORES:
+				return getIdentificadores();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -241,6 +287,7 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -255,6 +302,10 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 				return;
 			case Diagrama_concretaPackage.TCD_ATRIBUTO__VALOR_DEFECTO:
 				setValorDefecto((String)newValue);
+				return;
+			case Diagrama_concretaPackage.TCD_ATRIBUTO__IDENTIFICADORES:
+				getIdentificadores().clear();
+				getIdentificadores().addAll((Collection<? extends class_identifier>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -280,6 +331,9 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 			case Diagrama_concretaPackage.TCD_ATRIBUTO__VALOR_DEFECTO:
 				setValorDefecto(VALOR_DEFECTO_EDEFAULT);
 				return;
+			case Diagrama_concretaPackage.TCD_ATRIBUTO__IDENTIFICADORES:
+				getIdentificadores().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -300,6 +354,8 @@ public class TCDAtributoImpl extends EObjectImpl implements TCDAtributo {
 				return visibilidad != VISIBILIDAD_EDEFAULT;
 			case Diagrama_concretaPackage.TCD_ATRIBUTO__VALOR_DEFECTO:
 				return VALOR_DEFECTO_EDEFAULT == null ? valorDefecto != null : !VALOR_DEFECTO_EDEFAULT.equals(valorDefecto);
+			case Diagrama_concretaPackage.TCD_ATRIBUTO__IDENTIFICADORES:
+				return identificadores != null && !identificadores.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

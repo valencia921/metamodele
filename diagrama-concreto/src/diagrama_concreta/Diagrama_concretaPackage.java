@@ -734,13 +734,50 @@ public interface Diagrama_concretaPackage extends EPackage {
 	int TCD_ATRIBUTO__VALOR_DEFECTO = 3;
 
 	/**
+	 * The feature id for the '<em><b>Identificadores</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TCD_ATRIBUTO__IDENTIFICADORES = 4;
+
+	/**
 	 * The number of structural features of the '<em>TCD Atributo</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TCD_ATRIBUTO_FEATURE_COUNT = 4;
+	int TCD_ATRIBUTO_FEATURE_COUNT = 5;
+
+	/**
+	 * The meta object id for the '{@link diagrama_concreta.impl.class_identifierImpl <em>class identifier</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see diagrama_concreta.impl.class_identifierImpl
+	 * @see diagrama_concreta.impl.Diagrama_concretaPackageImpl#getclass_identifier()
+	 * @generated
+	 */
+	int CLASS_IDENTIFIER = 11;
+
+	/**
+	 * The feature id for the '<em><b>Identificador</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_IDENTIFIER__IDENTIFICADOR = 0;
+
+	/**
+	 * The number of structural features of the '<em>class identifier</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLASS_IDENTIFIER_FEATURE_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link diagrama_concreta.impl.TCDMetodoImpl <em>TCD Metodo</em>}' class.
@@ -750,7 +787,7 @@ public interface Diagrama_concretaPackage extends EPackage {
 	 * @see diagrama_concreta.impl.Diagrama_concretaPackageImpl#getTCDMetodo()
 	 * @generated
 	 */
-	int TCD_METODO = 11;
+	int TCD_METODO = 12;
 
 	/**
 	 * The feature id for the '<em><b>Lista Parametros</b></em>' attribute list.
@@ -814,7 +851,7 @@ public interface Diagrama_concretaPackage extends EPackage {
 	 * @see diagrama_concreta.impl.Diagrama_concretaPackageImpl#getNavegavilidad()
 	 * @generated
 	 */
-	int NAVEGAVILIDAD = 12;
+	int NAVEGAVILIDAD = 13;
 
 	/**
 	 * The meta object id for the '{@link diagrama_concreta.Multiplicidad <em>Multiplicidad</em>}' enum.
@@ -824,7 +861,7 @@ public interface Diagrama_concretaPackage extends EPackage {
 	 * @see diagrama_concreta.impl.Diagrama_concretaPackageImpl#getMultiplicidad()
 	 * @generated
 	 */
-	int MULTIPLICIDAD = 13;
+	int MULTIPLICIDAD = 14;
 
 	/**
 	 * The meta object id for the '{@link diagrama_concreta.TipoDato <em>Tipo Dato</em>}' enum.
@@ -834,7 +871,7 @@ public interface Diagrama_concretaPackage extends EPackage {
 	 * @see diagrama_concreta.impl.Diagrama_concretaPackageImpl#getTipoDato()
 	 * @generated
 	 */
-	int TIPO_DATO = 14;
+	int TIPO_DATO = 15;
 
 	/**
 	 * The meta object id for the '{@link diagrama_concreta.Visibilidad <em>Visibilidad</em>}' enum.
@@ -844,7 +881,7 @@ public interface Diagrama_concretaPackage extends EPackage {
 	 * @see diagrama_concreta.impl.Diagrama_concretaPackageImpl#getVisibilidad()
 	 * @generated
 	 */
-	int VISIBILIDAD = 15;
+	int VISIBILIDAD = 16;
 
 	/**
 	 * The meta object id for the '{@link diagrama_concreta.TipoRetorno <em>Tipo Retorno</em>}' enum.
@@ -854,7 +891,7 @@ public interface Diagrama_concretaPackage extends EPackage {
 	 * @see diagrama_concreta.impl.Diagrama_concretaPackageImpl#getTipoRetorno()
 	 * @generated
 	 */
-	int TIPO_RETORNO = 16;
+	int TIPO_RETORNO = 17;
 
 
 	/**
@@ -1439,6 +1476,38 @@ public interface Diagrama_concretaPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTCDAtributo_ValorDefecto();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link diagrama_concreta.TCDAtributo#getIdentificadores <em>Identificadores</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Identificadores</em>'.
+	 * @see diagrama_concreta.TCDAtributo#getIdentificadores()
+	 * @see #getTCDAtributo()
+	 * @generated
+	 */
+	EReference getTCDAtributo_Identificadores();
+
+	/**
+	 * Returns the meta object for class '{@link diagrama_concreta.class_identifier <em>class identifier</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>class identifier</em>'.
+	 * @see diagrama_concreta.class_identifier
+	 * @generated
+	 */
+	EClass getclass_identifier();
+
+	/**
+	 * Returns the meta object for the reference '{@link diagrama_concreta.class_identifier#getIdentificador <em>Identificador</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Identificador</em>'.
+	 * @see diagrama_concreta.class_identifier#getIdentificador()
+	 * @see #getclass_identifier()
+	 * @generated
+	 */
+	EReference getclass_identifier_Identificador();
 
 	/**
 	 * Returns the meta object for class '{@link diagrama_concreta.TCDMetodo <em>TCD Metodo</em>}'.
@@ -2030,6 +2099,32 @@ public interface Diagrama_concretaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TCD_ATRIBUTO__VALOR_DEFECTO = eINSTANCE.getTCDAtributo_ValorDefecto();
+
+		/**
+		 * The meta object literal for the '<em><b>Identificadores</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TCD_ATRIBUTO__IDENTIFICADORES = eINSTANCE.getTCDAtributo_Identificadores();
+
+		/**
+		 * The meta object literal for the '{@link diagrama_concreta.impl.class_identifierImpl <em>class identifier</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see diagrama_concreta.impl.class_identifierImpl
+		 * @see diagrama_concreta.impl.Diagrama_concretaPackageImpl#getclass_identifier()
+		 * @generated
+		 */
+		EClass CLASS_IDENTIFIER = eINSTANCE.getclass_identifier();
+
+		/**
+		 * The meta object literal for the '<em><b>Identificador</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CLASS_IDENTIFIER__IDENTIFICADOR = eINSTANCE.getclass_identifier_Identificador();
 
 		/**
 		 * The meta object literal for the '{@link diagrama_concreta.impl.TCDMetodoImpl <em>TCD Metodo</em>}' class.

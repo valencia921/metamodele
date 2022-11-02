@@ -2,6 +2,7 @@
  */
 package diagrama_concreta;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -17,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link diagrama_concreta.TCDAtributo#getTipoDato <em>Tipo Dato</em>}</li>
  *   <li>{@link diagrama_concreta.TCDAtributo#getVisibilidad <em>Visibilidad</em>}</li>
  *   <li>{@link diagrama_concreta.TCDAtributo#getValorDefecto <em>Valor Defecto</em>}</li>
+ *   <li>{@link diagrama_concreta.TCDAtributo#getIdentificadores <em>Identificadores</em>}</li>
  * </ul>
  *
  * @see diagrama_concreta.Diagrama_concretaPackage#getTCDAtributo()
@@ -133,5 +135,21 @@ public interface TCDAtributo extends EObject {
 	 * @generated
 	 */
 	void setValorDefecto(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Identificadores</b></em>' containment reference list.
+	 * The list contents are of type {@link diagrama_concreta.class_identifier}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Identificadores</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Identificadores</em>' containment reference list.
+	 * @see diagrama_concreta.Diagrama_concretaPackage#getTCDAtributo_Identificadores()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<class_identifier> getIdentificadores();
 
 } // TCDAtributo

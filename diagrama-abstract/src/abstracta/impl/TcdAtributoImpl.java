@@ -3,10 +3,8 @@
 package abstracta.impl;
 
 import abstracta.AbstractaPackage;
-import abstracta.ModificadorAcceso;
 import abstracta.TCDAtributo;
 import abstracta.TipoDato;
-import abstracta.TipoVariable;
 import abstracta.Visibilidad;
 
 import org.eclipse.emf.common.notify.Notification;

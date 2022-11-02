@@ -58,6 +58,15 @@ public interface AbstractaFactory extends EFactory {
 	TCDAtributo createTCDAtributo();
 
 	/**
+	 * Returns a new object of class '<em>TCD Class identifier</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>TCD Class identifier</em>'.
+	 * @generated
+	 */
+	TCDClass_identifier createTCDClass_identifier();
+
+	/**
 	 * Returns a new object of class '<em>TCD Metodo</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

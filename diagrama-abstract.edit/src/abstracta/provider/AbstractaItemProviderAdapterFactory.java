@@ -164,6 +164,29 @@ public class AbstractaItemProviderAdapterFactory extends AbstractaAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link abstracta.TCDClass_identifier} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TCDClass_identifierItemProvider tcdClass_identifierItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link abstracta.TCDClass_identifier}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTCDClass_identifierAdapter() {
+		if (tcdClass_identifierItemProvider == null) {
+			tcdClass_identifierItemProvider = new TCDClass_identifierItemProvider(this);
+		}
+
+		return tcdClass_identifierItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link abstracta.TCDMetodo} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -427,6 +450,7 @@ public class AbstractaItemProviderAdapterFactory extends AbstractaAdapterFactory
 		if (tcdPaqueteItemProvider != null) tcdPaqueteItemProvider.dispose();
 		if (tcdClaseItemProvider != null) tcdClaseItemProvider.dispose();
 		if (tcdAtributoItemProvider != null) tcdAtributoItemProvider.dispose();
+		if (tcdClass_identifierItemProvider != null) tcdClass_identifierItemProvider.dispose();
 		if (tcdMetodoItemProvider != null) tcdMetodoItemProvider.dispose();
 		if (tcdAsociacionItemProvider != null) tcdAsociacionItemProvider.dispose();
 		if (tcdComposicionItemProvider != null) tcdComposicionItemProvider.dispose();

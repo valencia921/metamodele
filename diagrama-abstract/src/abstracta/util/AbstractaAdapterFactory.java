@@ -84,6 +84,10 @@ public class AbstractaAdapterFactory extends AdapterFactoryImpl {
 				return createTCDAtributoAdapter();
 			}
 			@Override
+			public Adapter caseTCDClass_identifier(TCDClass_identifier object) {
+				return createTCDClass_identifierAdapter();
+			}
+			@Override
 			public Adapter caseTCDMetodo(TCDMetodo object) {
 				return createTCDMetodoAdapter();
 			}
@@ -188,6 +192,20 @@ public class AbstractaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTCDAtributoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link abstracta.TCDClass_identifier <em>TCD Class identifier</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see abstracta.TCDClass_identifier
+	 * @generated
+	 */
+	public Adapter createTCDClass_identifierAdapter() {
 		return null;
 	}
 

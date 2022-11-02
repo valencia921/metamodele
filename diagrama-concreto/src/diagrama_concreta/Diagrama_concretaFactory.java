@@ -112,6 +112,15 @@ public interface Diagrama_concretaFactory extends EFactory {
 	TCDAtributo createTCDAtributo();
 
 	/**
+	 * Returns a new object of class '<em>class identifier</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>class identifier</em>'.
+	 * @generated
+	 */
+	class_identifier createclass_identifier();
+
+	/**
 	 * Returns a new object of class '<em>TCD Metodo</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

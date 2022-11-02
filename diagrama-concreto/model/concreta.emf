@@ -113,6 +113,13 @@ class TCDAtributo {
 	attr TipoDato tipoDato;
 	attr Visibilidad visibilidad;
 	attr String valorDefecto;
+	
+	val class_identifier[*] identificadores;
+}
+
+@gmf.node()
+class class_identifier {
+	ref TCDAtributo identificador;
 }
 
 enum TipoDato {

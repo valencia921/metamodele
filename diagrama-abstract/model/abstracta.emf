@@ -23,6 +23,7 @@ class TCDClase {
     val TCDAtributo[*] listaAtributos;
     val TCDMetodo[*] listaMetodos;
     val TCDRelacion[*] listaRelaciones;
+    val TCDClass_identifier[*] identificadores;
     
     attr String nombre;
     attr String estereotipo;
@@ -36,6 +37,11 @@ class TCDAtributo {
 	attr TipoDato tipoDato;
 	attr Visibilidad visibilidad;
 	attr String valorDefecto;
+}
+
+@gmf.node()
+class TCDClass_identifier {
+	ref TCDAtributo identificador;
 }
 
 class TCDMetodo {

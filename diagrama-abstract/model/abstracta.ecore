@@ -27,6 +27,8 @@
         eType="#//TCDMetodo" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="listaRelaciones" upperBound="-1"
         eType="#//TCDRelacion" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="identificadores" upperBound="-1"
+        eType="#//TCDClass_identifier" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="estereotipo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAbstract" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
@@ -38,6 +40,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoDato" eType="#//TipoDato"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="visibilidad" eType="#//Visibilidad"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valorDefecto" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TCDClass_identifier">
+    <eAnnotations source="gmf.node"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="identificador" eType="#//TCDAtributo"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TCDMetodo">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="listaParametros" upperBound="-1"

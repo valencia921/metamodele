@@ -4,7 +4,6 @@ package abstracta_relacional.provider;
 
 
 import abstracta_relacional.Abstracta_relacionalPackage;
-import abstracta_relacional.PrimaryKey;
 
 import java.util.Collection;
 import java.util.List;
@@ -21,9 +20,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link abstracta_relacional.PrimaryKey} object.

@@ -61,6 +61,7 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 			case AbstractaPackage.TCD_PAQUETE: return createTCDPaquete();
 			case AbstractaPackage.TCD_CLASE: return createTCDClase();
 			case AbstractaPackage.TCD_ATRIBUTO: return createTCDAtributo();
+			case AbstractaPackage.TCD_CLASS_IDENTIFIER: return createTCDClass_identifier();
 			case AbstractaPackage.TCD_METODO: return createTCDMetodo();
 			case AbstractaPackage.TCD_ASOCIACION: return createTCDAsociacion();
 			case AbstractaPackage.TCD_COMPOSICION: return createTCDComposicion();
@@ -157,6 +158,16 @@ public class AbstractaFactoryImpl extends EFactoryImpl implements AbstractaFacto
 	public TCDAtributo createTCDAtributo() {
 		TCDAtributoImpl tcdAtributo = new TCDAtributoImpl();
 		return tcdAtributo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TCDClass_identifier createTCDClass_identifier() {
+		TCDClass_identifierImpl tcdClass_identifier = new TCDClass_identifierImpl();
+		return tcdClass_identifier;
 	}
 
 	/**

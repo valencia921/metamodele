@@ -26,7 +26,9 @@ public enum TipoDato implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ANY(0, "any", "any"), /**
+	ANY(0, "any", "any"),
+
+	/**
 	 * The '<em><b>String</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -74,7 +76,9 @@ public enum TipoDato implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	NULL(5, "null", "null"), /**
+	NULL(5, "null", "null"),
+
+	/**
 	 * The '<em><b>Void</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

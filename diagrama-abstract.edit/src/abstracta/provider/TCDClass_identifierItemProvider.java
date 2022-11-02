@@ -1,10 +1,9 @@
 /**
  */
-package abstracta_relacional.provider;
+package abstracta.provider;
 
 
-import abstracta_relacional.Abstracta_relacionalPackage;
-import abstracta_relacional.ForeignKey;
+import abstracta.AbstractaPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -12,23 +11,38 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
+import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.IItemPropertySource;
+import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
+import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link abstracta_relacional.ForeignKey} object.
+ * This is the item provider adapter for a {@link abstracta.TCDClass_identifier} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ForeignKeyItemProvider extends ColumnItemProvider {
+public class TCDClass_identifierItemProvider 
+	extends ItemProviderAdapter
+	implements
+		IEditingDomainItemProvider,
+		IStructuredItemContentProvider,
+		ITreeItemContentProvider,
+		IItemLabelProvider,
+		IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ForeignKeyItemProvider(AdapterFactory adapterFactory) {
+	public TCDClass_identifierItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -43,25 +57,25 @@ public class ForeignKeyItemProvider extends ColumnItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTableReferencedPropertyDescriptor(object);
+			addIdentificadorPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Table Referenced feature.
+	 * This adds a property descriptor for the Identificador feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addTableReferencedPropertyDescriptor(Object object) {
+	protected void addIdentificadorPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ForeignKey_tableReferenced_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ForeignKey_tableReferenced_feature", "_UI_ForeignKey_type"),
-				 Abstracta_relacionalPackage.Literals.FOREIGN_KEY__TABLE_REFERENCED,
+				 getString("_UI_TCDClass_identifier_identificador_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TCDClass_identifier_identificador_feature", "_UI_TCDClass_identifier_type"),
+				 AbstractaPackage.Literals.TCD_CLASS_IDENTIFIER__IDENTIFICADOR,
 				 true,
 				 false,
 				 true,
@@ -71,14 +85,14 @@ public class ForeignKeyItemProvider extends ColumnItemProvider {
 	}
 
 	/**
-	 * This returns ForeignKey.gif.
+	 * This returns TCDClass_identifier.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ForeignKey"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/TCDClass_identifier"));
 	}
 
 	/**
@@ -89,10 +103,7 @@ public class ForeignKeyItemProvider extends ColumnItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ForeignKey)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_ForeignKey_type") :
-			getString("_UI_ForeignKey_type") + " " + label;
+		return getString("_UI_TCDClass_identifier_type");
 	}
 	
 
@@ -119,6 +130,17 @@ public class ForeignKeyItemProvider extends ColumnItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+	}
+
+	/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResourceLocator getResourceLocator() {
+		return AbstractaEditPlugin.INSTANCE;
 	}
 
 }

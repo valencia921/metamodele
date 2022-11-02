@@ -5,6 +5,7 @@ package abstracta.impl;
 import abstracta.AbstractaPackage;
 import abstracta.TCDAtributo;
 import abstracta.TCDClase;
+import abstracta.TCDClass_identifier;
 import abstracta.TCDMetodo;
 import abstracta.TCDRelacion;
 
@@ -35,6 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link abstracta.impl.TCDClaseImpl#getListaAtributos <em>Lista Atributos</em>}</li>
  *   <li>{@link abstracta.impl.TCDClaseImpl#getListaMetodos <em>Lista Metodos</em>}</li>
  *   <li>{@link abstracta.impl.TCDClaseImpl#getListaRelaciones <em>Lista Relaciones</em>}</li>
+ *   <li>{@link abstracta.impl.TCDClaseImpl#getIdentificadores <em>Identificadores</em>}</li>
  *   <li>{@link abstracta.impl.TCDClaseImpl#getNombre <em>Nombre</em>}</li>
  *   <li>{@link abstracta.impl.TCDClaseImpl#getEstereotipo <em>Estereotipo</em>}</li>
  *   <li>{@link abstracta.impl.TCDClaseImpl#isIsAbstract <em>Is Abstract</em>}</li>
@@ -74,6 +76,16 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 	 * @ordered
 	 */
 	protected EList<TCDRelacion> listaRelaciones;
+
+	/**
+	 * The cached value of the '{@link #getIdentificadores() <em>Identificadores</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIdentificadores()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<TCDClass_identifier> identificadores;
 
 	/**
 	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
@@ -235,6 +247,18 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<TCDClass_identifier> getIdentificadores() {
+		if (identificadores == null) {
+			identificadores = new EObjectContainmentEList<TCDClass_identifier>(TCDClass_identifier.class, this, AbstractaPackage.TCD_CLASE__IDENTIFICADORES);
+		}
+		return identificadores;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getNombre() {
 		return nombre;
 	}
@@ -349,6 +373,8 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 				return ((InternalEList<?>)getListaMetodos()).basicRemove(otherEnd, msgs);
 			case AbstractaPackage.TCD_CLASE__LISTA_RELACIONES:
 				return ((InternalEList<?>)getListaRelaciones()).basicRemove(otherEnd, msgs);
+			case AbstractaPackage.TCD_CLASE__IDENTIFICADORES:
+				return ((InternalEList<?>)getIdentificadores()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -367,6 +393,8 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 				return getListaMetodos();
 			case AbstractaPackage.TCD_CLASE__LISTA_RELACIONES:
 				return getListaRelaciones();
+			case AbstractaPackage.TCD_CLASE__IDENTIFICADORES:
+				return getIdentificadores();
 			case AbstractaPackage.TCD_CLASE__NOMBRE:
 				return getNombre();
 			case AbstractaPackage.TCD_CLASE__ESTEREOTIPO:
@@ -401,6 +429,10 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 			case AbstractaPackage.TCD_CLASE__LISTA_RELACIONES:
 				getListaRelaciones().clear();
 				getListaRelaciones().addAll((Collection<? extends TCDRelacion>)newValue);
+				return;
+			case AbstractaPackage.TCD_CLASE__IDENTIFICADORES:
+				getIdentificadores().clear();
+				getIdentificadores().addAll((Collection<? extends TCDClass_identifier>)newValue);
 				return;
 			case AbstractaPackage.TCD_CLASE__NOMBRE:
 				setNombre((String)newValue);
@@ -438,6 +470,9 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 			case AbstractaPackage.TCD_CLASE__LISTA_RELACIONES:
 				getListaRelaciones().clear();
 				return;
+			case AbstractaPackage.TCD_CLASE__IDENTIFICADORES:
+				getIdentificadores().clear();
+				return;
 			case AbstractaPackage.TCD_CLASE__NOMBRE:
 				setNombre(NOMBRE_EDEFAULT);
 				return;
@@ -471,6 +506,8 @@ public class TCDClaseImpl extends EObjectImpl implements TCDClase {
 				return listaMetodos != null && !listaMetodos.isEmpty();
 			case AbstractaPackage.TCD_CLASE__LISTA_RELACIONES:
 				return listaRelaciones != null && !listaRelaciones.isEmpty();
+			case AbstractaPackage.TCD_CLASE__IDENTIFICADORES:
+				return identificadores != null && !identificadores.isEmpty();
 			case AbstractaPackage.TCD_CLASE__NOMBRE:
 				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
 			case AbstractaPackage.TCD_CLASE__ESTEREOTIPO:

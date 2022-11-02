@@ -137,6 +137,12 @@ public class Diagrama_concretaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Diagrama_concretaPackage.CLASS_IDENTIFIER: {
+				class_identifier class_identifier = (class_identifier)theEObject;
+				T result = caseclass_identifier(class_identifier);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Diagrama_concretaPackage.TCD_METODO: {
 				TCDMetodo tcdMetodo = (TCDMetodo)theEObject;
 				T result = caseTCDMetodo(tcdMetodo);
@@ -309,6 +315,21 @@ public class Diagrama_concretaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTCDAtributo(TCDAtributo object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>class identifier</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>class identifier</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseclass_identifier(class_identifier object) {
 		return null;
 	}
 

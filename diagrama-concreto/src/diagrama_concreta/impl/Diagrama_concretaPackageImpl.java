@@ -24,6 +24,7 @@ import diagrama_concreta.TipoRetorno;
 import diagrama_concreta.TipoVariable;
 import diagrama_concreta.Visibilidad;
 
+import diagrama_concreta.class_identifier;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -115,6 +116,13 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 	 * @generated
 	 */
 	private EClass tcdAtributoEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass class_identifierEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -710,6 +718,33 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getTCDAtributo_Identificadores() {
+		return (EReference)tcdAtributoEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getclass_identifier() {
+		return class_identifierEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getclass_identifier_Identificador() {
+		return (EReference)class_identifierEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTCDMetodo() {
 		return tcdMetodoEClass;
 	}
@@ -896,6 +931,10 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 		createEAttribute(tcdAtributoEClass, TCD_ATRIBUTO__TIPO_DATO);
 		createEAttribute(tcdAtributoEClass, TCD_ATRIBUTO__VISIBILIDAD);
 		createEAttribute(tcdAtributoEClass, TCD_ATRIBUTO__VALOR_DEFECTO);
+		createEReference(tcdAtributoEClass, TCD_ATRIBUTO__IDENTIFICADORES);
+
+		class_identifierEClass = createEClass(CLASS_IDENTIFIER);
+		createEReference(class_identifierEClass, CLASS_IDENTIFIER__IDENTIFICADOR);
 
 		tcdMetodoEClass = createEClass(TCD_METODO);
 		createEAttribute(tcdMetodoEClass, TCD_METODO__LISTA_PARAMETROS);
@@ -1011,6 +1050,10 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 		initEAttribute(getTCDAtributo_TipoDato(), this.getTipoDato(), "tipoDato", null, 0, 1, TCDAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDAtributo_Visibilidad(), this.getVisibilidad(), "visibilidad", null, 0, 1, TCDAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTCDAtributo_ValorDefecto(), ecorePackage.getEString(), "valorDefecto", null, 0, 1, TCDAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTCDAtributo_Identificadores(), this.getclass_identifier(), null, "identificadores", null, 0, -1, TCDAtributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(class_identifierEClass, class_identifier.class, "class_identifier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getclass_identifier_Identificador(), this.getTCDAtributo(), null, "identificador", null, 0, 1, class_identifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tcdMetodoEClass, TCDMetodo.class, "TCDMetodo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTCDMetodo_ListaParametros(), ecorePackage.getEString(), "listaParametros", null, 0, -1, TCDMetodo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1131,6 +1174,11 @@ public class Diagrama_concretaPackageImpl extends EPackageImpl implements Diagra
 			 "label.pattern", "{0}: {1}",
 			 "size", "150,16",
 			 "border", "null"
+		   });	
+		addAnnotation
+		  (class_identifierEClass, 
+		   source, 
+		   new String[] {
 		   });	
 		addAnnotation
 		  (tcdMetodoEClass, 

@@ -4,7 +4,6 @@ package abstracta_relacional.impl;
 
 import abstracta_relacional.Abstracta_relacionalPackage;
 import abstracta_relacional.Column;
-import abstracta_relacional.ForeignKey;
 import abstracta_relacional.PrimaryKey;
 import abstracta_relacional.Relation;
 import abstracta_relacional.Table;

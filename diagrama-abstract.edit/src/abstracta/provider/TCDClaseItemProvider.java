@@ -197,6 +197,7 @@ public class TCDClaseItemProvider
 			childrenFeatures.add(AbstractaPackage.Literals.TCD_CLASE__LISTA_ATRIBUTOS);
 			childrenFeatures.add(AbstractaPackage.Literals.TCD_CLASE__LISTA_METODOS);
 			childrenFeatures.add(AbstractaPackage.Literals.TCD_CLASE__LISTA_RELACIONES);
+			childrenFeatures.add(AbstractaPackage.Literals.TCD_CLASE__IDENTIFICADORES);
 		}
 		return childrenFeatures;
 	}
@@ -262,6 +263,7 @@ public class TCDClaseItemProvider
 			case AbstractaPackage.TCD_CLASE__LISTA_ATRIBUTOS:
 			case AbstractaPackage.TCD_CLASE__LISTA_METODOS:
 			case AbstractaPackage.TCD_CLASE__LISTA_RELACIONES:
+			case AbstractaPackage.TCD_CLASE__IDENTIFICADORES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -313,6 +315,11 @@ public class TCDClaseItemProvider
 			(createChildParameter
 				(AbstractaPackage.Literals.TCD_CLASE__LISTA_RELACIONES,
 				 AbstractaFactory.eINSTANCE.createTCDAgregacion()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(AbstractaPackage.Literals.TCD_CLASE__IDENTIFICADORES,
+				 AbstractaFactory.eINSTANCE.createTCDClass_identifier()));
 	}
 
 	/**

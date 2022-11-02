@@ -7,7 +7,7 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated Abstracta -->
+      <!-- @generated abstracta -->
       <factory
             uri="http://abstracta_relacional"
             class="abstracta_relacional.provider.Abstracta_relacionalItemProviderAdapterFactory"

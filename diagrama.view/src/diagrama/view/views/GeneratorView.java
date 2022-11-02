@@ -76,6 +76,7 @@ public class GeneratorView extends ViewPart {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				ModelFactoryModel mfm = ModelFactoryModel.getInstance();
+				mfm.generarModelToModelRelacional();
 			}
 		});
 		btnNewButton_1_1.setText("Generador de M2M relacional");
