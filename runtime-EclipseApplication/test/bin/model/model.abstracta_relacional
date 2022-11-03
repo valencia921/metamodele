@@ -1,2 +1,79 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<abstracta_relacional:Schema xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:abstracta_relacional="http://abstracta_relacional" name="Principal" user="admin" password="root"/>
+<?xml version="1.0" encoding="ASCII"?>
+<abstracta_relacional:ModelFactory xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:abstracta_relacional="http://abstracta_relacional">
+  <lstSchema name="principal" user="admin" password="root">
+    <listTables name="Bienestar">
+      <primaryKey columna="//@lstSchema.0/@listTables.0/@listColumns.0"/>
+      <listColumns name="codigo_bie" is_not_null="true" data_default="" is_unique="true"/>
+    </listTables>
+    <listTables name="Credito">
+      <primaryKey columna="//@lstSchema.0/@listTables.1/@listColumns.0"/>
+      <listColumns type="number" name="codigo_cre" is_not_null="true" is_unique="true"/>
+      <listColumns name="nombre_cre"/>
+      <listColumns name="horario"/>
+      <listColumns name="codigo_bie" is_not_null="true" data_default="" is_unique="true"/>
+    </listTables>
+    <listTables name="Persona">
+      <primaryKey columna="//@lstSchema.0/@listTables.2/@listColumns.0"/>
+      <listColumns type="number" name="cedula" is_not_null="true" is_unique="true"/>
+      <listColumns name="nombre" data_default=""/>
+      <listColumns name="correo"/>
+      <listColumns name="codigo_bie" is_not_null="true" data_default="" is_unique="true"/>
+    </listTables>
+    <listTables name="Instructor">
+      <primaryKey columna="//@lstSchema.0/@listTables.3/@listColumns.0"/>
+      <listColumns type="number" name="salario" is_not_null="true" is_unique="true"/>
+      <listColumns name="cargo"/>
+      <listColumns type="boolean" name="isActivo"/>
+    </listTables>
+    <listTables name="Estudiante">
+      <primaryKey columna="//@lstSchema.0/@listTables.4/@listColumns.0"/>
+      <listColumns name="facultad" is_not_null="true" is_unique="true"/>
+      <listColumns name="programa"/>
+    </listTables>
+    <listTables name="AsigCreditoEst">
+      <primaryKey columna="//@lstSchema.0/@listTables.5/@listColumns.0"/>
+      <listColumns name="fechaAsig" is_not_null="true" is_unique="true"/>
+      <listColumns type="boolean" name="estado"/>
+      <listColumns name="dia" is_not_null="true" is_unique="true"/>
+      <listColumns name="facultad" is_not_null="true" is_unique="true"/>
+    </listTables>
+    <listTables name="Lugar">
+      <primaryKey columna="//@lstSchema.0/@listTables.6/@listColumns.0"/>
+      <listColumns name="nombre_lugar" is_not_null="true" data_default="" is_unique="true"/>
+      <listColumns name="codigo_bie" is_not_null="true" data_default="" is_unique="true"/>
+    </listTables>
+    <listTables name="ClaseTest1">
+      <primaryKey columna="//@lstSchema.0/@listTables.7/@listColumns.0"/>
+      <listColumns name="id_test1" is_not_null="true" is_unique="true"/>
+    </listTables>
+    <listTables name="ClaseTest2">
+      <primaryKey columna="//@lstSchema.0/@listTables.8/@listColumns.0"/>
+      <listColumns type="number" name="id_test2" is_not_null="true" is_unique="true"/>
+      <listColumns name="id_test1" is_not_null="true" is_unique="true"/>
+    </listTables>
+    <listTables name="Academico">
+      <primaryKey columna="//@lstSchema.0/@listTables.9/@listColumns.0"/>
+      <listColumns name="duracion" is_not_null="true" is_unique="true"/>
+    </listTables>
+    <listTables name="Cultural">
+      <primaryKey columna="//@lstSchema.0/@listTables.10/@listColumns.0"/>
+      <listColumns type="number" name="id" is_not_null="true" auto_increment="true" is_unique="true"/>
+    </listTables>
+    <listTables name="Deportivo">
+      <primaryKey columna="//@lstSchema.0/@listTables.11/@listColumns.0"/>
+      <listColumns type="number" name="id" is_not_null="true" auto_increment="true" is_unique="true"/>
+    </listTables>
+    <listTables name="Horario">
+      <primaryKey columna="//@lstSchema.0/@listTables.12/@listColumns.0"/>
+      <listColumns name="dia" is_not_null="true" is_unique="true"/>
+      <listColumns name="horaIni"/>
+      <listColumns name="horaFin"/>
+      <listColumns name="id_horario"/>
+      <listColumns name="codigo_bie" is_not_null="true" data_default="" is_unique="true"/>
+    </listTables>
+    <listTables name="TestPrueba">
+      <primaryKey columna="//@lstSchema.0/@listTables.13/@listColumns.0"/>
+      <listColumns type="number" name="id_test3" is_not_null="true" is_unique="true"/>
+    </listTables>
+  </lstSchema>
+</abstracta_relacional:ModelFactory>
