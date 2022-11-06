@@ -29,28 +29,33 @@ public class TransformacionR2T {
 
 		String pathRaiz = "";
 		StringBuilder txtCodigo = new StringBuilder();
+		String msj = "ERROR";
 
 		DirectoryDialog fd = new DirectoryDialog(new Shell(), SWT.SELECTED);
 		fd.setText("Generacion de codigo");
 		pathRaiz = fd.open();
-
-		if (modelFactoryRelacional.getLstSchema().size() < 1) {
-			return "No hay esquemas creados";
+		if (pathRaiz != null) {
+			if (modelFactoryRelacional.getLstSchema().size() < 1) {
+				return "No hay esquemas creados";
+			} else {
+				txtCodigo = new StringBuilder();
+				txtCodigo.append("CREATE DATABASE IF NOT EXISTS "
+						+ modelFactoryRelacional.getLstSchema().get(0).getName() + ";\n\n");
+				txtCodigo.append("USE " + modelFactoryRelacional.getLstSchema().get(0).getName() + ";\n\n");
+				for (Table table : modelFactoryRelacional.getLstSchema().get(0).getListTables()) {
+					generarTabla(table, txtCodigo);
+				}
+				for (Table table : modelFactoryRelacional.getLstSchema().get(0).getListTables()) {
+					generarRelaciones(table, txtCodigo);
+				}
+				guardarArchivo(txtCodigo.toString(), pathRaiz + "/",
+						modelFactoryRelacional.getLstSchema().get(0).getName() + ".sql");
+			}
+			msj = "Se ha generado el código SQL";
 		} else {
-			txtCodigo = new StringBuilder();
-			txtCodigo.append("CREATE DATABASE IF NOT EXISTS " + modelFactoryRelacional.getLstSchema().get(0).getName()
-					+ ";\n\n");
-			txtCodigo.append("USE " + modelFactoryRelacional.getLstSchema().get(0).getName() + ";\n\n");
-			for (Table table : modelFactoryRelacional.getLstSchema().get(0).getListTables()) {
-				generarTabla(table, txtCodigo);
-			}
-			for (Table table : modelFactoryRelacional.getLstSchema().get(0).getListTables()) {
-				generarRelaciones(table, txtCodigo);
-			}
-			guardarArchivo(txtCodigo.toString(), pathRaiz + "/",
-					modelFactoryRelacional.getLstSchema().get(0).getName() + ".sql");
+			msj = "Se cancelo la transformación. No se creo ningún archivo SQL";
 		}
-		return "Se ha generado el código SQL";
+		return msj;
 	}
 
 	private void generarRelaciones(Table table, StringBuilder txtCodigo) {
@@ -61,8 +66,8 @@ public class TransformacionR2T {
 			tableTarget = relacion.getTableTarget();
 
 			System.out.println();
-			txtCodigo.append("ALTER TABLE " + table.getName() + " ADD FOREIGN KEY(" + relacion.getNameTarget().toLowerCase()
-					+ "_id) REFERENCES " + tableTarget.getName() + "("
+			txtCodigo.append("ALTER TABLE " + table.getName() + " ADD FOREIGN KEY("
+					+ relacion.getNameTarget().toLowerCase() + "_id) REFERENCES " + tableTarget.getName() + "("
 					+ tableTarget.getPrimaryKey().get(0).getColumna().getName() + ");\n\n");
 		}
 	}
