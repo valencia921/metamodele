@@ -34,54 +34,71 @@ public class GeneratorView extends ViewPart {
 		Group grpDeModeloA = new Group(composite, SWT.NONE);
 		grpDeModeloA.setBackground(SWTResourceManager.getColor(224, 255, 255));
 		grpDeModeloA.setText("Generaci\u00F3n de Modelo a Modelo");
-		grpDeModeloA.setBounds(24, 48, 400, 70);
+		grpDeModeloA.setBounds(10, 10, 400, 70);
 
-		Button btnNewButton = new Button(grpDeModeloA, SWT.NONE);
-		btnNewButton.setFont(SWTResourceManager.getFont("Segoe UI", 12, SWT.BOLD));
-		btnNewButton.setForeground(SWTResourceManager.getColor(0, 0, 0));
-		btnNewButton.addSelectionListener(new SelectionAdapter() {
+		Button btnGeneradorM2M = new Button(grpDeModeloA, SWT.NONE);
+		btnGeneradorM2M.setFont(SWTResourceManager.getFont("Segoe UI", 12, SWT.BOLD));
+		btnGeneradorM2M.setForeground(SWTResourceManager.getColor(0, 0, 0));
+		btnGeneradorM2M.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				ModelFactoryModel mfm = ModelFactoryModel.getInstance();
 				mfm.generarModelToModel();
 			}
 		});
-		btnNewButton.setBounds(10, 30, 380, 30);
-		btnNewButton.setText("Generador de M2M");
+		btnGeneradorM2M.setBounds(10, 30, 380, 30);
+		btnGeneradorM2M.setText("Generador de M2M");
 
 		Group grpDeModeloA_1 = new Group(composite, SWT.NONE);
 		grpDeModeloA_1.setBackground(SWTResourceManager.getColor(255, 182, 193));
 		grpDeModeloA_1.setText("Generaci\u00F3n de modelo a texto");
-		grpDeModeloA_1.setBounds(24, 140, 400, 70);
+		grpDeModeloA_1.setBounds(10, 95, 400, 70);
 
-		Button btnNewButton_1 = new Button(grpDeModeloA_1, SWT.NONE);
-		btnNewButton_1.setFont(SWTResourceManager.getFont("Segoe UI", 12, SWT.BOLD));
-		btnNewButton_1.setBounds(10, 30, 380, 30);
-		btnNewButton_1.addSelectionListener(new SelectionAdapter() {
+		Button btnGeneradorM2T = new Button(grpDeModeloA_1, SWT.NONE);
+		btnGeneradorM2T.setFont(SWTResourceManager.getFont("Segoe UI", 12, SWT.BOLD));
+		btnGeneradorM2T.setBounds(10, 30, 380, 30);
+		btnGeneradorM2T.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				ModelFactoryModel mfm = ModelFactoryModel.getInstance();
 				mfm.generarModelToText();
 			}
 		});
-		btnNewButton_1.setText("Generador de M2T");
+		btnGeneradorM2T.setText("Generador de M2T");
 		
 		Group grpDeModeloA_1_1 = new Group(composite, SWT.NONE);
 		grpDeModeloA_1_1.setText("Generaci\u00F3n de modelo a modelo relacional");
 		grpDeModeloA_1_1.setBackground(SWTResourceManager.getColor(255, 250, 205));
-		grpDeModeloA_1_1.setBounds(24, 229, 400, 70);
+		grpDeModeloA_1_1.setBounds(10, 180, 400, 70);
 		
-		Button btnNewButton_1_1 = new Button(grpDeModeloA_1_1, SWT.NONE);
-		btnNewButton_1_1.addSelectionListener(new SelectionAdapter() {
+		Button btnGeneradorM2R = new Button(grpDeModeloA_1_1, SWT.NONE);
+		btnGeneradorM2R.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				ModelFactoryModel mfm = ModelFactoryModel.getInstance();
 				mfm.generarModelToModelRelacional();
 			}
 		});
-		btnNewButton_1_1.setText("Generador de M2M relacional");
-		btnNewButton_1_1.setFont(SWTResourceManager.getFont("Segoe UI", 12, SWT.BOLD));
-		btnNewButton_1_1.setBounds(10, 30, 380, 30);
+		btnGeneradorM2R.setText("Generador de M2R");
+		btnGeneradorM2R.setFont(SWTResourceManager.getFont("Segoe UI", 12, SWT.BOLD));
+		btnGeneradorM2R.setBounds(10, 30, 380, 30);
+		
+		Group grpDeModeloA_1_1_1 = new Group(composite, SWT.NONE);
+		grpDeModeloA_1_1_1.setText("Generaci\u00F3n de modelo relacional a texto MySQL");
+		grpDeModeloA_1_1_1.setBackground(SWTResourceManager.getColor(255, 250, 205));
+		grpDeModeloA_1_1_1.setBounds(10, 266, 400, 70);
+		
+		Button btnGeneradorR2T = new Button(grpDeModeloA_1_1_1, SWT.NONE);
+		btnGeneradorR2T.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				ModelFactoryModel mfm = ModelFactoryModel.getInstance();
+				mfm.generarRelacionalToText();
+			}
+		});
+		btnGeneradorR2T.setText("Generador de R2T");
+		btnGeneradorR2T.setFont(SWTResourceManager.getFont("Segoe UI", 12, SWT.BOLD));
+		btnGeneradorR2T.setBounds(10, 30, 380, 30);
 
 	}
 

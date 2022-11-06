@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see abstracta_relacional.Abstracta_relacionalPackage#getRelation()
- * @model annotation="gmf.node label='nameSource'"
+ * @model annotation="gmf.node label='nameTarget'"
  * @generated
  */
 public interface Relation extends EObject {

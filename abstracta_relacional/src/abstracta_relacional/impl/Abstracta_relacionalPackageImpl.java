@@ -651,7 +651,7 @@ public class Abstracta_relacionalPackageImpl extends EPackageImpl implements Abs
 		  (relationEClass, 
 		   source, 
 		   new String[] {
-			 "label", "nameSource"
+			 "label", "nameTarget"
 		   });	
 		addAnnotation
 		  (triggerEClass, 

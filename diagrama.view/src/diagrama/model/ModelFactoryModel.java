@@ -164,4 +164,11 @@ public class ModelFactoryModel {
 		salvarAbstractaRelacional();
 	}
 
+	public void generarRelacionalToText() {
+		
+		modelFactoryAbstractaRelacional = cargarAbstractaRelacional();
+		TransformacionR2T transformacionR2T = new TransformacionR2T(modelFactoryAbstractaRelacional);
+		String msj = transformacionR2T.transformarR2T();
+		JOptionPane.showMessageDialog(null, msj);
+	}
 }

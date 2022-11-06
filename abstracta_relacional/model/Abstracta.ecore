@@ -40,7 +40,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Relation">
     <eAnnotations source="gmf.node">
-      <details key="label" value="nameSource"/>
+      <details key="label" value="nameTarget"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameSource" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameTarget" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

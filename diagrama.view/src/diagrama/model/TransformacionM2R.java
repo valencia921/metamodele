@@ -14,6 +14,7 @@ import abstracta.TCDAtributo;
 import abstracta_relacional.Abstracta_relacionalFactory;
 import abstracta_relacional.Column;
 import abstracta_relacional.PrimaryKey;
+import abstracta_relacional.Relation;
 import abstracta_relacional.Table;
 import abstracta_relacional.Type;
 
@@ -41,26 +42,26 @@ public class TransformacionM2R {
 		for (TCDClase tcdClase : modelFactoryAbstracta.getListaTodasClases()) {
 			// Crea las relaciones
 			for (TCDRelacion tcdRelacion : tcdClase.getListaRelaciones()) {
-				crearRelacion(tcdRelacion);
+				crearRelacion(tcdRelacion, tcdClase);
 			}
 		}
 		return mensaje;
 	}
 
-	private void crearRelacion(TCDRelacion tcdRelacion) {
+	private void crearRelacion(TCDRelacion tcdRelacion, TCDClase clase) {
 
-		TCDClase ClasSourceCon = tcdRelacion.getSource();
-		TCDClase ClasRelTargetCon = tcdRelacion.getTarget();
-		Table tableSource = obtenerTableRelacional(ClasSourceCon.getNombre());
-		Table tableTarget = obtenerTableRelacional(ClasRelTargetCon.getNombre());
+		TCDClase ClasSource = tcdRelacion.getSource();
+		TCDClase ClasRelTarget = tcdRelacion.getTarget();
+		Table tableSource = obtenerTableRelacional(ClasSource.getNombre());
+		Table tableTarget = obtenerTableRelacional(ClasRelTarget.getNombre());
+		Column column;
 
 		if (tcdRelacion instanceof TCDHerencia) {
-			if (tcdRelacion.getSource().getNombre().equalsIgnoreCase(ClasSourceCon.getNombre())) {
+			if (tcdRelacion.getSource().getNombre().equalsIgnoreCase(clase.getNombre())) {
 				return;
 			} else {
-				System.out.println("entre crear herencia " + tableSource.getName() + "_" + tableTarget.getName());
-				Column column = obtenerColumna(tableSource, tableSource.getPrimaryKey().get(0).getColumna().getName());
-				crearForanea(column, tableTarget);
+				column = obtenerColumna(tableSource, tableSource.getPrimaryKey().get(0).getColumna().getName());
+				crearForaneaHerencia(column, tableTarget, tableSource);
 			}
 		} else {
 
@@ -71,18 +72,31 @@ public class TransformacionM2R {
 				TCDAgregacion relacionAux = ((TCDAgregacion) tcdRelacion);
 				multiplicidadSource = relacionAux.getMultiplicidadOrigen();
 				multiplicidadTarget = relacionAux.getMultiplicidadDestino();
-				System.out.println("entre rela agregacion " + tableSource.getName() + "_" + tableTarget.getName());
-				
+
 				if (multiplicidadSource == Multiplicidad._0N || multiplicidadSource == Multiplicidad._1N) {
 					if (multiplicidadTarget == Multiplicidad._0N || multiplicidadTarget == Multiplicidad._1N) {
-						System.out.println("entre rela agregacion muchos muchos " + tableSource.getName() + "_" + tableTarget.getName());
 						crearTablaRelacion(tableSource, tableTarget);
 						return;
 					} else {
-						System.out.println("entre rela agregacion uno muchos " + tableSource.getName() + "_" + tableTarget.getName());
-						Column column = obtenerColumna(tableTarget,
-								tableTarget.getPrimaryKey().get(0).getColumna().getName());
-						crearForanea(column, tableSource);
+						column = obtenerColumna(tableTarget, tableTarget.getPrimaryKey().get(0).getColumna().getName());
+						crearForanea(column, tableSource, tableTarget);
+						Relation relacion_foreign = crearRelacionForanea(tableSource, tableTarget);
+						relacion_foreign.setNameSource(relacionAux.getNombreOrigen());
+						relacion_foreign.setNameTarget(relacionAux.getNombreDestino());
+						relacion_foreign.setMultiplicidadSource("*");
+						relacion_foreign.setMultiplicidadTarget("1");
+						tableSource.getListRelations().add(relacion_foreign);
+					}
+				} else {
+					if (multiplicidadTarget == Multiplicidad._01 || multiplicidadTarget == Multiplicidad._1) {
+						column = obtenerColumna(tableTarget, tableTarget.getPrimaryKey().get(0).getColumna().getName());
+						crearForanea(column, tableSource, tableTarget);
+						Relation relacion_foreign = crearRelacionForanea(tableSource, tableTarget);
+						relacion_foreign.setNameSource(relacionAux.getNombreOrigen());
+						relacion_foreign.setNameTarget(relacionAux.getNombreDestino());
+						relacion_foreign.setMultiplicidadSource("1");
+						relacion_foreign.setMultiplicidadTarget("1");
+						tableSource.getListRelations().add(relacion_foreign);
 					}
 				}
 			} else if (tcdRelacion instanceof TCDAsociacion) {
@@ -95,54 +109,126 @@ public class TransformacionM2R {
 						crearTablaRelacion(tableSource, tableTarget);
 						return;
 					} else {
-						Column column = obtenerColumna(tableTarget,
-								tableTarget.getPrimaryKey().get(0).getColumna().getName());
-						crearForanea(column, tableSource);
+						column = obtenerColumna(tableTarget, tableTarget.getPrimaryKey().get(0).getColumna().getName());
+						crearForanea(column, tableSource, tableTarget);
+						Relation relacion_foreign = crearRelacionForanea(tableSource, tableTarget);
+						relacion_foreign.setNameSource(relacionAux.getNombreOrigen());
+						relacion_foreign.setNameTarget(relacionAux.getNombreDestino());
+						relacion_foreign.setMultiplicidadSource("*");
+						relacion_foreign.setMultiplicidadTarget("1");
+						tableSource.getListRelations().add(relacion_foreign);
+					}
+				} else {
+					if (multiplicidadTarget == Multiplicidad._01 || multiplicidadTarget == Multiplicidad._1) {
+						column = obtenerColumna(tableTarget, tableTarget.getPrimaryKey().get(0).getColumna().getName());
+						crearForanea(column, tableSource, tableTarget);
+						Relation relacion_foreign = crearRelacionForanea(tableSource, tableTarget);
+						relacion_foreign.setNameSource(relacionAux.getNombreOrigen());
+						relacion_foreign.setNameTarget(relacionAux.getNombreDestino());
+						relacion_foreign.setMultiplicidadSource("1");
+						relacion_foreign.setMultiplicidadTarget("1");
+						tableSource.getListRelations().add(relacion_foreign);
 					}
 				}
 			} else if (tcdRelacion instanceof TCDComposicion) {
 				TCDComposicion relacionAux = ((TCDComposicion) tcdRelacion);
 				multiplicidadSource = relacionAux.getMultiplicidadOrigen();
 				multiplicidadTarget = relacionAux.getMultiplicidadDestino();
+
 				if (multiplicidadSource == Multiplicidad._0N || multiplicidadSource == Multiplicidad._1N) {
 					if (multiplicidadTarget == Multiplicidad._0N || multiplicidadTarget == Multiplicidad._1N) {
 						crearTablaRelacion(tableSource, tableTarget);
 						return;
 					} else {
-						Column column = obtenerColumna(tableTarget,
-								tableTarget.getPrimaryKey().get(0).getColumna().getName());
-						crearForanea(column, tableSource);
+						column = obtenerColumna(tableTarget, tableTarget.getPrimaryKey().get(0).getColumna().getName());
+						crearForanea(column, tableSource, tableTarget);
+						Relation relacion_foreign = crearRelacionForanea(tableSource, tableTarget);
+						relacion_foreign.setNameSource(relacionAux.getNombreOrigen());
+						relacion_foreign.setNameTarget(relacionAux.getNombreDestino());
+						relacion_foreign.setMultiplicidadSource("*");
+						relacion_foreign.setMultiplicidadTarget("1");
+						tableSource.getListRelations().add(relacion_foreign);
+					}
+				} else {
+					if (multiplicidadTarget == Multiplicidad._01 || multiplicidadTarget == Multiplicidad._1) {
+						column = obtenerColumna(tableTarget, tableTarget.getPrimaryKey().get(0).getColumna().getName());
+						crearForanea(column, tableSource, tableTarget);
+						Relation relacion_foreign = crearRelacionForanea(tableSource, tableTarget);
+						relacion_foreign.setNameSource(relacionAux.getNombreOrigen());
+						relacion_foreign.setNameTarget(relacionAux.getNombreDestino());
+						relacion_foreign.setMultiplicidadSource("1");
+						relacion_foreign.setMultiplicidadTarget("1");
+						tableSource.getListRelations().add(relacion_foreign);
 					}
 				}
 			} else if (tcdRelacion instanceof TCDDependencia) {
 				TCDDependencia relacionAux = ((TCDDependencia) tcdRelacion);
 				multiplicidadSource = relacionAux.getMultiplicidadOrigen();
 				multiplicidadTarget = relacionAux.getMultiplicidadDestino();
+
 				if (multiplicidadSource == Multiplicidad._0N || multiplicidadSource == Multiplicidad._1N) {
 					if (multiplicidadTarget == Multiplicidad._0N || multiplicidadTarget == Multiplicidad._1N) {
 						crearTablaRelacion(tableSource, tableTarget);
 						return;
 					} else {
-						Column column = obtenerColumna(tableTarget,
-								tableTarget.getPrimaryKey().get(0).getColumna().getName());
-						crearForanea(column, tableSource);
+						column = obtenerColumna(tableTarget, tableTarget.getPrimaryKey().get(0).getColumna().getName());
+						crearForanea(column, tableSource, tableTarget);
+						Relation relacion_foreign = crearRelacionForanea(tableSource, tableTarget);
+						relacion_foreign.setNameSource(relacionAux.getNombreOrigen());
+						relacion_foreign.setNameTarget(relacionAux.getNombreDestino());
+						relacion_foreign.setMultiplicidadSource("*");
+						relacion_foreign.setMultiplicidadTarget("1");
+						tableSource.getListRelations().add(relacion_foreign);
+					}
+				} else {
+					if (multiplicidadTarget == Multiplicidad._01 || multiplicidadTarget == Multiplicidad._1) {
+						column = obtenerColumna(tableTarget, tableTarget.getPrimaryKey().get(0).getColumna().getName());
+						crearForanea(column, tableSource, tableTarget);
+						Relation relacion_foreign = crearRelacionForanea(tableSource, tableTarget);
+						relacion_foreign.setNameSource(relacionAux.getNombreOrigen());
+						relacion_foreign.setNameTarget(relacionAux.getNombreDestino());
+						relacion_foreign.setMultiplicidadSource("1");
+						relacion_foreign.setMultiplicidadTarget("1");
+						tableSource.getListRelations().add(relacion_foreign);
 					}
 				}
 			}
 		}
 	}
 
-	private void crearForanea(Column column, Table table) {
+	private void crearForanea(Column column, Table table, Table tableTarget) {
 
 		Column column_foreign = Abstracta_relacionalFactory.eINSTANCE.createColumn();
 		column_foreign.setAuto_increment(column.isAuto_increment());
 		column_foreign.setData_default(column.getData_default());
 		column_foreign.setIs_not_null(true);
 		column_foreign.setIs_unique(true);
-		column_foreign.setName(column.getName());
+		column_foreign.setName(tableTarget.getName().toLowerCase() + "_id");
 		column_foreign.setType(column.getType());
 
 		table.getListColumns().add(column_foreign);
+	}
+
+	private void crearForaneaHerencia(Column column, Table table, Table tableSource) {
+
+		Column column_foreign = Abstracta_relacionalFactory.eINSTANCE.createColumn();
+		column_foreign.setAuto_increment(column.isAuto_increment());
+		column_foreign.setData_default(column.getData_default());
+		column_foreign.setIs_not_null(true);
+		column_foreign.setIs_unique(true);
+		column_foreign.setName("foreign_" + column.getName() + "_" + tableSource.getName());
+		column_foreign.setType(column.getType());
+
+		table.getListColumns().add(column_foreign);
+	}
+
+	private Relation crearRelacionForanea(Table tableSource, Table tableTarget) {
+
+		Relation relacion_foranea = Abstracta_relacionalFactory.eINSTANCE.createRelation();
+		relacion_foranea.setTableSource(tableSource);
+		relacion_foranea.setTableTarget(tableTarget);
+
+		return relacion_foranea;
 	}
 
 	private void creartabla(TCDClase tcdClase) {
@@ -167,7 +253,7 @@ public class TransformacionM2R {
 				PrimaryKey primaryKey = Abstracta_relacionalFactory.eINSTANCE.createPrimaryKey();
 				Column column = Abstracta_relacionalFactory.eINSTANCE.createColumn();
 				column.setName("id");
-				column.setType(Type.NUMBER);
+				column.setType(Type.INT);
 				column.setIs_unique(true);
 				column.setAuto_increment(true);
 				column.setIs_not_null(true);
@@ -226,8 +312,8 @@ public class TransformacionM2R {
 					tableSource.getPrimaryKey().get(0).getColumna().getName());
 			Column columnTarget = obtenerColumna(tableTarget,
 					tableTarget.getPrimaryKey().get(0).getColumna().getName());
-			crearForanea(columnSource, table);
-			crearForanea(columnTarget, table);
+			crearForaneaHerencia(columnSource, table, tableSource);
+			crearForaneaHerencia(columnTarget, table, tableTarget);
 		}
 	}
 
@@ -239,7 +325,7 @@ public class TransformacionM2R {
 		if (tcdAtributo.getTipoDato().getName().equalsIgnoreCase("string")) {
 			column.setType(Type.VARCHAR);
 		} else if (tcdAtributo.getTipoDato().getName().equalsIgnoreCase("number")) {
-			column.setType(Type.NUMBER);
+			column.setType(Type.INT);
 		} else if (tcdAtributo.getTipoDato().getName().equalsIgnoreCase("boolean")) {
 			column.setType(Type.BOOLEAN);
 		} else if (tcdAtributo.getTipoDato().getName().equalsIgnoreCase("undefined")) {

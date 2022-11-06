@@ -35,7 +35,7 @@ class Column {
 	attr boolean is_unique;
 }
 
-@gmf.node(label = "nameSource")
+@gmf.node(label = "nameTarget")
 class Relation {
 	attr String nameSource;
 	attr String nameTarget;
